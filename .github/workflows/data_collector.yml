@@ -1,0 +1,55 @@
+name: Collecting game data
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "21 7  1,7,13,19,25,31 * *" #บ่าย 2 ของไทย เวลารอรอบถัดไป 1 16  hr
+    - cron: "10 23  1,7,13,19,25 * *" #6 โมงเช้า ของ วันถัดไปของไทย เวลารอรอบถัดไป 1 20 hr
+    - cron: "50 18  2,8,14,20,26 * *"  #ตี 2 ของวันถัดไปของไทย 2 32 hr
+    - cron: "16 3  4,10,16,22,28 * *" #10 โมงของไทย เวลารอรอบถัดไป 4 32 hr
+    - cron: "20 11 5,11,17,23,29 * *" #6 โมงเย็นของไทย เวลารอรอบถัดไป 5 28 hr
+    - cron: "12 15  6,12,18,24,30 * *" #4 ทุ่มของไทย เวลารอรอบถัดไป 6 16 hr
+    # กัน Timeshift จะแปลกๆหน่อยตรงที่ ไม่ 24 hr เสมอไป (แย่สุดๆ)
+jobs:
+  Collecting:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout dataset repo
+        uses: actions/checkout@v4
+
+      - name: Checkout private pipeline repo
+        uses: actions/checkout@v4
+        with:
+          repository: Kidmaiook/Tesing_code_data
+          token: ${{ secrets.ACTION_TOKEN }}
+          path: pipeline_code
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install requirements
+        run: pip install -r pipeline_code/requirements.txt  
+        
+      - name: Install pyarrow
+        run: pip install pyarrow
+
+      - name: Run twitch collector
+        env:
+          TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
+          TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
+        run: python  pipeline_code/Scripts/Twitch_api_data_collect.py
+      
+      - name: Run steam collector
+        run: python pipeline_code/Scripts/Steam_code.py
+
+      - name: Commit dataset
+        run: |
+          git config --global user.name "github-actions"   
+          git config --global user.email "github-actions@github.com"
+          git add data/
+          git commit -m "update dataset" || echo "no changes"
+          git pull --rebase origin main
+          git push

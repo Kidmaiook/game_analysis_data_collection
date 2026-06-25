@@ -1,0 +1,40 @@
+name: compressor
+
+on:
+  workflow_dispatch:
+jobs:
+  my_job:
+    runs-on: ubuntu-latest
+
+    steps:    
+      - name: Checkout repo
+        uses: actions/checkout@v4    
+
+      - name: Checkout private pipeline repo
+        uses: actions/checkout@v4
+        with:
+          repository: Kidmaiook/Tesing_code_data
+          token: ${{ secrets.ACTION_TOKEN }}
+          path: pipeline_code
+        
+      - name: Setup python
+        uses: actions/setup-python@v5
+        with: 
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r pipeline_code/requirements.txt    
+
+      - name: Install pyarrow
+        run: pip install pyarrow      
+        
+      - name: Run Compressor
+        run: python pipeline_code/Scripts/Compress.py
+
+      - name: Commit dataset
+        run: |
+          git config --global user.name "github-actions"   
+          git config --global user.email "github-actions@github.com"
+          git add data/
+          git commit -m "update dataset" || echo "no changes"
+          git push

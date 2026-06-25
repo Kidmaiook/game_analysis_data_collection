@@ -1,0 +1,46 @@
+name: Schedule_gpu_data_collect
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 13 * * *"
+
+jobs:
+  my_job:
+    runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+    steps:
+      - name: Checkout dataset repo
+        uses: actions/checkout@v6
+
+      - name: Checkout private pipeline repo
+        uses: actions/checkout@v6
+        with:
+          repository: Kidmaiook/Tesing_code_data
+          token: ${{ secrets.ACTION_TOKEN }}
+          path: pipeline_code
+        
+      - name: Setup python
+        uses: actions/setup-python@v6
+        with: 
+          python-version: "3.12"
+
+      - name: Install requirements
+        run: |
+          pip install -r pipeline_code/requirements.txt
+          # Essential for bypassing the 403 error
+          pip install seleniumbase
+          seleniumbase install chromedriver
+
+      - name: Run GPU collector
+        run: python pipeline_code/Scripts/GPU.py
+
+      - name: Commit dataset
+        run: |
+          git config --global user.name "github-actions"   
+          git config --global user.email "github-actions@github.com"
+          git add data/
+          git commit -m "update dataset" || echo "no changes"
+          git push
