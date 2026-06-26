@@ -16,17 +16,17 @@ jobs:
 
     steps:
       - name: Checkout dataset repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Checkout private pipeline repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: Kidmaiook/Tesing_code_data
           token: ${{ secrets.ACTION_TOKEN }}
           path: pipeline_code
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
