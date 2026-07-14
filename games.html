@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Call Sheet — Green Room</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+  <div class="topbar">
+    <div class="brand"><span class="brand-dot"></span> Green Room</div>
+    <nav class="topnav">
+      <a href="index.html">Overview</a>
+      <a href="games.html">Call Sheet</a>
+      <a href="schedule.html">Signal Board</a>
+      <a href="insights.html">Deep Analysis</a>
+    </nav>
+    <div class="topbar-meta mono" id="topbarMeta">loading&hellip;</div>
+  </div>
+
+  <section class="section" style="border-top:none; padding-top:36px;">
+    <div class="section-head">
+      <div>
+        <h2>The call sheet</h2>
+        <p>Every game with enough independent streamers behind it to trust the numbers, ranked by
+          opportunity: audience size, how under-saturated it is, and its recent growth. Click a card for
+          its own best day/hour and Steam catalog info.</p>
+      </div>
+    </div>
+
+    <div class="filters">
+      <input type="text" id="searchInput" placeholder="Search a game&hellip;">
+      <select id="genreSelect"><option value="">All genres</option></select>
+      <select id="priceSelect">
+        <option value="">Any price</option>
+        <option value="free">Free to play</option>
+        <option value="paid">Paid</option>
+      </select>
+    </div>
+    <div class="sort-btns" id="sortBtns">
+      <button class="sort-btn active" data-sort="opportunity_score">Opportunity</button>
+      <button class="sort-btn" data-sort="growth_pct">Fastest growing</button>
+      <button class="sort-btn" data-sort="viewers_per_streamer">Least saturated</button>
+      <button class="sort-btn" data-sort="avg_viewers">Biggest audience</button>
+    </div>
+
+    <div class="game-grid" id="gameGrid"></div>
+    <div class="empty-state" id="emptyState" style="display:none;">No games match those filters. Try widening the search.</div>
+  </section>
+
+  <footer>
+    <p><strong>Methodology.</strong> Opportunity score blends audience size (40%), viewers-per-streamer (35%)
+      and clipped growth (25%), then discounts games backed by fewer than ~15 distinct streamers so a single
+      person's lucky night can't dominate the ranking. Best day/hour is shown in whichever mode you pick inside
+      a game's detail card — standardized (UTC) or time-of-day (streamer-local, estimated from broadcast language).</p>
+  </footer>
+</div>
+
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal">
+    <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+    <h3 id="modalTitle">&mdash;</h3>
+    <div class="modal-sub" id="modalSub">&mdash;</div>
+    <div class="modal-grid" id="modalStats"></div>
+    <div class="mode-toggle" id="modalModeToggle">
+      <button class="active" data-mode="utc">Standardized (UTC)</button>
+      <button data-mode="local">Time of day (local)</button>
+    </div>
+    <div class="mini-heat-label">Average viewers by day of week</div>
+    <div class="mini-board" id="modalDayBoard"></div>
+  </div>
+</div>
+
+<script src="js/common.js"></script>
+<script src="js/games.js"></script>
+</body>
+</html>

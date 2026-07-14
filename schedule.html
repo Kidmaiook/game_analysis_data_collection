@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signal Board — Green Room</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+  <div class="topbar">
+    <div class="brand"><span class="brand-dot"></span> Green Room</div>
+    <nav class="topnav">
+      <a href="index.html">Overview</a>
+      <a href="games.html">Call Sheet</a>
+      <a href="schedule.html">Signal Board</a>
+      <a href="insights.html">Deep Analysis</a>
+    </nav>
+    <div class="topbar-meta mono" id="topbarMeta">loading&hellip;</div>
+  </div>
+
+  <section class="section" style="border-top:none; padding-top:36px;">
+    <div class="section-head">
+      <div>
+        <h2>The signal board</h2>
+        <p>Viewers-per-streamer across every day &amp; hour in the dataset. Brighter cells mean more audience
+          is available for each person currently streaming &mdash; i.e. less competition for attention.</p>
+      </div>
+      <div>
+        <div class="mode-toggle" id="modeToggle">
+          <button class="active" data-mode="standardized">Standardized (UTC)</button>
+          <button data-mode="time_of_day">Time of day (local)</button>
+        </div>
+      </div>
+    </div>
+    <p class="mode-note" id="modeNote"></p>
+
+    <div class="board-wrap">
+      <div class="board-side">
+        <div class="side-stat">
+          <div class="k">Best day overall</div>
+          <div class="v" id="bestDayOverall">&mdash;</div>
+        </div>
+        <div class="side-stat">
+          <div class="k" id="bestHourLabel">Best hour overall (UTC)</div>
+          <div class="v" id="bestHourOverall">&mdash;</div>
+        </div>
+        <div class="side-stat">
+          <div class="legend">
+            <span>Quiet</span>
+            <span class="sw" style="background:#1B2426"></span>
+            <span class="sw" style="background:#1E3B33"></span>
+            <span class="sw" style="background:#235544"></span>
+            <span class="sw" style="background:#2B7358"></span>
+            <span class="sw" style="background:#38A874"></span>
+            <span class="sw" style="background:#63D9A0"></span>
+            <span>Wide open</span>
+          </div>
+        </div>
+      </div>
+      <div class="board">
+        <div class="board-grid" id="boardGrid"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <h2>How the two modes differ</h2>
+        <p>Twitch's API doesn't expose a stream's real timezone, only its broadcast language. "Time of day" estimates
+          each stream's local clock from a language&rarr;region lookup (documented in <code>EDA.py</code> as
+          <code>LANGUAGE_TZ_OFFSET_HOURS</code>) &mdash; a deliberate approximation, most useful for spotting whether
+          local evenings simply beat local mornings everywhere. "Standardized" needs no such guess: it's the literal
+          UTC clock, and is what you'd use to target a specific real-world audience window.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Ratios are total viewers divided by distinct concurrent streamers for that day/hour bucket, aggregated across
+      all months in the dataset. Empty cells mean the scraper simply never took a snapshot in that slot.</p>
+  </footer>
+</div>
+
+<script src="js/common.js"></script>
+<script src="js/schedule.js"></script>
+</body>
+</html>
