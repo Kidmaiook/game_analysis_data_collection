@@ -1,0 +1,326 @@
+{
+  "periods": [
+    "GLOBAL",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05"
+  ],
+  "charts": {
+    "GLOBAL": [
+      {
+        "key": "q1",
+        "title": "Steam players vs. Twitch viewers",
+        "image": "assets/insights/GLOBAL/graph_q1.png",
+        "description": "The Pearson correlation coefficient is 0.48 (moderate).\nThe result is statistically significant (p = 0.0000) based on 2823 samples."
+      },
+      {
+        "key": "q2",
+        "title": "Top games by potential score",
+        "image": "assets/insights/GLOBAL/graph_q2.png",
+        "description": "Top game by potential score is 'Dota 2'. This metric weighs viewer engagement (60%) and player counts (40%) to find trending titles."
+      },
+      {
+        "key": "q3",
+        "title": "What drives viewership",
+        "image": "assets/insights/GLOBAL/graph_q3.png",
+        "description": "Random Forest Regression identifies 'current_players' as the most influential factor on viewership for GLOBAL_TOTAL (R2 Score: 0.92).",
+        "model_summary": "SUMMARY FOR: GLOBAL_TOTAL\nMAE: 1577.47\nR2: 0.92\n\nSTATS:\n       current_players  peak_players        Price  Total_reviews   viewer_count\ncount      2705.000000  2.705000e+03  2705.000000   2.705000e+03    2705.000000\nmean      65118.480037  1.312540e+05   578.472577   5.550039e+05    5944.385952\nstd      108294.862224  2.164195e+05   630.434811   6.868745e+05   14991.519139\nmin        1901.000000  1.507700e+04     0.000000   1.890000e+03     145.000000\n25%       19668.000000  3.765000e+04     0.000000   1.100050e+05     649.000000\n50%       30407.000000  5.451500e+04   399.000000   2.723040e+05    1687.000000\n75%       57406.000000  1.198190e+05   835.800000   8.214670e+05    5096.000000\nmax      939719.000000  1.717624e+06  2100.000000   2.718396e+06  363291.000000"
+      },
+      {
+        "key": "q4",
+        "title": "Streamer activity by day",
+        "image": "assets/insights/GLOBAL/graph_q4.png",
+        "description": "Streamer activity peaked on Tuesday during GLOBAL_TOTAL, showing when the creator community is most active."
+      },
+      {
+        "key": "q5",
+        "title": "Viewer engagement by hour",
+        "image": "assets/insights/GLOBAL/graph_q5.png",
+        "description": "Visualizes average viewership throughout a 24-hour cycle. Peak engagement occurs at 2:00."
+      },
+      {
+        "key": "q6",
+        "title": "Peak-hour game market share",
+        "image": "assets/insights/GLOBAL/graph_q6.png",
+        "description": "Top 5 games sorted by market share during peak hours. Plotted from highest to lowest moving clockwise starting from the top."
+      },
+      {
+        "key": "q7",
+        "title": "Viewer-per-streamer ratio by day",
+        "image": "assets/insights/GLOBAL/graph_q7.png",
+        "description": "The best viewer-per-streamer ratio is found on Sunday. This indicates the most efficient time for streamers to gain audience share."
+      },
+      {
+        "key": "q8",
+        "title": "Predicting rising games",
+        "image": "assets/insights/GLOBAL/graph_q8.png",
+        "description": "Analysis: Can we use factors other than current viewer count to find rising stars?\nThe most accurate lead indicator is 'Peak Players'.\nThis proves that the Scoring Logic is NOT the superior method for picking games on the rise."
+      },
+      {
+        "key": "q9",
+        "title": "Dominant success indicators",
+        "image": "assets/insights/GLOBAL/graph_q9.png",
+        "description": "The most critical indicator for success is 'current_players', accounting for 56.0% of the model's decision-making."
+      },
+      {
+        "key": "distribution",
+        "title": "Viewer count distribution",
+        "image": "assets/insights/GLOBAL/graph_distribution_viewers.png",
+        "description": ""
+      }
+    ],
+    "2026-02": [
+      {
+        "key": "q1",
+        "title": "Steam players vs. Twitch viewers",
+        "image": "assets/insights/2026-02/graph_q1.png",
+        "description": "The Pearson correlation coefficient is 0.34 (weak).\nThe result is statistically significant (p = 0.0000) based on 463 samples."
+      },
+      {
+        "key": "q2",
+        "title": "Top games by potential score",
+        "image": "assets/insights/2026-02/graph_q2.png",
+        "description": "Top game by potential score is 'Dota 2'. This metric weighs viewer engagement (60%) and player counts (40%) to find trending titles."
+      },
+      {
+        "key": "q3",
+        "title": "What drives viewership",
+        "image": "assets/insights/2026-02/graph_q3.png",
+        "description": "Random Forest Regression identifies 'current_players' as the most influential factor on viewership for 2026-02 (R2 Score: 0.89).",
+        "model_summary": "SUMMARY FOR: 2026-02\nMAE: 2005.55\nR2: 0.89\n\nSTATS:\n       current_players   peak_players        Price  Total_reviews   viewer_count\ncount       433.000000     433.000000   433.000000   4.330000e+02     433.000000\nmean      69692.434180  125671.352194   624.172309   5.623704e+05    6542.381062\nstd      118677.969775  181809.963677   645.323719   6.700928e+05   20250.844648\nmin       11064.000000   19222.000000     0.000000   6.536000e+03     161.000000\n25%       20809.000000   38669.000000     0.000000   1.548640e+05     654.000000\n50%       30575.000000   56684.000000   400.000000   2.905450e+05    1913.000000\n75%       61616.000000  110062.000000  1049.000000   7.511770e+05    5535.000000\nmax      829414.000000  869734.000000  2100.000000   2.718396e+06  363291.000000"
+      },
+      {
+        "key": "q4",
+        "title": "Streamer activity by day",
+        "image": "assets/insights/2026-02/graph_q4.png",
+        "description": "Streamer activity peaked on Tuesday during 2026-02, showing when the creator community is most active."
+      },
+      {
+        "key": "q5",
+        "title": "Viewer engagement by hour",
+        "image": "assets/insights/2026-02/graph_q5.png",
+        "description": "Visualizes average viewership throughout a 24-hour cycle. Peak engagement occurs at 22:00."
+      },
+      {
+        "key": "q6",
+        "title": "Peak-hour game market share",
+        "image": "assets/insights/2026-02/graph_q6.png",
+        "description": "Top 5 games sorted by market share during peak hours. Plotted from highest to lowest moving clockwise starting from the top."
+      },
+      {
+        "key": "q7",
+        "title": "Viewer-per-streamer ratio by day",
+        "image": "assets/insights/2026-02/graph_q7.png",
+        "description": "The best viewer-per-streamer ratio is found on Friday. This indicates the most efficient time for streamers to gain audience share."
+      },
+      {
+        "key": "q8",
+        "title": "Predicting rising games",
+        "image": "assets/insights/2026-02/graph_q8.png",
+        "description": "Analysis: Can we use factors other than current viewer count to find rising stars?\nThe most accurate lead indicator is 'Peak Players'.\nThis proves that the Scoring Logic is NOT the superior method for picking games on the rise."
+      },
+      {
+        "key": "q9",
+        "title": "Dominant success indicators",
+        "image": "assets/insights/2026-02/graph_q9.png",
+        "description": "The most critical indicator for success is 'current_players', accounting for 76.4% of the model's decision-making."
+      },
+      {
+        "key": "distribution",
+        "title": "Viewer count distribution",
+        "image": "assets/insights/2026-02/graph_distribution_viewers.png",
+        "description": ""
+      }
+    ],
+    "2026-03": [
+      {
+        "key": "q1",
+        "title": "Steam players vs. Twitch viewers",
+        "image": "assets/insights/2026-03/graph_q1.png",
+        "description": "The Pearson correlation coefficient is 0.56 (moderate).\nThe result is statistically significant (p = 0.0000) based on 616 samples."
+      },
+      {
+        "key": "q2",
+        "title": "Top games by potential score",
+        "image": "assets/insights/2026-03/graph_q2.png",
+        "description": "Top game by potential score is 'Dota 2'. This metric weighs viewer engagement (60%) and player counts (40%) to find trending titles."
+      },
+      {
+        "key": "q3",
+        "title": "What drives viewership",
+        "image": "assets/insights/2026-03/graph_q3.png",
+        "description": "Random Forest Regression identifies 'current_players' as the most influential factor on viewership for 2026-03 (R2 Score: 0.93).",
+        "model_summary": "SUMMARY FOR: 2026-03\nMAE: 1429.64\nR2: 0.93\n\nSTATS:\n       current_players  peak_players        Price  Total_reviews   viewer_count\ncount       577.000000  5.770000e+02   577.000000   5.770000e+02     577.000000\nmean      64468.512998  1.290406e+05   530.058821   5.802098e+05    5619.232236\nstd      104591.520929  2.312177e+05   602.513425   6.941281e+05   14034.496627\nmin        1901.000000  1.507700e+04     0.000000   1.890000e+03     145.000000\n25%       20627.000000  3.572700e+04     0.000000   1.401390e+05     591.000000\n50%       31873.000000  5.642000e+04   279.300000   2.999310e+05    1451.000000\n75%       56327.000000  1.087070e+05   799.000000   8.414790e+05    4716.000000\nmax      827336.000000  1.717624e+06  1990.000000   2.718396e+06  154657.000000"
+      },
+      {
+        "key": "q4",
+        "title": "Streamer activity by day",
+        "image": "assets/insights/2026-03/graph_q4.png",
+        "description": "Streamer activity peaked on Tuesday during 2026-03, showing when the creator community is most active."
+      },
+      {
+        "key": "q5",
+        "title": "Viewer engagement by hour",
+        "image": "assets/insights/2026-03/graph_q5.png",
+        "description": "Visualizes average viewership throughout a 24-hour cycle. Peak engagement occurs at 22:00."
+      },
+      {
+        "key": "q6",
+        "title": "Peak-hour game market share",
+        "image": "assets/insights/2026-03/graph_q6.png",
+        "description": "Top 5 games sorted by market share during peak hours. Plotted from highest to lowest moving clockwise starting from the top."
+      },
+      {
+        "key": "q7",
+        "title": "Viewer-per-streamer ratio by day",
+        "image": "assets/insights/2026-03/graph_q7.png",
+        "description": "The best viewer-per-streamer ratio is found on Sunday. This indicates the most efficient time for streamers to gain audience share."
+      },
+      {
+        "key": "q8",
+        "title": "Predicting rising games",
+        "image": "assets/insights/2026-03/graph_q8.png",
+        "description": "Analysis: Can we use factors other than current viewer count to find rising stars?\nThe most accurate lead indicator is 'Peak Players'.\nThis proves that the Scoring Logic is NOT the superior method for picking games on the rise."
+      },
+      {
+        "key": "q9",
+        "title": "Dominant success indicators",
+        "image": "assets/insights/2026-03/graph_q9.png",
+        "description": "The most critical indicator for success is 'current_players', accounting for 54.9% of the model's decision-making."
+      },
+      {
+        "key": "distribution",
+        "title": "Viewer count distribution",
+        "image": "assets/insights/2026-03/graph_distribution_viewers.png",
+        "description": ""
+      }
+    ],
+    "2026-04": [
+      {
+        "key": "q1",
+        "title": "Steam players vs. Twitch viewers",
+        "image": "assets/insights/2026-04/graph_q1.png",
+        "description": "The Pearson correlation coefficient is 0.48 (moderate).\nThe result is statistically significant (p = 0.0000) based on 926 samples."
+      },
+      {
+        "key": "q2",
+        "title": "Top games by potential score",
+        "image": "assets/insights/2026-04/graph_q2.png",
+        "description": "Top game by potential score is 'Dota 2'. This metric weighs viewer engagement (60%) and player counts (40%) to find trending titles."
+      },
+      {
+        "key": "q3",
+        "title": "What drives viewership",
+        "image": "assets/insights/2026-04/graph_q3.png",
+        "description": "Random Forest Regression identifies 'Total_reviews' as the most influential factor on viewership for 2026-04 (R2 Score: 0.93).",
+        "model_summary": "SUMMARY FOR: 2026-04\nMAE: 1230.02\nR2: 0.93\n\nSTATS:\n       current_players  peak_players        Price  Total_reviews   viewer_count\ncount       906.000000  9.060000e+02   906.000000   9.060000e+02     906.000000\nmean      62861.769316  1.359798e+05   591.741578   5.331238e+05    5479.080574\nstd      107288.558866  2.374683e+05   635.837197   6.842118e+05   11146.908863\nmin        9322.000000  1.647200e+04     0.000000   6.536000e+03     166.000000\n25%       18839.750000  3.783200e+04     0.000000   1.100050e+05     701.750000\n50%       28888.500000  5.305800e+04   400.000000   2.687650e+05    1649.500000\n75%       55526.250000  1.253170e+05   809.750000   6.646360e+05    5326.000000\nmax      939719.000000  1.290870e+06  1990.000000   2.718396e+06  146045.000000"
+      },
+      {
+        "key": "q4",
+        "title": "Streamer activity by day",
+        "image": "assets/insights/2026-04/graph_q4.png",
+        "description": "Streamer activity peaked on Wednesday during 2026-04, showing when the creator community is most active."
+      },
+      {
+        "key": "q5",
+        "title": "Viewer engagement by hour",
+        "image": "assets/insights/2026-04/graph_q5.png",
+        "description": "Visualizes average viewership throughout a 24-hour cycle. Peak engagement occurs at 2:00."
+      },
+      {
+        "key": "q6",
+        "title": "Peak-hour game market share",
+        "image": "assets/insights/2026-04/graph_q6.png",
+        "description": "Top 5 games sorted by market share during peak hours. Plotted from highest to lowest moving clockwise starting from the top."
+      },
+      {
+        "key": "q7",
+        "title": "Viewer-per-streamer ratio by day",
+        "image": "assets/insights/2026-04/graph_q7.png",
+        "description": "The best viewer-per-streamer ratio is found on Monday. This indicates the most efficient time for streamers to gain audience share."
+      },
+      {
+        "key": "q8",
+        "title": "Predicting rising games",
+        "image": "assets/insights/2026-04/graph_q8.png",
+        "description": "Analysis: Can we use factors other than current viewer count to find rising stars?\nThe most accurate lead indicator is 'Peak Players'.\nThis proves that the Scoring Logic is NOT the superior method for picking games on the rise."
+      },
+      {
+        "key": "q9",
+        "title": "Dominant success indicators",
+        "image": "assets/insights/2026-04/graph_q9.png",
+        "description": "The most critical indicator for success is 'Total_reviews', accounting for 37.6% of the model's decision-making."
+      },
+      {
+        "key": "distribution",
+        "title": "Viewer count distribution",
+        "image": "assets/insights/2026-04/graph_distribution_viewers.png",
+        "description": ""
+      }
+    ],
+    "2026-05": [
+      {
+        "key": "q1",
+        "title": "Steam players vs. Twitch viewers",
+        "image": "assets/insights/2026-05/graph_q1.png",
+        "description": "The Pearson correlation coefficient is 0.55 (moderate).\nThe result is statistically significant (p = 0.0000) based on 818 samples."
+      },
+      {
+        "key": "q2",
+        "title": "Top games by potential score",
+        "image": "assets/insights/2026-05/graph_q2.png",
+        "description": "Top game by potential score is 'Dota 2'. This metric weighs viewer engagement (60%) and player counts (40%) to find trending titles."
+      },
+      {
+        "key": "q3",
+        "title": "What drives viewership",
+        "image": "assets/insights/2026-05/graph_q3.png",
+        "description": "Random Forest Regression identifies 'current_players' as the most influential factor on viewership for 2026-05 (R2 Score: 0.93).",
+        "model_summary": "SUMMARY FOR: 2026-05\nMAE: 1729.67\nR2: 0.93\n\nSTATS:\n       current_players   peak_players        Price  Total_reviews   viewer_count\ncount       789.000000     789.000000   789.000000   7.890000e+02     789.000000\nmean      65674.993029  130509.905577   573.561343   5.576528e+05    6388.300380\nstd      106244.555398  196749.391031   634.637465   6.941865e+05   16093.020898\nmin        8785.000000   15872.000000     0.000000   7.814000e+03     162.000000\n25%       19405.000000   38295.000000     0.000000   1.004820e+05     649.000000\n50%       31123.000000   53569.000000   399.000000   2.723040e+05    1773.000000\n75%       55974.000000  134154.000000   856.000000   8.214670e+05    5075.000000\nmax      804831.000000  979753.000000  1999.000000   2.718396e+06  224374.000000"
+      },
+      {
+        "key": "q4",
+        "title": "Streamer activity by day",
+        "image": "assets/insights/2026-05/graph_q4.png",
+        "description": "Streamer activity peaked on Friday during 2026-05, showing when the creator community is most active."
+      },
+      {
+        "key": "q5",
+        "title": "Viewer engagement by hour",
+        "image": "assets/insights/2026-05/graph_q5.png",
+        "description": "Visualizes average viewership throughout a 24-hour cycle. Peak engagement occurs at 3:00."
+      },
+      {
+        "key": "q6",
+        "title": "Peak-hour game market share",
+        "image": "assets/insights/2026-05/graph_q6.png",
+        "description": "Top 5 games sorted by market share during peak hours. Plotted from highest to lowest moving clockwise starting from the top."
+      },
+      {
+        "key": "q7",
+        "title": "Viewer-per-streamer ratio by day",
+        "image": "assets/insights/2026-05/graph_q7.png",
+        "description": "The best viewer-per-streamer ratio is found on Wednesday. This indicates the most efficient time for streamers to gain audience share."
+      },
+      {
+        "key": "q8",
+        "title": "Predicting rising games",
+        "image": "assets/insights/2026-05/graph_q8.png",
+        "description": "Analysis: Can we use factors other than current viewer count to find rising stars?\nThe most accurate lead indicator is 'Peak Players'.\nThis proves that the Scoring Logic is NOT the superior method for picking games on the rise."
+      },
+      {
+        "key": "q9",
+        "title": "Dominant success indicators",
+        "image": "assets/insights/2026-05/graph_q9.png",
+        "description": "The most critical indicator for success is 'current_players', accounting for 58.3% of the model's decision-making."
+      },
+      {
+        "key": "distribution",
+        "title": "Viewer count distribution",
+        "image": "assets/insights/2026-05/graph_distribution_viewers.png",
+        "description": ""
+      }
+    ]
+  }
+}
