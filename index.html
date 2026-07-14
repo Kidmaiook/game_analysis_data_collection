@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Room — Stream Planning Console</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+  <div class="topbar">
+    <div class="brand"><span class="brand-dot"></span> Green Room</div>
+    <nav class="topnav">
+      <a href="index.html">Overview</a>
+      <a href="games.html">Call Sheet</a>
+      <a href="schedule.html">Signal Board</a>
+      <a href="insights.html">Deep Analysis</a>
+    </nav>
+    <div class="topbar-meta mono" id="topbarMeta">loading&hellip;</div>
+  </div>
+
+  <section class="hero">
+    <div>
+      <div class="eyebrow">Stream planning console</div>
+      <h1>Know what to <em>play</em>,<br>know when to <em>go live</em>.</h1>
+      <p class="sub">Built from real Steam concurrent-player counts and Twitch stream snapshots
+        (plus a look at the GPU market). Every recommendation here is a measurement, not a guess.</p>
+
+      <div class="readouts" id="readouts"></div>
+    </div>
+
+    <div class="onair-card" id="onairCard">
+      <div class="onair-top">
+        <span class="onair-tag mono" id="onairTag">&mdash;</span>
+        <span class="onair-time mono" id="onairTime">&mdash;</span>
+      </div>
+      <div class="onair-verdict" id="onairVerdict">Reading the room&hellip;</div>
+      <div class="onair-detail" id="onairDetail">Checking your local time against the audience-per-streamer signal.</div>
+      <div class="onair-bar-track"><div class="onair-bar-fill" id="onairBar" style="width:0%"></div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <h2>Right now, the best opportunities are&hellip;</h2>
+        <p>Ranked by audience size, how under-saturated the category is, and recent growth. Full list, filters and search on the Call Sheet.</p>
+      </div>
+    </div>
+    <div class="teaser-grid" id="teaserGrid"></div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><div><h2>Explore further</h2></div></div>
+    <div class="page-links">
+      <a class="page-link-card" href="games.html">
+        <div class="pl-eyebrow">Games</div>
+        <h3>The Call Sheet</h3>
+        <p>Every game with enough data to trust, searchable and sortable by opportunity, growth, saturation, or audience size.</p>
+      </a>
+      <a class="page-link-card" href="schedule.html">
+        <div class="pl-eyebrow">Timing</div>
+        <h3>The Signal Board</h3>
+        <p>Day &times; hour heatmap of viewer competition, in both standardized (UTC) and streamer-local time-of-day views.</p>
+      </a>
+      <a class="page-link-card" href="insights.html">
+        <div class="pl-eyebrow">Methodology</div>
+        <h3>Deep Analysis</h3>
+        <p>The underlying statistics: correlation strength, what a model says actually drives viewership, and monthly breakdowns.</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <h2>Hardware market context</h2>
+        <p>A streamer's setup budget matters too — average tracked GPU price by month, and where the value currently sits.</p>
+      </div>
+    </div>
+    <div class="gpu-grid" id="gpuGrid"></div>
+  </section>
+
+  <footer>
+    <p>Built by <code>EDA.py</code> from monthly Steam, Twitch, Steam-catalog and GPU-price snapshots.
+      See the Deep Analysis page for methodology and statistical detail, and the README in the project
+      folder for how to refresh this data.</p>
+  </footer>
+</div>
+
+<script src="js/common.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
