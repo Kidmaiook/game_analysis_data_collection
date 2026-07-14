@@ -1,22 +1,5 @@
 name: Refresh dashboard data
 
-# Regenerates docs/data.json, docs/insights.json and docs/assets/insights/
-# from whatever is in analysis/Data/monthly/, then commits the result and
-# (re)publishes GitHub Pages.
-#
-# Triggers:
-#   - workflow_dispatch: a manual "Run workflow" button in the Actions tab.
-#     Always available, regardless of how new monthly data gets into the
-#     runner.
-#   - push to main touching analysis/Data/monthly/**: fires automatically
-#     if you commit new monthly parquet snapshots straight into the repo.
-#     If you've gitignored that folder (recommended for a public repo),
-#     this trigger simply never fires — use workflow_dispatch instead, or
-#     add a step below that pulls the new snapshot from wherever you keep
-#     it (S3, GCS, a private data repo, etc.) before "Run EDA.py".
-#   - schedule: commented out below; uncomment if you want a recurring
-#     safety-net run regardless of whether new data showed up.
-
 on:
   workflow_dispatch: {}
   push:
@@ -26,10 +9,10 @@ on:
       - 'analysis/EDA.py'
       - 'analysis/parquet_fallback.py'
   # schedule:
-  #   - cron: '0 6 1 * *'   # 06:00 UTC on the 1st of every month
+  #   - cron: '0 6 1 * *'  
 
 permissions:
-  contents: write   # needed to commit the refreshed docs/ back to the repo
+  contents: write  
   pages: write
   id-token: write
 
@@ -53,15 +36,6 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r analysis/requirements.txt
-
-      # --- Optional: fetch new raw snapshots from elsewhere -------------
-      # If analysis/Data/monthly/ is gitignored, pull this month's parquet
-      # files down here before running the pipeline, e.g.:
-      #
-      # - name: Download latest monthly snapshot
-      #   run: |
-      #     aws s3 sync s3://your-bucket/monthly analysis/Data/monthly
-      # --------------------------------------------------------------------
 
       - name: Run EDA.py
         working-directory: analysis
