@@ -1,0 +1,113 @@
+name: Refresh dashboard data
+
+# Regenerates docs/data.json, docs/insights.json and docs/assets/insights/
+# from whatever is in analysis/Data/monthly/, then commits the result and
+# (re)publishes GitHub Pages.
+#
+# Triggers:
+#   - workflow_dispatch: a manual "Run workflow" button in the Actions tab.
+#     Always available, regardless of how new monthly data gets into the
+#     runner.
+#   - push to main touching analysis/Data/monthly/**: fires automatically
+#     if you commit new monthly parquet snapshots straight into the repo.
+#     If you've gitignored that folder (recommended for a public repo),
+#     this trigger simply never fires — use workflow_dispatch instead, or
+#     add a step below that pulls the new snapshot from wherever you keep
+#     it (S3, GCS, a private data repo, etc.) before "Run EDA.py".
+#   - schedule: commented out below; uncomment if you want a recurring
+#     safety-net run regardless of whether new data showed up.
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - 'analysis/Data/monthly/**'
+      - 'analysis/EDA.py'
+      - 'analysis/parquet_fallback.py'
+  # schedule:
+  #   - cron: '0 6 1 * *'   # 06:00 UTC on the 1st of every month
+
+permissions:
+  contents: write   # needed to commit the refreshed docs/ back to the repo
+  pages: write
+  id-token: write
+
+concurrency:
+  group: refresh-dashboard-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+          cache-dependency-path: analysis/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r analysis/requirements.txt
+
+      # --- Optional: fetch new raw snapshots from elsewhere -------------
+      # If analysis/Data/monthly/ is gitignored, pull this month's parquet
+      # files down here before running the pipeline, e.g.:
+      #
+      # - name: Download latest monthly snapshot
+      #   run: |
+      #     aws s3 sync s3://your-bucket/monthly analysis/Data/monthly
+      # --------------------------------------------------------------------
+
+      - name: Run EDA.py
+        working-directory: analysis
+        env:
+          SITE_DIR: ../docs   # matches the site/ -> docs/ rename for Pages
+        run: python EDA.py
+
+      - name: Upload full report as a build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: analysis-report
+          path: analysis/Data/Global_Summary/
+          if-no-files-found: warn
+
+      - name: Commit refreshed dashboard data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/data.json docs/insights.json docs/assets/insights/
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Refresh dashboard data [automated]"
+            git push
+          fi
+
+  deploy-pages:
+    needs: refresh
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out repo (post-refresh)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload docs/ as the Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
