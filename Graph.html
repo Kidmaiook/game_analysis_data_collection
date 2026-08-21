@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+  <title>Graph</title>
   <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -16,8 +17,8 @@
     </div>
     <nav>
       <ul>
-        <li><a href="index.html" class="active"><span class="icon">🏠</span><span class="text">Home</span></a></li>
-        <li><a href="Graph.html"><span class="icon">📈</span><span class="text">Graph and explanation</span></a></li>
+        <li><a href="index.html" ><span class="icon">🏠</span><span class="text">Home</span></a></li>
+        <li><a href="Graph.html" class="active"><span class="icon">📈</span><span class="text">Graph and explanation</span></a></li>
         <li><a href="Analytic.html"><span class="icon">📓</span><span class="text">Analytic</span></a></li>
         <li><a href="TOU.html"><span class="icon">✅</span><span class="text">Term of use</span></a></li>
         <li><a href="#"><span class="icon">⚙️</span><span class="text">Others</span></a></li>
@@ -29,23 +30,26 @@
   <main class="main-content" id="main-content">
     <!-- Top Introduction Header -->
    <header class="page-header">
-     <h1>Game and twitch stream Data analysis research project</h1>
-     <p>Welcome! This is our research project and where every analytic take place!</p>
+     <h1>Graph and dashbord over view</h1>
+     <p>I has lost this page (Rewrite later)</p>
    </header>
 
-    <!--Row -->
-  <section>
-  <div class="info-container">
-    <h1>Info</h1>
-    <p>This Project was built in period from the start of project (Fabuary 2026) to the end of project (Now) to </p>
+<!-- Filter Controls -->
+    <div class="controls-wrapper">
+      <div id="filter-buttons" class="filter-buttons"></div>
+      <select id="period-dropdown" class="period-dropdown" style="display: none;"></select>
+    </div>
+
+    <!-- Dynamic Content Grid -->
+    <section id="dashboard-grid" class="dashboard-grid"></section>
+  </main>
+  <div id="image-modal" class="image-modal">
+    <span class="modal-close" id="modal-close">&times;</span>
+    <img class="modal-content-img" id="modal-img" alt="Zoomed Chart Preview">
+    <div id="modal-caption" class="modal-caption"></div>
   </div>
 
-  <div class="info-container">
-    <h1>About us</h1>
-    <p>We are scholar of Prince of songkla university </p>
-  </main>
-</section>
-
   <script src="js/slidebar.js"></script>
+  <script src="js/Zoom.js"></script>
 </body>
 </html>
