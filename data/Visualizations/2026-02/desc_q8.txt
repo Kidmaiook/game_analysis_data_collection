@@ -1,0 +1,3 @@
+Analysis: Can we use factors other than current viewer count to find rising stars?
+The most accurate lead indicator is 'Peak Players'.
+This proves that the Scoring Logic is NOT the superior method for picking games on the rise.

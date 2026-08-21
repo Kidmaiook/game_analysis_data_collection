@@ -1,0 +1,1 @@
+Top game by potential score is 'Dota 2'. This metric weighs viewer engagement (60%) and player counts (40%) to find trending titles.

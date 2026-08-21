@@ -1,0 +1,105 @@
+{
+    "Info": [
+        "Graph_Info"
+    ],
+    "charts": {
+        "Graph_Info": [
+            {
+                "title": "Q1 Steam players vs. Twitch viewers",
+                "images": [
+                    {
+                        "url": "assets/insights/2026-02/graph_q1.png"
+                    },
+                    {
+                        "url": "assets/insights/2026-04/graph_q1.png"
+                    },
+                    {
+                        "url": "assets/insights/2026-06/graph_q1.png"
+                    }
+                ],
+                "description": "<b>Based on the results</b>, the Pearson correlation coefficients range from 0.48 to 0.61, indicating a <b>moderate positive relationship</b> between the number of players and viewers. This suggests that games with a higher number of players tend to have more viewers; however, the correlation is not strong enough to accurately predict one variable from the other, as other factors may also influence the number of viewers and players. \n\nThe <b>p-value of 0.000</b> indicates that the observed correlations are <b>highly statistically significant</b>. Therefore, there is strong evidence that the positive relationships between players and viewers are unlikely to have occurred by chance. \n\nThe scatter plot also shows that most games are clustered within approximately <b>0–200,000 players</b> and <b>0–20, 000 viewers</b>, representing the typical range observed in the dataset. However, there is <b>a few game that stands out with both a very high number of players and a very high number of viewers</b>. This indicates that games with exceptionally high player counts and viewer counts are relatively uncommon in the dataset."
+            },
+            {
+                "title": "Q2 Top games by potential score",
+                "images": [
+                    {
+                        "url": "assets/insights/2026-02/graph_q2.png"
+                    },
+                    {
+                        "url": "assets/insights/2026-07/graph_q2.png"
+                    }
+                ],
+                "description": " <b>The Potential Score</b> is a metric used to indicate how well a Steam game performs in terms of its potential for streaming on Twitch. It is calculated by combining the Z-scores of the number of Steam players and Twitch viewers, allowing both metrics to be compared on the same standardized scale. \n\n Across all graphs, <b>Dota 2 consistently ranks first</b>, indicating that it has the strongest overall performance based on the two metrics. Other games that frequently appear among the top-ranked games include <b>Path of Exile, Rust, Dead by Daylight, and PUBG: BATTLEGROUNDS</b>. \n\n<b>One notable case is Palworld</b>. Although it does not consistently appear at the top of the rankings, it reached <b>second place in July 2026</b>, following a major game update. This sudden increase in its Potential Score suggests that major updates may have the potential to increase both player activity and streaming interest. Therefore, Palworld can be considered an example of a game with <b>potential for increased Twitch streaming performance following a major update.</b> \n\nHowever, the Potential Score should be interpreted as an <b>indicator rather than a prediction.</b> A high score does not necessarily mean that a game will become popular on Twitch, since other factors such as game updates, new content, events, release schedules, and external trends may also affect its performance."
+            },
+            {
+                "title": "Q3 What drives viewership",
+                "images": [
+                    {
+                        "url": "assets/insights/2026-04/graph_q3.png"
+                    },
+                    {
+                        "url": "assets/insights/2026-06/graph_q3.png"
+                    }
+                ],
+                "description": "The analysis suggests that <b>current player count</b> is the most influential factor in <b>determining which games streamers choose to play</b>. This indicates that games with a larger active player base tend to attract more viewers on Twitch. In other words, when more players know and actively play a game, there is generally a larger potential audience interested in watching content related to that game.\n\nOther factors that may influence streaming performance include <b>total review count, game price, and peak player count.</b> Total reviews can be considered an indicator of a game's overall popularity and awareness, while price may influence how accessible the game is to potential players. Peak player count reflects the game's ability to attract a large number of players at a particular point in time. \n\nOverall, these factors suggest that <b>both the current popularity and historical interest in a game can influence its potential to attract Twitch viewers.</b> However, these factors should not be considered the only determinants, as streaming performance can also be affected by other factors such as updates, events, new content, and trends within the gaming community."
+            },
+            {
+                "title": "Q4 Streamer activity by day",
+                "images": [
+                    {
+                        "url": "assets/insights/GLOBAL/graph_q4.png"
+                    },
+                    {
+                        "url": "assets/insights/2026-07/graph_q4.png"
+                    }
+                ],
+                "description": "<b>Streamers are active throughout the week</b>, with streaming activity occurring consistently across all days. However, the overall number of active streamers tends to be <b>higher on Saturday and Monday</b>, while <b>Sunday has the lowest level of streaming activity.</b> \n\nThis suggests that streamer activity does not necessarily follow a simple weekend pattern, as Monday also shows relatively high activity compared with other weekdays. The lower activity observed on Sunday may indicate differences in streamer schedules or audience availability."
+            },
+            {
+                "title": "Q5 Viewer engagement by hour",
+                "images": [
+                    {
+                        "url": "assets/insights/GLOBAL/graph_q5.png"
+                    }
+                ],
+                "description": "Viewer engagement remains active throughout the day, but the highest level of engagement is consistently observed <b>between approximately 10:00 PM and 3:00 AM (UTC+7).</b> This suggests that this time period may be the most <b>suitable time for streaming on Twitch,</b> as it corresponds to a period of high viewer activity. \n\nOne possible explanation is the difference in time zones between regions. The period from <b>10:00 PM to 3:00 AM (UTC+7)</b> corresponds approximately to <b>3:00 PM to 8:00 PM</b> in UTC−1 to UTC+0, which overlaps with the afternoon and evening in those time zones. This period may therefore coincide with the time when a large portion of the Twitch audience and streamers are active. \n\nHowever, the data does not directly confirm that most viewers and streamers are located in UTC−1 to UTC+1. Therefore, this should be considered a <b>possible explanation for the observed pattern rather than a definitive conclusion.</b> Other factors, such as regional gaming habits, work and school schedules, and differences in audience behavior, may also contribute to the higher viewer engagement during this period."
+            },
+            {
+                "title": "Q6 Peak-hour game market share",
+                "images": [
+                    {
+                        "url": "assets/insights/2026-02/graph_q6.png"
+                    },
+                    {
+                        "url": "assets/insights/2026-06/graph_q6.png"
+                    },
+                    {
+                        "url": "assets/insights/2026-07/graph_q6.png"
+                    }
+                ],
+                "description": "Games with the largest market share on Twitch are <b>Counter-Strike and League of Legends</b>. However, categories such as <b>Just Chatting</b> and <b>La Velada</b>, which are not traditional PC games, can also rank highly, especially during peak hours. This suggests that Twitch viewers are interested in not only gaming but also social entertainment and live events. \n\nSome games have streamers active throughout the day but do not rank highly in viewer numbers. This indicates that <b>streaming activity does not always reflect overall viewer popularity</b>, and a game may be more popular on other platforms than on Twitch."
+            },
+            {
+                "title": "Q7 Viewer-per-streamer ratio by day",
+                "images": [
+                    {
+                        "url": "assets/insights/GLOBAL/graph_q7.png"
+                    }
+                ],
+                "description": "The <b>viewer-to-streamer ratio</b> peaks between <b>Friday and Sunday.</b> According to the Q4 analysis, these three days represent the <b>optimal period for streaming on Twitch</b>, as streamers have the potential to reach more viewers relative to the level of competition."
+            },
+            {
+                "title": "Q8 Predicting rising games and Q9 Dominant success indicators",
+                "images": [
+                    {
+                        "url": "assets/insights/GLOBAL/graph_q8.png"
+                    },
+                    {
+                        "url": "assets/insights/GLOBAL/graph_q9.png"
+                    }
+                ],
+                "description": "The <b>most influential factor affecting a game's rising trend on Twitch is its current viewer count.</b> Meanwhile, <b>current player</b> count can be considered a key indicator of a game's success and potential. Other factors may also contribute, but current viewers and current players show the strongest relevance to a game's Twitch performance."
+            }
+        ]
+    }
+}

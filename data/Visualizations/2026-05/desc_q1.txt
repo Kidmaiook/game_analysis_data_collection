@@ -1,0 +1,2 @@
+The Pearson correlation coefficient is 0.55 (moderate).
+The result is statistically significant (p = 0.0000) based on 818 samples.

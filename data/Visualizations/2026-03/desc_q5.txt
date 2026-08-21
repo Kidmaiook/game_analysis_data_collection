@@ -1,0 +1,1 @@
+Visualizes average viewership throughout a 24-hour cycle. Peak engagement occurs at 22:00.

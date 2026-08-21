@@ -1,0 +1,1 @@
+The most critical indicator for success is 'current_players', accounting for 58.5% of the model's decision-making.
