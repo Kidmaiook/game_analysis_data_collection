@@ -39,7 +39,13 @@
         "key": "q5",
         "title": "Viewer engagement by hour",
         "image": "assets/insights/GLOBAL/graph_q5.png",
-        "description": "Visualizes average viewership throughout a 24-hour cycle. Peak engagement occurs at 3:00."
+        "description": "Visualizes average viewership throughout a 24-hour cycle (UTC +7). Peak engagement occurs at 3:00."
+      },
+      {
+        "key": "q52",
+        "title": "Viewer engagement by hour UTC 0",
+        "image": "assets/insights/GLOBAL/graph_q52.png",
+        "description": "Visualizes average viewership throughout a 24-hour cycle (UTC 0). Peak engagement occurs at 20:00."
       },
       {
         "key": "q6",
@@ -102,7 +108,13 @@
         "key": "q5",
         "title": "Viewer engagement by hour",
         "image": "assets/insights/2026-02/graph_q5.png",
-        "description": "Visualizes average viewership throughout a 24-hour cycle. Peak engagement occurs at 22:00."
+        "description": "Visualizes average viewership throughout a 24-hour cycle (UTC +7). Peak engagement occurs at 22:00."
+      },
+      {
+        "key": "q52",
+        "title": "Viewer engagement by hour UTC 0",
+        "image": "assets/insights/2026-02/graph_q52.png",
+        "description": "Visualizes average viewership throughout a 24-hour cycle (UTC 0). Peak engagement occurs at 15:00."
       },
       {
         "key": "q6",
@@ -165,7 +177,13 @@
         "key": "q5",
         "title": "Viewer engagement by hour",
         "image": "assets/insights/2026-03/graph_q5.png",
-        "description": "Visualizes average viewership throughout a 24-hour cycle. Peak engagement occurs at 22:00."
+        "description": "Visualizes average viewership throughout a 24-hour cycle (UTC +7). Peak engagement occurs at 22:00."
+      },
+      {
+        "key": "q52",
+        "title": "Viewer engagement by hour UTC 0",
+        "image": "assets/insights/2026-03/graph_q52.png",
+        "description": "Visualizes average viewership throughout a 24-hour cycle (UTC 0). Peak engagement occurs at 15:00."
       },
       {
         "key": "q6",
@@ -228,7 +246,13 @@
         "key": "q5",
         "title": "Viewer engagement by hour",
         "image": "assets/insights/2026-04/graph_q5.png",
-        "description": "Visualizes average viewership throughout a 24-hour cycle. Peak engagement occurs at 2:00."
+        "description": "Visualizes average viewership throughout a 24-hour cycle (UTC +7). Peak engagement occurs at 2:00."
+      },
+      {
+        "key": "q52",
+        "title": "Viewer engagement by hour UTC 0",
+        "image": "assets/insights/2026-04/graph_q52.png",
+        "description": "Visualizes average viewership throughout a 24-hour cycle (UTC 0). Peak engagement occurs at 19:00."
       },
       {
         "key": "q6",
@@ -291,7 +315,13 @@
         "key": "q5",
         "title": "Viewer engagement by hour",
         "image": "assets/insights/2026-05/graph_q5.png",
-        "description": "Visualizes average viewership throughout a 24-hour cycle. Peak engagement occurs at 3:00."
+        "description": "Visualizes average viewership throughout a 24-hour cycle (UTC +7). Peak engagement occurs at 3:00."
+      },
+      {
+        "key": "q52",
+        "title": "Viewer engagement by hour UTC 0",
+        "image": "assets/insights/2026-05/graph_q52.png",
+        "description": "Visualizes average viewership throughout a 24-hour cycle (UTC 0). Peak engagement occurs at 20:00."
       },
       {
         "key": "q6",
@@ -354,7 +384,13 @@
         "key": "q5",
         "title": "Viewer engagement by hour",
         "image": "assets/insights/2026-06/graph_q5.png",
-        "description": "Visualizes average viewership throughout a 24-hour cycle. Peak engagement occurs at 23:00."
+        "description": "Visualizes average viewership throughout a 24-hour cycle (UTC +7). Peak engagement occurs at 23:00."
+      },
+      {
+        "key": "q52",
+        "title": "Viewer engagement by hour UTC 0",
+        "image": "assets/insights/2026-06/graph_q52.png",
+        "description": "Visualizes average viewership throughout a 24-hour cycle (UTC 0). Peak engagement occurs at 16:00."
       },
       {
         "key": "q6",
@@ -417,7 +453,13 @@
         "key": "q5",
         "title": "Viewer engagement by hour",
         "image": "assets/insights/2026-07/graph_q5.png",
-        "description": "Visualizes average viewership throughout a 24-hour cycle. Peak engagement occurs at 6:00."
+        "description": "Visualizes average viewership throughout a 24-hour cycle (UTC +7). Peak engagement occurs at 6:00."
+      },
+      {
+        "key": "q52",
+        "title": "Viewer engagement by hour UTC 0",
+        "image": "assets/insights/2026-07/graph_q52.png",
+        "description": "Visualizes average viewership throughout a 24-hour cycle (UTC 0). Peak engagement occurs at 23:00."
       },
       {
         "key": "q6",

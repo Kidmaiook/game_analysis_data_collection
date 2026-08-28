@@ -170,3 +170,21 @@
   from { transform: scale(0.85); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+
+.gpu-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 14px;
+}
+@media (max-width: 700px) { .gpu-grid { grid-template-columns: 1fr; } }
+.gpu-card {
+  background: var(--panel);
+  border-radius: var(--radius);
+  padding: 8px;
+}
+.gpu-card h3 { font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--text-dim); margin-bottom: 10px; }
+.gpu-card-chart img { width: 100%; border-radius: 8px; display: block; background: #0d1315; }
+.gpu-row { display: flex; justify-content: space-between; font-size: 13.5px; padding: 5px 0; border-top: 1px solid var(--line); }
+.gpu-row:first-child { border-top: none; }
+
+

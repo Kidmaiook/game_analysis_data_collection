@@ -60,6 +60,9 @@
                 "images": [
                     {
                         "url": "assets/insights/GLOBAL/graph_q5.png"
+                    },
+                    {
+                        "url": "assets/insights/GLOBAL/graph_q52.png"
                     }
                 ],
                 "description": "Viewer engagement remains active throughout the day, but the highest level of engagement is consistently observed <b>between approximately 10:00 PM and 3:00 AM (UTC+7).</b> This suggests that this time period may be the most <b>suitable time for streaming on Twitch,</b> as it corresponds to a period of high viewer activity. \n\nOne possible explanation is the difference in time zones between regions. The period from <b>10:00 PM to 3:00 AM (UTC+7)</b> corresponds approximately to <b>3:00 PM to 8:00 PM</b> in UTC−1 to UTC+0, which overlaps with the afternoon and evening in those time zones. This period may therefore coincide with the time when a large portion of the Twitch audience and streamers are active. \n\nHowever, the data does not directly confirm that most viewers and streamers are located in UTC−1 to UTC+1. Therefore, this should be considered a <b>possible explanation for the observed pattern rather than a definitive conclusion.</b> Other factors, such as regional gaming habits, work and school schedules, and differences in audience behavior, may also contribute to the higher viewer engagement during this period."
@@ -99,6 +102,15 @@
                     }
                 ],
                 "description": "The <b>most influential factor affecting a game's rising trend on Twitch is its current viewer count.</b> Meanwhile, <b>current player</b> count can be considered a key indicator of a game's success and potential. Other factors may also contribute, but current viewers and current players show the strongest relevance to a game's Twitch performance."
+            },
+            {
+                "title": "The viewer count distribution",
+                "images": [
+                    {
+                        "url": "assets/insights/GLOBAL/graph_distribution_viewers.png"
+                    }
+                ],
+                "description": "Most streamers have between 0 and 10,000 viewers per stream, with the number of streamers gradually decreasing as the viewer count increases. The distribution is <b>right-Skewed</b>, indicating that most streamers attract a relatively small number of viewers, while a small number of streamers achieve exceptionally high viewer counts. These high-performing streamers form the long right tail of the distribution. \n\nAnother factor to consider is <b>the stream start and end time.</b> The collected data may include streams that had only recently started when the data was recorded. These streams may have had fewer viewers simply because they had not yet accumulated their typical audience. Therefore, the recording time should be considered as a potential limitation when interpreting viewer-per-stream results."
             }
         ]
     }

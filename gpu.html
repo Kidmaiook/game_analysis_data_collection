@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analytic</title>
+    <title>Graph</title>
     <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -20,11 +20,11 @@
         <nav>
             <ul>
                 <li><a href="index.html"><span class="icon">🏠</span><span class="text">Home</span></a></li>
-                <li><a href="gpu.html"><span class="icon">💽</span><span class="text">About GPU</span></a></li>
-                <li><a href="Graph.html"><span class="icon">📈</span><span class="text">Graph and explanation</span></a>
-                </li>
-                <li><a href="Analytic.html" class="active"><span class="icon">📓</span><span
-                            class="text">Analytic</span></a></li>
+                <li><a href="gpu.html" class="active"><span class="icon">💽</span><span class="text">About
+                            GPU</span></a></li>
+                <li><a href="Graph.html"><span class="icon">📈</span><span class="text">Graph and
+                            explanation</span></a></li>
+                <li><a href="Analytic.html"><span class="icon">📓</span><span class="text">Analytic</span></a></li>
                 <li><a href="TOU.html"><span class="icon">✅</span><span class="text">Term of use</span></a></li>
                 <li><a href="#"><span class="icon">⚙️</span><span class="text">Others</span></a></li>
             </ul>
@@ -34,21 +34,20 @@
     <!-- Main Content Area -->
     <main class="main-content" id="main-content">
         <header class="page-header">
-            <h1>Dashboard Analytics</h1>
-            <p>Deep analysis from the project started to Ended explain for each found.</p>
+            <h1>For GPU Only</h1>
+            <p>Dashboard that show just a cpu price and a bit of analytic</p>
         </header>
-
-        <!-- 3-Image Grid Cards Container -->
-        <div id="dashboard-grid" class="dashboard-grid multi-grid"></div>
-        <div id="dashboard-grid" class="dashboard-grid multi-grid"></div>
+        <div class="info-container">
+            <div class="gpu-grid" id="gpuGrid"></div>
+        </div>
+        <div class="info-container">
+            <h2>GPU INFO ANALYTIC</h2>
+            <p>The rise in GPU prices over time is driven by factors other than Steam gaming or Twitch streaming—factors that are virtually unrelated. GPU prices can surge due to trends, news, or other elements not included in our study.</p>
+        </div>
     </main>
-    <div id="image-modal" class="image-modal">
-        <span class="modal-close" id="modal-close">&times;</span>
-        <img class="modal-content-img" id="modal-img" alt="Zoomed Preview">
-        <div id="modal-caption" class="modal-caption"></div>
-    </div>
+
     <script src="js/slidebar.js"></script>
-    <script src="js/Deepana.js"></script>
+    <script src="js/gpu.js"></script>
 </body>
 
 </html>

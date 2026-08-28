@@ -15,6 +15,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+#setting color
 SITE_BG = '#0d1315'
 SITE_PANEL = '#141b1e'
 SITE_TEXT = '#ECEEE9'
@@ -25,6 +26,7 @@ SITE_TALLY = '#E1483A'
 SITE_AMBER = '#E3A23C'
 SITE_ACCENT = ['#63D9A0', '#E3A23C', '#E1483A', '#4FA8D8', '#B37FE0']
 
+#Graph theme
 THEME_RC = {
     'figure.facecolor': SITE_BG,
     'axes.facecolor': SITE_PANEL,
@@ -49,6 +51,7 @@ plt.rcParams.update(THEME_RC)
 def site_sequential_palette(n_colors):
     return sns.light_palette(SITE_CUE, n_colors=max(n_colors, 2) + 1, reverse=False)[1:]
 
+#setting path directory and sub folder
 BASE_DIR = 'data'
 RAW_DIR = os.path.join(BASE_DIR, 'raw')
 MONTHLY_DIR = os.path.join(BASE_DIR, 'monthly')
@@ -89,7 +92,7 @@ def _read_parquet_safe(path):
         warnings.warn(f"Skipping unreadable parquet file: {path} ({e})")
         return None
 
-
+#geting year and month from monthly
 def _month_from_path(path):
     parts = os.path.normpath(path).split(os.sep)
     for p in parts:
@@ -97,7 +100,7 @@ def _month_from_path(path):
             return p
     return None
 
-
+#read and load data parquet
 def load_data(category, tag_month=False):
     csv_files = glob.glob(os.path.join(RAW_DIR, category, '*.csv'))
     parquet_files = sorted(glob.glob(os.path.join(MONTHLY_DIR, '**', category, '*.parquet'), recursive=True))
@@ -128,7 +131,10 @@ def dedupe_game_info(game_info):
         df = df.sort_values('source_month')
     return df.drop_duplicates(subset='Game_Name', keep='last').reset_index(drop=True)
 
-def prepare_fact_table(df_steam, df_twitch):
+#now fact table
+def prepare_fact_table(df_steam, df_twitch): #fanction data load add here (1)
+
+    #prepare data
     df_steam = df_steam.copy()
     df_steam['date'] = pd.to_datetime(df_steam['snapshot_day']).dt.date
     steam_agg = df_steam.groupby(['date', 'game'])[['current_players', 'peak_players']].mean().reset_index()
@@ -141,7 +147,8 @@ def prepare_fact_table(df_steam, df_twitch):
         steam_agg, twitch_agg,
         left_on=['date', 'game'], right_on=['date', 'game_name'], how='inner'
     ).drop(columns=['game_name'])
-
+    
+    #making zscore
     for col in ['current_players', 'viewer_count']:
         std = fact_table[col].std()
         fact_table[f'{col}_zscore'] = zscore(fact_table[col]) if std > 0 else 0.0
@@ -217,12 +224,33 @@ def q2_trends(fact_table, label, out_dir):
     if fact_table.empty:
         return
     plt.figure(figsize=(14, 7))
-    data = fact_table.groupby('game')['potential_score'].mean().sort_values(ascending=False).head(10)
+
+    #mean
+    overall_mean = fact_table['potential_score'].mean()
+    data = fact_table.groupby('game')['potential_score'].mean().sort_values(ascending=False).head(20)
+
+    ax = data.plot(kind='barh', color=SITE_CUE)
+    ax.invert_yaxis()
+
+    #red line
+    plt.axvline(x=overall_mean, color='red', linestyle='--', linewidth=2, label=f'Mean ({overall_mean:.2f})')
+
+    #plot text on right side
+    plt.annotate(
+        f'Mean Score: {overall_mean:.2f}', 
+        xy=(0.98, 0.02), 
+        xycoords='axes fraction',
+        ha='right', 
+        va='bottom', 
+        color='red', 
+        fontweight='bold',
+        fontsize=12
+    )
+
     data.plot(kind='barh', color=SITE_CUE).invert_yaxis()
     plt.title(f'Q2 Top Games by Potential ({label})')
     plt.subplots_adjust(left=0.35)
     plt.savefig(os.path.join(out_dir, 'graph_q2.png')); plt.close()
-
     with open(os.path.join(out_dir, 'desc_q2.txt'), 'w') as f:
         top_game = data.index[0]
         desc = (f"Top game by potential score is '{top_game}'. This metric weighs viewer engagement "
@@ -275,7 +303,7 @@ def q4_daily_activity(df_time, label, out_dir):
     plt.figure(figsize=(10, 6))
     order = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
     data = df_time.groupby('day_of_week')['user_id'].nunique().reindex(order)
-    sns.barplot(x=data.index, y=data.values, hue=data.index, palette=site_sequential_palette(len(data)), legend=False)
+    sns.barplot(x=data.index, y=data.values, color=SITE_CUE, legend=False)
     plt.xticks(rotation=30)
     plt.title(f'Q4 Daily Activity ({label})')
     plt.xlabel('Day of the Week')
@@ -303,23 +331,66 @@ def q5_hourly_engagement(df_time, label, out_dir):
     plt.xticks(range(0, 24))
     plt.savefig(os.path.join(out_dir, 'graph_q5.png')); plt.close()
 
+
     with open(os.path.join(out_dir, 'desc_q5.txt'), 'w') as f:
-        desc = (f"Visualizes average viewership throughout a 24-hour cycle. Peak engagement occurs at "
+        desc = (f"Visualizes average viewership throughout a 24-hour cycle (UTC +7). Peak engagement occurs at "
                 f"{hv.idxmax()}:00.")
         f.write(desc)
     return hv, desc
+
+def q5_hourly_engagement_based_time(df_time, label, out_dir):
+
+    df_time['base_hour'] = (df_time['hour'] - 7) % 24
+    hv2 = df_time.groupby('base_hour')['viewer_count'].mean()
+    plt.figure(figsize=(10, 5))
+    plt.plot(hv2.index, hv2.values, marker='o', color=SITE_CUE)
+    plt.title(f'Q5 Hourly Engagement UTC 0 ({label})')
+    plt.xlabel('Hour of Day (24h)')
+    plt.ylabel('Average Viewer Count')
+    plt.xticks(range(0, 24))
+    plt.savefig(os.path.join(out_dir, 'graph_q52.png')); plt.close()
+
+    with open(os.path.join(out_dir, 'desc_q52.txt'), 'w') as f:
+        desc2 = (f"Visualizes average viewership throughout a 24-hour cycle (UTC 0). Peak engagement occurs at "
+                f"{hv2.idxmax()}:00.")
+        f.write(desc2)
+    return hv2, desc2
 
 
 def q6_peak_hour_dominance(df_time, hv, label, out_dir):
     if hv.empty:
         return None
-    pk = df_time[df_time['hour'] == hv.idxmax()].groupby('game_name')['viewer_count'].sum().sort_values(ascending=False).head(5)
-    if pk.empty:
+    grouped = df_time[df_time['hour'] == hv.idxmax()].groupby('game_name')['viewer_count'].sum().sort_values(ascending=False)
+    if grouped.empty:
         return None
+    
+    if len(grouped) > 10:
+        top10 = grouped.head(10)
+        others_sum = grouped.iloc[10:].sum()
+        
+        # Only add 'Others' if the sum is greater than 0
+        if others_sum > 0:
+            pk = pd.concat([top10, pd.Series({'Others': others_sum})])
+        else:
+            pk = top10
+    else:
+        pk = grouped
+
+    has_others = 'Others' in pk.index
+    num_main_slices = len(pk) - 1 if has_others else len(pk)
+
+    if len(SITE_ACCENT) >= num_main_slices:
+        main_colors = list(SITE_ACCENT[:num_main_slices])
+    else:
+        main_colors = list(sns.color_palette(palette="husl", n_colors=num_main_slices))
+
+    colors = main_colors + ['gray'] if has_others else main_colors
+
     fig, ax = plt.subplots(figsize=(10, 8))
     wedges, texts, autotexts = ax.pie(
         pk, autopct='%1.1f%%', startangle=90, counterclock=False,
-        colors=SITE_ACCENT[:len(pk)] if len(pk) <= len(SITE_ACCENT) else sns.color_palette("husl", len(pk)), pctdistance=0.85,
+        colors=colors,
+        pctdistance=0.85,
     )
     ax.legend(wedges, pk.index, title="Games", loc="center left", bbox_to_anchor=(1, 0, 0.5, 1))
     ax.axis('equal')
@@ -400,7 +471,7 @@ def weight_analysis(rf, subset, feats, label, out_dir):
     importances = pd.DataFrame({'Feature': feats, 'Importance': rf.feature_importances_}).sort_values(
         by='Importance', ascending=False)
     plt.figure(figsize=(10, 6))
-    sns.barplot(data=importances, x='Importance', y='Feature', hue='Feature', palette=site_sequential_palette(len(importances)), legend=False)
+    sns.barplot(data=importances, x='Importance', y='Feature', color=SITE_CUE, legend=False)
     plt.title(f'Q9: Dominant Success Indicators ({label})')
     plt.tight_layout()
     plt.savefig(os.path.join(out_dir, 'graph_q9.png')); plt.close()
@@ -421,7 +492,6 @@ def viewer_distribution(df_time, label, out_dir):
     ax1.hist(df_time['viewer_count'], bins=80, range=(0, 80000), color=SITE_CUE, alpha=0.55,
              edgecolor=SITE_BG, label='Record Count', bottom=0.1, log=True)
     ax1.set_ylabel('Number of Records (Log Scale)', color=SITE_CUE)
-    ax1.set_ylim(0.1, 1000)
 
     ax2 = ax1.twinx()
     sns.kdeplot(data=df_time['viewer_count'], color=SITE_TALLY, linewidth=3, ax=ax2, label='Trend Line')
@@ -690,6 +760,7 @@ INSIGHT_TITLES = {
     'q3': 'What drives viewership',
     'q4': 'Streamer activity by day',
     'q5': 'Viewer engagement by hour',
+    'q52': 'Viewer engagement by hour UTC 0',
     'q6': 'Peak-hour game market share',
     'q7': 'Viewer-per-streamer ratio by day',
     'q8': 'Predicting rising games',
@@ -699,7 +770,7 @@ INSIGHT_TITLES = {
 
 
 def collect_insight_charts(period, assets_period_dir, desc_q1, desc_q2, desc_q3_and_summary,
-                            desc_q4, desc_q5, desc_q6, desc_q7, desc_q8, desc_q9, desc_distribution):
+                            desc_q4, desc_q5, desc_q52, desc_q6, desc_q7, desc_q8, desc_q9, desc_distribution):
     desc_q3, model_summary = desc_q3_and_summary if desc_q3_and_summary else (None, None)
     entries_spec = [
         ('q1', desc_q1, None),
@@ -707,6 +778,7 @@ def collect_insight_charts(period, assets_period_dir, desc_q1, desc_q2, desc_q3_
         ('q3', desc_q3, model_summary),
         ('q4', desc_q4, None),
         ('q5', desc_q5, None),
+        ('q52', desc_q52, None),
         ('q6', desc_q6, None),
         ('q7', desc_q7, None),
         ('q8', desc_q8, None),
@@ -775,6 +847,7 @@ def run_analysis():
     d_q4 = q4_daily_activity(df_twitch_time, label, summary_dir)
 
     hv_g, d_q5 = q5_hourly_engagement(df_twitch_time, label, summary_dir)
+    hv_g2, d_q52 = q5_hourly_engagement_based_time(df_twitch_time, label, summary_dir)
     d_q6 = q6_peak_hour_dominance(df_twitch_time, hv_g, label, summary_dir)
     d_q7 = q7_efficiency_ratio(df_twitch_time, label, summary_dir)
 
@@ -783,7 +856,7 @@ def run_analysis():
     d_q9 = weight_analysis(rf, subset, feats, label, summary_dir)
 
     charts_by_period = {
-        'GLOBAL': collect_insight_charts('GLOBAL', summary_dir, d_q1, d_q2, d_q3, d_q4, d_q5,
+        'GLOBAL': collect_insight_charts('GLOBAL', summary_dir, d_q1, d_q2, d_q3, d_q4, d_q5, d_q52,
                                           d_q6, d_q7, d_q8, d_q9, d_dist)
     }
 
@@ -806,6 +879,7 @@ def run_analysis():
         md_q4 = q4_daily_activity(m_time, month, month_dir)
 
         hv, md_q5 = q5_hourly_engagement(m_time, month, month_dir)
+        hv2, md_q52 = q5_hourly_engagement_based_time(m_time, month, month_dir)
         md_q6 = q6_peak_hour_dominance(m_time, hv, month, month_dir)
         md_q7 = q7_efficiency_ratio(m_time, month, month_dir)
         md_dist = viewer_distribution(m_time, month, month_dir)
@@ -814,7 +888,7 @@ def run_analysis():
 
         month_assets_dir_rel = month
         charts_by_period[month] = collect_insight_charts(month_assets_dir_rel, month_dir, md_q1, md_q2, md_q3,
-                                                           md_q4, md_q5, md_q6, md_q7, md_q8, md_q9, md_dist)
+                                                           md_q4, md_q5, md_q52, md_q6, md_q7, md_q8, md_q9, md_dist)
 
     print("Publishing insight charts to the website's assets folder...")
     insights_assets_dir = os.path.join(ASSETS_DIR, 'insights')
