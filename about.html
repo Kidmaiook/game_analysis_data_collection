@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — Green Room</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+  <div class="topbar">
+    <div class="brand"><span class="brand-dot"></span> Green Room</div>
+    <nav class="topnav">
+      <a href="index.html">Overview</a>
+      <a href="games.html">Call Sheet</a>
+      <a href="schedule.html">Signal Board</a>
+      <a href="insights.html">Deep Analysis</a>
+      <a href="about.html">About Us</a>
+    </nav>
+    <div class="topbar-meta mono" id="topbarMeta">loading&hellip;</div>
+    <div class="zoom-control" id="siteZoomControl"></div>
+    <div class="theme-toggle-wrap" id="themeToggleControl"></div>
+  </div>
+
+  <section class="section" style="border-top:none; padding-top:36px;">
+    <div class="section-head">
+      <div>
+        <h2>About Us</h2>
+        <p>We built this platform for our graduation project, driven by data analytics and our passion for gaming content strategy.</p>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         EDIT-ME: fill in your own content below.
+         โอมอยากเพิ่มอะไร เพิ่มได้เลย
+    ============================================================ -->
+
+    <div class="about-content" id="aboutContent">
+      <p>
+        <strong>Green Room</strong> (Data-Driven Gaming Trend Analysis) is a senior graduation project developed at the College of Computing, Prince of Songkla University (Phuket Campus). 
+      </p>
+      <p>
+        As gamers and creators ourselves, we noticed a common challenge: many independent content creators rely on intuition or short-lived hype when picking games to stream. This often leads to wasted time and low audience engagement. Green Room bridges this "information asymmetry" by analyzing real-time metrics from Steam and Twitch to help creators make data-driven decisions.
+      </p>
+
+      <h3>Project Objectives</h3>
+      <ul>
+        <li><strong>Steam vs. Twitch Correlation:</strong> Investigate whether player counts on Steam have a statistically significant relationship with viewer counts on Twitch.</li>
+        <li><strong>Data-Driven Dashboard:</strong> Develop an interactive analytics dashboard to evaluate high-potential games and reduce the risk of choosing games purely by instinct.</li>
+        <li><strong>Key Performance Indicators:</strong> Identify and weight the key variables that drive a game's reach and success on streaming platforms.</li>
+      </ul>
+
+      <h3>Data Sources & Technology</h3>
+      <p>
+        Our system ingests, cleans, and models data from multiple sources including the Steam API, Twitch API, SteamSpy, SteamCharts, and SullyGnome using automated batch ETL pipelines.
+      </p>
+
+      <h3>The Team</h3>
+      <ul>
+        <li><strong>Nattaphop Kao-ian</strong> (6630611026) — Data Searching, Visualization, Coding & Hosting, EDA</li>
+        <li><strong>Kasidit Kasempitakpong</strong> (6630611059) — Data Collection, Cleaning, Data Modeling, Automation</li>
+      </ul>
+
+      <h3>Project Advisor</h3>
+      <p>
+        <strong>Asst. Prof. Dr. Panisa Treepong</strong> — College of Computing, Prince of Songkla University
+      </p>
+    </div>
+    <!-- ============================================================
+         EDIT-ME end
+    ============================================================ -->
+
+  </section>
+
+  <footer>
+    <p class="copyright">&copy; PSU Phuket</p>
+  </footer>
+</div>
+
+<script src="js/common.js"></script>
+<script>DataStore.data().then(renderLatestUpdate);</script>
+</body>
+</html>

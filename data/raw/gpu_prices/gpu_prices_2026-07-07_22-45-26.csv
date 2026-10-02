@@ -1,0 +1,11 @@
+snapshot_day,snapshot_time,Daysnap,gpu_name,vram,price_usd
+2026-07-07,22-45-26,Tuesday,Arc A580,8GB,199
+2026-07-07,22-45-26,Tuesday,Arc B580,12GB,291
+2026-07-07,22-45-26,Tuesday,Arc B570,10GB,259
+2026-07-07,22-45-26,Tuesday,Radeon RX 9070,16GB,579
+2026-07-07,22-45-26,Tuesday,GeForce RTX 5060 Ti,8GB,359
+2026-07-07,22-45-26,Tuesday,Radeon RX 9070 XT,16GB,689
+2026-07-07,22-45-26,Tuesday,Radeon RX 7700 XT,12GB,409
+2026-07-07,22-45-26,Tuesday,Arc A750,8GB,307
+2026-07-07,22-45-26,Tuesday,Radeon RX 9060 XT,8GB,399
+2026-07-07,22-45-26,Tuesday,GeForce RTX 5060,8GB,339

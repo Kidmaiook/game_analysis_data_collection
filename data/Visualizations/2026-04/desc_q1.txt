@@ -1,0 +1,1 @@
+Steam player counts and Twitch viewer counts have a moderate relationship (r = 0.48): the two tend to rise together. Across 926 matched game/day snapshots, that relationship is a real pattern, not noise (p = 0.0000). The link is loose enough that a game can be big on one platform and modest on the other — treat them as complementary signals, not substitutes.

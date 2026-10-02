@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deep Analysis — Green Room</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+  <div class="topbar">
+    <div class="brand"><span class="brand-dot"></span> Green Room</div>
+    <nav class="topnav">
+      <a href="index.html">Overview</a>
+      <a href="games.html">Call Sheet</a>
+      <a href="schedule.html">Signal Board</a>
+      <a href="insights.html">Deep Analysis</a>
+      <a href="about.html">About Us</a>
+    </nav>
+    <div class="topbar-meta mono" id="topbarMeta">loading&hellip;</div>
+    <div class="zoom-control" id="siteZoomControl"></div>
+    <div class="theme-toggle-wrap" id="themeToggleControl"></div>
+  </div>
+
+  <section class="section" style="border-top:none; padding-top:36px;">
+    <div class="section-head">
+      <div>
+        <h2>Deep analysis</h2>
+        <p>The statistical work behind the recommendations: how strongly Steam player counts and Twitch viewership
+          actually correlate, what a Random Forest model says drives viewership, and whether the scoring logic
+          used elsewhere on this site actually predicts which games are about to rise. Generated straight from
+          <code>EDA.py</code> — global totals, plus a breakdown per month. Click any game (a point, a bar, or a
+          stacked segment/legend entry) to highlight that game across every chart on this page; click it again,
+          or the chip that appears, to clear it.</p>
+      </div>
+    </div>
+
+    <div class="period-controls" id="periodControls">
+      <div class="period-select-group">
+        <label for="yearSelect">Year</label>
+        <select id="yearSelect"></select>
+      </div>
+      <div class="period-select-group">
+        <label for="monthSelect">Month</label>
+        <select id="monthSelect"></select>
+      </div>
+      <div class="period-select-group">
+        <label for="weekSelect">Week</label>
+        <select id="weekSelect"><option value="ALL">All weeks</option></select>
+      </div>
+      <div class="period-select-group">
+        <label for="daySelect">Day</label>
+        <select id="daySelect"><option value="ALL">All days</option></select>
+      </div>
+      <div class="period-current mono" id="periodCurrent"></div>
+    </div>
+    <div class="game-filter-chip" id="gameFilterChip" style="display:none;"></div>
+    <p class="filter-hint">Week and Day only apply within a specific month &mdash; pick a Month first. Weeks are
+      calendar weeks within that month (Week 1 = days 1&ndash;7, and so on). Leave Week on "All weeks" and the Day
+      dropdown lists every day of the month; pick a Week and Day narrows to just that week's days. Some charts
+      (like the feature-importance model) need more data than a single day gives and won't show for that
+      granularity &mdash; try Week or the whole Month instead.</p>
+    <div id="insightBlocksPre"></div>
+
+    <div class="timing-section">
+      <div class="timing-head">
+        <h3>Timing signals</h3>
+        <p>Streamer activity, viewer engagement, game market share and the viewer-per-streamer ratio, all broken
+          down by day/hour &mdash; filterable by clock reference and by broadcast region so you can see whether the
+          pattern holds for a specific audience, not just the global average. Two of these charts also have a view
+          toggle for a second dimension (which games make up the totals) alongside the simple view.</p>
+      </div>
+      <div class="period-controls">
+        <div class="period-select-group">
+          <label for="timingTimezoneSelect">Timezone</label>
+          <select id="timingTimezoneSelect">
+            <option value="standardized">Standardized (UTC)</option>
+            <option value="time_of_day">Local time-of-day</option>
+          </select>
+        </div>
+        <div class="period-select-group">
+          <label for="timingCountrySelect">Region</label>
+          <select id="timingCountrySelect"></select>
+        </div>
+      </div>
+      <p class="filter-hint" id="timingRegionNote">Region is estimated from each stream's broadcast language, not
+        verified viewer location &mdash; treat it as a rough proxy, not a precise geography.</p>
+      <div class="timing-charts" id="timingCharts"></div>
+    </div>
+
+    <div id="insightBlocksPost"></div>
+  </section>
+
+  <footer>
+    <p>&copy; PSU Phuket</p>
+  </footer>
+</div>
+
+<script src="js/common.js"></script>
+<script src="js/insights.js"></script>
+</body>
+</html>
