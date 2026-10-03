@@ -1,4 +1,4 @@
-name: Sync Multiple Folders from Main to Web
+name: Sync and Run python from main to web
 
 on:
   workflow_dispatch:
@@ -9,14 +9,14 @@ on:
       - 'data'
 
 jobs:
-  sync-to-web:
+  sync-and-run:
     runs-on: ubuntu-latest
     permissions:
       contents: write
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
@@ -25,15 +25,30 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Checkout Web Branch and Sync Folders
+      - name: Checkout Web and Sync Folders
         run: |
           git checkout Web_secend_edition
           git checkout main -- data
           
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Install Dependencies
+        run: |
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: run python
+        run: |
+          python EDA.py
+      
+      - name: Commit and Push All Changes
+        run: |
           if [ -n "$(git status --porcelain)" ]; then
-            git add data
-            git commit -m "chore: auto-sync multiple folders from main branch [skip ci]"
+            git add .
+            git commit -m "Data sync and update"
             git push origin Web_secend_edition
           else
             echo "No changes to commit."
           fi
+        
