@@ -27,13 +27,13 @@ jobs:
 
       - name: Checkout Web Branch and Sync Folders
         run: |
-          git checkout web
+          git checkout Web_secend_edition
           git checkout main -- data
           
           if [ -n "$(git status --porcelain)" ]; then
             git add data
             git commit -m "chore: auto-sync multiple folders from main branch [skip ci]"
-            git push origin web
+            git push origin Web_secend_edition
           else
             echo "No changes to commit."
           fi
