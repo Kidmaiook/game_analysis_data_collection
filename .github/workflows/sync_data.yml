@@ -28,6 +28,7 @@ jobs:
       - name: Checkout Web and Sync Folders
         run: |
           git checkout Web_secend_edition
+          git rm -rf data || true
           git checkout main -- data
           
       - name: Set up Python
