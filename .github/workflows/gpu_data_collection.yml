@@ -3,7 +3,7 @@ name: Schedule_gpu_data_collect
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 12 * * *"
+    - cron: "25 4 * * *"
 
 jobs:
   my_job:
