@@ -34,7 +34,10 @@
     </div>
 
     <div class="filters">
-      <input type="text" id="searchInput" placeholder="Search games&hellip; separate with spaces to match any (e.g. dota valorant)">
+      <div class="game-search-wrap">
+        <input type="text" id="searchInput" autocomplete="off" aria-autocomplete="list" aria-controls="gameSearchSuggestions" placeholder="Search games… start typing a title">
+        <div id="gameSearchSuggestions" class="game-search-suggestions" role="listbox" hidden></div>
+      </div>
       <div class="checklist-dropdown" id="genreDropdown">
         <button type="button" class="checklist-toggle" id="genreToggle">
           <span id="genreToggleLabel">All genres</span>

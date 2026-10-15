@@ -972,7 +972,12 @@ def build_gpu_market(gpu_df, out_dir):
     coalesced = pd.Series(np.nan, index=df.index)
     for col in present_variants:
         coalesced = coalesced.fillna(df[col])
-    df['price_usd'] = coalesced
+    # Source files sometimes store prices as strings (e.g. '$1,299' or
+    # '1,299.00'). Normalize to numeric before comparisons/grouping.
+    df['price_usd'] = pd.to_numeric(
+        coalesced.astype(str).str.replace(r'[^0-9.\-]', '', regex=True),
+        errors='coerce'
+    )
     price_col = 'price_usd'
     name_col = 'gpu_name' if 'gpu_name' in df.columns else 'model'
     if name_col not in df.columns:

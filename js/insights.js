@@ -851,7 +851,8 @@ function svgStackedBarChart(stack, gameOrder, opts = {}) {
 
 function svgHistogramChart(bins, counts, opts = {}) {
   const width = 560, height = 230;
-  const padL = 50, padR = 14, padT = 14, padB = 28;
+  // Reserve extra space on the right so the final x-axis tick remains fully visible.
+  const padL = 50, padR = 36, padT = 14, padB = 28;
   const innerW = width - padL - padR, innerH = height - padT - padB;
   const scaleMode = opts.scale || 'linear';
   const maxC = Math.max(1, ...counts);
@@ -871,7 +872,8 @@ function svgHistogramChart(bins, counts, opts = {}) {
   let xt = '';
   [0, 0.25, 0.5, 0.75, 1].forEach(f => {
     const val = Math.round(bins[0] + (bins[bins.length - 1] - bins[0]) * f);
-    xt += `<text x="${(padL + innerW * f).toFixed(1)}" y="${height - padB + 16}" text-anchor="middle" class="chart-axis-label">${fmt(val)}</text>`;
+    const anchor = f === 0 ? 'start' : (f === 1 ? 'end' : 'middle');
+    xt += `<text x="${(padL + innerW * f).toFixed(1)}" y="${height - padB + 16}" text-anchor="${anchor}" class="chart-axis-label">${fmt(val)}</text>`;
   });
   let grid = '';
   if (scaleMode === 'log10') {

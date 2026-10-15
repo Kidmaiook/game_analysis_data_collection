@@ -152,7 +152,44 @@ function closeModal() {
 }
 
 function bindControls() {
-  document.getElementById('searchInput').addEventListener('input', e => { currentSearch = e.target.value; renderGames(); });
+  const searchInput = document.getElementById('searchInput');
+  const suggestions = document.getElementById('gameSearchSuggestions');
+  function updateGameSuggestions() {
+    const query = searchInput.value.trim().toLowerCase();
+    if (!query) { suggestions.hidden = true; suggestions.innerHTML = ''; return; }
+    const matches = DATA.games
+      .filter(g => g.game.toLowerCase().includes(query))
+      .sort((a, b) => {
+        const ap = a.game.toLowerCase().startsWith(query) ? 0 : 1;
+        const bp = b.game.toLowerCase().startsWith(query) ? 0 : 1;
+        return ap - bp || a.game.localeCompare(b.game);
+      }).slice(0, 8);
+    suggestions.innerHTML = matches.map(g =>
+      `<button type="button" class="game-search-option" role="option" data-game="${encodeURIComponent(g.game)}">${g.game.replace(/[&<>"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]))}</button>`
+    ).join('');
+    suggestions.hidden = matches.length === 0;
+    suggestions.querySelectorAll('.game-search-option').forEach(btn => btn.addEventListener('click', () => {
+      searchInput.value = decodeURIComponent(btn.dataset.game);
+      currentSearch = searchInput.value;
+      suggestions.hidden = true;
+      renderGames();
+    }));
+  }
+  searchInput.addEventListener('input', e => {
+    currentSearch = e.target.value;
+    updateGameSuggestions();
+    renderGames();
+  });
+  searchInput.addEventListener('keydown', e => {
+    if (e.key === 'Escape') suggestions.hidden = true;
+    if (e.key === 'Enter' && !suggestions.hidden) {
+      const first = suggestions.querySelector('.game-search-option');
+      if (first) { e.preventDefault(); first.click(); }
+    }
+  });
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.game-search-wrap')) suggestions.hidden = true;
+  });
   document.getElementById('priceSelect').addEventListener('change', e => { currentPrice = e.target.value; renderGames(); });
 
   const dropdown = document.getElementById('genreDropdown');

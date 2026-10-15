@@ -1,12 +1,12 @@
 const DAY_ORDER = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 const DAY_SHORT = { Monday: 'Mon', Tuesday: 'Tue', Wednesday: 'Wed', Thursday: 'Thu', Friday: 'Fri', Saturday: 'Sat', Sunday: 'Sun' };
 const HEAT_COLORS = [
-  'rgba(var(--cue-rgb), 0.08)',
-  'rgba(var(--cue-rgb), 0.24)',
-  'rgba(var(--cue-rgb), 0.42)',
-  'rgba(var(--cue-rgb), 0.62)',
-  'rgba(var(--cue-rgb), 0.82)',
-  'var(--cue)',
+  'rgba(99, 217, 160, 0.08)',
+  'rgba(99, 217, 160, 0.24)',
+  'rgba(99, 217, 160, 0.42)',
+  'rgba(99, 217, 160, 0.62)',
+  'rgba(99, 217, 160, 0.82)',
+  '#63D9A0',
 ];
 
 function fmt(n) {
@@ -189,28 +189,11 @@ function currentSiteZoom() {
   return ZOOM_STEPS.includes(stored) ? stored : 1;
 }
 
-let _topbarShell = null;
-
 function ensureZoomRoot() {
   if (_zoomRoot) return _zoomRoot;
-
-  // Pull the navbar out of the scaled area entirely so it stays a fixed,
-  // readable size and doesn't drift/distort at different zoom levels --
-  // only the page's own content scales, not the navigation chrome. It
-  // keeps the exact same look by reusing the .wrap centering rules.
-  const topbarEl = document.querySelector('.topbar');
-  let shell = null;
-  if (topbarEl) {
-    shell = document.createElement('div');
-    shell.id = 'topbarShell';
-    shell.className = 'wrap';
-    shell.appendChild(topbarEl);
-  }
-
   const root = document.createElement('div');
   root.id = 'zoomRoot';
   while (document.body.firstChild) root.appendChild(document.body.firstChild);
-  if (shell) document.body.appendChild(shell);
   document.body.appendChild(root);
   // Lock zoomRoot to a fixed pixel width up front. Left as the default
   // "auto" (fill your container), it inherits from <body> -- and since
@@ -222,25 +205,6 @@ function ensureZoomRoot() {
   // (different chart, different dropdown) and doesn't have this coupling.
   root.style.width = `${window.innerWidth}px`;
   _zoomRoot = root;
-  _topbarShell = shell;
-  if (shell) {
-    // position:fixed anchors to the real browser viewport regardless of
-    // body's size, which matters here because compensateZoomLayout()
-    // deliberately makes body wider/taller than the viewport to hold the
-    // scaled content -- a normal-flow element would center itself against
-    // that inflated body width, not the true viewport, and visibly drift.
-    // left:0 + right:0 (both, not width:100%) is what's needed for the
-    // .wrap class's margin:auto to actually center it within the viewport
-    // for a position:fixed element -- omitting either one makes the UA
-    // fall back to flush-left instead of centering.
-    shell.style.position = 'fixed';
-    shell.style.top = '0';
-    shell.style.left = '0';
-    shell.style.right = '0';
-    shell.style.zIndex = '100';
-    shell.style.background = 'var(--ink)';
-    root.style.marginTop = `${shell.offsetHeight}px`;
-  }
   // Deliberately no ResizeObserver here: reacting to every incidental
   // content-height change (a chart re-rendering, a web font finishing
   // load) by resizing body mid-session is what was silently resetting
@@ -248,7 +212,6 @@ function ensureZoomRoot() {
   // explicit zoom change (applySiteZoom) and on real window resizes only.
   window.addEventListener('resize', () => {
     root.style.width = `${window.innerWidth}px`;
-    if (shell) root.style.marginTop = `${shell.offsetHeight}px`;
     compensateZoomLayout();
   });
   return root;
@@ -258,9 +221,8 @@ function compensateZoomLayout(level) {
   if (!_zoomRoot) return;
   const lvl = level != null ? level : currentSiteZoom();
   const naturalWidth = parseFloat(_zoomRoot.style.width) || _zoomRoot.scrollWidth;
-  const topbarHeight = _topbarShell ? _topbarShell.offsetHeight : 0;
   document.body.style.width = `${naturalWidth * lvl}px`;
-  document.body.style.height = `${topbarHeight + _zoomRoot.scrollHeight * lvl}px`;
+  document.body.style.height = `${_zoomRoot.scrollHeight * lvl}px`;
 }
 
 function applySiteZoom(level) {
@@ -305,7 +267,7 @@ function initSiteZoomControl() {
   const holder = document.getElementById('siteZoomControl');
   if (!holder) return;
   holder.innerHTML = `
-    <button type="button" class="zoom-btn zoom-btn-a" id="siteZoomOut" title="Zoom out" aria-label="Zoom out">A</button>
+    <button type="button" class="zoom-btn zoom-btn-a" id="siteZoomOut" title="Zoom out" aria-label="Zoom out">a</button>
     <span class="zoom-label mono" id="siteZoomLabel">100%</span>
     <button type="button" class="zoom-btn zoom-btn-a" id="siteZoomIn" title="Zoom in" aria-label="Zoom in">A</button>
     <button type="button" class="zoom-btn" id="siteZoomReset" title="Reset zoom" aria-label="Reset zoom">&#8635;</button>
@@ -340,13 +302,9 @@ function initGraphZoom(hostEl, wrapEl) {
   const controls = document.createElement('div');
   controls.className = 'graph-zoom-controls';
   controls.innerHTML = `
-    <button type="button" class="zoom-btn zoom-btn-icon" data-dir="-1" title="Zoom out" aria-label="Zoom out">
-      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="10" cy="10" r="6"/><line x1="14.5" y1="14.5" x2="20" y2="20"/><line x1="7" y1="10" x2="13" y2="10"/></svg>
-    </button>
-    <button type="button" class="zoom-btn zoom-btn-icon" data-dir="1" title="Zoom in" aria-label="Zoom in">
-      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="10" cy="10" r="6"/><line x1="14.5" y1="14.5" x2="20" y2="20"/><line x1="7" y1="10" x2="13" y2="10"/><line x1="10" y1="7" x2="10" y2="13"/></svg>
-    </button>
-    <button type="button" class="zoom-btn zoom-btn-reset" data-reset="1" title="Reset size" aria-label="Reset size">Reset</button>
+    <button type="button" class="zoom-btn zoom-btn-a" data-dir="-1" title="Zoom out" aria-label="Zoom out">a</button>
+    <button type="button" class="zoom-btn zoom-btn-a" data-dir="1" title="Zoom in" aria-label="Zoom in">A</button>
+    <button type="button" class="zoom-btn" data-reset="1" title="Reset size" aria-label="Reset size">&#8635;</button>
   `;
   hostEl.style.position = hostEl.style.position || 'relative';
   hostEl.appendChild(controls);
