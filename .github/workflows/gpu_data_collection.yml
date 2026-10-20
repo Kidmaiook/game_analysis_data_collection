@@ -35,7 +35,9 @@ jobs:
           seleniumbase install chromedriver
 
       - name: Run GPU collector
-        run: python pipeline_code/Scripts/GPU.py
+        uses: coactions/setup-xvfb@v1
+        with:
+             run: python pipeline_code/Scripts/GPU.py
 
       - name: Commit dataset
         run: |
