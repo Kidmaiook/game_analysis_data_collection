@@ -708,7 +708,9 @@ function svgScatterChart(points) {
   for (let g = 0; g <= 2; g++) {
     const gx = padL + (innerW * g) / 2;
     const val = Math.round((maxX * g) / 2);
-    xticks += `<text x="${gx.toFixed(1)}" y="${height - padB + 16}" text-anchor="middle" class="chart-axis-label">${fmt(val)}</text>`;
+    // Right-align the last tick to the plot edge so a long number isn't clipped.
+    const anchor = g === 2 ? 'end' : 'middle';
+    xticks += `<text x="${(g === 2 ? width - 4 : gx).toFixed(1)}" y="${height - padB + 16}" text-anchor="${anchor}" class="chart-axis-label">${fmt(val)}</text>`;
   }
   const dots = points.map(p => {
     const tip = `<strong>${escapeHtml(p.game)}</strong><br>Steam players: ${fmt(Math.round(p.x))}<br>Twitch viewers: ${fmt(Math.round(p.y))}`;
@@ -721,11 +723,15 @@ function svgScatterChart(points) {
 }
 
 function svgHorizontalBarChart(items, opts = {}) {
-  const rowH = 27, padL = 132, padR = 56, padT = 8, padB = 8;
+  const rowH = 27, padL = 132, padT = 8, padB = 8;
   const width = 560;
   const height = padT + padB + items.length * rowH;
-  const innerW = width - padL - padR;
   const barItems = items.filter(it => !it.divider);
+  // Reserve enough room on the right for the longest value label (~6.4px per
+  // character at the 10px mono axis font) so big numbers are never clipped.
+  const longestLabel = Math.max(0, ...barItems.map(it => String(opts.format ? opts.format(it.value) : fmt(it.value)).replace(/<[^>]*>/g, '').length));
+  const padR = Math.max(56, Math.ceil(longestLabel * 6.6) + 16);
+  const innerW = width - padL - padR;
   const hasPos = barItems.some(it => it.value > 0);
   const hasNeg = barItems.some(it => it.value < 0);
   const diverging = hasPos && hasNeg;
@@ -754,7 +760,7 @@ function svgHorizontalBarChart(items, opts = {}) {
     const anchor = it.value >= 0 ? 'start' : 'end';
     bars += `<text x="${labelX.toFixed(1)}" y="${(y + rowH / 2 + 4).toFixed(1)}" text-anchor="${anchor}" class="chart-axis-label">${formatted}</text>`;
   });
-  return `<svg viewBox="0 0 ${width} ${height}" class="mini-chart" preserveAspectRatio="xMidYMid meet">${bars}</svg>`;
+  return `<svg viewBox="0 0 ${width} ${height}" class="mini-chart" preserveAspectRatio="xMidYMid meet" style="overflow:visible">${bars}</svg>`;
 }
 
 const DONUT_PALETTE = ['#63D9A0', '#E3A23C', '#E1483A', '#4FA8D8', '#B37FE0', '#5B6B6D'];

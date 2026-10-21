@@ -20,8 +20,18 @@ function scoreColor(score) {
   return 'var(--tally)';
 }
 
+const HEAT_COLORS_LIGHT = [
+  'rgba(46, 125, 209, 0.10)',
+  'rgba(46, 125, 209, 0.25)',
+  'rgba(46, 125, 209, 0.42)',
+  'rgba(46, 125, 209, 0.62)',
+  'rgba(46, 125, 209, 0.82)',
+  '#1F63B0',
+];
+
 function heatColor(level) {
-  return HEAT_COLORS[Math.max(0, Math.min(5, level))];
+  const light = document.documentElement.getAttribute('data-theme') === 'light';
+  return (light ? HEAT_COLORS_LIGHT : HEAT_COLORS)[Math.max(0, Math.min(5, level))];
 }
 
 const DataStore = (() => {

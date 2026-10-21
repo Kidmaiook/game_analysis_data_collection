@@ -40,9 +40,17 @@ function updateGenreToggleLabel() {
 
 /* Splits a search string on whitespace into separate OR terms, e.g.
    "dota valorant" -> ["dota", "valorant"], so several games can be
-   compared side by side at once. */
+   compared side by side at once. Full game names picked from the dropdown
+   are kept together as one phrase (e.g. "Dota 2") instead of being split. */
+let pickedGames = [];
 function searchTerms() {
-  return currentSearch.trim().toLowerCase().split(/\s+/).filter(Boolean);
+  let text = currentSearch.toLowerCase();
+  const terms = [];
+  pickedGames.slice().sort((a, b) => b.length - a.length).forEach(name => {
+    const n = name.toLowerCase();
+    if (text.includes(n)) { terms.push(n); text = text.replace(n, ' '); }
+  });
+  return terms.concat(text.trim().split(/\s+/).filter(Boolean));
 }
 
 function filteredSortedGames() {
@@ -142,7 +150,7 @@ function renderModalStats() {
   document.getElementById('modalDayBoard').innerHTML = DAY_ORDER.map(d => {
     const v = (byDay && byDay[d]) || 0;
     const level = Math.min(5, Math.ceil((v / maxDay) * 5));
-    return `<div class="mini-cell" style="background:${heatColor(level)}"><span class="d">${DAY_SHORT[d]}</span>${v ? Math.round(v).toLocaleString() : '—'}</div>`;
+    return `<div class="mini-cell" data-level="${level}" style="background:${heatColor(level)}"><span class="d">${DAY_SHORT[d]}</span>${v ? Math.round(v).toLocaleString() : '—'}</div>`;
   }).join('');
 }
 
@@ -154,29 +162,45 @@ function closeModal() {
 function bindControls() {
   const searchInput = document.getElementById('searchInput');
   const suggestions = document.getElementById('gameSearchSuggestions');
+  const escHtml = t => t.replace(/[&<>"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
+  /* The dropdown works on the word currently being typed: every time a space
+     is typed, the dropdown starts over for the next word. Choosing a game
+     replaces just that word and leaves a trailing space so the next one can
+     be typed straight away. */
+  function currentToken() {
+    const v = searchInput.value;
+    const m = v.match(/(\S*)$/);
+    return { token: m ? m[1] : '', start: m ? v.length - m[1].length : v.length };
+  }
   function updateGameSuggestions() {
-    const query = searchInput.value.trim().toLowerCase();
+    const { token } = currentToken();
+    const query = token.toLowerCase();
     if (!query) { suggestions.hidden = true; suggestions.innerHTML = ''; return; }
     const matches = DATA.games
       .filter(g => g.game.toLowerCase().includes(query))
       .sort((a, b) => {
-        const ap = a.game.toLowerCase().startsWith(query) ? 0 : 1;
-        const bp = b.game.toLowerCase().startsWith(query) ? 0 : 1;
-        return ap - bp || a.game.localeCompare(b.game);
+        const rank = g => { const n = g.game.toLowerCase();
+          return n.startsWith(query) ? 0 : n.split(/\s+/).some(w => w.startsWith(query)) ? 1 : 2; };
+        return rank(a) - rank(b) || a.game.localeCompare(b.game);
       }).slice(0, 8);
     suggestions.innerHTML = matches.map(g =>
-      `<button type="button" class="game-search-option" role="option" data-game="${encodeURIComponent(g.game)}">${g.game.replace(/[&<>"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]))}</button>`
+      `<button type="button" class="game-search-option" role="option" data-game="${encodeURIComponent(g.game)}">${escHtml(g.game)}</button>`
     ).join('');
     suggestions.hidden = matches.length === 0;
     suggestions.querySelectorAll('.game-search-option').forEach(btn => btn.addEventListener('click', () => {
-      searchInput.value = decodeURIComponent(btn.dataset.game);
+      const name = decodeURIComponent(btn.dataset.game);
+      const { start } = currentToken();
+      searchInput.value = searchInput.value.slice(0, start) + name + ' ';
+      if (!pickedGames.includes(name)) pickedGames.push(name);
       currentSearch = searchInput.value;
       suggestions.hidden = true;
+      searchInput.focus();
       renderGames();
     }));
   }
   searchInput.addEventListener('input', e => {
     currentSearch = e.target.value;
+    pickedGames = pickedGames.filter(n => currentSearch.toLowerCase().includes(n.toLowerCase()));
     updateGameSuggestions();
     renderGames();
   });
