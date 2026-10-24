@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-23T15:28:21.833349+00:00",
-  "last_updated_display": "23/10/2026",
+  "generated_at": "2026-10-24T14:08:23.184894+00:00",
+  "last_updated_display": "24/10/2026",
   "meta": {
     "months_covered": [
       "2026-02",
@@ -75809,7 +75809,7 @@
       "2026-07": 553.41,
       "2026-08": 876.92,
       "2026-09": 849.62,
-      "2026-10": 3156.14
+      "2026-10": 377.73
     },
     "avg_price_by_year": {
       "2026": {
@@ -75821,7 +75821,7 @@
         "2026-07": 553.41,
         "2026-08": 876.92,
         "2026-09": 849.62,
-        "2026-10": 3156.14
+        "2026-10": 377.73
       }
     },
     "cheapest_models": [
@@ -75849,23 +75849,23 @@
     "priciest_models": [
       {
         "model": "GeForce RTX 5090",
-        "avg_price": 4679.14
-      },
-      {
-        "model": "GeForce RTX 5080",
-        "avg_price": 4039.84
-      },
-      {
-        "model": "GeForce RTX 5070 Ti",
-        "avg_price": 2631.75
+        "avg_price": 4611.24
       },
       {
         "model": "GeForce RTX 3090",
         "avg_price": 1899.0
       },
       {
+        "model": "GeForce RTX 3080 Ti",
+        "avg_price": 1778.23
+      },
+      {
+        "model": "GeForce RTX 5080",
+        "avg_price": 1460.28
+      },
+      {
         "model": "Radeon RX 6900 XT",
-        "avg_price": 1849.42
+        "avg_price": 1439.83
       }
     ],
     "total_models_tracked": 81,
