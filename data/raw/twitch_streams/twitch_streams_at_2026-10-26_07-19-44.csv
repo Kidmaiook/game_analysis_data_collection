@@ -1,0 +1,994 @@
+id,user_id,user_login,game_id,game_name,viewer_count,started_at,language,tags,snapshot_date,snapshot_time,snapshot_day
+320916984796,246450563,stableronaldo,749097531,NMS Boxing,41486,2026-10-25T23:36:26Z,en,['English'],2026-10-26,07-19-44,Monday
+319089098597,77827128,tumblurr,509658,Just Chatting,36004,2026-10-25T20:12:04Z,it,"['Italiano', 'DropAbilitati']",2026-10-26,07-19-44,Monday
+320824534494,107117952,jasontheween,749097531,NMS Boxing,31830,2026-10-25T23:29:17Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319696082775,552120296,zackrawrr,509658,Just Chatting,31665,2026-10-25T17:38:57Z,en,"['English', 'politics', 'bald', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319696447831,207813352,hasanabi,509658,Just Chatting,28785,2026-10-25T18:17:56Z,en,"['news', 'politics', 'adhd', 'English', 'GamerRage', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319142613606,238813810,eliasn97,27471,Minecraft,24718,2026-10-25T15:32:08Z,de,['Deutsch'],2026-10-26,07-19-44,Monday
+317175506516,1494360677,caedrel247,21779,League of Legends,21478,2026-10-25T11:29:42Z,en,"['247', 'LCK', 'LEC', 'LOLESPORTS', 'CAEDREL', 'LEAGUEOFLEGENDS', 'English', 'Variety', 'Worlds', 'Worlds2026']",2026-10-26,07-19-44,Monday
+319403643764,512137332,bisteconee,509658,Just Chatting,15552,2026-10-25T22:33:43Z,pt,['Português'],2026-10-26,07-19-44,Monday
+319696710743,494543675,lacy,509658,Just Chatting,15037,2026-10-25T18:44:43Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318456949080,91067577,emiru,331198496,Sobosuba,14177,2026-10-25T21:04:55Z,en,"['English', 'Cosplay', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318946481639,12875057,gronkh,491962037,Big Ambitions,13319,2026-10-25T17:00:26Z,de,"['TollerStream', 'SoEinTollerStream', 'EinfachNurToll', 'Wirklich', 'toll', 'Deutsch', 'soulmask']",2026-10-26,07-19-44,Monday
+318457133784,26490481,summit1g,65632,DayZ,13300,2026-10-25T21:28:30Z,en,['English'],2026-10-26,07-19-44,Monday
+318126141156,155601320,jltomy,32982,Grand Theft Auto V,12896,2026-10-25T20:14:03Z,fr,['Français'],2026-10-26,07-19-44,Monday
+317739829495,23936415,jerma985,32982,Grand Theft Auto V,12469,2026-10-25T21:42:13Z,en,"['English', 'Retired', 'ExtrovertedIntrovert', 'BroadcastArc', 'VirgoLibra', 'BigJ', 'XpressRediSetGoFanclub', 'UncEra']",2026-10-26,07-19-44,Monday
+319698865239,119795835,aldo_geo,1422023940,QSMP,11940,2026-10-25T21:59:09Z,es,"['Español', 'Guapo', 'Nahual', 'Piedrita', 'Hidrocalido', 'Aguascalientes', 'México', 'SingleMotherHunter', 'NiñoNintendo']",2026-10-26,07-19-44,Monday
+319681128663,172312401,nooreax,27471,Minecraft,11671,2026-10-24T08:39:10Z,de,"['Deutsch', 'Arbeitslos', 'notyexpress']",2026-10-26,07-19-44,Monday
+320912504156,121510236,juansguarnizo,1422023940,QSMP,10836,2026-10-25T18:19:12Z,es,['Español'],2026-10-26,07-19-44,Monday
+318108207586,622498423,otplol_,21779,League of Legends,10522,2026-10-25T16:08:37Z,fr,"['Français', 'DropsActivés']",2026-10-26,07-19-44,Monday
+318109495906,1895664,djmariio,518203,Sports,10084,2026-10-25T17:50:07Z,es,"['DJMARIO', 'DJMARIIO', 'FIFA', 'FC', 'Español', 'ULTIMATEMOSTOLES', 'FC26', 'MUNDIAL', 'WORLDCUP', 'FC27']",2026-10-26,07-19-44,Monday
+320996606176,997729120,2xrakai,509658,Just Chatting,9912,2026-10-25T22:17:25Z,en,"['English', 'rakai', 'funny', 'lit', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318458198616,45098797,cdawg,509658,Just Chatting,8421,2026-10-25T23:52:48Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319699076439,27992608,pikabooirl,18122,World of Warcraft,8421,2026-10-25T22:17:57Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318112590946,89204267,slipix,21779,League of Legends,7670,2026-10-25T21:54:01Z,fr,"['Français', 'DropsActivés']",2026-10-26,07-19-44,Monday
+318110416354,590548738,sylvainlyve,195574289,Moon Sweepers,7237,2026-10-25T18:58:51Z,fr,"['Français', 'chômage', 'singe', 'KeepPushing', 'sylvainlyve']",2026-10-26,07-19-44,Monday
+318137905123,434570224,teamfighttactics,513143,Teamfight Tactics,7113,2026-10-25T19:24:49Z,en,"['English', 'Esports', 'TeamfightsTactics', 'EnchantedWilds']",2026-10-26,07-19-44,Monday
+318948116583,78874179,krokoboss,21779,League of Legends,6963,2026-10-25T18:35:13Z,de,"['Deutsch', 'DropsAktiviert']",2026-10-26,07-19-44,Monday
+321962272985,63602976,skipnho,509658,Just Chatting,6551,2026-10-25T20:10:13Z,pt,"['Português', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+318134841315,181357564,tolkin,21779,League of Legends,6416,2026-10-25T14:52:28Z,de,"['Deutsch', 'English', 'MOBA', 'lol', 'leagueoflegeneds', 'Esports', 'DropsAktiviert']",2026-10-26,07-19-44,Monday
+319088437093,91026471,giggand,32982,Grand Theft Auto V,6296,2026-10-25T19:25:24Z,de,"['Deusch', 'Deutsch']",2026-10-26,07-19-44,Monday
+318138451683,132199022,dvm_medja,32982,Grand Theft Auto V,6006,2026-10-25T20:05:37Z,fr,['Français'],2026-10-26,07-19-44,Monday
+319695706711,1019733647,marlon,509658,Just Chatting,5890,2026-10-25T16:52:54Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+322009902042,51496027,loltyler1,21779,League of Legends,5708,2026-10-25T23:33:40Z,en,"['English', 'loltyler1', 'tyler1', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319084960101,430023505,xrohat,32982,Grand Theft Auto V,5691,2026-10-25T15:56:42Z,de,['Deutsch'],2026-10-26,07-19-44,Monday
+318111213410,1352210033,dumbo_ttv69,32982,Grand Theft Auto V,5637,2026-10-25T20:01:45Z,fr,"['Français', 'gtarp', 'gta', 'GTAVFiveM', 'urbex', 'Urbexing', 'urbexnocturno', 'UrbexSquad']",2026-10-26,07-19-44,Monday
+322121992795,64140092,laynalazar,23311496,Clive Barker's Hellraiser: Revival,5518,2026-10-25T17:50:54Z,en,"['VTuber', 'English', 'Horror', 'Relaxing', 'Comfort', 'Cozy', 'VoiceActor', 'DropsEnabled', 'Anomaly', 'Mature']",2026-10-26,07-19-44,Monday
+320817404254,124994203,rakattack,515025,Overwatch,5444,2026-10-25T15:52:45Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+316460148973,41487980,pauleta_twitch,509658,Just Chatting,5423,2026-10-25T22:03:00Z,fr,"['Français', 'DropsActivés']",2026-10-26,07-19-44,Monday
+317740273271,44445592,pokimane,509658,Just Chatting,5219,2026-10-25T22:36:21Z,en,"['English', 'PositiveMentalAttitude', 'ToxicStreamer', 'BADDIEGAMER', 'fps', 'Competitive', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+322004196314,427632467,lvndmark,491931,Escape from Tarkov,5072,2026-10-25T17:02:23Z,en,['English'],2026-10-26,07-19-44,Monday
+317738305143,145015519,foolish,1422023940,QSMP,5065,2026-10-25T17:40:40Z,en,['English'],2026-10-26,07-19-44,Monday
+318138576611,63675549,kaydop,30921,Rocket League,4973,2026-10-25T20:14:54Z,fr,"['Français', 'rocketleague', 'SSL', 'kaydop']",2026-10-26,07-19-44,Monday
+319333663221,156465245,belrodrigues,509658,Just Chatting,4933,2026-10-25T20:43:17Z,pt,"['Português', 'Tinhosa', 'Mulher', 'Louca', 'Rinite', 'FechadaComJesus', 'LGBTQIAPIus', 'LivrosSimBBBNão', 'Rosácea', 'TaylorSwift']",2026-10-26,07-19-44,Monday
+317737240183,24856654,desertbus,458738,Desert Bus,4846,2026-10-25T13:00:20Z,en,"['PartyGame', 'English', 'charity']",2026-10-26,07-19-44,Monday
+320995868896,681384353,feirlygab,1422023940,QSMP,4617,2026-10-25T21:23:37Z,es,['Español'],2026-10-26,07-19-44,Monday
+318457452376,31194266,shotzzy,1478650472,Call of Duty: Modern Warfare 4,4597,2026-10-25T22:12:42Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+320906158940,7236692,dansgaming,492934,RESIDENT EVIL 7 biohazard,4559,2026-10-25T04:48:04Z,en,"['TwitchOG', 'DansGame', 'Emotes', 'Variety', 'English', 'Solo', 'Gaming', 'Cozy', 'Community', 'Singleplayer']",2026-10-26,07-19-44,Monday
+319334597237,30672329,felps,509658,Just Chatting,4559,2026-10-25T22:12:58Z,pt,"['Felps', 'Variedade', 'Português', 'FelpsFelps', 'FelpsFelpsFelps', 'FelpsFelpsFelpsFelps', 'FelpsFelpsFelpsFelpsFelps', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+318127741028,218668268,zenrll,30921,Rocket League,4550,2026-10-25T23:23:58Z,en,['English'],2026-10-26,07-19-44,Monday
+319086644069,125036509,gamerbrother,123184772,EA Sports FC 27,4489,2026-10-25T17:41:04Z,de,"['Deutsch', 'Fußball', 'justchatting', 'Gamerbrother', 'fifa', 'Football', 'eafc27']",2026-10-26,07-19-44,Monday
+319333540469,61247277,vinicin_lil,509658,Just Chatting,4247,2026-10-25T20:31:09Z,pt,"['Português', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+321964198361,12943173,pokelawls,32982,Grand Theft Auto V,4195,2026-10-25T22:19:08Z,en,"['English', 'depression', 'ubereats', 'lo', 'gigi']",2026-10-26,07-19-44,Monday
+322009033434,94130217,gingy,27471,Minecraft,4190,2026-10-25T22:38:01Z,en,"['English', 'NoSpoilersNoBackseating']",2026-10-26,07-19-44,Monday
+317133675094,63667409,justcooman,29595,Dota 2,4079,2026-10-25T20:00:46Z,ru,['Русский'],2026-10-26,07-19-44,Monday
+320916098268,43650535,zwebackhd,123184772,EA Sports FC 27,3994,2026-10-25T22:39:33Z,en,"['FIFA', 'SPORTS', 'SOCCER', 'English', 'FC']",2026-10-26,07-19-44,Monday
+318458117336,38251312,paymoneywubby,509658,Just Chatting,3987,2026-10-25T23:42:30Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319330639093,160925541,kekedepatinete,19619,Tibia,3950,2026-10-25T13:45:16Z,pt,"['Português', 'Tibia', 'rubinot', 'tibiaglobal', 'MMORPG', 'Rubinot', 'RUBINIOT']",2026-10-26,07-19-44,Monday
+316183923155,42351942,nissaxter,21779,League of Legends,3934,2026-10-25T22:41:35Z,es,"['Español', 'DropsActivados']",2026-10-26,07-19-44,Monday
+319401293940,72733233,omeiaum,509658,Just Chatting,3910,2026-10-25T17:53:37Z,pt,"['Português', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+317738614263,105584645,zoomaa,1478650472,Call of Duty: Modern Warfare 4,3745,2026-10-25T18:33:20Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+322007001946,431882702,teegrizzley,32982,Grand Theft Auto V,3703,2026-10-25T20:18:16Z,en,['English'],2026-10-26,07-19-44,Monday
+322119994843,21130533,nadeshot,1478650472,Call of Duty: Modern Warfare 4,3664,2026-10-25T15:17:19Z,en,"['English', 'Nadeshot', 'OpTic', '100Thieves', '100T', 'MW4', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318138573283,28575692,mistermv,513143,Teamfight Tactics,3574,2026-10-25T20:14:39Z,fr,"['Français', 'humour', 'Vieux', 'Retro', 'indies']",2026-10-26,07-19-44,Monday
+318454260440,105750155,thimagroo,509658,Just Chatting,3562,2026-10-25T14:35:34Z,pt,"['Português', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+320913398748,206865739,zanfas_cenegal,509658,Just Chatting,3560,2026-10-25T19:24:32Z,pt,"['Português', 'RPG', 'SurvivaI', 'Futebol', 'dota', 'TDAH', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+318105828450,81446331,traytonlol,21779,League of Legends,3511,2026-10-25T12:21:51Z,fr,"['Français', 'Esports', 'LEC', 'LCK', 'LPL', 'Challenger', 'stuckmaster', 'fable', 'DropsActivés']",2026-10-26,07-19-44,Monday
+319274985334,159239195,sabrinoca,509658,Just Chatting,3510,2026-10-25T20:12:25Z,pt,"['Português', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+318138150627,104320683,move_mind,32982,Grand Theft Auto V,3466,2026-10-25T19:45:08Z,pt,"['Português', 'gta']",2026-10-26,07-19-44,Monday
+319698426455,116673961,lftoxy_val,516575,VALORANT,3446,2026-10-25T21:19:10Z,en,['English'],2026-10-26,07-19-44,Monday
+316637502578,77415295,jasper7se,21779,League of Legends,3444,2026-10-25T23:23:30Z,ja,"['日本語', 'Drops有効']",2026-10-26,07-19-44,Monday
+320913871964,149727725,dkayed,1119642287,Yu-Gi-Oh! Master Duel,3423,2026-10-25T20:00:14Z,en,"['CardGame', 'Tournament', 'English', 'yugioh', 'masterduel', 'CCG']",2026-10-26,07-19-44,Monday
+320993096416,40965449,subroza,516575,VALORANT,3398,2026-10-25T18:12:58Z,en,"['English', 'radiant', 'Ranked', 'french', 'funny', 'pro', 'professional', 'RANK1', 'Arabic', 'Moroccan']",2026-10-26,07-19-44,Monday
+320991488864,70880222,smoke,65632,DayZ,3369,2026-10-25T16:12:59Z,en,"['English', 'DayZ', 'Adventure', 'Immersion', 'Action', 'Shooter']",2026-10-26,07-19-44,Monday
+319087349221,100901794,shylily,275186889,BALL x PIT,3352,2026-10-25T18:18:27Z,en,"['English', 'Vtuber', 'Anime', 'AAAAAAAAAAAAAAAAAAAAAAAAA', 'ASMR', 'ASMRvisual', 'screwdriver', 'Furry']",2026-10-26,07-19-44,Monday
+318938800487,1171769612,jynxzi247,499973,Always On,3322,2026-10-25T03:45:01Z,en,"['English', 'jynxzi', 'siege', 'rainbowixsiege', 'caseoh', 'kai']",2026-10-26,07-19-44,Monday
+319696973271,100869214,arky,749097531,NMS Boxing,3312,2026-10-25T19:07:26Z,en,['English'],2026-10-26,07-19-44,Monday
+322008116186,693562216,hotblockchain,509658,Just Chatting,3260,2026-10-25T21:35:07Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+322010087770,31545223,agurin,21779,League of Legends,3256,2026-10-25T23:45:51Z,de,"['Deutsch', 'English', 'DropsAktiviert']",2026-10-26,07-19-44,Monday
+322124613083,84316241,penta,722422729,$cam With Your Friends,3231,2026-10-25T20:46:46Z,en,"['English', 'Educational', 'Socialeating']",2026-10-26,07-19-44,Monday
+322005662426,96063399,scrap,1478650472,Call of Duty: Modern Warfare 4,3229,2026-10-25T18:44:21Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+322008901338,126678134,officermesser,32982,Grand Theft Auto V,3161,2026-10-25T22:28:43Z,en,"['English', 'NoPixel']",2026-10-26,07-19-44,Monday
+319695072215,13576693,frodan,513143,Teamfight Tactics,3148,2026-10-25T15:13:53Z,en,"['English', 'lilia', 'Unlucky', 'unemployed', 'DadGamer']",2026-10-26,07-19-44,Monday
+322008381786,432689780,ravusssss,509658,Just Chatting,3120,2026-10-25T21:53:45Z,fr,"['ravusssss', 'Divertissement', 'Discussions', 'eafc25', 'Football', 'Français', 'EASportsFC26', 'débat', 'ANECTODE', 'gaming']",2026-10-26,07-19-44,Monday
+318139744867,578207968,elyihi,518203,Sports,3112,2026-10-25T22:04:08Z,es,"['English', 'Español', 'DropsActivados']",2026-10-26,07-19-44,Monday
+319698573399,45302947,iitztimmy,33214,Fortnite,3095,2026-10-25T21:32:28Z,en,"['English', 'iiTzHimothy', 'RedBullGuy', 'PlayApexStreamer', 'mightbestupid']",2026-10-26,07-19-44,Monday
+318452785624,39724467,swagg,1478650472,Call of Duty: Modern Warfare 4,3039,2026-10-25T08:09:03Z,en,"['fazeswagg', 'FaZe', 'English', 'cod', 'callofduty', 'warzone', 'warzonecallofduty', 'swagg', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318949555943,53065331,dariomocciatwitch,509658,Just Chatting,3002,2026-10-25T20:00:14Z,it,"['Italiano', 'DropAbilitati']",2026-10-26,07-19-44,Monday
+322005433178,119015407,dashy,1478650472,Call of Duty: Modern Warfare 4,2988,2026-10-25T18:28:12Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319083474277,145498295,exsl95,27471,Minecraft,2896,2026-10-25T14:19:57Z,de,['Deutsch'],2026-10-26,07-19-44,Monday
+318458214488,689975521,heinzbaines_,509658,Just Chatting,2868,2026-10-25T23:54:33Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+316626425457,896388738,henyathegenius,27471,Minecraft,2859,2026-10-25T22:49:15Z,en,"['English', 'Vtuber', '日本語', 'Bilingual', 'Henya', 'HenyaTheGenius', 'へにゃ', 'Anime', 'Japanese']",2026-10-26,07-19-44,Monday
+318927375335,1591661229,lorrinbever,498566,Slots,2799,2026-10-24T10:42:09Z,de,['Deutsch'],2026-10-26,07-19-44,Monday
+319698289111,936171791,yugi,749097531,NMS Boxing,2787,2026-10-25T21:05:57Z,en,"['English', 'yugi2x']",2026-10-26,07-19-44,Monday
+318949851751,1550330900,anarabdullaev_21409,29595,Dota 2,2753,2026-10-25T20:19:22Z,ru,['Русский'],2026-10-26,07-19-44,Monday
+319400545908,1088633937,brederodess,19619,Tibia,2741,2026-10-25T16:08:59Z,pt,"['Tibia', 'rubinot', 'Português']",2026-10-26,07-19-44,Monday
+317740035831,856618797,smugalana,509658,Just Chatting,2735,2026-10-25T22:07:29Z,en,"['vtuber', 'English', 'cringe', 'ADHD', 'girl', 'Woman', 'Female', 'Regarded', 'Anime', 'Fox']",2026-10-26,07-19-44,Monday
+319085898725,129405323,oilrats,263490,Rust,2712,2026-10-25T16:55:53Z,en,"['Deutsch', 'English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+320996319072,133220545,jay3,1264310518,Marvel Rivals,2663,2026-10-25T21:57:53Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+320822810206,1106657346,sugarfree,2132205352,Deadlock,2655,2026-10-25T21:57:49Z,en,['English'],2026-10-26,07-19-44,Monday
+318457247704,36616300,capcomfighters,55453844,Street Fighter 6,2653,2026-10-25T21:45:10Z,en,"['StreetFighter6', 'Esports', 'FGC', 'fightinggames', 'English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+320909297244,25009441,lexveldhuis,488190,Poker,2651,2026-10-25T13:58:22Z,en,['English'],2026-10-26,07-19-44,Monday
+320997925728,725072884,yurnboi,509658,Just Chatting,2649,2026-10-25T23:38:01Z,en,"['English', 'yurnboi', 'spanish', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+320820983902,532335131,djnixinthemix,1669431183,DJs,2648,2026-10-25T20:02:39Z,en,"['DJ', 'NYC', 'DanceMusic', 'ElectronicDanceMusic', 'HouseMusic', 'ProgressiveHouse', 'MelodicTechno', 'ProgressiveTrance', 'Techno', 'Disco']",2026-10-26,07-19-44,Monday
+319085399909,1556918898,deepins02_14891,29595,Dota 2,2638,2026-10-25T16:24:23Z,ru,['Русский'],2026-10-26,07-19-44,Monday
+318455287640,145686333,eskay,2132205352,Deadlock,2632,2026-10-25T17:38:50Z,en,"['English', 'pretty', 'smart', 'funny', 'perfect', 'humble', 'Vtuber', 'wholesome']",2026-10-26,07-19-44,Monday
+321961509977,38746172,esfandtv,32982,Grand Theft Auto V,2626,2026-10-25T19:14:43Z,en,"['English', 'NoPixel', 'GTARP', 'Cornwood', 'drops', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+322123738203,78738197,stormfall33,1581328319,Cucina Stellata ✦ Starred Cuisine,2614,2026-10-25T19:49:44Z,en,"['English', 'Woman', 'cringe', 'GIGA', 'Female', 'girl', 'Cosplay', 'NoBackseatingUnlessAsked']",2026-10-26,07-19-44,Monday
+317738337015,25080754,pobelter,21779,League of Legends,2605,2026-10-25T17:47:01Z,en,"['English', 'Chill', 'Anime', 'RotisserieChickens', 'lebronjames', 'xddfreezone', 'labubu', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+316181835475,27107346,b0aty,459931,Old School RuneScape,2601,2026-10-25T11:51:18Z,en,"['English', 'frog', 'Toad', 'Whale', 'felloff', 'WashedUp']",2026-10-26,07-19-44,Monday
+319144076390,198939622,onlyjson,1763263,nanos world,2591,2026-10-25T17:14:16Z,de,"['gtavrproleplay', 'Deutsch', 'NARCOCITY', 'fivem', 'Unterhaltung', 'gta']",2026-10-26,07-19-44,Monday
+318127435748,511896289,atowwwww,30921,Rocket League,2542,2026-10-25T22:40:15Z,fr,"['France', 'belge', 'Français', 'rocketleague', 'pro', 'stream', 'Karminecorp', 'KCORP']",2026-10-26,07-19-44,Monday
+319272480758,91402599,hera,13389,Age of Empires II,2535,2026-10-25T16:00:11Z,en,"['English', 'RTS']",2026-10-26,07-19-44,Monday
+318137459939,28337972,limealicious,1338428218,CONTROL Resonant,2505,2026-10-25T18:48:58Z,en,"['Cozy', 'Vtuber', 'English', 'Gremlin']",2026-10-26,07-19-44,Monday
+319088683621,89600394,therealmarzaa,509658,Just Chatting,2493,2026-10-25T19:42:06Z,it,"['Italiano', 'English', 'Barese', 'DropAbilitati']",2026-10-26,07-19-44,Monday
+320997287520,187193172,zlaner,464339927,ARC Raiders,2480,2026-10-25T23:00:51Z,en,"['warzone', 'calldofduty', 'blackkops6', 'gaming', 'English', 'optic', 'arcraiders', 'eldenring', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+322125993307,2982838,surefour,718286993,Order of the Sinking Star,2469,2026-10-25T22:21:41Z,en,['English'],2026-10-26,07-19-44,Monday
+321959733081,130350056,igabypachi,509511,Marbles on Stream,2450,2026-10-25T17:11:23Z,es,"['Español', 'Inglés', 'manca', 'Cumpleaños', 'FESTEJO', 'DropsActivados', 'ng7']",2026-10-26,07-19-44,Monday
+315616527726,16677765,qttsix,743893402,WARDOGS,2436,2026-10-25T14:50:14Z,zh,['中文'],2026-10-26,07-19-44,Monday
+316626323313,49396168,osulive,21465,osu!,2424,2026-10-25T22:00:17Z,en,['English'],2026-10-26,07-19-44,Monday
+319141394406,872174898,2okos,498592,I'm Only Sleeping,2409,2026-10-25T13:58:11Z,hu,"['Magyar', 'IRL', 'reactions', 'LOUD', '2okos', 'DropokEngedélyezve', 'minecraft']",2026-10-26,07-19-44,Monday
+319090422245,252393390,imviolet_,509659,ASMR,2408,2026-10-25T22:28:44Z,it,"['Italiano', 'imviolet', 'English', 'Woman', 'ASMR', 'justchatting', 'DropAbilitati']",2026-10-26,07-19-44,Monday
+322006062682,158577991,carmen,32982,Grand Theft Auto V,2379,2026-10-25T19:11:10Z,en,"['English', 'rp', 'cringe', 'woman', 'toxic', 'feet']",2026-10-26,07-19-44,Monday
+318457737560,245488727,vulture_ow,515025,Overwatch,2378,2026-10-25T22:52:42Z,en,"['English', 'Competitive', 'fps', 'junkrat', 'SewerRat', 'overwatch', 'hashtagawesome', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319403026548,270186408,k1ng,33214,Fortnite,2326,2026-10-25T21:20:28Z,es,['Español'],2026-10-26,07-19-44,Monday
+320819089758,25458544,sequisha,1092451091,HUNGER,2258,2026-10-25T17:56:15Z,en,"['English', 'Solo', 'comedy']",2026-10-26,07-19-44,Monday
+317180046548,834113869,judah_xx,29595,Dota 2,2243,2026-10-25T22:06:33Z,ru,"['Русский', 'English']",2026-10-26,07-19-44,Monday
+319697164119,26154978,sykkuno,32982,Grand Theft Auto V,2229,2026-10-25T19:24:23Z,en,['English'],2026-10-26,07-19-44,Monday
+316636215026,534168696,tororo_vtuber,771448419,AION 2,2219,2026-10-25T14:11:52Z,ja,['日本語'],2026-10-26,07-19-44,Monday
+319088185573,36620767,agraelus,366868770,Refund This Game,2212,2026-10-25T19:09:37Z,cs,['Čeština'],2026-10-26,07-19-44,Monday
+319148091878,85039743,mrdzinold,32399,Counter-Strike,2208,2026-10-25T22:25:03Z,pl,['Polski'],2026-10-26,07-19-44,Monday
+319697130199,479919599,yuy_ix,1478650472,Call of Duty: Modern Warfare 4,2192,2026-10-25T19:21:16Z,en,"['English', 'Vtuber', 'Woman', 'ADHD', 'Victim', 'Heartwarming', 'Educational', 'Manipulator', 'Antiintellectual', 'Crashout']",2026-10-26,07-19-44,Monday
+320996838624,188548235,berrycrepe,509658,Just Chatting,2178,2026-10-25T22:32:48Z,en,"['English', 'CalimariMommy', 'Derp', 'Vtuber', 'react', 'gamer', 'yapmaxxing', 'yapping', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+320997303264,48533154,bawkbasoup,1028198402,Dead Space,2177,2026-10-25T23:01:39Z,en,"['GodGamer', 'GamerGod', 'English', 'Canada', 'ADHD', 'Horror', 'Canadian', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+320911961820,1200831758,caseoh247,509658,Just Chatting,2174,2026-10-25T17:41:11Z,en,"['caseoh', 'Caseohgames', 'VOD', 'reruns', 'Rerun', 'English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319148673894,643858978,glauii,498566,Slots,2156,2026-10-25T23:45:50Z,de,"['France', 'Montreal', 'trading', 'Moon', 'Deutsch']",2026-10-26,07-19-44,Monday
+320997624928,93857215,npesta,460951,Geometry Dash,2153,2026-10-25T23:19:18Z,en,['English'],2026-10-26,07-19-44,Monday
+319143850726,183830454,godmota,498566,Slots,2143,2026-10-25T17:00:04Z,pt,['Português'],2026-10-26,07-19-44,Monday
+317740032119,152416667,lolyoung,21779,League of Legends,2107,2026-10-25T22:07:01Z,en,"['english', 'league', 'challenger', 'korean', 'mid', 'chill', 'bladee', 'ecco2k', 'English']",2026-10-26,07-19-44,Monday
+322126665179,1592643947,thespraycontrolguy,32399,Counter-Strike,2104,2026-10-25T23:07:32Z,en,['English'],2026-10-26,07-19-44,Monday
+317179202900,735937795,uraniumrr,509658,Just Chatting,2086,2026-10-25T19:09:58Z,ru,"['Русский', 'DropsВключены']",2026-10-26,07-19-44,Monday
+319699502167,79521577,cbass,1478650472,Call of Duty: Modern Warfare 4,2064,2026-10-25T22:58:21Z,en,"['English', 'PlayingwithViewers', 'Competitive', 'latina', 'cod', 'callofduty', 'drops', 'feet', 'mw4', 'cod']",2026-10-26,07-19-44,Monday
+321960439641,167189231,staryuuki,509658,Just Chatting,2059,2026-10-25T18:00:07Z,es,"['Español', 'Yuuki', 'Staryuuki', '12horas', 'especial', 'DropsActivados']",2026-10-26,07-19-44,Monday
+316637389426,31062476,fobm4ster,513181,Genshin Impact,2035,2026-10-25T22:31:13Z,en,['English'],2026-10-26,07-19-44,Monday
+320818294750,22510310,gamesdonequick,512953,ELDEN RING,2005,2026-10-25T17:00:13Z,en,"['English', 'Speedrun', 'nohit', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+317738882167,526832402,wakewilder,32982,Grand Theft Auto V,2001,2026-10-25T19:15:27Z,en,"['English', 'NoPixel', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+320913388636,36973271,geega,32982,Grand Theft Auto V,1991,2026-10-25T19:23:47Z,en,"['English', 'Vtuber', 'Evil', 'CancerSurvivor', 'NoPixel', 'NoPixelV']",2026-10-26,07-19-44,Monday
+322003851738,43204993,lilaggy,13420,Jak and Daxter: The Precursor Legacy,1991,2026-10-25T16:38:20Z,en,['English'],2026-10-26,07-19-44,Monday
+318457312600,87204022,disguisedtoast,2132205352,Deadlock,1979,2026-10-25T21:53:49Z,en,['English'],2026-10-26,07-19-44,Monday
+320916201308,167124768,t10nat,509658,Just Chatting,1939,2026-10-25T22:46:40Z,en,"['Asian', 'Australia', 'asiangirl', 'Chatty', 'tism', 'ADHD', 'yapper', 'degen', 'VoiceActing', 'English']",2026-10-26,07-19-44,Monday
+318941507047,1591997754,parrisberni,498566,Slots,1902,2026-10-25T11:01:44Z,en,"['English', 'slots', 'casinostream', 'bonushunt']",2026-10-26,07-19-44,Monday
+319699894615,1305342529,theburntpeanut_247,499973,Always On,1882,2026-10-25T23:30:27Z,en,"['English', 'VOD', 'Rerun', 'arcraiders', 'tobacco']",2026-10-26,07-19-44,Monday
+318951899111,151120600,en3rix_,123184772,EA Sports FC 27,1873,2026-10-26T00:10:16Z,it,['Italiano'],2026-10-26,07-19-44,Monday
+322125353307,821264962,h3fnerj,509672,IRL,1862,2026-10-25T21:37:13Z,en,"['English', 'Rerun']",2026-10-26,07-19-44,Monday
+322124273371,52813540,arielle,27471,Minecraft,1861,2026-10-25T20:24:52Z,en,"['English', 'Vtuber', 'Chaotic', 'comfy', 'crashout']",2026-10-26,07-19-44,Monday
+321957160537,104137861,lyric,464339927,ARC Raiders,1856,2026-10-25T13:05:19Z,en,"['English', 'Anime', 'ADHD', 'Vtuber', 'movement', 'Asian', 'fps', 'catgirl', 'PvP', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+317176477780,54742538,karmikkoala,1144717324,Gothic 1 Remake,1855,2026-10-25T13:38:23Z,ru,['Русский'],2026-10-26,07-19-44,Monday
+319333913589,470426173,ranozera,509658,Just Chatting,1850,2026-10-25T21:07:25Z,pt,"['Português', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+319696299479,139745227,luality,65876,Cyberpunk 2077,1842,2026-10-25T18:01:18Z,en,"['English', 'RPG', 'drops', 'ChallengeRun', 'girl', 'bnuy', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+321961436633,90930048,auriellis,32982,Grand Theft Auto V,1833,2026-10-25T19:09:24Z,en,"['Roleplaying', 'LBGTQIA', 'Cats', 'English', 'NoPixel', 'NoPixelWL', 'RP', 'ProdigyRP', 'nopixelV']",2026-10-26,07-19-44,Monday
+320917306332,133118594,mingo,460630,Rainbow Six Siege,1832,2026-10-25T23:56:28Z,en,"['English', 'jynxzi', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+322121646427,38871579,feinberg,27471,Minecraft,1832,2026-10-25T17:26:11Z,en,"['English', 'Speedrun']",2026-10-26,07-19-44,Monday
+315613252718,752742297,seoi1016,116747788,"Pools, Hot Tubs, and Beaches",1832,2026-10-24T13:06:31Z,ko,"['한국어', 'English', '中文', 'Asian', '日本語', 'Русский', 'Dance', 'kpop', 'korean', '재방송']",2026-10-26,07-19-44,Monday
+322123598427,49150253,dalplatinum,1669431183,DJs,1817,2026-10-25T19:40:36Z,en,"['DJ', 'Turntables', 'UK', 'hatwearer', 'bootlegs', 'word', 'mashups', 'English', 'HipHop', 'Breaks']",2026-10-26,07-19-44,Monday
+316158142802,31220977,silithur,329951934,Pokémon Community Game,1814,2026-10-25T18:58:38Z,es,"['Español', 'English']",2026-10-26,07-19-44,Monday
+316158459218,87803283,the_happy_hob,489170,DARK SOULS II: Scholar of the First Sin,1810,2026-10-25T20:33:41Z,en,"['NECK', 'DONK', 'ADHD', 'British', 'SpanishAswell', 'English']",2026-10-26,07-19-44,Monday
+317739853943,43223443,hunterowner,498566,Slots,1806,2026-10-25T21:46:04Z,en,['English'],2026-10-26,07-19-44,Monday
+318138031331,42549067,aenot,32982,Grand Theft Auto V,1782,2026-10-25T19:35:00Z,fr,"['Français', 'flashback', 'RP', 'Aenot', 'NoPixel', 'DropsActivés']",2026-10-26,07-19-44,Monday
+320821813982,82350088,nyanners,497480,Detroit: Become Human,1781,2026-10-25T20:57:51Z,en,"['English', 'Vtuber', 'ENVtuber', 'womaninSTEM']",2026-10-26,07-19-44,Monday
+319699522647,143726713,sweetdreams,511224,Apex Legends,1773,2026-10-25T23:00:02Z,en,"['English', 'apexlegends', 'fps']",2026-10-26,07-19-44,Monday
+319274803190,136447686,eguinorante,509658,Just Chatting,1768,2026-10-25T19:55:48Z,pt,"['Português', 'debate', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+319147733606,825918871,slotshub_skillz,498566,Slots,1748,2026-10-25T21:44:48Z,el,['Ελληνικά'],2026-10-26,07-19-44,Monday
+316637320434,147462900,capcomfighters_jp,55453844,Street Fighter 6,1748,2026-10-25T21:57:11Z,ja,"['eSports', 'ストリートファイターリーグ', '日本語', 'スト6', 'ストリートファイター6', 'ストリートファイター', 'SF6', 'SFリーグ', 'CPT2026', 'CAPCOMCUP13']",2026-10-26,07-19-44,Monday
+321964599769,236171146,cented,499634,Crypto,1748,2026-10-25T22:46:13Z,en,['English'],2026-10-26,07-19-44,Monday
+318951338215,512901888,s_chilla,1535225577,The Last of Us Part II Remastered,1746,2026-10-25T22:46:07Z,ru,['Русский'],2026-10-26,07-19-44,Monday
+322008468826,230583557,itskxtlyn,499003,VRChat,1741,2026-10-25T21:59:42Z,en,"['English', 'Vtuber', 'ASMR', 'meowmeowmeowmeowmeowmeow', 'ENVtuber', 'ADHD', 'brat']",2026-10-26,07-19-44,Monday
+320996723552,151487295,lomein,2132205352,Deadlock,1735,2026-10-25T22:25:27Z,en,"['English', 'deadlock']",2026-10-26,07-19-44,Monday
+320993688800,478290210,sheiden,21779,League of Legends,1717,2026-10-25T18:53:06Z,en,"['English', 'LCS', 'Challenger', 'Tagalog', 'pro', 'LEC', 'jungle', 'Rank1', 'Philippines', 'NA']",2026-10-26,07-19-44,Monday
+319147985766,103824525,lyegaia,509658,Just Chatting,1708,2026-10-25T22:13:06Z,fr,"['Français', 'DropsActivés']",2026-10-26,07-19-44,Monday
+319334532085,113206860,rubini,19619,Tibia,1699,2026-10-25T22:07:26Z,pt,"['Português', 'Medivia', 'MMORPG', 'Tibia', 'Rubinot']",2026-10-26,07-19-44,Monday
+318112300642,88301612,xari,509658,Just Chatting,1686,2026-10-25T21:29:07Z,fr,"['Français', 'DropsActivés']",2026-10-26,07-19-44,Monday
+319274556022,766198172,lulyfpps,509658,Just Chatting,1684,2026-10-25T19:30:50Z,pt,"['Português', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+318943724135,636587384,alveussanctuary,272263131,"Animals, Aquariums, and Zoos",1678,2026-10-25T14:00:49Z,en,"['English', 'TogetherForGood', 'purplemartins', 'DropsEnabled', 'Charity']",2026-10-26,07-19-44,Monday
+320993187424,279419549,agendafreetv,509658,Just Chatting,1665,2026-10-25T18:19:19Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318112373986,43286888,elotrix,509658,Just Chatting,1641,2026-10-25T21:35:29Z,de,"['Trophäenjagd', 'Storygames', 'Deutsch', 'DropsAktiviert']",2026-10-26,07-19-44,Monday
+319696337623,117349875,smallant,23894,Call of Duty: Black Ops,1641,2026-10-25T18:04:42Z,en,['English'],2026-10-26,07-19-44,Monday
+319080488933,1591651383,yancycarol,498566,Slots,1638,2026-10-25T10:10:29Z,de,['Deutsch'],2026-10-26,07-19-44,Monday
+318950330471,533814723,lubricum,29595,Dota 2,1630,2026-10-25T20:56:58Z,ru,['Русский'],2026-10-26,07-19-44,Monday
+319686177495,163168110,eido,2132205352,Deadlock,1622,2026-10-24T20:53:52Z,en,"['meow', 'mexican', 'English', 'Asian']",2026-10-26,07-19-44,Monday
+317740530551,16689163,criken,68351,Mount & Blade II: Bannerlord,1616,2026-10-25T23:07:29Z,en,"['Comfy', 'Roleplay', 'Interactive', 'English']",2026-10-26,07-19-44,Monday
+320998314080,481072852,chailynx,499003,VRChat,1614,2026-10-26T00:00:36Z,en,"['English', 'Furry', 'Lynx', 'Princess', 'LGBTQIAPlus', 'Trans', 'lewdbutwholesome', 'lewdtuber', 'FBT', 'chill']",2026-10-26,07-19-44,Monday
+319090091621,462386663,ocwsport,509658,Just Chatting,1600,2026-10-25T21:49:42Z,it,"['Italiano', 'DropAbilitati']",2026-10-26,07-19-44,Monday
+318124559460,149393615,spear_shot,21779,League of Legends,1584,2026-10-25T18:00:43Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318123985892,695897019,la4awale,123184772,EA Sports FC 27,1577,2026-10-25T17:10:31Z,en,"['English', 'fifa', 'ad', 'FC27']",2026-10-26,07-19-44,Monday
+320913998300,672366427,beribug,91423,Dark Souls II,1576,2026-10-25T20:08:40Z,en,"['English', 'Vtuber', 'mischievous', 'tummyachesurvivor', 'estrogen', 'bug', 'menhera', 'creepbyradiohead', 'cortisolspike']",2026-10-26,07-19-44,Monday
+319403312116,96161253,tealzlol,509658,Just Chatting,1575,2026-10-25T21:56:38Z,pt,"['Português', 'emo', 'LGBT', 'proplayer', 'LeagueoflegendsWildrift', 'leagueoflegend', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+319699551447,206506086,euriece,511224,Apex Legends,1571,2026-10-25T23:01:59Z,ja,"['日本語勉強', '日本語', 'EURIECE', '雑談', '日本', 'ユリース']",2026-10-26,07-19-44,Monday
+317133678038,698924516,witchblvde,29595,Dota 2,1555,2026-10-25T20:01:12Z,ru,"['English', 'Русский', 'Бизнес', 'Демонтаж', 'Українська', 'Приключение', 'Приколы']",2026-10-26,07-19-44,Monday
+317085408981,1054416358,kadobes2,498566,Slots,1553,2026-10-24T05:37:30Z,en,['English'],2026-10-26,07-19-44,Monday
+320823894750,810617325,megalodonvt,509658,Just Chatting,1547,2026-10-25T22:57:46Z,en,"['English', 'sharkussy', 'ADHD', 'Mega', 'vtubers', 'sharkvtuber', 'Purple', 'shark', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+322003842522,32093909,ahlaundoh,18122,World of Warcraft,1535,2026-10-25T16:37:34Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+320913408860,705383099,twinkles,32982,Grand Theft Auto V,1534,2026-10-25T19:25:20Z,en,"['English', 'NoPixel', 'Latino', 'Vtuber', 'Whitelist', 'NoPixelV']",2026-10-26,07-19-44,Monday
+318926726631,1591652743,bellamyesme,498566,Slots,1530,2026-10-24T09:35:01Z,de,['Deutsch'],2026-10-26,07-19-44,Monday
+322118751579,531980177,pleasingpoet,509658,Just Chatting,1527,2026-10-25T12:51:02Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318457132504,194749904,yayahuz,509672,IRL,1526,2026-10-25T21:28:21Z,pt,"['LOUD', 'Português']",2026-10-26,07-19-44,Monday
+319089679717,1592549217,garnettfx,499634,Crypto,1522,2026-10-25T21:02:45Z,en,"['English', 'crypto', 'trading', 'BTCUSDTLivestreaming']",2026-10-26,07-19-44,Monday
+319698303319,80585512,yusuf7n,749097531,NMS Boxing,1521,2026-10-25T21:07:10Z,en,"['English', 'KODE', 'STICKTOTHEKODE']",2026-10-26,07-19-44,Monday
+320821780318,238498798,kingsman265_twitch,1264310518,Marvel Rivals,1520,2026-10-25T20:55:47Z,en,"['English', 'DropsEnabled', 'MarvelRivalsAvengers']",2026-10-26,07-19-44,Monday
+322127329115,194430943,itsbenandkaren,743,Chess,1520,2026-10-25T23:52:19Z,en,"['English', 'chess']",2026-10-26,07-19-44,Monday
+322126628699,245226810,jelty,33214,Fortnite,1515,2026-10-25T23:05:04Z,es,['Español'],2026-10-26,07-19-44,Monday
+317085408725,1054416007,bygyxogy,498566,Slots,1500,2026-10-24T05:37:16Z,pt,['Português'],2026-10-26,07-19-44,Monday
+318450783576,1169147491,hutchmf_247,499973,Always On,1489,2026-10-25T03:53:03Z,en,"['English', 'Rerun']",2026-10-26,07-19-44,Monday
+317739579511,110066407,hanner,31376,Terraria,1480,2026-10-25T21:05:53Z,en,"['English', 'furry', 'LGBTQIAPlus', 'FormerTraderJoesEmployee', 'poopcore', 'goonette', 'leaking', 'evil', 'KristenStewartPlugHole']",2026-10-26,07-19-44,Monday
+319699219159,113129363,alueiasmr,509659,ASMR,1477,2026-10-25T22:31:17Z,en,"['Vtuber', 'English', 'catgirl', 'brat', 'bottom', 'yapper', 'cozy', 'princess', 'ASMR']",2026-10-26,07-19-44,Monday
+317090197077,1054415821,wofyvupov4,29452,Virtual Casino,1476,2026-10-24T18:04:34Z,pt,"['Português', 'casino', 'slots', 'gambling']",2026-10-26,07-19-44,Monday
+322005982170,460202635,gems,464339927,ARC Raiders,1476,2026-10-25T19:05:34Z,en,"['English', 'action', 'arcraiders', 'gaming', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318138760291,169558955,mehdoche,32982,Grand Theft Auto V,1476,2026-10-25T20:30:04Z,fr,"['Français', 'gta', 'GTARP', 'FlashbackWL']",2026-10-26,07-19-44,Monday
+320996855776,53648099,warn,515025,Overwatch,1473,2026-10-25T22:33:53Z,en,"['overwatch', 'Ranked', 'Competitive', 'ADHD', 'Ashe', 'drops', 'English', 'overwatch2', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319333080309,41783889,axtlol,509658,Just Chatting,1470,2026-10-25T19:48:16Z,pt,"['Português', 'CBLOL', 'lol', 'leagueoflegeneds', 'LTA', 'Variedade', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+320823539550,24124090,datmodz,771448419,AION 2,1469,2026-10-25T22:39:04Z,en,"['AMA', 'English']",2026-10-26,07-19-44,Monday
+319274935030,124656692,seucreysonreborn,29595,Dota 2,1466,2026-10-25T20:07:50Z,pt,['Português'],2026-10-26,07-19-44,Monday
+320993811808,948230892,matarakan,2755,HλLF-LIFE,1466,2026-10-25T19:00:32Z,en,"['Vtuber', 'English', 'Drops']",2026-10-26,07-19-44,Monday
+318945135591,25821344,shenpai,1690221315,Pokémon Black Version 2,1456,2026-10-25T15:36:00Z,en,"['English', 'OhGodHelpMe', 'NoBackseating', 'Bisexual', 'WomenKisser', 'yaoiconnoisseur', 'ADHD', 'TransRights', 'NoGenAI', 'antiGenAI']",2026-10-26,07-19-44,Monday
+320916296796,12338326,formal,1478650472,Call of Duty: Modern Warfare 4,1451,2026-10-25T22:53:06Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+316182522067,195942193,tyrone,32982,Grand Theft Auto V,1442,2026-10-25T15:59:24Z,en,"['English', 'British', 'capitalrp', 'plus44', 'gtarp', 'gta6']",2026-10-26,07-19-44,Monday
+321965203289,56395702,coconutb,743893402,WARDOGS,1435,2026-10-25T23:23:38Z,en,['English'],2026-10-26,07-19-44,Monday
+319700008407,738493418,madi2hottyy,509658,Just Chatting,1430,2026-10-25T23:40:03Z,en,"['English', 'madi2hottyy', 'IRL', 'streamer', 'justcchatting', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+321963057497,27787567,iateyourpie,2634,Banjo-Tooie,1427,2026-10-25T21:03:29Z,en,"['English', 'PieCommunity', 'Hardcore', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318139672291,62789124,oruipinto,509658,Just Chatting,1411,2026-10-25T21:55:57Z,pt,"['Português', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+320819499358,563855821,princezam,27471,Minecraft,1396,2026-10-25T18:23:12Z,en,['English'],2026-10-26,07-19-44,Monday
+315651045232,463310708,lingmu_ch,21779,League of Legends,1396,2026-10-25T18:42:16Z,zh,"['vtuber', '亞洲', '觀眾互動', '中文', 'fps', '世界樹計畫', '启用掉宝']",2026-10-26,07-19-44,Monday
+319402593396,202987684,muriloso,509658,Just Chatting,1396,2026-10-25T20:30:04Z,pt,"['Português', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+318124841060,62989856,shisheyu,512923,Baldur's Gate 3,1395,2026-10-25T18:24:49Z,fr,"['Français', 'chill']",2026-10-26,07-19-44,Monday
+319700191703,1114783978,snowcone,509658,Just Chatting,1388,2026-10-25T23:55:40Z,en,"['English', 'ADHD', 'streameruniversity', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+321962291929,188965645,nohandsgamer,138585,Hearthstone,1367,2026-10-25T20:11:40Z,en,"['English', 'Standard', 'hearthstone', 'OlderStreamer']",2026-10-26,07-19-44,Monday
+319697606231,60672785,robinsongz,513143,Teamfight Tactics,1365,2026-10-25T20:04:14Z,en,"['young', 'actuallyold', 'English']",2026-10-26,07-19-44,Monday
+318135876451,804923620,leothecrack,33214,Fortnite,1363,2026-10-25T16:34:19Z,fr,"['fortnite', 'cup', 'finale', 'chill', 'token', 'Scrims', 'FNCS', 'Tournament', 'Français', 'English']",2026-10-26,07-19-44,Monday
+317097969365,174141858,elina,65876,Cyberpunk 2077,1356,2026-10-25T19:45:50Z,en,"['English', 'swedish', 'woman', 'stinky', 'ADHD', 'female', 'Interactive', 'Chatty', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318112671458,112523183,mahdiba,509658,Just Chatting,1355,2026-10-25T22:02:26Z,fr,"['Français', 'DropsActivés']",2026-10-26,07-19-44,Monday
+318455029464,24538518,sneakylol,2132205352,Deadlock,1347,2026-10-25T17:00:10Z,en,['English'],2026-10-26,07-19-44,Monday
+317176303444,729639945,perra,509658,Just Chatting,1345,2026-10-25T13:15:01Z,sv,"['Svenska', 'Norsk', 'IRL', 'ADHD', 'English', 'Fat', 'DropsAktiverat']",2026-10-26,07-19-44,Monday
+320816913502,81628627,gladd,737987407,Enshrouded,1339,2026-10-25T15:10:23Z,en,"['English', 'Relatable', 'Chill', 'ChallengeRun', 'Unfiltered', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318121335011,25722719,dakillzor,27546,World of Tanks,1328,2026-10-24T07:33:56Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319144549478,836843004,rouszztrash,29595,Dota 2,1328,2026-10-25T17:47:11Z,ru,['Русский'],2026-10-26,07-19-44,Monday
+317738737271,1131600178,lirik_247,499973,Always On,1327,2026-10-25T18:53:43Z,en,"['English', 'lirik', 'Variety', 'Rerun', 'Horror', 'horrormonth', 'SpookyVibes', 'DropsEnabled', 'streamoween', 'halloween']",2026-10-26,07-19-44,Monday
+318113185762,45859662,madegfx,123184772,EA Sports FC 27,1326,2026-10-25T22:52:33Z,fr,['Français'],2026-10-26,07-19-44,Monday
+319085664485,101020771,repaz,21779,League of Legends,1325,2026-10-25T16:41:58Z,de,"['Deutsch', 'DropsAktiviert']",2026-10-26,07-19-44,Monday
+318950170215,806175043,lizabaktt,509658,Just Chatting,1321,2026-10-25T20:43:43Z,ru,"['Русский', 'DropsВключены']",2026-10-26,07-19-44,Monday
+320994839008,23524577,swifty,18122,World of Warcraft,1321,2026-10-25T20:07:32Z,en,"['English', 'swifty', 'warcraft', 'worldofwarcraft', 'worldofwarcraft', 'pvp', 'oneshot', 'IRL']",2026-10-26,07-19-44,Monday
+319698979927,163562674,jankyrondo,509658,Just Chatting,1315,2026-10-25T22:09:15Z,en,"['sports', 'Commanders', 'NFL', 'funny', 'funnystream', 'entertaining', 'entertainment', 'English', 'jankyrondo', 'DMV']",2026-10-26,07-19-44,Monday
+318950788967,126902046,lobanjicaa,498566,Slots,1313,2026-10-25T21:43:26Z,en,"['English', 'funny', 'counterstrike', 'cs2', 'reactions', 'csgo']",2026-10-26,07-19-44,Monday
+317738149879,22253819,scarra,2132205352,Deadlock,1309,2026-10-25T17:09:56Z,en,"['English', 'mortdogssecondson', 'water', 'OTV', 'OfflineTV', 'fakefanspodcast', 'asmr', 'fpsprodigy']",2026-10-26,07-19-44,Monday
+316637223154,41670870,mrtiboute,1167018256,ALYSSA,1305,2026-10-25T21:10:45Z,fr,"['Français', 'Phasmophobia', 'horrrorgames', 'horreur', 'Horror']",2026-10-26,07-19-44,Monday
+319090241893,533163287,delaruetv,509658,Just Chatting,1300,2026-10-25T22:07:06Z,de,"['Deutsch', 'gta', 'rap', 'reaction', 'SUBATON', 'valorant', 'Raplarue', 'discord', 'cave', 'delaruetv']",2026-10-26,07-19-44,Monday
+319148663526,135177864,sidneyeweka,123184772,EA Sports FC 27,1298,2026-10-25T23:44:35Z,de,['Deutsch'],2026-10-26,07-19-44,Monday
+319085811045,462495003,kasiababis,509658,Just Chatting,1287,2026-10-25T16:51:03Z,pl,"['Polski', 'DropyWłączone']",2026-10-26,07-19-44,Monday
+319082869477,1591426901,ascheadmiral,498566,Slots,1281,2026-10-25T13:37:23Z,de,['Deutsch'],2026-10-26,07-19-44,Monday
+317740437495,11001241,kyr_sp33dy,1478650472,Call of Duty: Modern Warfare 4,1269,2026-10-25T22:57:28Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+321958198361,1249362132,pokemonlatam,1931693784,Pokémon Champions,1258,2026-10-25T15:05:40Z,es,"['Español', 'DropsActivados']",2026-10-26,07-19-44,Monday
+322123821147,23257020,ster,2132205352,Deadlock,1247,2026-10-25T19:55:15Z,en,['English'],2026-10-26,07-19-44,Monday
+317740489975,136822306,taxi2g,464339927,ARC Raiders,1242,2026-10-25T23:02:59Z,en,"['TRASH', 'SchizoMode', 'LoudisFunny', 'ToxicStream', 'GAMINGGOLEMJUICERMEGAMAN', 'aimbotting', 'AimAssistOff', 'Vtuber', 'cutegirl', 'English']",2026-10-26,07-19-44,Monday
+318950537191,70858845,leron_baron,509658,Just Chatting,1237,2026-10-25T21:15:38Z,ru,"['Русский', 'DropsВключены']",2026-10-26,07-19-44,Monday
+321964980569,95055754,diazbiffle,1478650472,Call of Duty: Modern Warfare 4,1234,2026-10-25T23:10:16Z,en,"['Warzone', 'English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+316253186410,25575995,mathil1,1041,Diablo II,1220,2026-10-25T17:16:27Z,en,['English'],2026-10-26,07-19-44,Monday
+317739537143,277057209,murdercrumpet,499003,VRChat,1220,2026-10-25T20:59:33Z,en,"['English', 'Vtuber', 'VtuberEN', 'VR']",2026-10-26,07-19-44,Monday
+322005366618,470975603,anabanana,461221,MARVEL Contest of Champions,1216,2026-10-25T18:23:44Z,es,"['Español', 'English', 'Woman', 'womangamer', 'ccp', 'drops', 'DropsActivados']",2026-10-26,07-19-44,Monday
+319276316662,956784486,surskity11,509658,Just Chatting,1211,2026-10-25T22:44:50Z,pt,"['Português', 'Brasil', 'PCDStreamer', 'justchatting', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+318457543640,85093927,rosii,509658,Just Chatting,1209,2026-10-25T22:25:14Z,en,"['English', 'Australian', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+316226010729,106013742,pestily,491931,Escape from Tarkov,1196,2026-10-25T17:40:00Z,en,['English'],2026-10-26,07-19-44,Monday
+320996426336,56582404,chrismelberger,1288749557,Dressmaker (2026),1196,2026-10-25T22:04:44Z,en,"['Loud', 'AlwaysHasBeen', 'English', 'GrownMan', 'BetterThanSamiAtFortnite', 'OldButStillChillLowkey', 'neatdude', 'NoBackseating', 'Unc', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+321962437209,51738113,theclutchjackson,464339927,ARC Raiders,1194,2026-10-25T20:21:57Z,en,"['sillygoose', 'arcraiders', 'comedy', 'English', 'thehairpinbandit', 'ClutchCrew', 'PG', 'Roleplay', 'gaming', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+321959164761,109828129,pokemontcg,9618,Pokémon Trading Card Game,1184,2026-10-25T16:31:38Z,es,"['Esports', 'pokemon', 'playpokemon', 'PTCG', 'TCG', 'pokemontcg', 'tabletop', 'tradingcardgame', 'DropsEnabled', 'Espàñol']",2026-10-26,07-19-44,Monday
+316226522089,37650924,chiblee,260915701,JOHN GLEEP,1182,2026-10-25T20:39:58Z,en,"['realuncle', 'NZ', 'Ally', 'English']",2026-10-26,07-19-44,Monday
+319276471030,1078197656,nokan777,29452,Virtual Casino,1179,2026-10-25T23:02:06Z,pt,"['Português', 'EngIish']",2026-10-26,07-19-44,Monday
+320916507740,26696343,coney,509658,Just Chatting,1179,2026-10-25T23:05:13Z,en,"['English', 'handsome', 'youthful', 'engaging', 'consciencious', 'goodwithpets', 'gaming', 'NOTPREGNANT', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319272751734,140772558,baiano,21779,League of Legends,1176,2026-10-25T16:37:09Z,pt,"['Português', 'CBLOL', 'LOUD', 'paiN', 'VKS', 'FURIA', 'IlhadasLendas', 'idl', 'ILHA', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+321964885081,272168411,renrize,509667,Food & Drink,1164,2026-10-25T23:04:19Z,es,"['Español', 'locura', 'México', 'TiaRen']",2026-10-26,07-19-44,Monday
+322102046939,118155820,willerz,2106425216,Gray Zone Warfare,1158,2026-10-24T12:17:22Z,en,"['English', 'chad', 'Friendly', 'Parkour', 'comedy', 'action', 'FPS', 'multiplayer', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+316158872914,760762515,playermakertv,498566,Slots,1154,2026-10-25T22:53:26Z,es,"['Español', 'casino', 'dinero', 'regalo', 'España', 'Argentina', 'ruleta', 'LiveCasino', 'timba', 'megafireblaze']",2026-10-26,07-19-44,Monday
+322001268954,51530423,damnitbennett,2106425216,Gray Zone Warfare,1150,2026-10-25T10:58:07Z,en,"['English', 'friendly', 'fps', 'chill', 'LearningToPlay', 'ExtractionShooter', 'Hardcore', 'pvp', 'CharityStream', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+322005612506,114942381,coopertv,32399,Counter-Strike,1147,2026-10-25T18:40:42Z,en,['English'],2026-10-26,07-19-44,Monday
+319699426775,1302240199,wardrobewinter,509658,Just Chatting,1137,2026-10-25T22:51:26Z,en,"['English', 'wardrobewinter', 'wardrobe', 'StreamerUniversity', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319273596918,544241532,mahmoojen,509658,Just Chatting,1131,2026-10-25T17:59:09Z,pt,"['Português', 'game', 'ruim', 'hype', 'react', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+319276380790,56722958,roberttson,509658,Just Chatting,1129,2026-10-25T22:52:06Z,es,"['Español', 'Chile', 'DropsActivados']",2026-10-26,07-19-44,Monday
+322109554267,56648155,twitchplayspokemon,1931693784,Pokémon Champions,1128,2026-10-24T22:04:23Z,en,"['English', 'TwitchPlays', 'Pokemon', 'OCE', 'AlwaysOn', 'AlwaysOnline', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+320818187614,31500812,smitegame,2094865572,SMITE 2,1126,2026-10-25T16:52:56Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318126879460,198363811,polispol1,1670574567,Tidy Up the Flower Shop,1122,2026-10-25T21:31:22Z,es,"['Español', 'Ambassadors', 'English', 'TwitchAmbassador', 'Simulator', 'spanish', 'chill', 'cine', 'guapoyelegante']",2026-10-26,07-19-44,Monday
+319085770981,165897730,lame,498566,Slots,1119,2026-10-25T16:48:37Z,en,"['Drops', 'LameBR', 'Lame', 'EngIish', 'Deutsch', 'English']",2026-10-26,07-19-44,Monday
+321964841689,23946146,dolphinchemist,66082,Games + Demos,1113,2026-10-25T23:01:46Z,en,"['English', 'genius', 'Esperanto', 'NoSpoilers']",2026-10-26,07-19-44,Monday
+317738805239,69588825,kalei,464339927,ARC Raiders,1103,2026-10-25T19:03:30Z,en,"['English', '100Thieves', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+317133466198,1121596361,geass81,494184,Mobile Legends: Bang Bang,1098,2026-10-25T19:31:26Z,ru,['Русский'],2026-10-26,07-19-44,Monday
+319090259045,103867423,xamar21,123184772,EA Sports FC 27,1096,2026-10-25T22:08:48Z,de,"['xAmar21', 'Amar', 'Deutsch', 'Sport', 'Simulation', 'Leckerboy21']",2026-10-26,07-19-44,Monday
+320823224926,645498689,paypay,32982,Grand Theft Auto V,1090,2026-10-25T22:22:10Z,en,"['English', 'LGBTQ', 'Gay', 'Roleplay']",2026-10-26,07-19-44,Monday
+320916176860,765713710,celebi_cos,509658,Just Chatting,1087,2026-10-25T22:44:55Z,en,"['English', 'cosplayer', 'chill']",2026-10-26,07-19-44,Monday
+319700187991,159292184,venofn,33214,Fortnite,1077,2026-10-25T23:55:28Z,en,['English'],2026-10-26,07-19-44,Monday
+317133659734,61776347,dianarice,32399,Counter-Strike,1076,2026-10-25T19:57:54Z,ru,"['Аутизм', 'чуткапсихолог', 'вкусняшки', 'залупачес', 'воньговна', 'скебоб', 'мукбанг', 'ASMR', 'Русский', 'Украинский']",2026-10-26,07-19-44,Monday
+320998231136,415249792,bigex,749097531,NMS Boxing,1063,2026-10-25T23:56:05Z,en,['English'],2026-10-26,07-19-44,Monday
+319271275894,72736442,ns_art,509658,Just Chatting,1062,2026-10-25T11:17:20Z,pt,"['Português', 'dota', 'nsart', 'Esports', 'Brasil', 'dota2', 'MOBA', 'Competitive', 'leagueoflegeneds', 'gaming']",2026-10-26,07-19-44,Monday
+318095256930,267550907,mystk,1478650472,Call of Duty: Modern Warfare 4,1062,2026-10-24T13:33:24Z,fr,"['Français', 'callofduty', 'Ranked', 'cdl', 'DropsActivés']",2026-10-26,07-19-44,Monday
+317739121527,543631090,gnomonkey,459931,Old School RuneScape,1059,2026-10-25T19:52:54Z,en,"['English', 'OSRS', 'Guidemaker', 'Speedrunner', 'WorldsFirstChaser', 'HCIM']",2026-10-26,07-19-44,Monday
+319089187173,540612615,mashtakof,195574289,Moon Sweepers,1057,2026-10-25T20:18:37Z,ru,['Русский'],2026-10-26,07-19-44,Monday
+321965094361,70661496,chica,33214,Fortnite,1056,2026-10-25T23:16:58Z,en,['English'],2026-10-26,07-19-44,Monday
+319698584407,84634992,amalee,1943685030,Permafrost,1047,2026-10-25T21:33:22Z,en,"['English', 'vtuber', 'Singer', 'Scuff', 'ENVtuber']",2026-10-26,07-19-44,Monday
+319403100916,37705807,smzinho,29595,Dota 2,1044,2026-10-25T21:30:14Z,pt,['Português'],2026-10-26,07-19-44,Monday
+317178947284,739969775,weronest,12839,Heroes of Might and Magic III: The Restoration of Erathia,1042,2026-10-25T18:31:41Z,ru,['Русский'],2026-10-26,07-19-44,Monday
+318140017763,74258289,joliveira10,509658,Just Chatting,1041,2026-10-25T22:38:30Z,pt,"['Português', 'benfica', 'Porto', 'Futebol', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+320908960476,69012069,m0xyy,2132205352,Deadlock,1039,2026-10-25T13:20:06Z,en,"['English', 'Hawkeye', 'old', 'Chud']",2026-10-26,07-19-44,Monday
+318455988184,47972131,choice,386821,Black Desert,1038,2026-10-25T19:07:41Z,en,"['English', 'Choice', 'BlackDesert', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319698442071,38553197,beaulo,460630,Rainbow Six Siege,1037,2026-10-25T21:20:21Z,en,"['English', 'beaulo', 'pro', 'STATE', 'smallpp', 'hugenuts', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318454961496,3102991,axialmatt,1287954772,Bluey's Happy Snaps,1034,2026-10-25T16:49:39Z,en,"['English', 'Hair', 'VarietyGaming', 'EEEEEEEE', 'SoftAlpha', 'gong', 'DropsEnabled', 'AnniversaryStream', 'AchievementHunting', 'AchievementHunter']",2026-10-26,07-19-44,Monday
+318140120931,53567674,miikelmst,123184772,EA Sports FC 27,1032,2026-10-25T22:54:37Z,es,"['españa', 'español', 'miikelmst', 'futchampions', 'Español', 'TOTY', 'fc27', 'fc27packopening', 'fc27futchampion', 'FC27ESPAÑOL']",2026-10-26,07-19-44,Monday
+319696308055,250208057,deadblossomjesse,509658,Just Chatting,1026,2026-10-25T18:02:05Z,en,"['English', 'funnystream', 'interestingPerson', 'goodpersonality', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+320915622876,55735861,rubixraptor,1330093788,Voices of the Void,1022,2026-10-25T22:07:09Z,en,"['English', 'sillyguy']",2026-10-26,07-19-44,Monday
+319696717271,138600347,stoopzz,969726726,Broken Ranks,1022,2026-10-25T18:45:16Z,en,"['MMORPG', 'English', 'MMO', 'RPG']",2026-10-26,07-19-44,Monday
+316226768489,460557680,bubbell,32982,Grand Theft Auto V,1017,2026-10-25T23:02:01Z,en,"['Australia', 'English', 'LiveLaughLore', 'ADHD', 'UnusualFindings', 'RPG']",2026-10-26,07-19-44,Monday
+322120232283,126436297,klean,2106425216,Gray Zone Warfare,1016,2026-10-25T15:38:13Z,en,"['English', 'UnitedStates', 'Hardcore', 'Immersion', '1440p', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319260051446,44114966,furq,516575,VALORANT,1014,2026-10-24T06:32:13Z,pt,"['Português', 'Radiante', 'Romantico', 'Tapas', 'iEsse', 'Reposição']",2026-10-26,07-19-44,Monday
+322125673435,1424123474,dimpiy,511224,Apex Legends,1012,2026-10-25T22:00:02Z,en,"['Variety', 'recommened', 'gaming', 'FrontPage', 'chill', 'adhd', 'English']",2026-10-26,07-19-44,Monday
+319276881782,62336028,burgaofps,491931,Escape from Tarkov,1007,2026-10-25T23:51:30Z,pt,['Português'],2026-10-26,07-19-44,Monday
+322125708763,643642250,jalensworld_,509658,Just Chatting,1005,2026-10-25T22:02:18Z,en,"['English', 'BabyDollaz', 'gamer', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319090215909,123922797,cristinini,13389,Age of Empires II,1004,2026-10-25T22:04:10Z,es,['Español'],2026-10-26,07-19-44,Monday
+320820646238,149107396,caresapo,21779,League of Legends,1004,2026-10-25T19:41:26Z,es,"['Español', 'LoL', 'Vtuber', 'Calvo', 'Furry', 'Therian', 'LGBTQPlus', 'Femboy', 'DropsActivados']",2026-10-26,07-19-44,Monday
+319147134950,173242119,degst3r,32399,Counter-Strike,998,2026-10-25T20:43:38Z,ru,"['cs', 'RU', 'Русский', 'degster', 'прокачка', 'прокачкаинвентаря']",2026-10-26,07-19-44,Monday
+322126546011,1016183683,fraanticc,33214,Fortnite,997,2026-10-25T23:00:14Z,en,"['English', 'Fortnite']",2026-10-26,07-19-44,Monday
+320916191068,32645411,tampaneversleeps,2030977008,Avatar Legends: The Fighting Game,988,2026-10-25T22:45:55Z,en,"['English', 'fgc', 'fighting', 'games', 'fightinggames', 'tournament']",2026-10-26,07-19-44,Monday
+319147631718,1033052690,fnrax,33214,Fortnite,978,2026-10-25T21:33:25Z,it,"['Italiano', 'Inglese', 'Fortnite']",2026-10-26,07-19-44,Monday
+317096067157,174053656,fandercs,29595,Dota 2,977,2026-10-25T15:24:22Z,ru,['Русский'],2026-10-26,07-19-44,Monday
+316253854186,93893204,harmless,32982,Grand Theft Auto V,973,2026-10-25T22:52:38Z,en,"['English', 'NoPixel', 'NoPixelV', 'NoPixel5']",2026-10-26,07-19-44,Monday
+318455488600,117481096,cjya,489401,Call of Duty: Black Ops III,970,2026-10-25T18:04:39Z,en,"['English', 'ilovevolleyball', 'inamedsurfcanceling', 'onepiecefan', 'dellapookie', 'Cooking', 'haikyuufan']",2026-10-26,07-19-44,Monday
+318112660578,95263266,mohleking,123184772,EA Sports FC 27,968,2026-10-25T22:01:19Z,fr,['Français'],2026-10-26,07-19-44,Monday
+319089494373,96067366,drcopernicotv,490744,Stardew Valley,954,2026-10-25T20:45:02Z,pt,['Português'],2026-10-26,07-19-44,Monday
+319402269940,62328653,tftoddy,513143,Teamfight Tactics,954,2026-10-25T19:54:33Z,pt,"['Português', 'TFT', 'TeamfightsTactics']",2026-10-26,07-19-44,Monday
+316181859027,59685493,cohh,499973,Always On,953,2026-10-25T12:00:02Z,en,"['ReRun', 'Cozy', 'GoodVibes', 'SFW', 'Parent', 'Chill', 'English']",2026-10-26,07-19-44,Monday
+316253541866,102777268,bazza,32982,Grand Theft Auto V,952,2026-10-25T20:10:27Z,en,"['English', 'NoPixel']",2026-10-26,07-19-44,Monday
+318127118820,87184624,zacknani,516575,VALORANT,951,2026-10-25T22:01:28Z,fr,"['football', 'Français', 'zackenrouelibre']",2026-10-26,07-19-44,Monday
+318125280484,426336938,sesuko,515025,Overwatch,941,2026-10-25T19:03:33Z,es,"['Español', 'DropsActivados']",2026-10-26,07-19-44,Monday
+317132136278,121202124,hadi_ow,515025,Overwatch,941,2026-10-25T16:55:56Z,en,"['top500', 'german', 'English', 'Reinhardt', 'overwatch', 'OWCS', 'drops', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+320800250206,105458682,bobross,509660,Art,940,2026-10-24T14:51:51Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318112788450,26538483,sips_,1161800735,Obenseuer,937,2026-10-25T22:13:26Z,en,"['English', 'falconry', 'bronzesmith', 'Dad', 'mapmaking', 'esportsready', 'albino', 'Garagegaming', 'nevernude', 'BeachHaters']",2026-10-26,07-19-44,Monday
+319274847990,467680536,jinkiwinkki,509658,Just Chatting,936,2026-10-25T19:59:53Z,pt,"['Português', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+318126179044,142564043,tayoh_,1763263,nanos world,932,2026-10-25T20:17:09Z,fr,['Français'],2026-10-26,07-19-44,Monday
+318138395491,212167812,giankoextreme,958726331,Beetleball,929,2026-10-25T20:02:00Z,it,"['Italiano', 'paleolitico', 'educativo', 'minecraft', 'SaluteMentale', 'bimboago', 'animali', 'Mhanz', 'marvelsnap', 'zugu']",2026-10-26,07-19-44,Monday
+318137880163,94830708,sura,32982,Grand Theft Auto V,925,2026-10-25T19:22:55Z,fr,"['Français', 'flashback', 'FlashbackWL', 'Rediffusion']",2026-10-26,07-19-44,Monday
+318946513639,251502475,cowfee,515025,Overwatch,923,2026-10-25T17:02:15Z,en,"['English', 'vtuber', 'support', 'kiriko', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319332762229,701399960,oisakura,509658,Just Chatting,923,2026-10-25T19:17:33Z,pt,"['Brasil', 'Japão', 'Português', 'Mulher', 'React', 'Conversa', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+317738135415,24991333,imaqtpie,2132205352,Deadlock,920,2026-10-25T17:07:32Z,en,['English'],2026-10-26,07-19-44,Monday
+319334161141,468642876,carol,509658,Just Chatting,918,2026-10-25T21:32:36Z,pt,"['Português', 'react', 'study', 'pomodoro', 'sprint', 'leitura', 'livros', 'Anime', 'otaku', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+320996471264,496942388,jill,737987407,Enshrouded,915,2026-10-25T22:08:16Z,en,"['English', 'jillcrofts', 'TombRaider', 'Speedrun', 'ChallengeRunner', 'cosplay', 'anime', 'NoBackseating', 'kpop', 'Speedrunner']",2026-10-26,07-19-44,Monday
+320818461790,69906737,chocotaco,65632,DayZ,915,2026-10-25T17:11:20Z,en,['English'],2026-10-26,07-19-44,Monday
+318110019426,655890726,tatiana_tv,32982,Grand Theft Auto V,911,2026-10-25T18:27:16Z,fr,"['Français', 'rp', 'flashback']",2026-10-26,07-19-44,Monday
+319694809943,469158011,kayceeedilla,1264310518,Marvel Rivals,909,2026-10-25T14:23:42Z,en,"['filipino', 'asianamerican', 'Asian', 'Competitive', 'Ranked', 'trending', 'viral', 'marvelrivals', 'English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+322127559131,70964046,bunnyayu,509659,ASMR,908,2026-10-26T00:05:04Z,en,"['English', 'Anime', 'Vtuber', 'Cosplay', 'ASMR']",2026-10-26,07-19-44,Monday
+319404035572,944658444,jmdeck,509658,Just Chatting,891,2026-10-25T23:13:41Z,pt,"['Português', 'ingles', 'Espàñol', 'IRL', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+320911118556,198758158,parkenharbor,494099,Kingdom Hearts HD 1.5 + 2.5 ReMIX,890,2026-10-25T16:36:33Z,en,"['Chatty', 'Educational', 'Canada', 'Cozy', 'English', 'hard', 'challenge', 'FirstPlaythrough']",2026-10-26,07-19-44,Monday
+321963020377,90222378,kruzadar,23311496,Clive Barker's Hellraiser: Revival,888,2026-10-25T21:00:59Z,en,"['English', 'chill', 'funny', 'FleshTuber', 'Woman', 'gaming', 'comedy', 'DadsOfTwitch']",2026-10-26,07-19-44,Monday
+318949166567,67262575,sektenspinner,1092451091,HUNGER,885,2026-10-25T19:35:20Z,de,"['Allrounder', 'Educational', 'MyWay', 'Deutsch', 'English']",2026-10-26,07-19-44,Monday
+319333037173,30458295,frttt,509658,Just Chatting,884,2026-10-25T19:44:15Z,pt,"['Português', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+318121195747,38824799,punkill,1478650472,Call of Duty: Modern Warfare 4,882,2026-10-24T06:42:28Z,fr,"['Français', 'MW4', 'callofduty', 'DropsActivés']",2026-10-26,07-19-44,Monday
+322007311194,64581694,rogue,1848745913,Battlefield REDSEC,879,2026-10-25T20:40:07Z,en,"['MonsterEnergy', 'TeamLiquid', 'Racing', 'Cars', 'English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318950583527,70274718,sypeh,1264310518,Marvel Rivals,871,2026-10-25T21:20:07Z,en,"['Dansk', 'English', 'support', 'strategist', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318950231015,1592530532,blessingbri,498566,Slots,868,2026-10-25T20:48:53Z,es,['Español'],2026-10-26,07-19-44,Monday
+319694050263,579357423,offlinezeus,32982,Grand Theft Auto V,868,2026-10-25T10:33:41Z,en,"['anime', 'roleplay', 'Hispanic', 'Cute', 'Gamer', 'uwu', 'NoPixel', 'NoPixelV', 'NOPIXELV', 'English']",2026-10-26,07-19-44,Monday
+320917191644,865175035,girlgamer2210,1441208453,Once Human,861,2026-10-25T23:49:36Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318126721124,251348817,e0j2,123184772,EA Sports FC 27,860,2026-10-25T21:12:28Z,en,['English'],2026-10-26,07-19-44,Monday
+319695029975,232951933,linkzzey,27471,Minecraft,855,2026-10-25T15:05:17Z,en,"['LetsPlay', 'English', 'Hardcore', 'SurvivaI', 'FamilyFriendly', 'Java', 'Singleplayer', 'ViewerRedemption', 'Chill', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+321963822297,231053562,cursedfiber78,1663723394,Gears of War: E-Day,853,2026-10-25T21:55:47Z,es,"['Español', 'tortilla', 'malabarista', 'Elmejorstreamerdelmundo', 'tupapá']",2026-10-26,07-19-44,Monday
+316192596456,64195856,paparatto18,1435206302,Slay the Spire II,853,2026-10-25T20:41:57Z,en,"['English', 'defectowns', 'nobbers', 'gaming', 'amid']",2026-10-26,07-19-44,Monday
+318137154787,243579697,hakaiwrld,32982,Grand Theft Auto V,851,2026-10-25T18:19:51Z,fr,['Français'],2026-10-26,07-19-44,Monday
+321961606105,87596756,lltrigger,21779,League of Legends,849,2026-10-25T19:22:05Z,en,"['English', 'Challenger', 'ADCMain', 'Educational', 'Coaching', 'Ranked', 'Competitive', 'LucianOTP', 'RPG', 'ASMR']",2026-10-26,07-19-44,Monday
+320915895388,37656960,dawildgrim,1229,Super Mario World,844,2026-10-25T22:25:47Z,en,['English'],2026-10-26,07-19-44,Monday
+319400615156,63111564,matta,509658,Just Chatting,844,2026-10-25T16:20:37Z,pt,"['Português', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+321959223129,28640725,lobosjr,982348888,ELDEN RING NIGHTREIGN,839,2026-10-25T16:36:49Z,en,"['voiceactor', 'chill', 'rpg', 'English', 'vgm', 'soulslike', 'Retro', 'nostalgía']",2026-10-26,07-19-44,Monday
+319146805094,70833988,dariomartiz,32982,Grand Theft Auto V,838,2026-10-25T20:14:16Z,it,"['fivem', 'peakville', 'dariomartiz', 'SantaMonica', 'Italiano']",2026-10-26,07-19-44,Monday
+318112711010,126287193,blaize,509658,Just Chatting,835,2026-10-25T22:06:19Z,fr,"['Français', 'BLAIZE', 'DropsActivés']",2026-10-26,07-19-44,Monday
+321964277081,147299717,blue_squadron,386821,Black Desert,832,2026-10-25T22:24:23Z,en,"['comedy', 'english', 'English', 'Chinese中文', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+317134346582,1591528991,zubarefff_3669413,27471,Minecraft,826,2026-10-25T23:31:34Z,ru,"['Zubarefff', 'Зубареффф', 'Zubarev', 'Зубарев', 'казиноонлайн', 'казинострим', 'стримказино', 'заносынедели', 'slots', 'Трепутин']",2026-10-26,07-19-44,Monday
+321965184345,23057278,gassymexican,1568081763,Mass Effect Legendary Edition,822,2026-10-25T23:22:34Z,en,"['English', 'max', 'gonzalez', 'gassymexican', 'ogtwitch', 'NoBackseatingUnlessAsked', 'NoSpoilersNoBackseating']",2026-10-26,07-19-44,Monday
+318458287704,110059426,bao,509658,Just Chatting,821,2026-10-26T00:03:04Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319090447589,135558945,mortenroyale,491168,Clash Royale,820,2026-10-25T22:31:34Z,de,['Deutsch'],2026-10-26,07-19-44,Monday
+319403980020,109093498,sofikimmy,515025,Overwatch,819,2026-10-25T23:07:16Z,es,"['Español', 'Chile', 'DropsActivados']",2026-10-26,07-19-44,Monday
+317132754390,80188115,liz0n,19423,Heavy Rain,816,2026-10-25T18:05:54Z,ru,"['Уют', 'Образование', 'Женщина', 'РазработкаИгр', 'Русский', 'IRL', 'Стратегии', 'DropsВключены']",2026-10-26,07-19-44,Monday
+318139981795,540797549,marinaifx,509658,Just Chatting,815,2026-10-25T22:33:18Z,es,"['Español', 'DropsActivados']",2026-10-26,07-19-44,Monday
+319131980518,1165108539,clixoffline,33214,Fortnite,814,2026-10-24T18:36:45Z,en,"['English', 'Fortnite', 'Clix', 'Lacy', 'StableRonaldo', 'XSET', 'FaZe', 'jynxzi']",2026-10-26,07-19-44,Monday
+319330859765,128775333,coreano,2132205352,Deadlock,814,2026-10-25T14:39:48Z,en,"['Português', 'English']",2026-10-26,07-19-44,Monday
+318137096803,440140011,twincytv,32982,Grand Theft Auto V,809,2026-10-25T18:14:47Z,fr,"['Français', 'FlashbackWL', 'GTARP', 'DropsActivés']",2026-10-26,07-19-44,Monday
+316135957457,27045041,toadamarillo,21779,League of Legends,809,2026-10-25T14:59:19Z,es,"['Español', 'LeagueaofLegends', 'LOL', 'Toad', 'TOADAMARILLO', 'DropsActivados']",2026-10-26,07-19-44,Monday
+319141248998,514473492,gwizdakk,32399,Counter-Strike,808,2026-10-25T13:46:28Z,pl,['Polski'],2026-10-26,07-19-44,Monday
+320798550750,42175924,reidboyy,1478650472,Call of Duty: Modern Warfare 4,806,2026-10-24T11:20:42Z,en,"['English', 'Furry', 'Bussy', 'fat', 'Fishing', 'obese', 'PlayingwithViewers', 'mommy', 'TTS', 'drops']",2026-10-26,07-19-44,Monday
+316637439730,463506689,tananapia,771448419,AION 2,804,2026-10-25T22:54:14Z,ja,"['絶叫系', '人妻', '脳筋', 'ママ配信者', '歯茎', 'ゲーミング主婦', '日本語', 'japanese', '脳筋', '雑談']",2026-10-26,07-19-44,Monday
+316136578897,440985624,wolfeei,2023301131,CreatorSMP,800,2026-10-25T18:26:00Z,nl,"['minecraft', 'Creatorsmp', 'CSMP', 'CSMP4', 'dutch', 'Nederlands']",2026-10-26,07-19-44,Monday
+319695024855,885938489,staish,1515862749,Disney Dreamlight Valley,799,2026-10-25T15:04:00Z,en,"['AnonymousFollows', 'English', 'Woman', 'cozy', 'inclusive', 'LurkerFriendly', 'AllyToAll', 'ClosedCaptions', 'optedoutofgenaitraining', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+320912566492,684318550,smashsv,504461,Super Smash Bros. Ultimate,798,2026-10-25T18:23:55Z,es,"['ENGLISH', 'SMASH', 'SuperSmash', 'Español']",2026-10-26,07-19-44,Monday
+318941353575,245214744,fuxelbau,27471,Minecraft,798,2026-10-25T10:49:02Z,de,"['Deutsch', 'Vtuber', 'drops']",2026-10-26,07-19-44,Monday
+317098410069,1568880985,treputin_lord_392881,516575,VALORANT,797,2026-10-25T21:32:46Z,ru,"['лорд', 'трепутин', 'казино', 'лудожоп', 'эвелон', 'папич', 'casino', 'Русский', 'хесус', 'Лудоман']",2026-10-26,07-19-44,Monday
+322006222042,38368079,garek,32982,Grand Theft Auto V,796,2026-10-25T19:23:26Z,en,"['Anime', 'IBS', 'Vtuber', 'Cringe', 'English', 'bald', 'corn', 'NoPixelV']",2026-10-26,07-19-44,Monday
+319697808727,849505301,mightaswellbemac,512710,Call of Duty: Warzone,796,2026-10-25T20:23:00Z,en,"['warzone', 'callofduty', 'rankedplay', 'HighEnergy', 'highkills', 'highkillgameplay', 'rebirthisland', 'BO7', 'bestintheworld', 'TopRanked']",2026-10-26,07-19-44,Monday
+318138189027,580985449,jizonn,509658,Just Chatting,795,2026-10-25T19:48:07Z,pt,"['Português', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+318458105304,500538599,mole,509658,Just Chatting,793,2026-10-25T23:40:32Z,en,"['irl', 'egirl', 'opium', 'based', 'women', 'girl', 'feet', 'English', 'singlemom', 'FeetLoversWelcome']",2026-10-26,07-19-44,Monday
+318137357027,526168468,mrsal_59,32982,Grand Theft Auto V,790,2026-10-25T18:38:52Z,fr,"['FlashbackWL', 'Français', '1440p']",2026-10-26,07-19-44,Monday
+316460165229,211413076,r0o08,505884,PUBG MOBILE,789,2026-10-25T22:07:38Z,ar,['العربية'],2026-10-26,07-19-44,Monday
+319699430743,568329848,sunnys,749097531,NMS Boxing,789,2026-10-25T22:51:51Z,en,"['miata', 'English', '100Thieves', 'oscs']",2026-10-26,07-19-44,Monday
+319082907877,551415077,lesleybunny,27471,Minecraft,789,2026-10-25T13:40:37Z,de,"['Deutsch', 'English', 'ca14', 'craftattack']",2026-10-26,07-19-44,Monday
+319147426278,69986821,dai_mon,509658,Just Chatting,787,2026-10-25T21:12:00Z,fr,"['Actualités', 'Radio', 'Français', 'débat', 'politique', 'chill', 'international', 'DropsActivés']",2026-10-26,07-19-44,Monday
+317179742676,717727472,tamae_,32982,Grand Theft Auto V,786,2026-10-25T21:01:11Z,pl,['Polski'],2026-10-26,07-19-44,Monday
+322009009242,96235256,ohtofu,491487,Dead by Daylight,777,2026-10-25T22:36:06Z,en,"['English', 'NoBackseatingAskFirst', 'SpoilersNotAllowed', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319147477862,472201909,dennusyt,2023301131,CreatorSMP,774,2026-10-25T21:17:16Z,nl,"['Nederlands', 'CSMP', 'Creatorsmp', 'minecraft', 'Hardcore']",2026-10-26,07-19-44,Monday
+319145832166,137025510,tosho0,1763263,nanos world,772,2026-10-25T19:07:22Z,de,"['Deutsch', 'RP', 'Zenkai', 'ZenkaiRP']",2026-10-26,07-19-44,Monday
+320823846366,189093703,thesnootyfox,509659,ASMR,771,2026-10-25T22:55:28Z,en,"['English', 'ASMR', 'Vtuber', 'mommy', 'findom', 'hypnosis', 'lewdtuber', 'cringe', 'paypig', 'goonmaxxing']",2026-10-26,07-19-44,Monday
+319699554775,792290049,lykq8don,511224,Apex Legends,771,2026-10-25T23:02:16Z,ja,"['APEX', '日本語', 'FPS', '再配信']",2026-10-26,07-19-44,Monday
+318458033240,565021390,kidshadoe,66082,Games + Demos,771,2026-10-25T23:31:13Z,en,"['English', 'drops', 'ADHD', 'Vtuber', 'LOUD', 'ADHDStreamer', 'Cosplay', 'FirstPlaythrough']",2026-10-26,07-19-44,Monday
+320996037600,240992719,snkarma,21779,League of Legends,771,2026-10-25T21:36:27Z,de,"['Gragas', 'Mentality', 'Midlane', 'Deutsch', 'Challenger', 'lol', 'leagueoflegends', 'Educational', 'NoWay', 'DropsAktiviert']",2026-10-26,07-19-44,Monday
+322007382874,427622167,sigy,490377,Sea of Thieves,771,2026-10-25T20:45:00Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318946989287,168348436,xrick75,1763263,nanos world,769,2026-10-25T17:31:17Z,de,"['Deutsch', 'RP', 'fivem', 'gta', 'Zenkai', 'ZenkaiDE']",2026-10-26,07-19-44,Monday
+319089310565,131917576,vivalafazza,123184772,EA Sports FC 27,767,2026-10-25T20:29:06Z,it,['Italiano'],2026-10-26,07-19-44,Monday
+322004446938,244693730,sardaco,459931,Old School RuneScape,767,2026-10-25T17:20:36Z,en,"['English', 'ironman']",2026-10-26,07-19-44,Monday
+320994152928,1027750470,staydownkayy,749097531,NMS Boxing,766,2026-10-25T19:20:57Z,en,"['English', 'DropsEnabled', 'USA', 'CLOVERBOYZ', 'kaicenat', 'Reggie', 'jaycincoo', 'tylil']",2026-10-26,07-19-44,Monday
+322127375451,142145687,pengwin,32982,Grand Theft Auto V,761,2026-10-25T23:55:13Z,en,"['English', 'Chill', 'Anime', 'NotBald', 'PleaseSubscribe', 'Cozy', 'Roleplay', 'nopixelV', 'nopixel']",2026-10-26,07-19-44,Monday
+316193003624,36888859,invain,509658,Just Chatting,760,2026-10-25T23:13:35Z,en,"['English', 'ASMR', 'Vtuber', 'Aussie', 'MaleVtuber', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+321960398425,234775606,vulpixie,24241,FINAL FANTASY XIV ONLINE,759,2026-10-25T17:57:45Z,en,"['English', 'vtuber', 'ENVtuber', 'anime', 'vulpixie', 'ALOO', 'NoSpoilersNoBackseating', 'squonkqueen']",2026-10-26,07-19-44,Monday
+315651208560,555231486,ryan8503031,488190,Poker,757,2026-10-25T20:06:54Z,zh,['中文'],2026-10-26,07-19-44,Monday
+319330482805,504334548,twisterdrops,65876,Cyberpunk 2077,756,2026-10-25T12:59:57Z,en,"['DropsActivated', 'drops', 'English', 'Français', 'twitchdrops', 'Badge', 'Badges', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319689642199,567928581,mooda,498592,I'm Only Sleeping,754,2026-10-25T01:43:25Z,en,['English'],2026-10-26,07-19-44,Monday
+318951492711,494082904,cricoccia3,123184772,EA Sports FC 27,749,2026-10-25T23:06:09Z,it,['Italiano'],2026-10-26,07-19-44,Monday
+318454882264,39763722,star0chris,512953,ELDEN RING,746,2026-10-25T16:36:26Z,en,"['Speedrun', 'Challenge', 'TheseTagsAreUseless', 'Educational', 'AdsAreCringe', 'RosesAreRed', 'ChatIsHardToManage', 'ForgetWhatYouJustRead', 'IHaveBrainDamage', 'English']",2026-10-26,07-19-44,Monday
+322123246811,488087884,josefattv,1663723394,Gears of War: E-Day,746,2026-10-25T19:16:25Z,es,"['Español', 'Tierroso']",2026-10-26,07-19-44,Monday
+318458144344,450653133,nyybeats,1669431183,DJs,745,2026-10-25T23:46:07Z,en,"['DJ', 'House', 'Music', 'English', 'EDM', 'dance', 'Techno', 'pride', 'LGBTQIA', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318457854936,24716782,jessecox,723030544,Stupid Never Dies,745,2026-10-25T23:06:26Z,en,"['English', 'StreamDaddy', 'funcle', 'BeExcellentToEachother', 'TooOldForTwitch']",2026-10-26,07-19-44,Monday
+321964743257,31723226,cobaltstreak,1414860634,The Binding of Isaac: Repentance,745,2026-10-25T22:56:11Z,en,"['English', 'isaac', 'Roguelike', 'Roguelite', 'Furry', 'Friendly', 'DungeonsandDragons', 'Chıll', 'mewgenics']",2026-10-26,07-19-44,Monday
+319276011894,225943943,mandymess,509658,Just Chatting,745,2026-10-25T22:09:27Z,pt,"['LGBT', 'DragQueen', 'Português', 'DBDcreator', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+317098029269,24703194,neet,499003,VRChat,742,2026-10-25T19:58:05Z,en,"['cinema', 'Mute', 'VR', 'music', 'Pagan', 'Metal', 'IndieRock', 'cute', 'English', 'Vtuber']",2026-10-26,07-19-44,Monday
+319145830502,793157866,sarahtoninx9,509658,Just Chatting,738,2026-10-25T19:07:13Z,de,"['Deutsch', 'german', 'justchattıng', 'BRAINROT', 'yapping', 'ragebait', 'Politik', 'reaction', 'react', 'DropsAktiviert']",2026-10-26,07-19-44,Monday
+321959189977,24935580,azulgg,9618,Pokémon Trading Card Game,738,2026-10-25T16:33:45Z,en,['English'],2026-10-26,07-19-44,Monday
+318948561639,144274705,pesh,509658,Just Chatting,738,2026-10-25T18:59:55Z,it,"['Italiano', 'pelato', 'DropAbilitati']",2026-10-26,07-19-44,Monday
+319142748518,21431060,phunkroyal,24241,FINAL FANTASY XIV ONLINE,737,2026-10-25T15:43:00Z,de,"['Deutsch', 'gaming', 'Cozy', 'RichtigSchönerStream', 'echtTollerStream', 'SchöneZuschauer', 'GeileSpielauswahl', 'KrasseSkillsHatDerPhunk', 'WahnsinnigTolleZuschauer', 'ChatIstAuchGanzOk']",2026-10-26,07-19-44,Monday
+318127309284,102680338,farfa,1119642287,Yu-Gi-Oh! Master Duel,736,2026-10-25T22:23:51Z,en,"['yugioh', 'masterduel', 'English']",2026-10-26,07-19-44,Monday
+318134385635,924287633,fragger_sandropt,30921,Rocket League,733,2026-10-25T14:01:12Z,pt,['Português'],2026-10-26,07-19-44,Monday
+318140013411,529436270,qassimiento,18846,Garry's Mod,732,2026-10-25T22:37:30Z,fr,['Français'],2026-10-26,07-19-44,Monday
+318948873703,132289488,hollywood285,123184772,EA Sports FC 27,730,2026-10-25T19:16:41Z,it,"['Italiano', 'fc26', 'fc27', 'hollywood285', 'fifa', 'nellonigro', 'packopening', 'English', 'calcio']",2026-10-26,07-19-44,Monday
+321960276569,132563423,firedancer,509658,Just Chatting,724,2026-10-25T17:49:06Z,en,"['egirl', 'dancing', 'asmr', 'English', 'hottub', 'Princess', 'Goddess', 'findom', 'Anime', 'feet']",2026-10-26,07-19-44,Monday
+319146978790,60513811,spartiatix,18707,Grand Theft Auto IV,723,2026-10-25T20:29:45Z,pl,['Polski'],2026-10-26,07-19-44,Monday
+319141182950,1522217820,astana666santa,498592,I'm Only Sleeping,722,2026-10-25T13:41:34Z,ru,['Русский'],2026-10-26,07-19-44,Monday
+319330943221,39152815,clovaobengala,771448419,AION 2,719,2026-10-25T14:57:24Z,pt,['Português'],2026-10-26,07-19-44,Monday
+319271055862,188210046,saegusinha,19619,Tibia,717,2026-10-25T09:40:16Z,pt,"['Português', 'inglês', 'PKA', 'PokemonAlliance']",2026-10-26,07-19-44,Monday
+319139183846,118547417,j0beats,490655,Pokémon GO,713,2026-10-25T10:44:23Z,en,"['DropsEnabled', 'Female', 'English', 'ClosedCaptions', 'PlayingwithViewers', 'UK', 'DualFormat', 'IRL', 'subathon', 'BeginnerFriendly']",2026-10-26,07-19-44,Monday
+318113596130,651300906,dvniel_play,32982,Grand Theft Auto V,709,2026-10-25T23:38:24Z,fr,['Français'],2026-10-26,07-19-44,Monday
+319698705239,139094686,punkdagod,55453844,Street Fighter 6,708,2026-10-25T21:45:08Z,en,"['Tournament', 'English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319698944087,645185149,doogile,27471,Minecraft,708,2026-10-25T22:06:04Z,en,"['speedrun', 'mcsr', 'ranked', 'doogie', 'English']",2026-10-26,07-19-44,Monday
+320992211680,88957496,metaphor,1478650472,Call of Duty: Modern Warfare 4,708,2026-10-25T17:08:52Z,en,"['marmot', 'English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+317739879031,572435780,onceuponem,494099,Kingdom Hearts HD 1.5 + 2.5 ReMIX,707,2026-10-25T21:48:48Z,en,['English'],2026-10-26,07-19-44,Monday
+319139304550,916028465,felikah,27471,Minecraft,706,2026-10-25T10:57:00Z,de,"['Deutsch', 'gaming', '7tv', 'Ragebait', 'Wutköder', 'Satire']",2026-10-26,07-19-44,Monday
+319698791383,500128827,codemiko,509658,Just Chatting,706,2026-10-25T21:52:48Z,en,"['English', 'VTuber', 'Korean', 'Asian', 'Woman', 'ADHD', 'Chatting', 'Chatty', '3D', 'AI']",2026-10-26,07-19-44,Monday
+319141730022,127361301,antilipsi,21779,League of Legends,706,2026-10-25T14:24:34Z,el,"['greek', 'English', 'Lissandra', 'Deutsch', 'Challenger', 'Tier3', 'Κύπρος', 'Cyprus', 'Greece', 'Ελληνικά']",2026-10-26,07-19-44,Monday
+322121317723,24534372,jimrsng,21779,League of Legends,706,2026-10-25T17:00:56Z,es,"['Español', 'divertido', 'comedia', 'irreverente', 'cringe', 'drops', 'DropsActivados']",2026-10-26,07-19-44,Monday
+319275492214,214147478,norgannonhh,464339927,ARC Raiders,705,2026-10-25T21:05:05Z,es,"['Español', 'MMORPG', 'Argentina', 'Drops', 'PvP', 'Gameplay', 'Noticias', 'Multijugador', 'ArcRaiders', 'Videojuegos']",2026-10-26,07-19-44,Monday
+317737154807,172170148,toptierkid,1264310518,Marvel Rivals,705,2026-10-25T12:23:09Z,en,"['English', 'TTK', 'Controller', 'xQc', 'KaiCenat', 'StableRonaldo', 'Lacy', 'Jynxzi', 'CaseOh', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318112902754,24449932,lythero,1264310518,Marvel Rivals,703,2026-10-25T22:23:57Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+320998059616,92786805,beauty,509511,Marbles on Stream,700,2026-10-25T23:46:04Z,en,"['English', 'NoBackseating', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+321960185689,1389671297,shinchan_oficial,1398657661,Anime Squad,700,2026-10-25T17:42:43Z,es,['Español'],2026-10-26,07-19-44,Monday
+318112087778,784302005,banniuwu,509658,Just Chatting,696,2026-10-25T21:11:20Z,de,"['Deutsch', 'Vegan', 'Politik', 'egirl', 'Cosplay', 'Frau', 'Wiederholen', 'DropsAktiviert']",2026-10-26,07-19-44,Monday
+319276699638,62471807,safiro01,516575,VALORANT,693,2026-10-25T23:28:12Z,es,"['Español', 'drops', 'valorant']",2026-10-26,07-19-44,Monday
+319697781847,159143377,stankrat,2106425216,Gray Zone Warfare,689,2026-10-25T20:20:30Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318113026658,838776397,en_442,509658,Just Chatting,688,2026-10-25T22:35:28Z,fr,"['liguedeschampions', 'Français', 'mbappe', 'realmadrid', 'Football', 'PSG', 'BARCA', 'DropsActivés']",2026-10-26,07-19-44,Monday
+316226850537,693883340,clioaite,509658,Just Chatting,687,2026-10-25T23:44:32Z,en,"['Vtuber', 'History', 'Chatty', 'Hag', 'LHWHPGFGSGASMRIE', 'Australia', 'English', 'PhaseConnect', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+320916555612,35833485,brozime,66170,Warframe,685,2026-10-25T23:08:10Z,en,"['English', 'IRL']",2026-10-26,07-19-44,Monday
+321963164377,80484610,legendofwinning,518203,Sports,685,2026-10-25T21:10:28Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+322120888411,86308586,fragas,491931,Escape from Tarkov,677,2026-10-25T16:30:04Z,en,"['English', 'glorp', 'BIGDOG']",2026-10-26,07-19-44,Monday
+320820965854,51123995,proze,1478650472,Call of Duty: Modern Warfare 4,676,2026-10-25T20:01:35Z,fr,"['Français', 'DropsActivés']",2026-10-26,07-19-44,Monday
+320912014300,53741885,crayon_fps,2132205352,Deadlock,676,2026-10-25T17:45:01Z,en,"['gamer', 'English', 'Vietnamese', 'extremelypassionate', 'richRP', 'eternus', 'deadlock', 'NA']",2026-10-26,07-19-44,Monday
+316695652595,170800884,japaneseprintmaking,509673,Makers & Crafting,676,2026-10-25T22:59:50Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+320911716316,700526126,blukitsune9,509511,Marbles on Stream,676,2026-10-25T17:22:40Z,en,"['English', 'Woman', 'IRL', 'girl', 'reaction', 'Friendly', 'tism', 'Cosplay', 'scary', 'Travel']",2026-10-26,07-19-44,Monday
+319088522213,43030068,kurolily,513181,Genshin Impact,676,2026-10-25T19:31:03Z,it,['Italiano'],2026-10-26,07-19-44,Monday
+317740814711,124651013,thegeekentry,490744,Stardew Valley,673,2026-10-25T23:42:35Z,en,"['English', 'ADHD', 'PositiveVibes', 'rizz', 'Alienware', 'Cozy', 'artist', 'AlienwareArenaStreamer', 'giveaway', 'UwuBakaSempai']",2026-10-26,07-19-44,Monday
+319698890839,406379460,oddrey,491487,Dead by Daylight,671,2026-10-25T22:01:15Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318123487972,700918704,roo404,1848745913,Battlefield REDSEC,671,2026-10-25T16:25:00Z,en,"['English', 'girlgamer', 'pcgaming', 'MnkPlayer', 'NoBackseating', 'CreatorProgram', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319142727398,187468813,bullseye,505963,Atomic Heart,668,2026-10-25T15:41:20Z,ru,"['Русский', '1440p', 'PVP', 'BattleRoyale', 'Extraction', 'FPS']",2026-10-26,07-19-44,Monday
+318139771107,246771012,d3ad_plays,491487,Dead by Daylight,667,2026-10-25T22:07:20Z,en,"['chill', 'English', 'Cozy', 'dbdcreator', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+321962799705,123610596,snapscube,31339,Project Zomboid,666,2026-10-25T20:46:18Z,en,"['English', 'bunnyslop', 'veggietuber', 'awesomeimages']",2026-10-26,07-19-44,Monday
+317131834838,71521770,tomatos,493174,Jackbox Party Packs,665,2026-10-25T16:14:31Z,ru,['Русский'],2026-10-26,07-19-44,Monday
+316694756467,157825412,matsuri_hs,138585,Hearthstone,665,2026-10-25T15:56:57Z,ja,['日本語'],2026-10-26,07-19-44,Monday
+318131517155,118722736,zerator_247,499973,Always On,663,2026-10-25T04:00:04Z,fr,"['AlwaysOn', '247Stream', '247Live', 'nonstop', 'replay', 'Français', 'Rediffusion']",2026-10-26,07-19-44,Monday
+319146957286,508412432,oses,2132205352,Deadlock,661,2026-10-25T20:27:43Z,ru,"['Русский', 'English']",2026-10-26,07-19-44,Monday
+319090350309,798404086,sodja13,771448419,AION 2,659,2026-10-25T22:19:48Z,ru,"['Русский', 'English', 'КорольШаманов']",2026-10-26,07-19-44,Monday
+320823355742,68727743,razah,509658,Just Chatting,659,2026-10-25T22:29:25Z,pt,"['Português', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+319697139671,244407024,sydeon,2132205352,Deadlock,658,2026-10-25T19:22:13Z,en,['English'],2026-10-26,07-19-44,Monday
+318136644707,452454652,nikos,32982,Grand Theft Auto V,658,2026-10-25T17:40:29Z,fr,['Français'],2026-10-26,07-19-44,Monday
+317739113847,37230996,jawgemo,516575,VALORANT,654,2026-10-25T19:51:40Z,en,['English'],2026-10-26,07-19-44,Monday
+322121405531,97160118,vincentsmg,263490,Rust,654,2026-10-25T17:07:11Z,en,"['English', 'Rust', 'Vincent', 'gaming', 'rustdrops', 'Rustdrop', 'ruststreamer', 'facepunch', 'Rustupdate', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+320996301024,6896654,artosis,11989,StarCraft,653,2026-10-25T21:56:41Z,en,"['English', 'starcraft', 'StarCraft2', 'RTS']",2026-10-26,07-19-44,Monday
+319144005862,625831970,basssultanhengzt45,498566,Slots,653,2026-10-25T17:09:12Z,de,['Deutsch'],2026-10-26,07-19-44,Monday
+320823080542,40541068,methodz,1478650472,Call of Duty: Modern Warfare 4,649,2026-10-25T22:13:28Z,en,"['cdl', 'cod', 'OpTic', 'methodz', 'English', 'fps', 'movember', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+320996320608,29183589,ashmonsterftw,65876,Cyberpunk 2077,649,2026-10-25T21:58:01Z,en,"['Chatty', 'English', 'HardestDifficulty', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+321963750105,80649665,nickdominates,1960720223,SILENT HILL: townfall,649,2026-10-25T21:51:12Z,en,"['English', 'Italian', 'spanish', 'latin', 'newyorker', 'GayAsHell', 'bignose', 'Yapper', 'ADHDfriendly', 'dominican']",2026-10-26,07-19-44,Monday
+317169629524,1452895933,orangemorangeslots,498566,Slots,648,2026-10-24T14:26:46Z,de,"['Deutsch', 'slots', 'casino']",2026-10-26,07-19-44,Monday
+319332582261,126341038,demuxa,509658,Just Chatting,647,2026-10-25T19:00:19Z,pt,"['Português', 'passiva', 'gay', 'LGBT', 'peruca', 'proplayer', 'Bear', '2k', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+320821829854,167059201,fortnitecompreport,33214,Fortnite,647,2026-10-25T20:58:47Z,en,['English'],2026-10-26,07-19-44,Monday
+317179724628,66084241,timaevvv,32399,Counter-Strike,647,2026-10-25T20:56:13Z,ru,"['Русский', 'общение', 'counterstrike2', 'DropsВключены', 'Timaevvv']",2026-10-26,07-19-44,Monday
+317738332407,38614029,johnpal,771448419,AION 2,643,2026-10-25T17:46:07Z,en,"['English', 'MMO', 'ARPG', 'NewPlayerFriendly', 'DadGamer']",2026-10-26,07-19-44,Monday
+319148460262,218255467,canerkrd,509658,Just Chatting,642,2026-10-25T23:11:34Z,de,"['Deutsch', 'DropsAktiviert']",2026-10-26,07-19-44,Monday
+319086201829,417428688,nairamofficial,509658,Just Chatting,642,2026-10-25T17:12:15Z,it,"['Italiano', 'English', 'DropAbilitati']",2026-10-26,07-19-44,Monday
+318124652260,141902679,thespiffingbrit,30028,The Elder Scrolls V: Skyrim,641,2026-10-25T18:06:37Z,en,"['british', 'tea', 'English', 'skyrim', '100dayschallenge']",2026-10-26,07-19-44,Monday
+318458217176,1083994430,reaperky7,509658,Just Chatting,640,2026-10-25T23:54:49Z,en,"['English', 'Toronto', 'SoulSociety', 'reaperky7', 'CatchingPreds', 'RK7', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319088659173,172781249,faister,27471,Minecraft,638,2026-10-25T19:40:24Z,de,"['Deutsch', 'BesterStream', '24HourStream', 'Legat']",2026-10-26,07-19-44,Monday
+318138540643,577594813,miriam_petricor,509658,Just Chatting,638,2026-10-25T20:12:08Z,es,"['Español', 'RPG', 'Singleplayer', 'fantasy', 'FantasyRPG', 'storymode', 'DropsActivados']",2026-10-26,07-19-44,Monday
+321965849945,60558572,whiskeyding0,509658,Just Chatting,634,2026-10-26T00:00:25Z,en,"['English', 'Furry', 'Vtuber', 'Hispanic', 'LOUD', 'OwO', 'cute', 'LGBTQIAPlus', 'Gay', 'Horror']",2026-10-26,07-19-44,Monday
+320820464862,512190147,meesterkeem,749097531,NMS Boxing,631,2026-10-25T19:29:01Z,en,"['IRL', 'Asian', 'Anime', 'VTuber', 'English', 'pokemon', 'kaicenat', 'cinna', 'valkyrae', 'kpop']",2026-10-26,07-19-44,Monday
+322126550235,56642080,shiabun,509658,Just Chatting,631,2026-10-25T23:00:25Z,en,"['English', 'bunny', 'Vtuber', 'wet', 'cringe', 'Twunk', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+317178846548,178091065,dedbaldesh,32399,Counter-Strike,630,2026-10-25T18:18:10Z,ru,['Русский'],2026-10-26,07-19-44,Monday
+321963969113,74439226,hankstergirl,343455332,Crime Scene Cleaner,628,2026-10-25T22:04:19Z,en,"['English', 'yapper', 'loudlaugher', 'wisdom', 'goofy', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+322125709403,411948943,gatzbii,1832641890,MLB The Show 26,628,2026-10-25T22:02:19Z,en,"['English', 'mlbtheshow', 'LOUD']",2026-10-26,07-19-44,Monday
+319700348887,136182935,whatever,509658,Just Chatting,628,2026-10-26T00:07:13Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318113526242,124147323,ricadam_lol,21779,League of Legends,627,2026-10-25T23:30:12Z,fr,['Français'],2026-10-26,07-19-44,Monday
+318125870564,38978803,marco,17828,The Legend of Zelda: Twilight Princess,620,2026-10-25T19:53:59Z,fr,['Français'],2026-10-26,07-19-44,Monday
+317178004052,25058522,fritterus,138585,Hearthstone,619,2026-10-25T16:42:53Z,ru,"['Русский', 'умом', 'hearthstone', 'skill', 'poe2']",2026-10-26,07-19-44,Monday
+319276669174,42686036,lolmechs,21779,League of Legends,619,2026-10-25T23:24:12Z,es,"['Vtuber', 'Sumiso', 'Qlon', 'Furry', 'Tsundere', 'Goodboy', 'Calvo', 'ASMR', 'EvasorDeImpuestos', 'Therian']",2026-10-26,07-19-44,Monday
+321957197913,45006242,jessekottonygo,1119642287,Yu-Gi-Oh! Master Duel,618,2026-10-25T13:11:23Z,en,['English'],2026-10-26,07-19-44,Monday
+319090332005,173819413,nicolepeachy,116747788,"Pools, Hot Tubs, and Beaches",616,2026-10-25T22:17:24Z,en,"['Moody', 'Italian', 'English', 'Rock', 'Metal', 'wine', 'cringe', 'golddigger']",2026-10-26,07-19-44,Monday
+319090139365,35828637,low4n,1478650472,Call of Duty: Modern Warfare 4,616,2026-10-25T21:55:18Z,fr,"['Français', 'DropsActivés']",2026-10-26,07-19-44,Monday
+319272418294,165229282,handsomed11,509658,Just Chatting,614,2026-10-25T15:51:13Z,pt,"['Português', 'terror', 'Horror', 'horrorgames', 'TerrorGames', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+319333879029,142321038,xandfps,21779,League of Legends,610,2026-10-25T21:04:11Z,pt,"['Português', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+321963007961,670055777,chiefbeef_rl,30921,Rocket League,610,2026-10-25T21:00:13Z,en,"['English', 'SSL', 'top100', 'jolly', 'TigerWoodsofRanked2v2', 'JimmyCricket', 'JeepersCreepers', 'Heads', 'mmm', 'Bucketofforksowner']",2026-10-26,07-19-44,Monday
+319402198900,416520528,mdmdaiane,509658,Just Chatting,609,2026-10-25T19:47:08Z,pt,"['Português', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+319695592023,195199217,timotino07,516575,VALORANT,604,2026-10-25T16:37:03Z,en,"['English', 'Français']",2026-10-26,07-19-44,Monday
+319085925733,551696128,dekii,1478650472,Call of Duty: Modern Warfare 4,604,2026-10-25T16:57:28Z,de,"['Deutsch', 'warzone', 'DropsAktiviert']",2026-10-26,07-19-44,Monday
+318444428504,1418939132,missmikkaa247,499973,Always On,602,2026-10-24T14:37:56Z,en,"['Rerun', 'AlwaysOn', 'English']",2026-10-26,07-19-44,Monday
+322126926939,95989162,hana,509659,ASMR,602,2026-10-25T23:25:30Z,en,"['English', 'AsianAmerican', 'Vtuber', 'catgirl', 'AuditoryASMR', 'Anime', 'Comfy', 'ENVtuber', '18plus']",2026-10-26,07-19-44,Monday
+322009555802,453880006,eggsterr,516575,VALORANT,600,2026-10-25T23:09:30Z,en,['English'],2026-10-26,07-19-44,Monday
+320913954652,10397006,jericho,1069936801,Nintendo Switch Sports Resort,598,2026-10-25T20:05:22Z,en,"['English', 'music', 'content', 'Variety']",2026-10-26,07-19-44,Monday
+322001819866,55899594,corgicam,722422729,$cam With Your Friends,597,2026-10-25T13:07:02Z,en,"['English', 'Vtuber', 'Furry', 'LGBTQIAPlusAlly', 'short', 'LOUD', 'Interactive', 'ClosedCaptions', 'subathon', 'Yapper']",2026-10-26,07-19-44,Monday
+318112044898,834616496,ranellebrown,509658,Just Chatting,596,2026-10-25T21:07:53Z,fr,"['Français', 'DropsActivés']",2026-10-26,07-19-44,Monday
+317098205013,484913911,ryujincs1,32399,Counter-Strike,596,2026-10-25T20:36:32Z,ru,"['Русский', 'English']",2026-10-26,07-19-44,Monday
+317098107221,132420183,mrxsmurf,29595,Dota 2,593,2026-10-25T20:13:42Z,ru,"['Русский', 'дота', 'animal', 'топ1тинкер', 'cybersport']",2026-10-26,07-19-44,Monday
+319695773143,52763608,gp_tv,1028198402,Dead Space,590,2026-10-25T17:00:15Z,en,"['English', 'groupchannel', 'VarietyStreamer', 'LGBTＱ', 'womensguild', 'TwitchAmbassador', 'prideguild', 'MarathonStream', 'DropsEnabled', 'subathon']",2026-10-26,07-19-44,Monday
+319276966646,500114455,sharkfps_,509658,Just Chatting,588,2026-10-26T00:02:11Z,pt,"['Português', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+320822261854,212682921,bobbypoffgaming,1478650472,Call of Duty: Modern Warfare 4,588,2026-10-25T21:24:01Z,en,"['ScarfSquad', '7tv', 'English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319404187252,1478694617,ninjaslot_,29452,Virtual Casino,588,2026-10-25T23:30:13Z,pt,"['Português', 'English', 'Apostas', 'cassino']",2026-10-26,07-19-44,Monday
+322006374746,117083340,tpain,509672,IRL,585,2026-10-25T19:34:29Z,en,"['English', 'music', 'gaming', 'simracing', 'SimDrifting', 'Editing', '3DModeling', '3DPrinting', 'FLASHINGLIGHTWARNING']",2026-10-26,07-19-44,Monday
+318455951064,46029485,disnof,508455,Valheim,583,2026-10-25T19:03:21Z,en,['English'],2026-10-26,07-19-44,Monday
+319087001829,162151864,klupatwins,1092451091,HUNGER,579,2026-10-25T18:00:03Z,de,"['Deutsch', 'just', 'chatting', 'zwillinge', 'reactions', 'rp', 'news', 'gaming', 'Diskussion', 'Gruselspiele']",2026-10-26,07-19-44,Monday
+318951079015,43233615,korb3n,29595,Dota 2,579,2026-10-25T22:15:12Z,ru,['Русский'],2026-10-26,07-19-44,Monday
+320998012384,202563619,tsk8,498566,Slots,578,2026-10-25T23:43:10Z,es,['Español'],2026-10-26,07-19-44,Monday
+319275347574,532201223,mynluvsx,327598602,Onimusha: Way of the Sword,578,2026-10-25T20:49:56Z,pt,['Português'],2026-10-26,07-19-44,Monday
+319145928294,514761065,jussef,509658,Just Chatting,578,2026-10-25T19:14:03Z,de,"['Deutsch', 'Wiederholen', 'DropsAktiviert']",2026-10-26,07-19-44,Monday
+321941686361,888028481,niru,19976,MapleStory,577,2026-10-24T14:35:54Z,en,"['English', 'slow', 'baddie', 'bald', 'specialneeds', '2486說你是羅傑', 'lowIQ']",2026-10-26,07-19-44,Monday
+319403706100,748361965,ziriguidum777,29452,Virtual Casino,575,2026-10-25T22:40:10Z,pt,['Português'],2026-10-26,07-19-44,Monday
+322126937179,259877714,fakedenni,460951,Geometry Dash,573,2026-10-25T23:26:19Z,en,"['geometrydash', 'tcd', 'denni', 'english', '7tv', 'English']",2026-10-26,07-19-44,Monday
+319335625333,1045438766,yagostooso,509658,Just Chatting,572,2026-10-26T00:00:09Z,pt,"['Português', 'yagostoso', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+319085226085,467161807,ricborr,33214,Fortnite,570,2026-10-25T16:12:40Z,it,"['Italiano', 'English']",2026-10-26,07-19-44,Monday
+318946462951,106318725,demonzz1,509658,Just Chatting,569,2026-10-25T16:59:45Z,pl,"['Polski', 'DropyWłączone']",2026-10-26,07-19-44,Monday
+320913923164,65365812,pumpkinpotion,509658,Just Chatting,565,2026-10-25T20:03:09Z,en,"['vtuber', 'cartoon', 'English', 'Comedy', 'Nostalgia', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+322126701659,125387632,amouranth,509672,IRL,565,2026-10-25T23:09:37Z,en,"['English', 'IRL', 'art', 'Pokémon', 'pokemon', 'whatnot', 'PokémonTCG']",2026-10-26,07-19-44,Monday
+322126627803,553831447,eros,509658,Just Chatting,565,2026-10-25T23:05:00Z,en,"['English', 'ADHD', 'Furry', 'mpreg', 'Horror', 'Vtuber', 'scary', 'LGBTQ', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+316226814313,192996446,hamuchivt,21779,League of Legends,564,2026-10-25T23:25:41Z,en,"['oce', 'vtuber', 'vtuberen', 'english', 'cozy', 'metal', 'challenger', 'chatting', 'asmr', 'English']",2026-10-26,07-19-44,Monday
+319088790501,65293646,inoiizy,21779,League of Legends,563,2026-10-25T19:49:21Z,de,"['german', 'deutsch', 'gym', 'Fitness', 'Groß', 'Deutsch', 'DropsAktiviert']",2026-10-26,07-19-44,Monday
+322005174490,48856368,larxa,1147745783,Inscryption,561,2026-10-25T18:11:15Z,en,"['English', 'ChallengedRunner', 'Vtuber', 'ENVtuber', 'NotAGoat', 'notafemboy']",2026-10-26,07-19-44,Monday
+318950861799,62000134,loryxamir,32982,Grand Theft Auto V,560,2026-10-25T21:51:40Z,el,"['Ελληνικά', 'Κωμωδίαστάνταπ', 'greek']",2026-10-26,07-19-44,Monday
+318129530339,80629581,deemonrider,329951934,Pokémon Community Game,560,2026-10-24T21:57:24Z,en,"['Chatting', 'English']",2026-10-26,07-19-44,Monday
+317134102614,805196060,abbasoov,509672,IRL,559,2026-10-25T21:52:25Z,ru,"['Русский', 'аббас', 'аббасов', 'абас']",2026-10-26,07-19-44,Monday
+319147309542,589029453,wrumf,27546,World of Tanks,558,2026-10-25T21:01:06Z,cs,"['multiplayer', 'WOT', 'drops', 'arkáda', 'slovenčina', 'Čeština', 'noskillgamer', 'PovolenéDrops']",2026-10-26,07-19-44,Monday
+317177876436,23834039,xibbe,29595,Dota 2,557,2026-10-25T16:27:01Z,en,"['English', 'donkey', 'touchgrass']",2026-10-26,07-19-44,Monday
+321961337817,65975539,walnutcast,32982,Grand Theft Auto V,555,2026-10-25T19:02:29Z,en,"['English', 'AuDHD', 'Skateboarding', 'Simulators', 'emo', 'poppunk']",2026-10-26,07-19-44,Monday
+319699636951,7154733,typicalgamer,33214,Fortnite,554,2026-10-25T23:08:29Z,en,"['English', 'PC', 'Multiplayer', 'PvP', 'Fortnite']",2026-10-26,07-19-44,Monday
+319276715510,1191297138,realvil_,498566,Slots,552,2026-10-25T23:30:02Z,es,['Español'],2026-10-26,07-19-44,Monday
+319691909335,782947440,policechasenetwork,509658,Just Chatting,552,2026-10-25T04:53:37Z,en,"['English', 'feet', 'handsome', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+322004889178,45143025,poach,1282866981,Delta Force,552,2026-10-25T17:53:28Z,en,"['English', 'Competitive', 'Pro', 'Chill', 'FPS', 'drops', 'Educational', 'ExtractionShooter', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+320916328028,275772571,skyytea,514207,The Dark Pictures Anthology: Little Hope,551,2026-10-25T22:55:11Z,en,"['English', 'FirstPlaythough', 'NoBackseating', 'EmbraceTheChaos', 'Shenanonce', 'Shenanigan', 'WelcomingCommunity', 'GetCozy', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+317738068215,1394318086,turnemsideways,1751366933,Riftbound,550,2026-10-25T16:55:03Z,en,"['RiftboundTCG', 'cardgame', 'TCG', 'English']",2026-10-26,07-19-44,Monday
+317740470263,506039737,4rufq,511224,Apex Legends,547,2026-10-25T23:00:49Z,ja,['日本語'],2026-10-26,07-19-44,Monday
+320974514912,1242487781,rdcwaitingroom_,499973,Always On,544,2026-10-24T16:10:49Z,en,['English'],2026-10-26,07-19-44,Monday
+320994392288,155586958,taylien,32982,Grand Theft Auto V,543,2026-10-25T19:37:25Z,en,"['English', 'yapping', 'alien', 'girl', 'feet', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+317132644438,71336,robbaz,1161800735,Obenseuer,540,2026-10-25T17:55:47Z,en,['English'],2026-10-26,07-19-44,Monday
+318947571431,1238488778,monkeyjet,464339927,ARC Raiders,538,2026-10-25T18:03:05Z,en,"['English', 'ADHD', 'vtuber', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+320997909600,625571358,hatecaps,749097531,NMS Boxing,537,2026-10-25T23:37:03Z,en,"['English', 'hatecaps', 'kaicenat', 'kai', 'jynxzi', 'YOURRAGE', 'mrbeast', 'streameruniversity', 'guinean', 'rynenzo']",2026-10-26,07-19-44,Monday
+320994850272,101783007,dewamoon,2132205352,Deadlock,537,2026-10-25T20:08:23Z,en,['English'],2026-10-26,07-19-44,Monday
+318945716967,29750090,paoloidolo,21779,League of Legends,536,2026-10-25T16:11:49Z,it,"['JUST', 'CHATTING', 'QUATTRO', 'CHIACCHIERE', 'PAOLOCANNONE', 'PAOLOIDOLO', 'ITALIANO', 'DRAMA', 'Italiano', 'DropAbilitati']",2026-10-26,07-19-44,Monday
+319403198964,1338038500,basementcup,5126,Resident Evil 3: Nemesis,536,2026-10-25T21:42:52Z,es,"['English', 'Español', 'Torneo', 'Tournament', 'Speedrun', 'Re3', 'Bio3', 'basementcup', 'race']",2026-10-26,07-19-44,Monday
+321963238361,883631002,connormook,1478650472,Call of Duty: Modern Warfare 4,536,2026-10-25T21:15:19Z,en,"['bushgaming', 'bush', 'mook', 'cod', 'English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+315628869615,139417491,woojungx4,509658,Just Chatting,535,2026-10-25T16:46:29Z,en,"['한국어', 'asia', 'dance', 'kpop', 'us', 'uk', 'kr', 'korea', 'eng', 'english']",2026-10-26,07-19-44,Monday
+321963363929,482795228,danyfishy,33214,Fortnite,533,2026-10-25T21:24:22Z,es,"['Español', 'Fortnite']",2026-10-26,07-19-44,Monday
+318109662818,582815681,laukinawa,1510789205,Planet Zoo 2,533,2026-10-25T18:01:04Z,fr,"['Chill', 'Alliée', 'Sims4', 'Français', 'DropsActivés']",2026-10-26,07-19-44,Monday
+318109559522,18887776,moman,32982,Grand Theft Auto V,532,2026-10-25T17:54:54Z,fr,"['Français', 'escapefromtarkov', 'EFT', 'tarkov', 'fps', 'CS', 'RP', 'gta', 'valorant']",2026-10-26,07-19-44,Monday
+319089809253,106159308,gronkhtv,497410,Metro Exodus,532,2026-10-25T21:16:24Z,de,['Deutsch'],2026-10-26,07-19-44,Monday
+322002799450,160010466,elly,771448419,AION 2,532,2026-10-25T15:04:54Z,en,"['English', 'elly', 'Vtuber', 'spanish', 'México', 'WordOfTheDay', 'Comedy']",2026-10-26,07-19-44,Monday
+318136842339,645911728,khadim,1763263,nanos world,530,2026-10-25T17:57:00Z,fr,"['Français', 'DropsActivés']",2026-10-26,07-19-44,Monday
+318453686744,242993644,loru77,2755,HλLF-LIFE,529,2026-10-25T11:44:15Z,ru,['Русский'],2026-10-26,07-19-44,Monday
+319142284902,138654076,vassilly,516575,VALORANT,528,2026-10-25T15:06:52Z,de,['Deutsch'],2026-10-26,07-19-44,Monday
+318946322663,221114625,xyzoom,27471,Minecraft,525,2026-10-25T16:51:50Z,de,['Deutsch'],2026-10-26,07-19-44,Monday
+317739516407,91855934,angelknivez,1354355809,Split Fiction,524,2026-10-25T20:56:41Z,en,"['roleplay', 'black', 'English', 'women', 'egirl', 'girlgamer', 'Roleplay']",2026-10-26,07-19-44,Monday
+319334422645,134648408,venatorzin,32399,Counter-Strike,524,2026-10-25T21:57:56Z,pt,"['Português', 'skins', 'csgo', 'fps']",2026-10-26,07-19-44,Monday
+318447525080,884338173,ferretsoftware,272263131,"Animals, Aquariums, and Zoos",519,2026-10-24T21:34:42Z,en,"['Ferret', 'Tube', 'Long', 'Wiggler', 'CatSnake', 'Noodle', 'Stinky', 'English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+320912142300,445080375,carabeanz,1478650472,Call of Duty: Modern Warfare 4,518,2026-10-25T17:54:40Z,en,"['egirl', 'Latina', 'Goddess', 'abs', 'feet', 'Princess', 'English', 'CommunityGames', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319145558502,1539745461,badging247,1478650472,Call of Duty: Modern Warfare 4,518,2026-10-25T18:51:10Z,en,"['Badge', 'Badges', 'drops', 'Español', 'English', 'Polski', '日本語', 'Chıll', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319148517350,1157841394,king_auga,32399,Counter-Strike,516,2026-10-25T23:20:59Z,el,"['English', 'faceitlvl10', 'greekcs2', 'greek', 'Ελληνικά', 'CS2', 'counterstrike2']",2026-10-26,07-19-44,Monday
+319335720565,983668295,myfrink,32399,Counter-Strike,513,2026-10-26T00:08:37Z,pt,"['Português', 'espanhol']",2026-10-26,07-19-44,Monday
+321965465689,135242520,jennalynnmeowri,509658,Just Chatting,513,2026-10-25T23:39:01Z,en,"['IRL', 'English', 'ADHD', 'Furry', 'gym', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318127408228,1525070120,vayasesenorcuestavayase,509670,Science & Technology,511,2026-10-25T22:36:31Z,es,"['Español', 'chiringuito', 'CHIRINGUITO', 'champions', 'league', 'championsleague', 'realmadrid', 'elchiringuito', 'elchiringuitodejugones', 'jugones']",2026-10-26,07-19-44,Monday
+317738444663,87063933,fir_,23894,Call of Duty: Black Ops,509,2026-10-25T18:04:38Z,en,"['English', 'Furry', 'Vtuber', 'sometimes', 'LGBTQIAPIus', 'Gay', 'LGBT']",2026-10-26,07-19-44,Monday
+321960917849,265701457,klaire,1535225577,The Last of Us Part II Remastered,509,2026-10-25T18:32:33Z,en,"['cats', 'ADHD', 'putmeoninthebackground', 'English', 'chicago', 'NoBackseating']",2026-10-26,07-19-44,Monday
+319089994341,165204409,comp_lol,21779,League of Legends,508,2026-10-25T21:38:43Z,el,['Ελληνικά'],2026-10-26,07-19-44,Monday
+320913356508,146094553,ellesmere_gaming,18122,World of Warcraft,507,2026-10-25T19:21:21Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319271826934,908202927,puggzao,29452,Virtual Casino,507,2026-10-25T13:56:25Z,pt,['Português'],2026-10-26,07-19-44,Monday
+317738196343,496523436,gbln420,2100615846,Car Park Capital,506,2026-10-25T17:19:11Z,en,['English'],2026-10-26,07-19-44,Monday
+319090097509,1331110466,wakayashixp,771448419,AION 2,506,2026-10-25T21:50:27Z,de,"['mmo', 'mmorpg', 'drops', 'game', 'Deutsch']",2026-10-26,07-19-44,Monday
+318137826275,80877667,strano,509658,Just Chatting,505,2026-10-25T19:18:39Z,fr,"['Français', 'DropsActivés']",2026-10-26,07-19-44,Monday
+319089192037,50473266,sawardega,509658,Just Chatting,503,2026-10-25T20:19:05Z,pl,"['Polski', 'DropyWłączone']",2026-10-26,07-19-44,Monday
+321964983897,41467289,quantum,21779,League of Legends,501,2026-10-25T23:10:24Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318112806754,57105861,thedarkraimola,509658,Just Chatting,501,2026-10-25T22:15:01Z,es,"['Español', 'luchitas', 'videojuegos', 'latam', 'DropsActivados']",2026-10-26,07-19-44,Monday
+318108813538,98914728,kamuslol,21779,League of Legends,500,2026-10-25T16:58:00Z,pt,"['Português', 'highelo', 'Challenger', 'DropsAtivados', 'Worlds2026']",2026-10-26,07-19-44,Monday
+320825198302,126632539,katevolved,21779,League of Legends,499,2026-10-26T00:01:34Z,en,"['English', 'WomensRights', 'Vtuber', 'Manipulator', 'Gaslighting', 'ManicDepression', 'Masculine', 'Schizophrenia', 'Katarina', 'GODCOMPLEX']",2026-10-26,07-19-44,Monday
+319404255860,1073508423,faello1,209738946,Wuthering Waves,499,2026-10-25T23:38:09Z,es,"['Español', 'WutheringWaves', 'Gacha', 'DropsActivados']",2026-10-26,07-19-44,Monday
+318112702306,484249913,ikiimartin,123184772,EA Sports FC 27,492,2026-10-25T22:05:37Z,es,"['Iki', 'IkiMartin', 'Ikifurbo', 'Ikitwitch', 'Ikiimartin', 'Andalucia', 'Andaluz', 'España', 'Español']",2026-10-26,07-19-44,Monday
+318946419687,192234076,shaker,32399,Counter-Strike,492,2026-10-25T16:57:31Z,de,['Deutsch'],2026-10-26,07-19-44,Monday
+322121773659,1508397237,wyll,27471,Minecraft,492,2026-10-25T17:35:39Z,en,['English'],2026-10-26,07-19-44,Monday
+318140112739,74785783,fafa,509658,Just Chatting,491,2026-10-25T22:53:16Z,fr,"['Français', 'DropsActivés']",2026-10-26,07-19-44,Monday
+322010109402,115659124,sanchovies,21779,League of Legends,491,2026-10-25T23:47:34Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+316695344115,673440976,im_mittiii,21779,League of Legends,490,2026-10-25T20:23:30Z,ja,"['日本語', 'Drops有効']",2026-10-26,07-19-44,Monday
+317180154452,64296498,talalusha,21465,osu!,489,2026-10-25T22:32:00Z,ru,['Русский'],2026-10-26,07-19-44,Monday
+318111248738,27920057,forsa,512953,ELDEN RING,487,2026-10-25T20:04:03Z,fr,"['Français', 'English', 'Subtitles', 'Speedrun', 'DropsActivés']",2026-10-26,07-19-44,Monday
+320994181472,39711157,stolenbr,1478650472,Call of Duty: Modern Warfare 4,486,2026-10-25T19:22:35Z,pt,"['Português', 'warzone', 'callofduty', 'fps', 'stolen', 'battleroyale', 'cod', 'campeonato', 'DropsAtivados', 'dmz']",2026-10-26,07-19-44,Monday
+321963866329,1379499821,trosknask,509658,Just Chatting,485,2026-10-25T21:58:35Z,en,"['English', 'Comedy', 'react', 'Relax', 'chill', 'Rerun', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319085009765,41942332,brix,1282866981,Delta Force,485,2026-10-25T15:59:23Z,de,"['Deutsch', 'English', 'Wiederholen', 'ValorantPartner', 'DeltaForceGame', 'DeltaForceCreator', 'deltaforcegameplay', 'deltaforcecreatorhub', 'DropsAktiviert']",2026-10-26,07-19-44,Monday
+320993087072,240510832,feeckz,417528,Albion Online,484,2026-10-25T18:12:18Z,es,"['Español', 'MMORPG', 'AlbionOnline', 'PvP', 'DropsActivados', 'English', 'Brasil']",2026-10-26,07-19-44,Monday
+319400520308,422804445,kelvinkerber1,488190,Poker,484,2026-10-25T16:04:26Z,pt,"['English', 'PortuguêsBR', 'Highstakes', 'Português']",2026-10-26,07-19-44,Monday
+315649992560,214658096,yumie0306,743893402,WARDOGS,483,2026-10-25T10:51:34Z,zh,"['Vtuber', '中文', '女生', '啟用掉宝', '訂閱免廣告', '呆兔子', '追隨不用錢', '什麼都玩', '漢堡兔', '歡愉']",2026-10-26,07-19-44,Monday
+322005052122,153437050,emmyuh,516575,VALORANT,483,2026-10-25T18:03:20Z,en,['English'],2026-10-26,07-19-44,Monday
+316253409258,475872420,royalcreates,32982,Grand Theft Auto V,482,2026-10-25T19:12:57Z,en,"['English', 'NoPixelV', 'Narcolepsy', 'ChattyStreamer']",2026-10-26,07-19-44,Monday
+322006034778,22559049,yodatv,18122,World of Warcraft,482,2026-10-25T19:09:12Z,en,"['English', 'MythicPlus', 'Keys', 'tank', 'Paladin', 'Rogue', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319696127191,635679643,silverrruns,27471,Minecraft,482,2026-10-25T17:43:24Z,en,"['Speedrun', 'English']",2026-10-26,07-19-44,Monday
+318458288216,156571999,yuzu,509658,Just Chatting,482,2026-10-26T00:03:07Z,en,"['Vtuber', 'Anime', 'ENVtuber', 'vtuber', 'English', 'gamer', 'Geriatric', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319090419557,36464115,sparkofphoenixtv,27471,Minecraft,482,2026-10-25T22:28:23Z,de,"['sparkofphoenix', 'Deutsch', 'minecraft']",2026-10-26,07-19-44,Monday
+319697967447,190399133,czanee,386821,Black Desert,480,2026-10-25T20:37:45Z,en,"['English', 'DropEnabled', 'IYELLALOT', 'silly', 'wacky', 'goofy', 'LyingEncouraged', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319402513268,83691960,baxbeast,2132205352,Deadlock,479,2026-10-25T20:19:59Z,es,['Español'],2026-10-26,07-19-44,Monday
+316226605801,152799336,splitsie,1444831815,Space Engineers 2,478,2026-10-25T21:30:10Z,en,"['English', 'Australian', 'BackseatingAllowed', 'BackSeatingMayBeIgnored', 'ClosedCaptions', 'Relaxed']",2026-10-26,07-19-44,Monday
+320824732894,555003695,cherrifire,509658,Just Chatting,476,2026-10-25T23:39:03Z,en,"['English', 'NoGenAI', 'AIOptedOut', 'LGBTQ']",2026-10-26,07-19-44,Monday
+319333656821,142932807,iaaras2,27471,Minecraft,476,2026-10-25T20:42:32Z,es,"['messiteamo', '420', 'lostdad', 'Español', 'depressed', 'PositiveVibes', 'nomom', 'Argentina']",2026-10-26,07-19-44,Monday
+320823955806,702640496,miia,509658,Just Chatting,475,2026-10-25T23:00:23Z,en,"['vtuber', 'autism', 'anime', 'xqc', 'Mindbreak', '1INCHWONDER', 'English', '10INCHTERROR', 'lolcow', 'beautifulandhumble']",2026-10-26,07-19-44,Monday
+319402247924,584330794,mito_dosul,509658,Just Chatting,475,2026-10-25T19:52:17Z,pt,"['Português', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+319089470309,80584722,lucashr,32982,Grand Theft Auto V,474,2026-10-25T20:43:07Z,it,"['italiano', 'fps', 'giochi', 'Italiano', 'sparatutto']",2026-10-26,07-19-44,Monday
+316636851954,106491108,mafuyumh1012,1478650472,Call of Duty: Modern Warfare 4,473,2026-10-25T18:02:40Z,ja,"['日本語', 'Drops有効']",2026-10-26,07-19-44,Monday
+320912991708,1414788834,yoatzicastro,509672,IRL,472,2026-10-25T18:56:19Z,en,['English'],2026-10-26,07-19-44,Monday
+320823690206,59302497,diaphone_,2030977008,Avatar Legends: The Fighting Game,470,2026-10-25T22:47:30Z,en,"['English', 'FGC']",2026-10-26,07-19-44,Monday
+318119344100,19013029,carn_,1041,Diablo II,469,2026-10-25T07:04:07Z,en,['English'],2026-10-26,07-19-44,Monday
+322125809627,112286787,nohitjerome,18122,World of Warcraft,469,2026-10-25T22:08:50Z,en,"['pvp', 'pve', 'English', 'seasonofdiscovery', 'hardcore', 'MistsofPandaria', 'MMORPG', 'roleplaying', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318109555044,250662770,jotta,509658,Just Chatting,468,2026-10-24T11:33:44Z,pt,"['Português', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+319684249815,7832442,rifftrax,499973,Always On,467,2026-10-24T18:05:26Z,en,['English'],2026-10-26,07-19-44,Monday
+319696337495,54138936,moarf23,65801,Call of Duty: Black Ops - Zombies,467,2026-10-25T18:04:40Z,en,['English'],2026-10-26,07-19-44,Monday
+317180034132,463500735,dipysya,32399,Counter-Strike,466,2026-10-25T22:04:19Z,ru,"['Русский', 'faceit10lvl', 'girlsplaying', 'cs2faceit']",2026-10-26,07-19-44,Monday
+320816963422,128189318,joeux9,1931693784,Pokémon Champions,465,2026-10-25T15:14:58Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319136511846,599459353,knebel_de,71375,Star Citizen,464,2026-10-25T02:34:17Z,de,"['Deutsch', 'DropsAktiviert']",2026-10-26,07-19-44,Monday
+319334938741,35647075,patopapao,509658,Just Chatting,463,2026-10-25T22:47:08Z,pt,"['Pontual', 'Bonito', 'Fitness', 'Lenhador', 'Português', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+317174931156,737383083,leissik,1282866981,Delta Force,463,2026-10-25T10:02:30Z,en,"['English', 'chattingwithviewers', 'ExtractionShooter', 'DeltaForceGame', 'deltaforce', 'stinger', 'chill', 'bald', 'solo', 'solovssquad']",2026-10-26,07-19-44,Monday
+316422822379,439727570,exnid,1478650472,Call of Duty: Modern Warfare 4,462,2026-10-25T22:43:38Z,ar,"['Arabic', 'English', 'العربية', 'تم・تمكين・Drops']",2026-10-26,07-19-44,Monday
+318127214436,1373370721,alexandresantos_comedy,921298138,BOMBANANA!,461,2026-10-25T22:12:33Z,pt,['Português'],2026-10-26,07-19-44,Monday
+318127714788,175348316,ouaiseddy,509658,Just Chatting,460,2026-10-25T23:19:26Z,fr,['Français'],2026-10-26,07-19-44,Monday
+317740442615,15554591,captainsparklez,27471,Minecraft,458,2026-10-25T22:57:55Z,en,['English'],2026-10-26,07-19-44,Monday
+320998138848,13766215,smight,27284,Retro,457,2026-10-25T23:50:56Z,en,"['English', 'LGBTQFriendly', 'retrogaming']",2026-10-26,07-19-44,Monday
+322126645723,906002875,kirillianfn1,33214,Fortnite,456,2026-10-25T23:06:07Z,en,['English'],2026-10-26,07-19-44,Monday
+316136908497,828239735,nogenerals,491931,Escape from Tarkov,455,2026-10-25T20:07:01Z,en,['English'],2026-10-26,07-19-44,Monday
+321964054105,21588571,anthony_kongphan,1092451091,HUNGER,455,2026-10-25T22:09:33Z,en,"['Vampire', 'goth', 'English']",2026-10-26,07-19-44,Monday
+320822508510,1369581021,happyhappygal_vod,33214,Fortnite,455,2026-10-25T21:39:29Z,en,"['English', 'happyhappygal', 'fortnite', 'christian', 'FamilyFriendly', 'ZeroBuild', 'Rerun']",2026-10-26,07-19-44,Monday
+319087534053,53686757,denzelzockt,491931,Escape from Tarkov,455,2026-10-25T18:30:10Z,en,"['Entspannt', 'Hand', 'Evil', 'PädagogischWertvoll', 'NoPants', 'Busch', 'Wissenschaftlichempfohlen', 'Deutsch', 'English']",2026-10-26,07-19-44,Monday
+320821907806,255727514,th3beardedbaron,518184,Phasmophobia,453,2026-10-25T21:03:14Z,en,"['English', 'Veteran', 'CultDaddy', 'Giveaways', 'streamoween']",2026-10-26,07-19-44,Monday
+317098362453,900633547,favorite,32982,Grand Theft Auto V,452,2026-10-25T21:17:44Z,en,"['vrchat', 'Vtuber', 'feet', 'ASMR', 'VR', 'English', 'Gremlin', 'brat', 'NoPixelV']",2026-10-26,07-19-44,Monday
+322124399451,25181720,barry,234502996,Towers of Babble,449,2026-10-25T20:32:52Z,en,"['English', 'ClosedCaptions', 'OptedOut']",2026-10-26,07-19-44,Monday
+319274368118,157809310,douglassola,509672,IRL,448,2026-10-25T19:10:45Z,pt,"['Português', 'Douglassola']",2026-10-26,07-19-44,Monday
+316157601490,46614578,sol1st,509658,Just Chatting,448,2026-10-25T16:02:59Z,ru,"['Русский', 'NoDeath', 'Permadeath', 'ХАРДКОР', 'challenge', 'ChallengeRun', 'МаксимальнаяСложность', 'фильм', 'Салют', 'DropsВключены']",2026-10-26,07-19-44,Monday
+318948417639,475671935,miidouw_,1763263,nanos world,447,2026-10-25T18:52:41Z,fr,"['Français', 'Roleplay', 'narutorp', 'Zenkai', 'NRP']",2026-10-26,07-19-44,Monday
+318123077475,407902778,levraidoffy,490377,Sea of Thieves,445,2026-10-24T12:00:04Z,fr,"['Français', 'DropsActivés']",2026-10-26,07-19-44,Monday
+316626179953,548125882,acomingzz,515025,Overwatch,444,2026-10-25T20:46:07Z,ja,"['日本語', 'CHILL', 'Drops有効']",2026-10-26,07-19-44,Monday
+316421530475,128829880,c2ncel,1478650472,Call of Duty: Modern Warfare 4,444,2026-10-25T16:51:40Z,ar,"['العربية', 'تم・تمكين・Drops']",2026-10-26,07-19-44,Monday
+319276931702,216809120,fiireh,498566,Slots,443,2026-10-25T23:58:02Z,es,['Español'],2026-10-26,07-19-44,Monday
+320916308700,1331136458,rorogambles,498566,Slots,443,2026-10-25T22:54:00Z,en,"['slots', 'English', 'casino', 'win', 'maxwin', 'rainbet', 'streamer']",2026-10-26,07-19-44,Monday
+318112734178,151219596,bmsjoel,509658,Just Chatting,442,2026-10-25T22:08:05Z,fr,"['doubleR', 'bg', 'noir', 'professionnel', 'francais', 'Français']",2026-10-26,07-19-44,Monday
+319068627301,56148610,aethelthryth,21779,League of Legends,442,2026-10-24T13:13:16Z,bg,"['Български', 'СРазрешениDrops']",2026-10-26,07-19-44,Monday
+317094098389,41884889,fabo,27471,Minecraft,442,2026-10-25T10:18:39Z,de,['Deutsch'],2026-10-26,07-19-44,Monday
+319696509015,549835405,sndylan,1478650472,Call of Duty: Modern Warfare 4,441,2026-10-25T18:24:27Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318139713635,43304416,hawnktv,18122,World of Warcraft,440,2026-10-25T22:00:52Z,es,"['Classic', 'Español', 'tbcanniversary', 'TBC', 'TBCHARDCORE', 'wowclassic', 'DropsActivados']",2026-10-26,07-19-44,Monday
+322127128411,803233182,joshtwoh,749097531,NMS Boxing,439,2026-10-25T23:39:03Z,en,['English'],2026-10-26,07-19-44,Monday
+322009061082,531575096,itsbanhammer,32982,Grand Theft Auto V,439,2026-10-25T22:39:47Z,en,"['ADHD', 'English', 'FAMILY', 'MENTALHEALTH', 'VIBES', 'NoPixel']",2026-10-26,07-19-44,Monday
+319275731830,1078936961,thaytg,29452,Virtual Casino,438,2026-10-25T21:33:29Z,pt,['Português'],2026-10-26,07-19-44,Monday
+319066496741,147649918,dimeax,27471,Minecraft,437,2026-10-24T09:57:56Z,de,['Deutsch'],2026-10-26,07-19-44,Monday
+316637598578,119497908,kyo1984123,509658,Just Chatting,437,2026-10-26T00:07:10Z,zh,"['中文', '時事話題', 'Vtuber', '國際台', '启用掉宝']",2026-10-26,07-19-44,Monday
+319335417077,1097470878,marto988hd,498566,Slots,435,2026-10-25T23:37:19Z,es,"['gambling', 'apuesta', 'apuestas', 'gamble', 'casino', 'Español']",2026-10-26,07-19-44,Monday
+322009661658,648164647,elmeap,1674334865,Water Delivery,435,2026-10-25T23:17:02Z,es,['Español'],2026-10-26,07-19-44,Monday
+322008268378,109215610,socksbx,6187,Portal,433,2026-10-25T21:45:40Z,en,"['English', 'unngghhhhhhhh', 'Culvers', 'Handsome', 'Cute', 'QFromImpracticalJokers', 'LGBTQPlus', 'Perc3Million', 'Divorced', 'RetroAchievements']",2026-10-26,07-19-44,Monday
+319276138358,127863425,rodil,21779,League of Legends,433,2026-10-25T22:24:18Z,pt,"['Português', 'English', 'proplayer', 'MOBA', 'jungle', 'LGBT', 'petfriendly', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+320996005088,201898973,dyna_plus,509672,IRL,433,2026-10-25T21:33:41Z,fr,"['react', 'montreal', 'paris', 'music', 'france', 'live', 'undergroundrap', 'rap', 'quebec', 'hiphop']",2026-10-26,07-19-44,Monday
+321961127769,463439194,eomzo,33214,Fortnite,433,2026-10-25T18:48:38Z,en,['English'],2026-10-26,07-19-44,Monday
+318127371364,933893257,sanymaaa,509658,Just Chatting,433,2026-10-25T22:31:46Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+322125718875,235734503,quaddi,491487,Dead by Daylight,431,2026-10-25T22:02:55Z,en,"['dbd', 'juicer', 'survivor', 'chill', 'Chatty', 'IntoTheFog', 'English', 'magicthegathering', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319083108325,72692222,antielitz,130942,Factorio,431,2026-10-25T13:55:08Z,en,"['English', 'speedrunnning']",2026-10-26,07-19-44,Monday
+319138688102,1252947491,badgetracker,1408630947,Witchspire,429,2026-10-25T09:49:42Z,en,"['Русский', 'English']",2026-10-26,07-19-44,Monday
+317133199318,52215959,followkudes,29595,Dota 2,428,2026-10-25T19:02:31Z,ru,"['Русский', 'English', 'cybersport', 'CS2', 'dota2', 'тильт', 'clown']",2026-10-26,07-19-44,Monday
+318140180963,92296049,timolazdrid,509658,Just Chatting,428,2026-10-25T23:04:02Z,fr,"['Français', 'DropsActivés']",2026-10-26,07-19-44,Monday
+319147401574,3818382,savyultras90,1478650472,Call of Duty: Modern Warfare 4,427,2026-10-25T21:09:36Z,it,"['savyultras', 'warzone', 'wsow', 'challenge', 'Italiano', 'English', 'DropAbilitati']",2026-10-26,07-19-44,Monday
+320822636766,29213580,thehamtv,2748,Magic: The Gathering,426,2026-10-25T21:47:26Z,en,['English'],2026-10-26,07-19-44,Monday
+320917204060,823377662,im_talented__,509658,Just Chatting,426,2026-10-25T23:50:19Z,en,"['spanish', 'family', 'sports', 'SportsTalk', 'sportsentertainment', 'NYCstreamers', 'DominicanRepublic', 'chattingwithviewers', 'MLB', 'English']",2026-10-26,07-19-44,Monday
+316625787249,25202416,shuteye_orange,509658,Just Chatting,424,2026-10-25T17:31:38Z,zh,"['中文', '恐怖遊戲', 'Horror', '恐怖', '启用掉宝']",2026-10-26,07-19-44,Monday
+322009970138,114402277,aruuu,509658,Just Chatting,423,2026-10-25T23:38:02Z,en,"['English', 'Muslim', 'Woman', 'Autism', 'meow', 'kitty', 'insane', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+320817049822,137786375,luxthos,737987407,Enshrouded,423,2026-10-25T15:22:31Z,en,"['English', 'AMA', 'Québec', 'MMORPG', 'ARPG', 'LurkerFriendly', 'Interactive', 'giveaway', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318944843751,51529432,cepreu_inq,771448419,AION 2,423,2026-10-25T15:16:51Z,ru,"['Русский', 'Аниме', 'MMORPG', 'Shotergame', 'poe2', 'PoE', 'Build', 'PathOfExile', 'drops', 'Rust']",2026-10-26,07-19-44,Monday
+319090232293,236507843,pizfn,509658,Just Chatting,422,2026-10-25T22:06:00Z,it,"['Italiano', 'DropAbilitati']",2026-10-26,07-19-44,Monday
+319274676342,78626614,stereonline,509658,Just Chatting,421,2026-10-25T19:43:39Z,pt,"['Português', 'Racing', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+319088181861,46543778,cardiffru,1702520304,Path of Exile 2,421,2026-10-25T19:09:18Z,ru,"['Русский', 'Безмата']",2026-10-26,07-19-44,Monday
+319084284773,28304438,earliboy,27471,Minecraft,421,2026-10-25T15:14:45Z,de,"['Deutsch', 'craftattack', 'UnityLife', 'Roleplay', 'Sauercrowd', 'UnityLifeDE', 'craftattack14']",2026-10-26,07-19-44,Monday
+322005705178,30281925,kacey,492934,RESIDENT EVIL 7 biohazard,419,2026-10-25T18:47:21Z,en,"['English', 'ClosedCaptions', 'LGBTQIA', 'LGBTQIAPlus', 'PopCulture', 'ADHD', 'FurryFriendly', 'Woman', 'Gay']",2026-10-26,07-19-44,Monday
+318136468195,42360116,cheese,2692,Super Mario 64,418,2026-10-25T17:26:22Z,en,"['English', 'LGBT', 'speedrunning', 'spanish', 'mario']",2026-10-26,07-19-44,Monday
+319145129190,1540069091,einfachmem,1763263,nanos world,418,2026-10-25T18:22:18Z,de,"['zenkaide', 'roleplay', 'rp', 'ninjarp', 'shinobirp', 'naruto', 'narutorp', 'openworld', 'rpg', 'Deutsch']",2026-10-26,07-19-44,Monday
+320818087134,40545537,ship,33214,Fortnite,417,2026-10-25T16:44:45Z,en,"['English', 'FamilyFriendly', 'Chatty', 'goodvibes']",2026-10-26,07-19-44,Monday
+319334430197,217321691,levi_cs,32399,Counter-Strike,417,2026-10-25T21:58:38Z,pt,"['Português', 'Português']",2026-10-26,07-19-44,Monday
+319275824630,505463244,skyaboveme,509660,Art,416,2026-10-25T21:45:32Z,en,"['vtuber', 'ENvtuber', 'Fanart', 'artist', 'digitalart', 'English', 'Waifu', 'booba', 'wife', 'Slop']",2026-10-26,07-19-44,Monday
+318126143076,697498408,p4perback,27471,Minecraft,415,2026-10-25T20:14:14Z,en,"['english', 'british', 'lgbt', 'french', 'p4persmp', 'horror', 'loud', 'English']",2026-10-26,07-19-44,Monday
+317738668279,3393813,eevisu,504461,Super Smash Bros. Ultimate,413,2026-10-25T18:42:34Z,en,['English'],2026-10-26,07-19-44,Monday
+315629635055,26766376,q158688920,509658,Just Chatting,413,2026-10-25T22:04:06Z,zh,"['中文', 'gamer', 'pokemon', 'Pokémon', '启用掉宝']",2026-10-26,07-19-44,Monday
+322123820635,140135053,zavalr,936822813,DOOM: The Dark Ages,412,2026-10-25T19:55:14Z,en,"['English', 'Vtuber', 'BRAINROT', 'WATCHOUT', 'TacoBellSponsorMe', 'tacobell', 'ENVtuber', 'Anime', 'gaming', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319274499062,78787513,magnumofspades,488634,Don't Starve Together,412,2026-10-25T19:24:43Z,pt,"['DontStarveTogether', 'Português', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+317179821396,131233129,audio__rw,509658,Just Chatting,411,2026-10-25T21:18:17Z,ru,"['Русский', 'терпение', 'TRPM', 'автоматизация', 'Автоматизація', 'АвтоматизацияПроцессов', 'DropsВключены']",2026-10-26,07-19-44,Monday
+318946478439,116882497,mirza_jahic,123184772,EA Sports FC 27,410,2026-10-25T17:00:17Z,de,"['Deutsch', 'EA', 'EASPORTSFC', 'fc27', 'EAFC27', 'ultimateteam', 'Fussball']",2026-10-26,07-19-44,Monday
+319091019365,148991242,whyousolonely,509672,IRL,410,2026-10-25T23:52:15Z,ru,['Русский'],2026-10-26,07-19-44,Monday
+317098748501,953952360,justhatemeeecatq,29595,Dota 2,410,2026-10-25T23:41:54Z,ru,"['Русский', 'Депрессия', 'Шизофрения', 'дединсайд', 'джастхейтми', 'justhateme', 'штормспирит', 'stormspirit', 'Обучение', 'Обучающийконтент']",2026-10-26,07-19-44,Monday
+317740957303,116675659,anothermatt_,1414860634,The Binding of Isaac: Repentance,410,2026-10-25T23:59:46Z,en,"['English', 'matt', 'mewgenics', 'isaac', 'buck', 'bumble', 'Pikmin']",2026-10-26,07-19-44,Monday
+318127277668,484356001,antoniomasmas,509658,Just Chatting,409,2026-10-25T22:20:09Z,es,['Español'],2026-10-26,07-19-44,Monday
+319698929623,151819490,keeoh,516575,VALORANT,408,2026-10-25T22:04:43Z,en,"['English', 'adhd', 'trampoline', 'backflip', 'radiant', 'valorant', 'tenz', 'ninja', 'humble']",2026-10-26,07-19-44,Monday
+319147498598,709933926,yaneher,29595,Dota 2,407,2026-10-25T21:19:06Z,ru,"['Русский', 'керри', 'титан', 'сильный', '0ошибок', 'впотоке', 'кирпичи', 'спокойныйстрим', 'психология', 'альтушка']",2026-10-26,07-19-44,Monday
+317176866516,482219642,dannykoopa,1478650472,Call of Duty: Modern Warfare 4,406,2026-10-25T14:28:13Z,ru,"['Русский', 'DropsВключены']",2026-10-26,07-19-44,Monday
+319065260261,1547091336,catcut100,491878,BeamNG.drive,404,2026-10-24T06:57:06Z,en,"['CarCrashes', 'English', 'carcrashes', 'CrashTestDummy', 'SurvivalChallenge', 'simulation', 'DrivingSimulator', 'RealisticPhysics', 'RealisticPhysics', 'cars']",2026-10-26,07-19-44,Monday
+321957901017,27235948,adamvseverything,1064893715,Resident Evil 3,404,2026-10-25T14:37:42Z,en,"['Chill', 'English', 'Challenge', 'Hardcore', 'GoodVibes', 'RimWorld', 'NoBackseating', 'Guides', 'warhammer', 'BlindPlaythrough']",2026-10-26,07-19-44,Monday
+317097605973,775803864,nedogonpolya,509658,Just Chatting,403,2026-10-25T18:43:56Z,ru,"['Русский', 'москва', 'девушка', 'общение', 'спорт', 'DropsВключены']",2026-10-26,07-19-44,Monday
+318949981671,142271083,mozgoejka,401587136,Arena Breakout: Infinite,403,2026-10-25T20:29:03Z,ru,"['Русский', 'Vtuber', 'втубер', 'Витубер', 'ruvtuber']",2026-10-26,07-19-44,Monday
+318137782115,448607714,lexitvz,1960720223,SILENT HILL: townfall,400,2026-10-25T19:14:53Z,fr,"['Français', 'chill', 'multigaming', 'discussion', 'LexiTVz', 'FR', 'Lexi']",2026-10-26,07-19-44,Monday
+316637581938,727265661,yoshimyan,509658,Just Chatting,400,2026-10-26T00:00:49Z,en,"['Japan', 'Japanese', '日本語', 'Travel', 'IRL', 'Asian', '日本', 'girl', 'Anime', 'vlog']",2026-10-26,07-19-44,Monday
+319334613749,502911561,daniliu,509658,Just Chatting,400,2026-10-25T22:14:35Z,pt,"['Português', 'English', 'Trans', 'LGBT', 'Mothering', 'Mastermind', 'Eminência', 'SafeSpace', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+320821381214,195166073,hachubby,506442,DOOM Eternal,400,2026-10-25T20:29:14Z,en,"['English', 'Variety', 'IRL', 'USA', 'gaming', 'korean', 'Cooking', 'music']",2026-10-26,07-19-44,Monday
+321965229529,585079300,blossom,509659,ASMR,399,2026-10-25T23:25:04Z,en,"['ASMR', 'Vtuber', 'mommy', 'SleepAid', 'Waifu', 'earlicking', 'English', 'feet', 'AuditoryASMR', 'findom']",2026-10-26,07-19-44,Monday
+316137263953,68000893,longlivequebec,4222,Star Wars: Empire at War,398,2026-10-25T22:08:15Z,en,"['English', 'chillstream']",2026-10-26,07-19-44,Monday
+317179260884,170424398,muxa___,32982,Grand Theft Auto V,397,2026-10-25T19:19:23Z,ru,['Русский'],2026-10-26,07-19-44,Monday
+316253707882,21534457,werster,5620,Pokémon Stadium 2,395,2026-10-25T21:28:46Z,en,"['English', 'Pokémon', 'pokemon', 'Speedrun', 'RTA', 'WRAttempts', 'PBAttempts', 'speedrunning', 'Australian']",2026-10-26,07-19-44,Monday
+321961546201,161942879,barneyjack,66170,Warframe,394,2026-10-25T19:17:48Z,en,"['fun', 'free', 'ninja', 'funny', 'tennocreate', 'freetoplay', 'playwithviewers', 'English']",2026-10-26,07-19-44,Monday
+319698288983,709629345,sacred,511224,Apex Legends,394,2026-10-25T21:05:57Z,en,['English'],2026-10-26,07-19-44,Monday
+320914138844,44741426,streamerhouse,1441208453,Once Human,393,2026-10-25T20:18:38Z,en,"['Marathon', 'AlwaysOn', 'Subathon', 'StreamerHouse', 'English', '24hr', '247Stream', 'LGBTQ', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+317180192212,107306822,divvity,509658,Just Chatting,392,2026-10-25T22:41:02Z,en,"['English', 'girl', 'swedish', 'forsen', 'unhygenic', 'evil', 'chudette', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318457457624,630680605,swooty18,1478650472,Call of Duty: Modern Warfare 4,391,2026-10-25T22:13:38Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319699446999,93812777,awedragon,138585,Hearthstone,389,2026-10-25T22:53:33Z,en,"['English', 'Battlegrounds', 'Hearthstone', 'autobattler']",2026-10-26,07-19-44,Monday
+322126165595,603995517,katanah,509672,IRL,389,2026-10-25T22:33:49Z,en,['English'],2026-10-26,07-19-44,Monday
+318951265383,939860797,dooomcr,491168,Clash Royale,389,2026-10-25T22:37:00Z,de,"['Deutsch', 'Wiederholen', 'clashroyale', 'DOoOMcr']",2026-10-26,07-19-44,Monday
+316253822570,132566833,light_e7,510056,Epic Seven,389,2026-10-25T22:35:16Z,en,"['English', 'Gacha']",2026-10-26,07-19-44,Monday
+321997933018,1518194236,a_seagull247,515025,Overwatch,389,2026-10-25T03:16:39Z,en,['English'],2026-10-26,07-19-44,Monday
+317096686037,1401536423,philonovich,32399,Counter-Strike,388,2026-10-25T16:47:53Z,ru,"['English', 'CS2', 'gaming', 'Русский', 'film']",2026-10-26,07-19-44,Monday
+322006589530,510475666,devonjenelle,509658,Just Chatting,388,2026-10-25T19:50:18Z,en,"['FINDOM', 'FINDOMME', 'GODDESS', 'PRINCESS', 'WOMAN', 'PAYPIG', 'BRAT', 'English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+317737766263,97782735,solidfps,771448419,AION 2,388,2026-10-25T15:52:03Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+316636470642,464257616,dethseiya,464339927,ARC Raiders,387,2026-10-25T15:28:20Z,ja,"['ADHD', 'ＡＤＨＤ', 'adhd', '日本語', 'V狩り', 'valorant', 'Drops有効']",2026-10-26,07-19-44,Monday
+318138018275,202928819,edyssey,456845141,Zenless Zone Zero,387,2026-10-25T19:34:10Z,es,"['Español', 'ZZZ', 'zzzero', 'English', '日本語', 'DropsActivados']",2026-10-26,07-19-44,Monday
+319335540853,1078201828,tubaraozn,29452,Virtual Casino,387,2026-10-25T23:50:41Z,pt,"['Português', 'cassino', 'slots', 'bet', 'aposta']",2026-10-26,07-19-44,Monday
+320995232224,428000880,willowleef,31355766,Tenebris Somnia,386,2026-10-25T20:34:56Z,en,"['English', 'Canadian', 'gamergirl', '18plus', 'LGBTQ', 'ADHD', 'Horror', 'chattingwithviewers', 'VoiceActor', 'egirl']",2026-10-26,07-19-44,Monday
+317134074582,90091305,nlineprime_,29595,Dota 2,386,2026-10-25T21:42:24Z,ru,"['Русский', 'mid', '15k', 'kez', 'largo', 'arc']",2026-10-26,07-19-44,Monday
+319140582246,106096750,muts,459931,Old School RuneScape,386,2026-10-25T12:53:51Z,en,['English'],2026-10-26,07-19-44,Monday
+319698780375,660555943,jayunmatched,509658,Just Chatting,385,2026-10-25T21:51:38Z,en,"['justchatting', 'd10', 'English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+320990942816,1027196985,iloveximm,460630,Rainbow Six Siege,385,2026-10-25T15:26:41Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318458222424,173950952,dubudota,29595,Dota 2,383,2026-10-25T23:55:33Z,en,['English'],2026-10-26,07-19-44,Monday
+319068740837,152126110,jojohf,509658,Just Chatting,383,2026-10-24T13:22:14Z,ru,"['Русский', 'DropsВключены']",2026-10-26,07-19-44,Monday
+322003801306,41382559,jojosaysbreee,2607,Haunting Ground,383,2026-10-25T16:34:09Z,en,"['poop', 'BOOBAS', 'mommy', 'milkers', 'clikkie', 'twentyonepilots', 'StargateNipNops', 'DeadWeight', 'AIOptedOut', 'LGBTQIA']",2026-10-26,07-19-44,Monday
+322009572186,754966991,chillvibez_420life,66170,Warframe,382,2026-10-25T23:10:44Z,en,['English'],2026-10-26,07-19-44,Monday
+322007301594,69730130,charli,32982,Grand Theft Auto V,382,2026-10-25T20:39:25Z,en,"['English', 'Roleplay', 'VoiceActing', 'tarot']",2026-10-26,07-19-44,Monday
+319274848758,127556533,claritysnicket,509658,Just Chatting,382,2026-10-25T19:59:57Z,pt,"['Português', 'an4lfabeta', 'locais', 'DE', 'fala', 'avó', 'gatos', 'netos', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+318456738392,181621578,sigridandbird,509658,Just Chatting,381,2026-10-25T20:40:22Z,en,"['Improv', 'Vtuber', 'Woman', 'Chatty', 'English', 'NoBackseating', 'vivisectionRP', 'yuri', 'Roleplay', 'Burps']",2026-10-26,07-19-44,Monday
+319335118965,143736801,spkclb,32982,Grand Theft Auto V,380,2026-10-25T23:06:14Z,pt,['Português'],2026-10-26,07-19-44,Monday
+320915722204,46061760,bthmaniac,1478650472,Call of Duty: Modern Warfare 4,379,2026-10-25T22:13:59Z,en,"['English', 'BtH', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319275746806,96909398,alineetv,1264310518,Marvel Rivals,378,2026-10-25T21:35:33Z,es,"['Latina', 'Doll', 'Español', 'English', 'girl', 'Chile', 'México', 'Comptetitive', 'LGBTQIAPlus', 'DropsActivados']",2026-10-26,07-19-44,Monday
+317739902583,101114125,vswed,512953,ELDEN RING,378,2026-10-25T21:52:30Z,en,"['English', 'SafeSpace', 'BaldWelcome', 'MetalMusic', 'SchwartzWaitingRoom', 'IBelieveinJoeHendry', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319141424358,153485923,abaddon,509663,Special Events,376,2026-10-25T14:00:08Z,en,"['English', 'Vtuber', 'ADHD', 'Comfy', '日本語OK', 'Ikemen', 'Yapper', 'Vsinger', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+320914534748,204762769,penpuin,515025,Overwatch,376,2026-10-25T20:47:38Z,en,"['English', 'Asian', 'boba', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319141776230,49901658,serpent,1458901309,Find The Needle,375,2026-10-25T14:28:02Z,nl,"['Nederlands', 'serpentgameplay', 'rickbroers', 'ruziemaken']",2026-10-26,07-19-44,Monday
+322007648218,30080840,tsm_theoddone,1954784138,Final Fantasy Resonance,372,2026-10-25T21:02:48Z,en,['English'],2026-10-26,07-19-44,Monday
+321960400601,214560121,brookeab,1354355809,Split Fiction,372,2026-10-25T17:57:53Z,en,"['English', '100Thieves']",2026-10-26,07-19-44,Monday
+318107880676,416031592,solaryhs,138585,Hearthstone,372,2026-10-24T04:58:15Z,fr,['Français'],2026-10-26,07-19-44,Monday
+319135739878,1516761989,jankos247,21779,League of Legends,372,2026-10-24T23:58:13Z,en,"['Jankos', 'Esports', 'English']",2026-10-26,07-19-44,Monday
+320820890078,79521613,prestivent,513143,Teamfight Tactics,371,2026-10-25T19:57:12Z,en,['English'],2026-10-26,07-19-44,Monday
+319335316725,146758860,belenyaa,509658,Just Chatting,371,2026-10-25T23:27:11Z,es,"['Español', 'Chile', 'Anime', 'Cosplay', 'cosplayer', 'English', 'DropsActivados']",2026-10-26,07-19-44,Monday
+321964881113,43490123,moosebrother,32982,Grand Theft Auto V,371,2026-10-25T23:03:59Z,en,"['English', 'RP', 'gamer', 'cats', 'Moaner']",2026-10-26,07-19-44,Monday
+316136937297,41343682,helenalive,29595,Dota 2,370,2026-10-25T20:16:54Z,en,"['English', 'IRL', 'girl', 'Friendly', 'cosy', 'Princess', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318951892071,1078199574,nhaqi06,509658,Just Chatting,368,2026-10-26T00:08:45Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318948858855,663103118,visky,32982,Grand Theft Auto V,368,2026-10-25T19:15:46Z,de,['Deutsch'],2026-10-26,07-19-44,Monday
+316253983210,32099052,purpp,459931,Old School RuneScape,367,2026-10-25T23:59:36Z,en,['English'],2026-10-26,07-19-44,Monday
+321962440537,32349768,gmart,2124871354,RuneScape: Dragonwilds,367,2026-10-25T20:22:08Z,en,"['English', 'Vtuber', 'ConstantlyConfused', 'funandjustchill', 'assmode']",2026-10-26,07-19-44,Monday
+317739060599,527560945,dinomitetwins,509672,IRL,366,2026-10-25T19:42:46Z,en,"['English', 'outdoors', 'irl', 'nyc', 'newyorkcity', 'walking', 'justchatting', 'travel', 'halloween']",2026-10-26,07-19-44,Monday
+319273470070,181077473,gaules,32399,Counter-Strike,366,2026-10-25T17:47:44Z,pt,['Português'],2026-10-26,07-19-44,Monday
+318949632615,52443328,enkk,66082,Games + Demos,365,2026-10-25T20:04:35Z,it,"['gigachad', 'almostchiavable', 'averaged', 'Italiano', 'aiguru', 'retrotopico', 'adultista', 'esiziale', 'turlupinante', 'aiexpert']",2026-10-26,07-19-44,Monday
+317131540054,142243867,dano,417892,Z1: Battle Royale,365,2026-10-25T15:32:43Z,en,"['English', 'H1Z1']",2026-10-26,07-19-44,Monday
+319697238999,400530750,vampykinz,509658,Just Chatting,364,2026-10-25T19:31:16Z,en,"['Vtuber', 'English', 'Anime', 'Woman', 'indie', 'reacts', 'ENVtuber', 'BRATTYKINZ', 'Chatty', 'BRAT']",2026-10-26,07-19-44,Monday
+319334745589,600037165,marcusoceifeiro,509658,Just Chatting,363,2026-10-25T22:26:28Z,pt,"['Português', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+317085693141,9528182,chilledchaos,499973,Always On,363,2026-10-24T07:15:35Z,en,"['English', 'ItalianSafeSpace', 'ChilledChaos', 'LyingEncouraged', 'seventeencarat', 'AmongUs', 'Multiplayer', 'aioptedout']",2026-10-26,07-19-44,Monday
+319148452326,539128874,batatvideogames,16562,Robot Alchemic Drive,362,2026-10-25T23:10:46Z,en,"['English', 'VTuber', 'FlatEarther', 'Sellout', 'FirstTimePlayer', 'LastTimePlayer', 'TungTungLike', 'ChineseAustralian', 'Cheese']",2026-10-26,07-19-44,Monday
+319148530406,33004374,tolomeo,66082,Games + Demos,362,2026-10-25T23:23:09Z,en,"['fat', 'lardvaark', 'sissyhypnosis', 'wholesome', 'gaybaiter', 'manlet', 'homeless', 'English']",2026-10-26,07-19-44,Monday
+318458392024,1223027783,iamtrinitytaylor2,509658,Just Chatting,359,2026-10-26T00:16:37Z,en,"['gta', 'English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318127128676,108236875,ikoneec,65632,DayZ,358,2026-10-25T22:02:20Z,fr,"['DayZ', 'SURVIE', 'Français']",2026-10-26,07-19-44,Monday
+320815916510,418066881,telfer1,19976,MapleStory,358,2026-10-25T13:28:58Z,en,"['English', 'mcdonalds', 'Chinese', 'China', 'xijinping', 'Cantonese']",2026-10-26,07-19-44,Monday
+318106624482,635449574,chaoticmuch,511224,Apex Legends,358,2026-10-25T13:46:39Z,en,['English'],2026-10-26,07-19-44,Monday
+318127591652,866554568,reyyn,30921,Rocket League,358,2026-10-25T23:00:43Z,fr,"['English', 'RocketlLeague', 'Français', 'Deutsch', 'DropsEnable', 'top100']",2026-10-26,07-19-44,Monday
+322127268827,37242816,tr0g,3207,Living Ball,357,2026-10-25T23:48:37Z,en,"['LGBTQIAPlus', 'Bisexual', 'xemnas', 'English']",2026-10-26,07-19-44,Monday
+319276437878,1078191795,kevok,29452,Virtual Casino,356,2026-10-25T22:58:54Z,pt,"['Português', 'cassino', 'slots', 'bet', 'aposta', 'bonus', 'giro']",2026-10-26,07-19-44,Monday
+318135635427,537093321,norianne,497480,Detroit: Become Human,355,2026-10-25T16:10:25Z,fr,"['Français', 'gta', 'GrandTheftAutoV', 'gta5', 'fivem', 'baylife', 'bayliferp', 'Roleplay', 'ReadDeadRedemption2', 'rdr2']",2026-10-26,07-19-44,Monday
+320914782812,88354503,supergg,491487,Dead by Daylight,355,2026-10-25T21:06:10Z,en,"['justcchatting', 'justtchating', 'English', 'hispanic', 'dominican', 'subathon', 'dbd', 'justchatting', 'deadbydaylight', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+317737509111,66729949,sobadstrange,2009321156,Dark and Darker,353,2026-10-25T14:44:57Z,en,"['Hardcore', 'Speedruns', 'Positive', 'Teacher', 'Military', 'holidayhoopla', 'English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319331326453,130012553,mandyl,509658,Just Chatting,352,2026-10-25T16:10:46Z,pt,"['Português', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+317740504055,137909053,ms_tricky,116747788,"Pools, Hot Tubs, and Beaches",352,2026-10-25T23:04:34Z,en,"['English', 'findom', 'FINDOMME', 'Goddess', 'paypig', 'mommy', 'feet', 'ASMR', 'Princess']",2026-10-26,07-19-44,Monday
+322003838682,274382158,yojosherino,982348888,ELDEN RING NIGHTREIGN,351,2026-10-25T16:37:15Z,en,"['English', 'Speedrun']",2026-10-26,07-19-44,Monday
+317134101718,495624785,asunavysescythe,138585,Hearthstone,351,2026-10-25T21:52:01Z,ru,['Русский'],2026-10-26,07-19-44,Monday
+317134261974,1531059642,gigilo23,32399,Counter-Strike,351,2026-10-25T22:53:07Z,ru,"['Russia', 'dota2', 'Повтор', 'Русский']",2026-10-26,07-19-44,Monday
+318127271780,252427176,saselandiadirectos,509658,Just Chatting,350,2026-10-25T22:19:32Z,es,"['Español', 'DropsActivados']",2026-10-26,07-19-44,Monday
+318139508451,10951945,ashens,509658,Just Chatting,349,2026-10-25T21:37:18Z,en,['English'],2026-10-26,07-19-44,Monday
+317178726612,86518598,pukistylee,21779,League of Legends,349,2026-10-25T18:03:41Z,pl,"['Polska', 'Poland', 'English', 'AD', 'ADC', 'LE', 'Polski', 'DropyWłączone']",2026-10-26,07-19-44,Monday
+319147901030,737981510,cosmetical,2132205352,Deadlock,348,2026-10-25T22:03:28Z,en,"['English', 'Ranked', 'deadlock']",2026-10-26,07-19-44,Monday
+320822596574,89785432,abezy,1478650472,Call of Duty: Modern Warfare 4,348,2026-10-25T21:44:56Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318138551779,24527723,enevun,32982,Grand Theft Auto V,348,2026-10-25T20:12:57Z,en,"['Chill', 'English', 'Cozy', 'NoPixel', 'NoPixelV']",2026-10-26,07-19-44,Monday
+320824639198,146972429,akaelectro,670138298,Madden NFL 27,348,2026-10-25T23:34:15Z,en,['English'],2026-10-26,07-19-44,Monday
+320816244702,173103803,firsttourguardsman,223869970,"Warhammer 40,000: Space Marine II",347,2026-10-25T14:06:29Z,en,"['YoutubePartner', 'English', 'DropsEnabeled', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319145732838,109163696,berlino,32982,Grand Theft Auto V,347,2026-10-25T19:01:42Z,it,"['Italiano', 'PEAKVILLE', 'peakville', 'GTARP', 'English', 'sand', 'santamonicarp', 'santamonica']",2026-10-26,07-19-44,Monday
+322001516890,1533570524,savage2daendx,602040818,NBA 2K27,347,2026-10-25T12:14:38Z,en,['English'],2026-10-26,07-19-44,Monday
+319699756503,118376649,raeibon,21779,League of Legends,346,2026-10-25T23:18:20Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+317132024790,124194971,lala_carpediem,509672,IRL,346,2026-10-25T16:41:40Z,en,"['English', 'DIY', 'AdultLanguage', 'CanadaEh', 'Skoolie', 'Gamingwithchat', 'Roadtrips', 'Food', 'RoadToTwitchcon26']",2026-10-26,07-19-44,Monday
+316637304050,188273795,laxhawthorn007,509672,IRL,346,2026-10-25T21:49:37Z,en,['English'],2026-10-26,07-19-44,Monday
+317179477972,1419005056,whoshare,32399,Counter-Strike,346,2026-10-25T20:00:42Z,ru,"['гта5рп', 'Русский', 'gta5roleplayer', 'gta5rp']",2026-10-26,07-19-44,Monday
+322010032090,852883323,primatepaige,749097531,NMS Boxing,346,2026-10-25T23:42:10Z,en,"['handsome', 'English']",2026-10-26,07-19-44,Monday
+320915526364,1096331847,mooimimo,1945673289,The Mortuary Assistant,345,2026-10-25T22:00:29Z,en,"['English', 'Cosplay', 'femboy', 'MaleWife', 'Anime']",2026-10-26,07-19-44,Monday
+319699624407,227467763,hotrodd,33214,Fortnite,345,2026-10-25T23:07:25Z,en,"['scrims', 'unreal', 'fortnite', 'ZeroBuild', 'English', 'clix', 'hotrodd', 'zb', 'drops']",2026-10-26,07-19-44,Monday
+319148280038,570971897,nagibatorleon,464339927,ARC Raiders,345,2026-10-25T22:48:46Z,ru,"['pvp', 'Русский', 'DropsВключены']",2026-10-26,07-19-44,Monday
+319146182502,68819821,siormax,1221407161,Pikabuu: STOP!,343,2026-10-25T19:31:00Z,it,"['Italiano', 'StreamerCristiano', 'VivaLeForzeDellOrdine', 'NonUnBottegaio']",2026-10-26,07-19-44,Monday
+317134246614,27268093,alliance_hakis,511224,Apex Legends,343,2026-10-25T22:45:57Z,en,"['IGL', 'Comp', 'Scrim', 'Tourney', 'Pro', 'Alliance', 'Ranked', 'ApexPredator', 'English', 'movementgod']",2026-10-26,07-19-44,Monday
+318944052455,279485855,xxmigoo,1763263,nanos world,343,2026-10-25T14:24:20Z,en,"['slots', 'English']",2026-10-26,07-19-44,Monday
+319698060503,132968488,saucekill,749097531,NMS Boxing,342,2026-10-25T20:46:09Z,en,"['English', 'killkrew', 'Kode']",2026-10-26,07-19-44,Monday
+320820444766,1369169759,igotthedroptv,417752,Talk Shows & Podcasts,342,2026-10-25T19:27:45Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+317739638007,150267337,vigi,902998079,Halloween: The Game,342,2026-10-25T21:15:31Z,en,"['ClosedCaptions', 'SoundAlerts', 'Vtuber', 'ENVtuber', 'DropsEnabeled', 'LOUD', 'DebutVtuber', 'BackseatGamingAllowed', 'English', 'FirstaPlayThrough']",2026-10-26,07-19-44,Monday
+318454206680,413359386,saosbytheos,2106425216,Gray Zone Warfare,341,2026-10-25T14:23:01Z,en,"['FPS', 'TATICAL', 'DAD', 'GAMER', 'LOOTGOBLIN', 'LOOTING', 'PvP', 'PVpe', 'English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318140341475,74391737,yomax,123184772,EA Sports FC 27,341,2026-10-25T23:33:05Z,fr,"['Football', 'fifa', 'foot', 'Français', 'EASportsFC', 'football', 'eafc', 'fc27', 'EAFC27']",2026-10-26,07-19-44,Monday
+322010361434,175383693,sylvee,427281650,Party Quiz,340,2026-10-26T00:03:22Z,en,['English'],2026-10-26,07-19-44,Monday
+317098487637,613344450,togetherdl,2132205352,Deadlock,340,2026-10-25T21:58:54Z,ru,"['Русский', 'English', 'deadlock']",2026-10-26,07-19-44,Monday
+322122790875,604187751,aurorafractubela_uwu,509659,ASMR,340,2026-10-25T18:45:29Z,es,"['ASMRvisual', 'Español', 'earlicking', 'mommy', 'girl', 'ASMR', 'Princess', 'findom', 'Goddess', 'tarotista']",2026-10-26,07-19-44,Monday
+318457294168,32409994,bikeman,66082,Games + Demos,340,2026-10-25T21:51:01Z,en,"['ADHD', 'Humor', 'noSPOILERS', 'English']",2026-10-26,07-19-44,Monday
+319403709300,930625008,brunozfk,32399,Counter-Strike,339,2026-10-25T22:40:25Z,pt,['Português'],2026-10-26,07-19-44,Monday
+320995838944,146326830,snaddyy,2094865572,SMITE 2,339,2026-10-25T21:20:41Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+320908450780,878542604,fullthrottledg,2106425216,Gray Zone Warfare,338,2026-10-25T12:00:11Z,en,"['ADHDStreamer', 'ChillandChaotic', 'Immersion', '420friendly', 'English', 'grayzonewarfare', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319276319478,1376017573,sharkfpss7,29452,Virtual Casino,338,2026-10-25T22:45:10Z,pt,"['Português', 'coperar', 'cassino']",2026-10-26,07-19-44,Monday
+320914857820,13958058,omegapro,509658,Just Chatting,338,2026-10-25T21:12:10Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319695803735,56001630,mrfruit,2132205352,Deadlock,338,2026-10-25T17:02:59Z,en,"['English', 'ADHD']",2026-10-26,07-19-44,Monday
+319129415526,60185310,logo,27471,Minecraft,337,2026-10-24T16:02:24Z,de,"['Deutsch', 'drops', 'cape', 'craftattack', 'craftattack14', 'ca14', 'logo']",2026-10-26,07-19-44,Monday
+320912870108,134759417,whatiskami,55453844,Street Fighter 6,337,2026-10-25T18:47:30Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+321958149721,1001501388,betitodeidadsygod,490655,Pokémon GO,337,2026-10-25T15:01:18Z,es,"['Español', 'Humor', 'España', 'LATAM', 'Entretenimiento', 'chat', 'Drops', 'Badges', 'DropsActivados', 'Pokémon']",2026-10-26,07-19-44,Monday
+316637583730,132349933,snootydeath,509658,Just Chatting,336,2026-10-26T00:01:24Z,en,"['Daddy', 'chill', 'Yapper', 'VTuber', 'ADHD', 'Chatty', 'SafeSpace', 'ENVtuber', 'English', 'VisualASMR']",2026-10-26,07-19-44,Monday
+318950291303,1188677689,furo99,1763263,nanos world,335,2026-10-25T20:53:36Z,de,"['Deutsch', 'RP']",2026-10-26,07-19-44,Monday
+319145558374,1541374783,badgetracking,1408630947,Witchspire,335,2026-10-25T18:51:10Z,en,"['English', 'DropsEnabled', 'gamingstreaming', 'Badges', 'Badge']",2026-10-26,07-19-44,Monday
+319276135158,124734009,rafaelagoulart,509658,Just Chatting,335,2026-10-25T22:23:58Z,pt,"['Português', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+322006131674,172932484,predictzmlg,1848745913,Battlefield REDSEC,333,2026-10-25T19:16:24Z,en,"['firstpersonshooter', 'English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+317133994454,655029924,bam0nty,29595,Dota 2,332,2026-10-25T21:15:47Z,ru,"['Русский', 'strogo', 'shadowkekw', 'buster', 'evelone2004']",2026-10-26,07-19-44,Monday
+320996351712,598154162,hes2crazy730,490432,Mafia III,332,2026-10-25T22:00:07Z,en,"['English', 'ActionAdventureRPG', 'Rerun', 'OpenWorldGaming', 'SideQuests', 'programing', 'growingchannel', 'horrorgame']",2026-10-26,07-19-44,Monday
+320915118812,457481506,deargia,1609630759,Tidy Up the Halloween Shop,331,2026-10-25T21:30:39Z,es,['Español'],2026-10-26,07-19-44,Monday
+317739918455,710432375,twigbot_,518184,Phasmophobia,331,2026-10-25T21:54:27Z,en,"['loud', 'English', 'girl', 'sassy', 'food', 'Phasmophobia', 'LGBTQFriendly', 'SafeSpace', 'Ally']",2026-10-26,07-19-44,Monday
+319700253143,78903253,savinthebees,509658,Just Chatting,330,2026-10-26T00:00:09Z,en,"['HIVE', 'HIVESZN', 'Bush', 'did', '9', '11', 'English', 'ADHD', 'FATMEATGANG', 'MyNeckKirks']",2026-10-26,07-19-44,Monday
+319090113381,1209791823,dianvegas1,498566,Slots,328,2026-10-25T21:52:20Z,de,['Deutsch'],2026-10-26,07-19-44,Monday
+319088533221,407690417,kyossa0,509658,Just Chatting,328,2026-10-25T19:31:39Z,ru,"['Русский', 'DropsВключены']",2026-10-26,07-19-44,Monday
+319123317862,92655587,rescue,495202,Fire Emblem: Three Houses,327,2026-10-24T04:54:09Z,en,"['English', 'Comfy']",2026-10-26,07-19-44,Monday
+322006373466,245619729,arkrosed,32399,Counter-Strike,327,2026-10-25T19:34:24Z,en,"['NA', 'English', 'Tactics', 'Competitive', 'Premier', 'AWP', 'IGL', 'Skins', 'Chill']",2026-10-26,07-19-44,Monday
+322122322267,446825605,popsbarngrill,18122,World of Warcraft,327,2026-10-25T18:13:12Z,en,"['USA', 'Chilled', 'HardMode', 'Permadeath', 'English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319143064422,570983720,sandyjackson,509511,Marbles on Stream,327,2026-10-25T16:04:03Z,de,"['german', 'music', 'cozy', 'subathon', 'gaming', 'lgbtq', 'summer', 'singing', 'sports', 'gamescom']",2026-10-26,07-19-44,Monday
+320893192796,594761920,neongutz,1910103699,THE FINALS,326,2026-10-24T14:09:04Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+320917004764,22916751,bajheera,18122,World of Warcraft,326,2026-10-25T23:37:46Z,en,"['English', 'Warrior', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+317739726199,59189213,jayden,21779,League of Legends,325,2026-10-25T21:28:40Z,en,"['English', 'Gym', 'Anime', 'Cuban', 'Chinese', 'DropsEnabled', 'Bingo']",2026-10-26,07-19-44,Monday
+322124677211,462587493,goober,2132205352,Deadlock,325,2026-10-25T20:50:42Z,en,"['English', 'Competitive', 'pro', 'goofygoober', 'deadlock']",2026-10-26,07-19-44,Monday
+320916579548,46023180,natspresso,509658,Just Chatting,325,2026-10-25T23:09:48Z,en,"['English', 'girl', 'chatty', 'firstplaythrough', 'ChallengeRun', 'chill', 'metal', 'variety', 'VarietyStreamer', 'Welcoming']",2026-10-26,07-19-44,Monday
+319696194647,54706574,joshog,488190,Poker,325,2026-10-25T17:50:43Z,en,"['English', 'gambling']",2026-10-26,07-19-44,Monday
+319391562612,438686523,trollzinha,386821,Black Desert,324,2026-10-24T17:02:14Z,pt,"['Português', 'DropsAtivados', 'ExclusiveDrops', 'English', 'Español']",2026-10-26,07-19-44,Monday
+317740381431,208349132,valynfps,516575,VALORANT,324,2026-10-25T22:50:25Z,en,['English'],2026-10-26,07-19-44,Monday
+319697169111,1484041119,boxbox3122,499634,Crypto,324,2026-10-25T19:25:00Z,en,"['English', 'crypto']",2026-10-26,07-19-44,Monday
+318136647267,400638285,cerebrocule,518203,Sports,323,2026-10-25T17:40:44Z,es,"['fútbol', 'barça', 'directo', 'tertulia', 'charla', 'fcbarcelona', 'deportes', 'soccer', 'show', 'Español']",2026-10-26,07-19-44,Monday
+318127104868,28740713,condejorge,2007572117,Infection Free Zone,322,2026-10-25T22:00:18Z,es,['Español'],2026-10-26,07-19-44,Monday
+317740171895,572490366,jaharajayde,1288749557,Dressmaker (2026),322,2026-10-25T22:23:44Z,en,"['black', 'blackstreamer', 'africanamerican', 'women', 'English', 'NoBackseating', 'NoSpoilers']",2026-10-26,07-19-44,Monday
+318112708450,203429435,originalvicz,123184772,EA Sports FC 27,322,2026-10-25T22:06:08Z,en,['English'],2026-10-26,07-19-44,Monday
+319089659877,189927415,imba__tv,123184772,EA Sports FC 27,322,2026-10-25T21:00:58Z,de,['Deutsch'],2026-10-26,07-19-44,Monday
+320900013404,1312862940,asmongold247,18122,World of Warcraft,320,2026-10-24T22:42:07Z,en,['English'],2026-10-26,07-19-44,Monday
+316253798506,672957517,jeanfaymas,947947891,Disco Elysium: The Final Cut,319,2026-10-25T22:21:32Z,en,"['Vtuber', 'Tomboy', 'Australia', 'bakadere', 'English', 'Vershion', 'AUS', 'scifi']",2026-10-26,07-19-44,Monday
+317740095223,1507399988,squeakykat_,509659,ASMR,319,2026-10-25T22:14:53Z,en,"['English', 'ASMR', 'catgirl', 'Headpats', 'mommy', 'kisses', 'Vtuber']",2026-10-26,07-19-44,Monday
+320913418204,880562387,rawdogmoon,509658,Just Chatting,319,2026-10-25T19:26:13Z,en,"['English', 'assyrian', 'streameruniversity', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319148108262,125177248,achkev,32982,Grand Theft Auto V,319,2026-10-25T22:27:07Z,de,"['Deutsch', 'rp', 'fun', 'hardcore', 'UnrealEngine', 'gta', 'peak', 'server', 'Roleplay', 'DropsAktiviert']",2026-10-26,07-19-44,Monday
+319086174821,1591790146,r2reforge,502829,R2 Online: Reign of Revolution,319,2026-10-25T17:10:35Z,ru,"['English', 'R2Online', 'Русский', 'R2стрим', 'R2OnlineReignofRevolution', 'R2', 'R20']",2026-10-26,07-19-44,Monday
+319275834742,128069182,bronziocrelol,21779,League of Legends,319,2026-10-25T21:47:17Z,pt,"['Português', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+319086876773,56863404,joshmaen1,195574289,Moon Sweepers,318,2026-10-25T17:53:51Z,de,"['roleplay', 'unscripted', 'Deutsch', 'RP', 'GTARP', 'reaction']",2026-10-26,07-19-44,Monday
+317094415445,154132019,snowmers,263490,Rust,318,2026-10-25T11:18:48Z,en,"['English', 'RUST', 'rustsolo', 'rustsnowball', 'rustpvp', 'rustpro', 'rustwipe', 'drops', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319699740119,473739345,gryffinn,21779,League of Legends,318,2026-10-25T23:16:54Z,en,"['English', 'CHALLENGER', 'jungler', 'leagueoflegends', 'Rank1', 'LCS', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+320909734876,35074137,foxmanslays,2009321156,Dark and Darker,318,2026-10-25T14:38:24Z,en,"['sorcerer', 'warlock', 'wizard', 'arena', 'pvp', 'darkanddarker', 'competitive', 'English', 'solo', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319699504215,135175880,genburten,511224,Apex Legends,317,2026-10-25T22:58:33Z,en,"['English', 'apex', 'Controller', 'apexrankedgrind', 'apexlegends']",2026-10-26,07-19-44,Monday
+320997471072,219296666,rhyzohm,509658,Just Chatting,316,2026-10-25T23:10:52Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318139860963,491048227,diablorp666,490948,The Isle,316,2026-10-25T22:16:19Z,en,"['English', 'TheIsle', 'Dinosaurs', 'Roleplay', 'Funny', 'ProximityChat', 'Multiplayer', 'Survival', 'Community', '18Plus']",2026-10-26,07-19-44,Monday
+318139742947,779855707,momocitavt,2128193047,Super Battle Golf,316,2026-10-25T22:03:53Z,en,"['English', 'vtuber', 'Mommy', 'Gyaru']",2026-10-26,07-19-44,Monday
+319148387942,705364715,mthd4s,138585,Hearthstone,315,2026-10-25T23:01:52Z,en,"['English', 'goat', 'educational', 'ProfessionalGamer']",2026-10-26,07-19-44,Monday
+319089245925,196794962,romall1katv,29595,Dota 2,315,2026-10-25T20:23:33Z,ru,['Русский'],2026-10-26,07-19-44,Monday
+317737871223,48532479,crashnaps,13263,EVE Online,314,2026-10-25T16:13:12Z,en,"['English', 'eboy', 'ADHD', 'ShadowWizardMoneyGang', 'IRL', 'EGIRL', 'WIGGLYWOBBLYWHOA', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+320915440476,40043146,t666ommy,417528,Albion Online,313,2026-10-25T21:54:37Z,en,"['PvP', 'English', 'NA', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+320822344158,80145304,speedgaming,9435,The Legend of Zelda: A Link to the Past,313,2026-10-25T21:28:58Z,en,"['Competitive', 'Speedrun', 'Commentary', 'Tournament', 'Randomizer', 'Racing', 'English']",2026-10-26,07-19-44,Monday
+318137601379,21080562,mrbboy45,32982,Grand Theft Auto V,312,2026-10-25T19:00:19Z,fr,"['Français', 'MrBboy45', 'Horreur', 'Drôle', 'GTA', 'RP', 'Roleplay', 'pokemon']",2026-10-26,07-19-44,Monday
+319404517748,1387559246,pep1ludopa,498566,Slots,311,2026-10-26T00:06:21Z,es,"['Español', 'Repetir']",2026-10-26,07-19-44,Monday
+322004981210,92653727,x33n,27471,Minecraft,310,2026-10-25T17:59:31Z,en,"['English', 'Modded', 'LGBTQIAPlus', 'microscape', 'Enshrouded', 'Keymailer']",2026-10-26,07-19-44,Monday
+320915937372,168847241,dragonspit,509658,Just Chatting,309,2026-10-25T22:28:40Z,en,"['English', 'Vtuber', 'vibing', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319085889893,228149164,flairr,1763263,nanos world,309,2026-10-25T16:55:16Z,de,"['Gaming', 'GTARP', 'German', 'NarcoCity', 'Roleplay', 'Deutsch']",2026-10-26,07-19-44,Monday
+319698171735,201686998,winnie,263490,Rust,309,2026-10-25T20:56:26Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319274136310,232900452,bruking,401587136,Arena Breakout: Infinite,309,2026-10-25T18:48:41Z,pt,['Português'],2026-10-26,07-19-44,Monday
+322009588954,883921027,mu_chanterelle,509659,ASMR,309,2026-10-25T23:11:53Z,en,"['English', 'Vtuber', 'Mommy', 'ASMR', 'SleepAid']",2026-10-26,07-19-44,Monday
+317178267860,818242175,maddogsleague,29595,Dota 2,309,2026-10-25T17:11:31Z,en,['English'],2026-10-26,07-19-44,Monday
+319143088102,189100403,grimz,33214,Fortnite,308,2026-10-25T16:05:29Z,fr,['Français'],2026-10-26,07-19-44,Monday
+319403682932,1078196221,rapososlots,29452,Virtual Casino,308,2026-10-25T22:37:50Z,pt,"['Português', 'cassino', 'slots', 'bet', 'aposta']",2026-10-26,07-19-44,Monday
+316136621777,808185165,albadubai,497527,Doki Doki Literature Club!,308,2026-10-25T18:39:26Z,es,"['Español', 'game', 'gameplay', 'juego']",2026-10-26,07-19-44,Monday
+318458310744,110623396,nexzou,512710,Call of Duty: Warzone,307,2026-10-26T00:06:32Z,en,"['English', 'warzone', 'mw3', 'resurgence', 'cdl', 'LOUD', 'rage', 'rebirth']",2026-10-26,07-19-44,Monday
+319404052852,1532504159,dobleverde,509658,Just Chatting,306,2026-10-25T23:15:22Z,es,"['charlando', 'ENVIVO', 'reaccion', 'Español', 'DropsActivados']",2026-10-26,07-19-44,Monday
+321965559897,8843899,quirkitized,19554,iRacing,305,2026-10-25T23:44:53Z,en,['English'],2026-10-26,07-19-44,Monday
+318139142755,928045540,owlfr_,32982,Grand Theft Auto V,305,2026-10-25T21:02:30Z,fr,"['Français', 'FlashbackWL']",2026-10-26,07-19-44,Monday
+320825333982,935147817,muvaellaivy,902998079,Halloween: The Game,304,2026-10-26T00:08:10Z,en,['English'],2026-10-26,07-19-44,Monday
+317098407125,49218669,totless,2128193047,Super Battle Golf,303,2026-10-25T21:31:40Z,en,"['Vtuber', 'swedish', 'English', 'Anime', 'Yapper', 'ADHD', 'vcardtcg', 'Scuff', 'yuri', 'Autism']",2026-10-26,07-19-44,Monday
+319272564470,107151878,loxastv,19619,Tibia,303,2026-10-25T16:12:04Z,pt,"['MMORPG', 'PixelArt', 'indiegame', 'Português', 'pokealliance']",2026-10-26,07-19-44,Monday
+317740578039,65151421,lyra,509658,Just Chatting,302,2026-10-25T23:13:26Z,en,"['English', 'Vtuber', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+322005907162,139837888,oliverog,33214,Fortnite,300,2026-10-25T19:00:47Z,en,"['English', 'Fortnite']",2026-10-26,07-19-44,Monday
+322008584154,77913099,ifrostbolt,2132205352,Deadlock,300,2026-10-25T22:06:42Z,en,"['community', 'pVp', 'VIbes', 'destiny2', 'Horror', 'PvE', 'English', 'Español', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318111025764,757102582,streamdatabase,509658,Just Chatting,300,2026-10-24T14:05:54Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+320821881566,118385536,achillefps,1478650472,Call of Duty: Modern Warfare 4,299,2026-10-25T21:01:46Z,fr,"['Français', 'BR', 'Variety', 'fps', 'qc', 'RP', 'gta', 'Rust', 'IRL', 'react']",2026-10-26,07-19-44,Monday
+319694464599,67650991,realkraftyy,512953,ELDEN RING,299,2026-10-25T12:46:30Z,en,"['English', 'ExtractionShooter', 'MEN', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319697315159,165753222,savefile17,138585,Hearthstone,298,2026-10-25T19:38:38Z,en,"['English', 'Arena', 'nerd', 'Leaderboard', 'hearthstonearena', 'hearthstone', 'StarWarsNerd', 'StarTrekNerd']",2026-10-26,07-19-44,Monday
+322120240347,24372676,molgoatkirby,459931,Old School RuneScape,298,2026-10-25T15:39:12Z,en,"['osrs', 'speedrun', 'challenge', 'wr', 'guide', 'English']",2026-10-26,07-19-44,Monday
+322010129242,142957433,jrobthefinesser,1848745913,Battlefield REDSEC,298,2026-10-25T23:48:54Z,en,"['fyp', 'gaming', 'livestream', 'battlefield', 'warzone', 'fyp', 'IRL', 'English']",2026-10-26,07-19-44,Monday
+319148023782,1078195522,erypr50,509658,Just Chatting,298,2026-10-25T22:17:06Z,it,"['Italiano', 'DropAbilitati']",2026-10-26,07-19-44,Monday
+319696160727,45301539,worldofchap,490377,Sea of Thieves,298,2026-10-25T17:47:17Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+317098756949,133763336,uniquee,29595,Dota 2,297,2026-10-25T23:45:59Z,ru,['Русский'],2026-10-26,07-19-44,Monday
+316182076755,63546191,catawin,513143,Teamfight Tactics,297,2026-10-25T13:21:37Z,en,"['chill', 'funny', 'hot', 'humble', 'English', 'Asian', 'TFT']",2026-10-26,07-19-44,Monday
+318950724967,76508554,anomaly,65632,DayZ,297,2026-10-25T21:35:36Z,en,['English'],2026-10-26,07-19-44,Monday
+317738555639,107042044,chewy4u,1414860634,The Binding of Isaac: Repentance,297,2026-10-25T18:24:20Z,en,"['English', 'ad']",2026-10-26,07-19-44,Monday
+319139310566,547064977,archiedos,1984929743,The Elder Scrolls IV: Oblivion Remastered,297,2026-10-25T10:57:43Z,ru,['Русский'],2026-10-26,07-19-44,Monday
+319146231910,482185130,aquaivy_asmr,509659,ASMR,296,2026-10-25T19:34:01Z,en,"['English', 'findom', 'goddess', 'asmr', 'earlicking', 'paypig', 'walletdrain', 'Rerun', 'PartnerPush']",2026-10-26,07-19-44,Monday
+317133172054,124432017,detoo,512953,ELDEN RING,296,2026-10-25T19:00:08Z,no,"['Norsk', 'IRL', 'DropsAktivert']",2026-10-26,07-19-44,Monday
+319086000997,38608008,serverenok,1393304883,Mir Tankov,295,2026-10-25T17:00:59Z,ru,['Русский'],2026-10-26,07-19-44,Monday
+320996970976,141446299,sprooky,2124871354,RuneScape: Dragonwilds,295,2026-10-25T22:41:48Z,en,"['coughingbaby', 'demon', 'demonmode', 'beastmode', 'scary', 'hi', 'hello', 'hey', 'hiii', 'English']",2026-10-26,07-19-44,Monday
+319087670117,124318726,matteohs,509667,Food & Drink,295,2026-10-25T18:38:17Z,it,"['Italiano', 'Cucina', 'Cooking', 'Food']",2026-10-26,07-19-44,Monday
+320823971550,276337840,greekwario,18122,World of Warcraft,295,2026-10-25T23:01:00Z,en,['English'],2026-10-26,07-19-44,Monday
+319698484311,44923106,imfiredup,18122,World of Warcraft,294,2026-10-25T21:24:16Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318125085796,104919208,sooshi,2132205352,Deadlock,294,2026-10-25T18:48:10Z,en,['English'],2026-10-26,07-19-44,Monday
+320824356190,70298142,zaikiai,509658,Just Chatting,294,2026-10-25T23:20:09Z,en,"['Vtuber', 'Anime', 'Vtubers', 'Envtuber', 'English', 'Gremlin', 'Waifu', 'react', 'Unhinged', 'reaction']",2026-10-26,07-19-44,Monday
+318122463204,12585713,threedogg,5596,Manhunt,293,2026-10-25T14:44:15Z,en,"['English', 'NoBackseating']",2026-10-26,07-19-44,Monday
+319402800372,161340615,murloka,417528,Albion Online,292,2026-10-25T20:55:47Z,es,"['MMO', 'SOLO', 'english', 'girl', 'egirl', 'Español', 'English', 'Español', 'DropsEnabled', 'murloka']",2026-10-26,07-19-44,Monday
+322007593434,677461819,fangguu,499003,VRChat,292,2026-10-25T20:59:36Z,en,"['unga', 'English', 'vtuber', 'ENVtuber', 'Autism', 'retro', 'women']",2026-10-26,07-19-44,Monday
+320912510300,477885912,bullet,602040818,NBA 2K27,291,2026-10-25T18:19:40Z,en,"['English', 'DropsEnable', 'dropson']",2026-10-26,07-19-44,Monday
+321986541274,96428232,skullface,1478650472,Call of Duty: Modern Warfare 4,291,2026-10-24T14:41:51Z,en,"['English', 'warzone', 'fps', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+321962557529,417264303,glizz,602040818,NBA 2K27,291,2026-10-25T20:30:17Z,en,['English'],2026-10-26,07-19-44,Monday
+318126639588,168605141,raimakgames,715873020,Dead Take,291,2026-10-25T21:03:51Z,es,"['Español', 'dbd', 'terror', 'EspacioSeguro', 'contentcreator', 'Phasmophobia', 'deadbydaylight']",2026-10-26,07-19-44,Monday
+316192837736,20632757,gamelifeow,2132205352,Deadlock,289,2026-10-25T22:15:16Z,ru,"['Овервочер', 'Кошкодевочка', 'Гамелифе', 'Русский', 'Ткачжизниимба', 'самыйдобрыйстример', 'БезНытья', 'отпторблегенда']",2026-10-26,07-19-44,Monday
+319699706839,624501601,hisokat42,1478650472,Call of Duty: Modern Warfare 4,289,2026-10-25T23:13:59Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+318945239015,75309526,bucher,509658,Just Chatting,288,2026-10-25T15:43:02Z,de,"['Deutsch', 'pro', 'Esports', 'radiant', 'DropsAktiviert']",2026-10-26,07-19-44,Monday
+317096985813,793085872,filfeel,509658,Just Chatting,288,2026-10-25T17:24:54Z,ru,"['Русский', 'DropsВключены']",2026-10-26,07-19-44,Monday
+318134293475,806610556,mgclutch,511224,Apex Legends,287,2026-10-25T13:51:29Z,en,"['apexlegends', 'English', 'NorthernIrish', 'Controller', 'BRAINROT', 'yapping', 'Yapper', 'ADHD', 'leagueoflegends']",2026-10-26,07-19-44,Monday
+320821064158,853183942,chopp,65632,DayZ,287,2026-10-25T20:07:44Z,en,"['DayZ', 'English']",2026-10-26,07-19-44,Monday
+318125768932,53404144,senimj,65632,DayZ,287,2026-10-25T19:45:19Z,en,"['PvP', 'Survival', 'Zombies', 'Portuguese', 'Portugal', 'Chatty', 'Kpop', 'English', 'FriendlyCommunity', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319142295910,25429692,justlolaman,2748,Magic: The Gathering,287,2026-10-25T15:07:41Z,en,['English'],2026-10-26,07-19-44,Monday
+319403093748,122752263,juwie,27284,Retro,287,2026-10-25T21:29:41Z,pt,"['Português', 'PrimeiraJogada', 'SemBackseat', 'KratosCareca']",2026-10-26,07-19-44,Monday
+318457575256,944055101,novapovie,509672,IRL,286,2026-10-25T22:29:58Z,en,"['English', 'charming', 'young', 'amazing', 'beautiful', 'girl', 'handsome', 'hot', 'Gorgeous']",2026-10-26,07-19-44,Monday
+320819364830,67182393,lightlaser,24241,FINAL FANTASY XIV ONLINE,286,2026-10-25T18:14:15Z,en,"['English', 'stoopid', 'Variety', 'drinkbutter', 'videogamesarepog', 'LightLaser']",2026-10-26,07-19-44,Monday
+320820561118,489936975,ikitcat_,1597660489,RESIDENT EVIL: requiem,286,2026-10-25T19:35:20Z,en,"['cosplayer', 'English', 'french', 'Cosplay', 'girl', 'Horror', 'ResidentEvill', 'chill', 'Cozy', 'challenge']",2026-10-26,07-19-44,Monday
+319403480052,1095116475,euellenmaggnus,509658,Just Chatting,285,2026-10-25T22:15:59Z,pt,"['Português', 'Brasil', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+319145062374,27521657,nirvtv,417528,Albion Online,285,2026-10-25T18:17:22Z,de,"['Drops', 'English', 'German', 'UwU', 'SoftwareDevelopment', 'Deutsch', 'DropsAktiviert']",2026-10-26,07-19-44,Monday
+316635079410,73525495,shiyu2615,386821,Black Desert,285,2026-10-25T10:11:19Z,zh,"['貓咪', '启用掉宝', '啟用掉寶', '音樂', 'cat', '24小時', '中文']",2026-10-26,07-19-44,Monday
+319087109733,102818982,big_nose,18912,Tekken 6,285,2026-10-25T18:04:20Z,de,"['ADHD', 'ADHS', 'Deutsch']",2026-10-26,07-19-44,Monday
+320916109148,58287338,luxx,21779,League of Legends,285,2026-10-25T22:40:20Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319087225445,121097846,fakeade,509658,Just Chatting,284,2026-10-25T18:10:54Z,it,"['Italiano', 'justcchatting', 'gta', 'drama', 'live', 'DropAbilitati']",2026-10-26,07-19-44,Monday
+320993687264,159693513,syanne,1089655891,PERSONA3 RELOAD,284,2026-10-25T18:53:01Z,en,['English'],2026-10-26,07-19-44,Monday
+315628554095,1486919792,cri_1hisykzw,498566,Slots,284,2026-10-25T14:20:56Z,es,['Español'],2026-10-26,07-19-44,Monday
+322122062043,146201683,melanji,2132205352,Deadlock,283,2026-10-25T17:55:30Z,en,"['English', 'watchparty', 'analysis', 'whimsy', 'yapping', 'bleh']",2026-10-26,07-19-44,Monday
+318112375522,31408286,joaos92,21779,League of Legends,281,2026-10-25T21:35:35Z,pt,"['Português', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+319276034934,161855477,frostcincoum,509658,Just Chatting,281,2026-10-25T22:11:36Z,pt,"['Português', 'videogame', 'anime', 'react', 'mídia', 'notícias', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+316192109416,252615649,bigbigmongey,27471,Minecraft,280,2026-10-25T17:45:48Z,en,"['Speedrun', 'English', 'mongey']",2026-10-26,07-19-44,Monday
+320996347872,63585181,bookofken,698857838,The Wrong Way,280,2026-10-25T21:59:53Z,en,"['English', 'dailystream', 'BookOfKen', 'couple', 'horrorgames', 'variety', 'roleplay']",2026-10-26,07-19-44,Monday
+319695960535,18934154,n0pants,1568081763,Mass Effect Legendary Edition,280,2026-10-25T17:23:41Z,en,"['English', 'ASMR', 'soundbath', 'Victim', '日本語のk', 'RhythmGames', 'Anime']",2026-10-26,07-19-44,Monday
+319700090711,118241089,karasmai,21779,League of Legends,280,2026-10-25T23:47:14Z,en,"['English', 'kayn', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+315614698222,907334098,serimm11,509658,Just Chatting,280,2026-10-25T01:01:14Z,ko,"['한국어', 'US', '드롭활성화됨']",2026-10-26,07-19-44,Monday
+318135136611,496112634,kurama_203,33214,Fortnite,280,2026-10-25T15:23:07Z,fr,['Français'],2026-10-26,07-19-44,Monday
+318949569127,426588385,edennymph,509658,Just Chatting,280,2026-10-25T20:00:56Z,de,"['Deutsch', 'cozy', 'deutsch', 'tattoo', 'girl', 'SafeSpace', 'DropsAktiviert']",2026-10-26,07-19-44,Monday
+317739798135,48397374,ezbompany,263490,Rust,279,2026-10-25T21:38:34Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+316636638706,35876178,deerbb,509658,Just Chatting,278,2026-10-25T16:30:59Z,zh,"['中文', '启用掉宝']",2026-10-26,07-19-44,Monday
+318951655399,122639650,j0j0c69,21779,League of Legends,277,2026-10-25T23:30:52Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+319090797029,76661869,satoriuslol,21779,League of Legends,277,2026-10-25T23:16:04Z,de,"['English', 'Deutsch', 'educational', 'challenger', 'triplechallenger', 'toplane', 'DropsAktiviert']",2026-10-26,07-19-44,Monday
+318946424039,788683920,mikyas59,516588,Rise Online,277,2026-10-25T16:57:46Z,tr,"['Türkçe', 'MMORPG', 'MiKYaS59', 'riseonline', 'riseonlineworld', 'Mikyas', 'knightonline', 'riseonlinemobil', 'riseonlinearagon', 'RiseonlineDrop']",2026-10-26,07-19-44,Monday
+319335539573,1152049133,tulshan11_,498566,Slots,277,2026-10-25T23:50:35Z,en,['English'],2026-10-26,07-19-44,Monday
+317740612471,610743760,therealbigwinnn,509658,Just Chatting,277,2026-10-25T23:18:07Z,en,"['English', 'IShowSpeed', 'ishowspeedclips', 'kai', 'bigwinnn', 'jynxzi', 'ADHD', 'therealbigwinnn', 'funny', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+316183996755,31680543,mblaoc,13389,Age of Empires II,276,2026-10-25T23:10:53Z,en,['English'],2026-10-26,07-19-44,Monday
+320916221020,115467657,gale,1264310518,Marvel Rivals,276,2026-10-25T22:47:59Z,en,"['English', 'marvelrivals', 'gale', 'aim', 'top500', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+317098606677,89334144,hekimae,1960720223,SILENT HILL: townfall,276,2026-10-25T22:41:37Z,en,['English'],2026-10-26,07-19-44,Monday
+320997058016,178183255,maddynf,33214,Fortnite,275,2026-10-25T22:47:51Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+320911245660,411746363,its_iron,1478650472,Call of Duty: Modern Warfare 4,275,2026-10-25T16:46:45Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
+317173241684,808203756,r2cronus,502829,R2 Online: Reign of Revolution,275,2026-10-24T23:55:34Z,ru,"['Русский', 'R2Online']",2026-10-26,07-19-44,Monday
+320913819868,93937104,wagnerthomazoni,417752,Talk Shows & Podcasts,274,2026-10-25T19:56:24Z,pt,"['Português', 'DropsAtivados']",2026-10-26,07-19-44,Monday
+320820199774,480046482,yesseniavo,905232303,DON'T SCREAM TOGETHER,274,2026-10-25T19:10:51Z,en,"['English', 'Vtuber', 'Latina', 'NIKKEPartner', 'Women', 'WuWaCreator', 'HoyoCreator', 'EndfieldCreators', 'Hispanic']",2026-10-26,07-19-44,Monday
+319396560756,802137739,boycoins_,19619,Tibia,274,2026-10-25T01:47:02Z,pt,"['Tibia', 'BAIKIDLE', 'baiakidle', 'Português']",2026-10-26,07-19-44,Monday
+318948173031,117995626,usachman,1597660489,RESIDENT EVIL: requiem,274,2026-10-25T18:38:35Z,uk,"['Українська', 'Україна', 'Українською', 'Ukraine', 'UA', 'Ukrainian', 'Одеса', 'Миколаїв', 'Ігри']",2026-10-26,07-19-44,Monday
+318458328536,124052895,johnnieguilbert,509658,Just Chatting,273,2026-10-26T00:08:36Z,en,"['English', 'DropsEnabled']",2026-10-26,07-19-44,Monday
