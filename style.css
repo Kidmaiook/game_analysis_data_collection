@@ -1141,3 +1141,18 @@ footer code {
 :root[data-theme="light"] .mini-cell[data-level="5"] { color: #FFFFFF; }
 :root[data-theme="light"] .mini-cell[data-level="4"] .d,
 :root[data-theme="light"] .mini-cell[data-level="5"] .d { color: rgba(255,255,255,.85); }
+
+/* ---- Light mode: no-data cells are light grey, and the legend shows it ---- */
+:root[data-theme="light"] .cell:not([data-level]),
+:root[data-theme="light"] .cell[data-level=""] {
+  background: repeating-linear-gradient(135deg, #ECEFF2, #ECEFF2 4px, #E1E5E9 4px, #E1E5E9 8px);
+}
+.legend .sw.nodata {
+  background: repeating-linear-gradient(135deg, #171F21, #171F21 3px, #1B2426 3px, #1B2426 6px);
+  margin-left: 8px;
+}
+:root[data-theme="light"] .legend .sw.nodata {
+  background: repeating-linear-gradient(135deg, #ECEFF2, #ECEFF2 3px, #DDE2E7 3px, #DDE2E7 6px);
+  border-color: #C9D1D9;
+}
+:root[data-theme="light"] .mini-cell.no-data { background: #ECEFF2 !important; color: #8A96A3; }

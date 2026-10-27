@@ -150,7 +150,7 @@ function renderModalStats() {
   document.getElementById('modalDayBoard').innerHTML = DAY_ORDER.map(d => {
     const v = (byDay && byDay[d]) || 0;
     const level = Math.min(5, Math.ceil((v / maxDay) * 5));
-    return `<div class="mini-cell" data-level="${level}" style="background:${heatColor(level)}"><span class="d">${DAY_SHORT[d]}</span>${v ? Math.round(v).toLocaleString() : '—'}</div>`;
+    return `<div class="mini-cell${v ? '' : ' no-data'}" data-level="${level}" style="background:${heatColor(level)}"><span class="d">${DAY_SHORT[d]}</span>${v ? Math.round(v).toLocaleString() : '—'}</div>`;
   }).join('');
 }
 
