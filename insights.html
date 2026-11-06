@@ -30,11 +30,52 @@
         <p>The statistical work behind the recommendations: how strongly Steam player counts and Twitch viewership
           actually correlate, what a Random Forest model says drives viewership, and whether the scoring logic
           used elsewhere on this site actually predicts which games are about to rise. Generated straight from
-          <code>EDA.py</code> — global totals, plus a breakdown per month. Click any game (a point, a bar, or a
+          <code>EDA.py</code> — the latest month by default, with every earlier month and the all-time totals one dropdown away. Click any game (a point, a bar, or a
           stacked segment/legend entry) to highlight that game across every chart on this page; click it again,
           or the chip that appears, to clear it.</p>
       </div>
     </div>
+
+    <details class="newbie-guide" open>
+      <summary><span class="newbie-badge">New here?</span> Start with these 4 charts</summary>
+      <p class="newbie-lead">You don&rsquo;t need to read every chart. If you&rsquo;re a new streamer deciding
+        <em>what</em> to play and <em>when</em> to go live, go through these in order &mdash; each button jumps
+        straight to the chart.</p>
+      <ol class="newbie-steps">
+        <li>
+          <button type="button" class="newbie-jump" data-jump="q2">1 &middot; Top games by potential score</button>
+          <span><strong>What should I play?</strong> Green bars are games with strong viewers <em>and</em> players right now.
+            Pick from the top, but skip anything far above the rest if you&rsquo;re small &mdash; giants are hard to get seen in.</span>
+        </li>
+        <li>
+          <button type="button" class="newbie-jump" data-jump="q7">2 &middot; Viewer-per-streamer ratio by day</button>
+          <span><strong>Which day is least crowded?</strong> A tall bar means many viewers for few streamers &mdash;
+            that&rsquo;s the day a small channel is most likely to be noticed.</span>
+        </li>
+        <li>
+          <button type="button" class="newbie-jump" data-jump="q5">3 &middot; Viewer engagement by hour</button>
+          <span><strong>What time should I go live?</strong> The peak is when the most people are watching; the
+            hours just <em>before</em> the peak are often a good compromise. Set <em>Timezone</em> to
+            &ldquo;Local time-of-day&rdquo; and pick your audience&rsquo;s <em>Region</em> first.</span>
+        </li>
+        <li>
+          <button type="button" class="newbie-jump" data-jump="distribution">4 &middot; Viewer count distribution</button>
+          <span><strong>What&rsquo;s realistic?</strong> Most streams are tiny and a handful are huge. Read the
+            <em>median</em> (not the average) as your normal expectation &mdash; this chart keeps you from comparing
+            yourself with the giants.</span>
+        </li>
+      </ol>
+      <p class="newbie-more"><strong>Then, when you&rsquo;re comfortable:</strong>
+        <button type="button" class="newbie-jump small" data-jump="q6">Game market share by hour</button> shows who you&rsquo;d compete
+        with at the busiest hour;
+        <button type="button" class="newbie-jump small" data-jump="q1">Steam vs. Twitch</button> checks whether a game&rsquo;s player
+        count predicts its viewers;
+        <button type="button" class="newbie-jump small" data-jump="q3">What drives viewership</button> and
+        <button type="button" class="newbie-jump small" data-jump="q8">Predicting rising games</button> are the
+        statistics behind the scoring &mdash; safe to skip at first.</p>
+      <p class="newbie-tip"><strong>Tip:</strong> click any game (a dot, a bar or a legend entry) to follow it across
+        every chart. Hover or tap any bar for exact numbers.</p>
+    </details>
 
     <div class="period-controls" id="periodControls">
       <div class="period-select-group">
@@ -56,7 +97,7 @@
       <div class="period-current mono" id="periodCurrent"></div>
     </div>
     <div class="game-filter-chip" id="gameFilterChip" style="display:none;"></div>
-    <p class="filter-hint">Week and Day only apply within a specific month &mdash; pick a Month first. Weeks are
+    <p class="filter-hint">Week and Day only apply within a specific month &mdash; choose "All years" + "All months" for the all-time view, or a specific month to narrow down. Weeks are
       calendar weeks within that month (Week 1 = days 1&ndash;7, and so on). Leave Week on "All weeks" and the Day
       dropdown lists every day of the month; pick a Week and Day narrows to just that week's days. Some charts
       (like the feature-importance model) need more data than a single day gives and won't show for that
