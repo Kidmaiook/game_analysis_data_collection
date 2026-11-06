@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T06:15:08.839045+00:00",
+  "generated_at": "2026-11-06T17:42:14.646148+00:00",
   "last_updated_display": "06/11/2026",
   "meta": {
     "months_covered": [
@@ -77934,7 +77934,7 @@
       "2026-08": 876.92,
       "2026-09": 849.62,
       "2026-10": 383.16,
-      "2026-11": 393.41
+      "2026-11": 394.77
     },
     "avg_price_by_year": {
       "2026": {
@@ -77947,7 +77947,7 @@
         "2026-08": 876.92,
         "2026-09": 849.62,
         "2026-10": 383.16,
-        "2026-11": 393.41
+        "2026-11": 394.77
       }
     },
     "cheapest_models": [
@@ -77957,19 +77957,19 @@
       },
       {
         "model": "GeForce GTX 750",
-        "avg_price": 87.3
+        "avg_price": 87.34
       },
       {
         "model": "GeForce GTX 750 Ti",
-        "avg_price": 105.3
+        "avg_price": 105.34
+      },
+      {
+        "model": "Radeon Pro WX 4100",
+        "avg_price": 124.04
       },
       {
         "model": "Radeon R9 290X / 390X",
-        "avg_price": 129.99
-      },
-      {
-        "model": "GeForce GTX 1050",
-        "avg_price": 136.08
+        "avg_price": 130.58
       }
     ],
     "priciest_models": [
@@ -77991,10 +77991,10 @@
       },
       {
         "model": "Radeon RX 6900 XT",
-        "avg_price": 1302.12
+        "avg_price": 1256.22
       }
     ],
-    "total_models_tracked": 84,
+    "total_models_tracked": 85,
     "chart": "assets/gpu/graph_gpu_price_trend.png"
   }
 }
