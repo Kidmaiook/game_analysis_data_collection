@@ -1120,7 +1120,7 @@ footer code {
 
 /* ---- Light mode heatmap: shades of blue, readable hover tooltip ---- */
 :root[data-theme="light"] .cell[data-level="0"],
-:root[data-theme="light"] .legend .sw[data-level="0"] { background: rgba(46, 125, 209, 0.10); }
+:root[data-theme="light"] .legend .sw[data-level="0"] { background: rgba(232, 243, 255, 0.877); }
 :root[data-theme="light"] .cell[data-level="1"],
 :root[data-theme="light"] .legend .sw[data-level="1"] { background: rgba(46, 125, 209, 0.25); }
 :root[data-theme="light"] .cell[data-level="2"],
@@ -1141,73 +1141,3 @@ footer code {
 :root[data-theme="light"] .mini-cell[data-level="5"] { color: #FFFFFF; }
 :root[data-theme="light"] .mini-cell[data-level="4"] .d,
 :root[data-theme="light"] .mini-cell[data-level="5"] .d { color: rgba(255,255,255,.85); }
-
-
-/* ---------- Deep Analysis: newbie guide ---------- */
-.newbie-guide {
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-left: 3px solid var(--cue);
-  border-radius: var(--radius);
-  padding: 14px 20px 16px;
-  margin-bottom: 26px;
-  max-width: 100%;
-}
-.newbie-guide > summary {
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 15px;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.newbie-guide > summary::-webkit-details-marker { display: none; }
-.newbie-guide > summary::after { content: '\25BE'; margin-left: auto; color: var(--text-dim); transition: transform .15s; }
-.newbie-guide:not([open]) > summary::after { transform: rotate(-90deg); }
-.newbie-badge {
-  background: var(--cue);
-  color: var(--ink);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .04em;
-  text-transform: uppercase;
-  padding: 3px 9px;
-  border-radius: 999px;
-}
-.newbie-lead, .newbie-more, .newbie-tip { font-size: 13px; color: var(--text-dim); margin: 12px 0 0; max-width: 90ch; line-height: 1.55; }
-.newbie-steps { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 10px; }
-.newbie-steps li {
-  display: grid;
-  grid-template-columns: minmax(200px, 270px) 1fr;
-  gap: 14px;
-  align-items: center;
-  background: var(--panel-hi);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 10px 12px;
-  font-size: 13px;
-  line-height: 1.5;
-}
-.newbie-steps li span { color: var(--text-dim); }
-.newbie-steps li strong { color: var(--text); }
-.newbie-jump {
-  font: inherit;
-  font-size: 13px;
-  font-weight: 600;
-  text-align: left;
-  color: var(--cue);
-  background: transparent;
-  border: 1px solid var(--cue);
-  border-radius: 8px;
-  padding: 8px 12px;
-  cursor: pointer;
-}
-.newbie-jump:hover { background: var(--cue); color: var(--ink); }
-.newbie-jump.small { font-size: 12px; padding: 2px 9px; border-radius: 999px; margin: 0 2px; }
-@media (max-width: 720px) { .newbie-steps li { grid-template-columns: 1fr; } }
-.guide-flash { animation: guideFlash 1.6s ease-out; }
-@keyframes guideFlash {
-  0%, 35% { box-shadow: 0 0 0 3px var(--cue); }
-  100% { box-shadow: 0 0 0 0 transparent; }
-}
