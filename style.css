@@ -1120,7 +1120,7 @@ footer code {
 
 /* ---- Light mode heatmap: shades of blue, readable hover tooltip ---- */
 :root[data-theme="light"] .cell[data-level="0"],
-:root[data-theme="light"] .legend .sw[data-level="0"] { background: rgba(226, 238, 251, 0.25); }
+:root[data-theme="light"] .legend .sw[data-level="0"] { background: rgba(46, 125, 209, 0.10); }
 :root[data-theme="light"] .cell[data-level="1"],
 :root[data-theme="light"] .legend .sw[data-level="1"] { background: rgba(46, 125, 209, 0.25); }
 :root[data-theme="light"] .cell[data-level="2"],
@@ -1133,9 +1133,19 @@ footer code {
 :root[data-theme="light"] .legend .sw[data-level="5"] { background: #1F63B0; box-shadow: 0 0 12px rgba(31, 99, 176, 0.6); }
 :root[data-theme="light"] .cell:hover::after {
   background: #FFFFFF;
-  color: #cce8ff;
+  color: #000000;
   border-color: #B9CCDE;
-  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 24px rgba(20, 45, 70, 0.18);
+}
+/* Light mode: "no data" cells (no data-level) are whiteish instead of dark. */
+:root[data-theme="light"] .cell {
+  background: repeating-linear-gradient(135deg, #FFFFFF, #FFFFFF 4px, #F1F4F8 4px, #F1F4F8 8px);
+}
+:root[data-theme="light"] .cell[data-level] { background-image: none; }
+/* Light mode: hover text in tooltips is black. */
+:root[data-theme="light"] .chart-tooltip,
+:root[data-theme="light"] .chart-tooltip strong {
+  color: #000000;
 }
 :root[data-theme="light"] .mini-cell[data-level="4"],
 :root[data-theme="light"] .mini-cell[data-level="5"] { color: #FFFFFF; }
