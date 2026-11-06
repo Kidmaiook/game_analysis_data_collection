@@ -12,8 +12,8 @@ let periodsParsed = []; // [{year:'2026', month:'07', key:'2026-07'}, ...]
 let currentTimezone = 'standardized';
 let currentCountry = 'ALL';
 let q4ViewMode = 'stacked'; // 'simple' | 'stacked'
-let q6ViewMode = 'pie'; // 'stacked' | 'pie'  (default: Peak hour)
-let distScaleMode = 'log10'; // 'linear' | 'log10'  (default: Log10)
+let q6ViewMode = 'stacked'; // 'stacked' | 'pie'
+let distScaleMode = 'linear'; // 'linear' | 'log10'
 let selectedGame = null; // cross-chart game filter, set by clicking any game element
 
 Promise.all([DataStore.data(), DataStore.insights()]).then(([DATA, insights]) => {
@@ -24,16 +24,12 @@ Promise.all([DataStore.data(), DataStore.insights()]).then(([DATA, insights]) =>
     .filter(p => p !== 'GLOBAL')
     .map(p => ({ year: p.split('-')[0], month: p.split('-')[1], key: p }));
 
-  // Default is the latest month that has data (periods are 'YYYY-MM', so a
-  // plain string sort puts the newest last). Falls back to GLOBAL if there
-  // are no monthly periods at all. "All years / All months" is still one
-  // click away in the dropdowns.
-  const latest = periodsParsed.slice().sort((a, b) => a.key.localeCompare(b.key)).pop();
-  currentYear = latest ? latest.year : ALL_VALUE;
-  currentMonth = latest ? latest.month : ALL_VALUE;
+  // Default is global/global, i.e. all months across all years.
+  currentYear = ALL_VALUE;
+  currentMonth = ALL_VALUE;
   currentWeek = ALL_VALUE;
   currentDay = ALL_VALUE;
-  currentPeriod = latest ? latest.key : 'GLOBAL';
+  currentPeriod = 'GLOBAL';
 
   renderYearSelect();
   renderMonthSelect();
@@ -42,7 +38,6 @@ Promise.all([DataStore.data(), DataStore.insights()]).then(([DATA, insights]) =>
   bindPeriodControls();
   renderCountrySelect();
   bindTimingControls();
-  bindNewbieGuide();
   renderBlocks();
 });
 
@@ -269,7 +264,6 @@ function chartBlockHtml(key, title, inner) {
 
 function wireUpChartBlocks(container) {
   container.querySelectorAll('.insight-block').forEach(block => {
-    if (block.dataset.chartKey) block.id = 'chart-' + block.dataset.chartKey;
     initChartInteractivity(block);
     const wrap = block.querySelector('.chart-zoom-wrap');
     if (wrap) initGraphZoom(block, wrap);
@@ -335,28 +329,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const chip = document.getElementById('gameFilterChip');
   if (chip) chip.addEventListener('click', () => setSelectedGame(null));
 });
-
-/* ---------- Newbie guide: "start here" jump buttons ---------- */
-
-function bindNewbieGuide() {
-  document.addEventListener('click', e => {
-    const btn = e.target.closest('[data-jump]');
-    if (!btn) return;
-    const target = document.getElementById('chart-' + btn.dataset.jump);
-    if (!target) return;
-    target.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    target.classList.remove('guide-flash');
-    void target.offsetWidth; // restart the animation if clicked twice
-    target.classList.add('guide-flash');
-  });
-  document.querySelectorAll('[data-guide-reset]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      distScaleMode = 'log10';
-      q6ViewMode = 'pie';
-      renderBlocks();
-    });
-  });
-}
 
 function toggleRow(options, activeValue, attrName) {
   return `<div class="chart-toggle-row">${options.map(opt =>
@@ -736,7 +708,9 @@ function svgScatterChart(points) {
   for (let g = 0; g <= 2; g++) {
     const gx = padL + (innerW * g) / 2;
     const val = Math.round((maxX * g) / 2);
-    xticks += `<text x="${gx.toFixed(1)}" y="${height - padB + 16}" text-anchor="middle" class="chart-axis-label">${fmt(val)}</text>`;
+    // Right-align the last tick to the plot edge so a long number isn't clipped.
+    const anchor = g === 2 ? 'end' : 'middle';
+    xticks += `<text x="${(g === 2 ? width - 4 : gx).toFixed(1)}" y="${height - padB + 16}" text-anchor="${anchor}" class="chart-axis-label">${fmt(val)}</text>`;
   }
   const dots = points.map(p => {
     const tip = `<strong>${escapeHtml(p.game)}</strong><br>Steam players: ${fmt(Math.round(p.x))}<br>Twitch viewers: ${fmt(Math.round(p.y))}`;
