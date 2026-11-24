@@ -203,8 +203,19 @@ function ensureZoomRoot() {
   if (_zoomRoot) return _zoomRoot;
   const root = document.createElement('div');
   root.id = 'zoomRoot';
-  while (document.body.firstChild) root.appendChild(document.body.firstChild);
+  // Keep fixed-position overlays (the game detail modal) OUT of the scaled
+  // wrapper: a transformed ancestor becomes the containing block for
+  // position:fixed children, so inside zoomRoot the modal is sized/placed
+  // against the whole page instead of the visible screen.
+  const keepOutside = el => el.nodeType === 1 && el.classList.contains('modal-backdrop');
+  const stay = [];
+  while (document.body.firstChild) {
+    const n = document.body.firstChild;
+    if (keepOutside(n)) { stay.push(n); document.body.removeChild(n); }
+    else root.appendChild(n);
+  }
   document.body.appendChild(root);
+  stay.forEach(n => document.body.appendChild(n));
   // Lock zoomRoot to a fixed pixel width up front. Left as the default
   // "auto" (fill your container), it inherits from <body> -- and since
   // compensateZoomLayout() below sets body's width explicitly, that would
