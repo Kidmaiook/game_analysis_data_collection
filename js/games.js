@@ -12,7 +12,14 @@ DataStore.data().then(d => {
 
   populateGenreFilter();
   renderGames();
+  renderFormulas();
   bindControls();
+  GRDownload.attach(document.querySelector('#modalBackdrop .modal'), {
+    title: () => t('games.dl_title', { game: modalGame ? modalGame.game : '' }),
+    subtitle: () => (modalMode === 'local' ? t('common.local') : 'UTC'),
+    png: modalBoardPng,
+    csv: modalBoardCsv,
+  });
 
   const params = new URLSearchParams(location.search);
   const preselect = params.get('g');
@@ -33,9 +40,9 @@ function populateGenreFilter() {
 
 function updateGenreToggleLabel() {
   const label = document.getElementById('genreToggleLabel');
-  if (currentGenres.size === 0) label.textContent = 'All genres';
+  if (currentGenres.size === 0) label.textContent = t('games.all_genres');
   else if (currentGenres.size === 1) label.textContent = [...currentGenres][0];
-  else label.textContent = `${currentGenres.size} genres selected`;
+  else label.textContent = t('games.genres_n', { n: currentGenres.size });
 }
 
 /* Splits a search string on whitespace into separate OR terms, e.g.
@@ -58,7 +65,7 @@ function filteredSortedGames() {
   let games = DATA.games.filter(g => {
     if (terms.length) {
       const name = g.game.toLowerCase();
-      if (!terms.some(t => name.includes(t))) return false;
+      if (!terms.some(term => name.includes(term))) return false;
     }
     if (currentGenres.size && !(g.genres || []).some(x => currentGenres.has(x))) return false;
     if (currentPrice === 'free' && !g.free) return false;
@@ -81,8 +88,8 @@ function renderGames() {
   empty.style.display = 'none';
 
   grid.innerHTML = games.slice(0, 60).map(g => {
-    const tags = (g.genres || []).slice(0, 3).map(t => `<span class="tag">${t}</span>`).join('');
-    const priceTag = g.free ? `<span class="tag">Free</span>` : (g.price != null ? `<span class="tag">$${(g.price / 100).toFixed(2)}</span>` : '');
+    const tags = (g.genres || []).slice(0, 3).map(tg => `<span class="tag">${tg}</span>`).join('');
+    const priceTag = g.free ? `<span class="tag">${t('games.card.free')}</span>` : (g.price != null ? `<span class="tag">$${(g.price / 100).toFixed(2)}</span>` : '');
     const growthSign = g.growth_pct > 0 ? '+' : '';
     return `
     <div class="card" data-game="${encodeURIComponent(g.game)}">
@@ -93,12 +100,12 @@ function renderGames() {
       <div class="card-meter"><div class="card-meter-fill" style="width:${g.opportunity_score}%;background:${scoreColor(g.opportunity_score)}"></div></div>
       <div class="card-tags">${priceTag}${tags}</div>
       <div class="card-stats">
-        <div><span class="k">Avg viewers</span><br><span class="v">${Math.round(g.avg_viewers).toLocaleString()}</span></div>
-        <div><span class="k">Per streamer</span><br><span class="v">${Math.round(g.viewers_per_streamer).toLocaleString()}</span></div>
-        <div><span class="k">Growth</span><br><span class="v">${growthSign}${g.growth_pct}%</span></div>
-        <div><span class="k">Best slot (UTC)</span><br><span class="v">${g.best_day_utc ? DAY_SHORT[g.best_day_utc] : '—'} ${g.best_hour_utc != null ? g.best_hour_utc + ':00' : ''}</span></div>
+        <div><span class="k">${t('games.card.avg')}</span><br><span class="v">${fmt(Math.round(g.avg_viewers))}</span></div>
+        <div><span class="k">${t('games.card.per')}</span><br><span class="v">${fmt(Math.round(g.viewers_per_streamer))}</span></div>
+        <div><span class="k">${t('games.card.growth')}</span><br><span class="v">${growthSign}${g.growth_pct}%</span></div>
+        <div><span class="k">${t('games.card.slot')}</span><br><span class="v">${g.best_day_utc ? dayShortLabel(g.best_day_utc) : '—'} ${g.best_hour_utc != null ? g.best_hour_utc + ':00' : ''}</span></div>
       </div>
-      <div class="confidence-note">Based on ${g.samples} snapshots across ${g.unique_streamers_seen} streamers.</div>
+      <div class="confidence-note">${t('games.card.based_on', { samples: fmt(g.samples), streamers: fmt(g.unique_streamers_seen) })}</div>
     </div>`;
   }).join('');
 
@@ -117,8 +124,8 @@ function openModal(gameName) {
 
   document.getElementById('modalTitle').textContent = g.game;
   document.getElementById('modalSub').textContent = g.review_score_desc
-    ? `${g.review_score_desc} on Steam${g.total_reviews ? ` · ${g.total_reviews.toLocaleString()} reviews` : ''}`
-    : `Not matched to a Steam catalog entry (may be an event, IRL category, or newly released title).`;
+    ? t('games.modal.sub', { desc: g.review_score_desc, reviews: g.total_reviews ? t('games.modal.reviews', { n: fmt(g.total_reviews) }) : '' })
+    : t('games.modal.unmatched');
 
   renderModalStats();
   document.getElementById('modalBackdrop').classList.add('open');
@@ -131,15 +138,15 @@ function renderModalStats() {
   const bestDay = isLocal ? g.best_day_local : g.best_day_utc;
   const bestHour = isLocal ? g.best_hour_local : g.best_hour_utc;
   const byDay = isLocal ? g.by_day_local : g.by_day_utc;
-  const clockLabel = isLocal ? '(local)' : '(UTC)';
+  const clockLabel = isLocal ? `(${t('common.local')})` : '(UTC)';
 
   const stats = [
-    ['Opportunity', g.opportunity_score.toFixed(0)],
-    ['Avg viewers', Math.round(g.avg_viewers).toLocaleString()],
-    ['Viewers / streamer', Math.round(g.viewers_per_streamer).toLocaleString()],
-    ['Growth', `${g.growth_pct > 0 ? '+' : ''}${g.growth_pct}%`],
-    [`Best day ${clockLabel}`, bestDay || '—'],
-    [`Best hour ${clockLabel}`, bestHour != null ? `${bestHour}:00` : '—'],
+    [t('games.modal.opportunity'), g.opportunity_score.toFixed(0)],
+    [t('games.modal.avg'), fmt(Math.round(g.avg_viewers))],
+    [t('games.modal.per'), fmt(Math.round(g.viewers_per_streamer))],
+    [t('games.modal.growth'), `${g.growth_pct > 0 ? '+' : ''}${g.growth_pct}%`],
+    [t('games.modal.best_day', { clock: clockLabel }), bestDay ? dayLabel(bestDay) : '—'],
+    [t('games.modal.best_hour', { clock: clockLabel }), bestHour != null ? `${bestHour}:00` : '—'],
   ];
   document.getElementById('modalStats').innerHTML = stats.map(([k, v]) => `
     <div class="modal-stat"><div class="k">${k}</div><div class="v">${v}</div></div>
@@ -150,7 +157,7 @@ function renderModalStats() {
   document.getElementById('modalDayBoard').innerHTML = DAY_ORDER.map(d => {
     const v = (byDay && byDay[d]) || 0;
     const level = Math.min(5, Math.ceil((v / maxDay) * 5));
-    return `<div class="mini-cell" data-level="${level}" style="background:${heatColor(level)}"><span class="d">${DAY_SHORT[d]}</span>${v ? Math.round(v).toLocaleString() : '—'}</div>`;
+    return `<div class="mini-cell" data-level="${level}" style="background:${heatColor(level)}"><span class="d">${dayShortLabel(d)}</span>${v ? fmt(Math.round(v)) : '—'}</div>`;
   }).join('');
 }
 
@@ -162,7 +169,7 @@ function closeModal() {
 function bindControls() {
   const searchInput = document.getElementById('searchInput');
   const suggestions = document.getElementById('gameSearchSuggestions');
-  const escHtml = t => t.replace(/[&<>"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
+  const escHtml = str => str.replace(/[&<>"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
   /* The dropdown works on the word currently being typed: every time a space
      is typed, the dropdown starts over for the next word. Choosing a game
      replaces just that word and leaves a trailing space so the next one can
@@ -258,4 +265,87 @@ function bindControls() {
   document.getElementById('modalClose').addEventListener('click', closeModal);
   document.getElementById('modalBackdrop').addEventListener('click', e => { if (e.target.id === 'modalBackdrop') closeModal(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+}
+
+
+/* ---------------- Score formulas, with the real numbers behind them ---------------- */
+function renderFormulas() {
+  const M = DATA.methodology || {};
+  const opp = M.opportunity || {};
+  const pot = M.potential || {};
+  const nf = (v, d = 0) => localeNumber(v, { maximumFractionDigits: d, minimumFractionDigits: d });
+  const host = document.getElementById('oppFormula');
+  if (host && opp.components) {
+    const label = { audience: t('games.how_a'), saturation: t('games.how_s'), growth: t('games.how_g') };
+    const rows = opp.components.map(c => `<tr><td>${label[c.key]}</td><td class="mono">${Math.round(c.weight * 100)}%</td>
+      <td class="mono">${nf(c.zero_at, c.key === 'growth' ? 1 : 0)}${c.key === 'growth' ? '%' : ''}</td>
+      <td class="mono">${nf(c.full_at, c.key === 'growth' ? 1 : 0)}${c.key === 'growth' ? '%' : ''}</td></tr>`).join('');
+    const ex = opp.example;
+    const exLabel = { audience: t('games.how_ex_a'), saturation: t('games.how_ex_s'), growth: t('games.how_ex_g') };
+    let exHtml = '';
+    if (ex) {
+      const exRows = ex.components.map(c => `<tr><td>${exLabel[c.key]}</td>
+        <td class="mono">${nf(c.value, c.key === 'growth' ? 1 : 0)}${c.key === 'growth' ? '%' : ''}</td>
+        <td class="mono">${nf(c.norm, 3)}</td><td class="mono">${nf(c.points, 2)}</td></tr>`).join('');
+      exHtml = `<h4>${t('games.how_ex_h', { game: ex.game })}</h4>
+        <div class="table-scroll"><table class="formula-table"><thead><tr><th>${t('games.how_ex_col_comp')}</th><th>${t('games.how_ex_col_value')}</th><th>${t('games.how_ex_col_score')}</th><th>${t('games.how_ex_col_pts')}</th></tr></thead>
+        <tbody>${exRows}<tr class="sum"><td colspan="3">${t('games.how_ex_sum')}</td><td class="mono">${nf(ex.raw_score, 2)}</td></tr></tbody></table></div>
+        <p class="mono formula-line">${t('games.how_ex_m', { n: ex.unique_streamers, n1: ex.unique_streamers + 1, m: nf(ex.multiplier, 3) })}</p>
+        <p class="mono formula-line"><strong>${t('games.how_ex_final', { raw: nf(ex.raw_score, 2), m: nf(ex.multiplier, 3), final: nf(ex.final, 1) })}</strong></p>`;
+    }
+    host.innerHTML = `
+      <p>${t('games.how_lead', { n: opp.n_games })}</p>
+      <h4>${t('games.how_formula_h')}</h4>
+      <p class="mono formula-line"><strong>${t('games.how_formula')}</strong></p>
+      <h4>${t('games.how_comp_h')}</h4>
+      <div class="table-scroll"><table class="formula-table"><thead><tr><th>${t('games.how_col_comp')}</th><th>${t('games.how_col_weight')}</th><th>${t('games.how_col_zero')}</th><th>${t('games.how_col_full')}</th></tr></thead><tbody>${rows}</tbody></table></div>
+      <p class="mono formula-line">${t('games.how_norm')}</p>
+      <h4>${t('games.how_m_h')}</h4>
+      <p>${t('games.how_m')}</p>
+      ${exHtml}
+      <h4>${t('games.how_colors_h')}</h4>
+      <div class="score-legend">
+        <span class="score-legend-item"><span class="dot" style="background:var(--cue)"></span> ${t('games.how_c1')}</span>
+        <span class="score-legend-item"><span class="dot" style="background:var(--amber)"></span> ${t('games.how_c2')}</span>
+        <span class="score-legend-item"><span class="dot" style="background:var(--tally)"></span> ${t('games.how_c3')}</span>
+      </div>
+      <p>${t('games.how_board')}</p>`;
+  }
+  const potHost = document.getElementById('potFormula');
+  if (potHost && pot.rows) potHost.innerHTML = potentialFormulaHtml(pot);
+}
+
+/* ---- exporters for the modal's mini day board ---- */
+function modalBoardCsv() {
+  const g = modalGame;
+  const byDay = modalMode === 'local' ? g.by_day_local : g.by_day_utc;
+  return [['day', 'avg_viewers', 'clock'], ...DAY_ORDER.map(d => [d, (byDay && byDay[d]) || '', modalMode === 'local' ? 'local' : 'UTC'])];
+}
+async function modalBoardPng({ title, subtitle }) {
+  const g = modalGame;
+  const byDay = modalMode === 'local' ? g.by_day_local : g.by_day_utc;
+  const vals = DAY_ORDER.map(d => (byDay && byDay[d]) || 0);
+  const maxDay = Math.max(...vals, 1);
+  const panel = GRDownload.cssVar('--panel', '#192124');
+  const text = GRDownload.cssVar('--text', '#ECEEE9');
+  const dim = GRDownload.cssVar('--text-dim', '#8B9A9B');
+  const W = 640, H = 230, scale = 2, cw = 76, gap = 8, left = 24;
+  const canvas = document.createElement('canvas');
+  canvas.width = W * scale; canvas.height = H * scale;
+  const ctx = canvas.getContext('2d');
+  ctx.scale(scale, scale);
+  ctx.fillStyle = panel; ctx.fillRect(0, 0, W, H);
+  ctx.fillStyle = text; ctx.font = '700 22px sans-serif'; ctx.fillText(title, 24, 38);
+  ctx.fillStyle = dim; ctx.font = '14px monospace'; ctx.fillText(subtitle, 24, 62);
+  DAY_ORDER.forEach((d, i) => {
+    const level = Math.min(5, Math.ceil((vals[i] / maxDay) * 5));
+    const x = left + i * (cw + gap);
+    ctx.fillStyle = vals[i] ? heatColor(level) : (document.documentElement.getAttribute('data-theme') === 'light' ? '#F1F5F9' : 'rgba(128,140,142,0.18)');
+    ctx.fillRect(x, 90, cw, 80);
+    ctx.fillStyle = text; ctx.font = '12px monospace'; ctx.fillText(dayShortLabel(d), x + 8, 110);
+    ctx.font = '700 14px monospace'; ctx.fillText(vals[i] ? fmt(Math.round(vals[i])) : '\u2014', x + 8, 150);
+  });
+  ctx.fillStyle = dim; ctx.font = '12px monospace';
+  ctx.fillText('Green Room \u00b7 PSU Phuket \u00b7 ' + new Date().toISOString().slice(0, 10), 24, H - 18);
+  return new Promise(res => canvas.toBlob(res, 'image/png'));
 }

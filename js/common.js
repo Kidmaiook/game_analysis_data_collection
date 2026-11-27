@@ -11,8 +11,12 @@ const HEAT_COLORS = [
 
 function fmt(n) {
   if (n === undefined || n === null) return '—';
-  return n.toLocaleString();
+  return localeNumber(n);
 }
+
+/* Translated weekday names (data keys stay English: 'Monday', ...). */
+function dayLabel(d) { return localeDayName(d, 'long'); }
+function dayShortLabel(d) { return localeDayName(d, 'short'); }
 
 function scoreColor(score) {
   if (score >= 66) return 'var(--cue)';
@@ -40,11 +44,10 @@ const DataStore = (() => {
 
   function friendlyFetchError() {
     document.body.innerHTML = `<div class="wrap" style="padding-top:80px">
-      <h1 style="font-family:'Space Grotesk',sans-serif">Data didn't load</h1>
-      <p style="color:#8B9A9B;max-width:60ch">Browsers block local file:// pages from fetching other local files.
-      Serve this folder instead — from a terminal in the <span class="mono">site/</span> directory run:</p>
-      <p class="mono" style="background:#192124;padding:12px 16px;border-radius:8px;display:inline-block">python -m http.server 8000</p>
-      <p style="color:#8B9A9B">then open <span class="mono">http://localhost:8000</span>.</p>
+      <h1 style="font-family:'Space Grotesk',sans-serif">${t('err.title')}</h1>
+      <p style="color:#8B9A9B;max-width:60ch">${t('err.body')}</p>
+      <p class="mono" style="background:#192124;padding:12px 16px;border-radius:8px;display:inline-block">python3 -m http.server 8000</p>
+      <p style="color:#8B9A9B">${t('err.then')} <span class="mono">http://localhost:8000</span>.</p>
     </div>`;
   }
 
@@ -89,7 +92,7 @@ function renderLatestUpdate(payload) {
   if (!el || !payload) return;
   const display = payload.last_updated_display
     || (payload.generated_at ? formatDateDMY(payload.generated_at) : null);
-  el.textContent = display ? `Latest update: ${display}` : '—';
+  el.textContent = display ? t('common.latest_update', { date: display }) : '—';
 }
 
 function formatDateDMY(isoString) {
@@ -288,10 +291,10 @@ function initSiteZoomControl() {
   const holder = document.getElementById('siteZoomControl');
   if (!holder) return;
   holder.innerHTML = `
-    <button type="button" class="zoom-btn zoom-btn-a" id="siteZoomOut" title="Zoom out" aria-label="Zoom out">a</button>
+    <button type="button" class="zoom-btn zoom-btn-a" id="siteZoomOut" title="${t('zoom.out')}" aria-label="${t('zoom.out')}">a</button>
     <span class="zoom-label mono" id="siteZoomLabel">100%</span>
-    <button type="button" class="zoom-btn zoom-btn-a" id="siteZoomIn" title="Zoom in" aria-label="Zoom in">A</button>
-    <button type="button" class="zoom-btn" id="siteZoomReset" title="Reset zoom" aria-label="Reset zoom">&#8635;</button>
+    <button type="button" class="zoom-btn zoom-btn-a" id="siteZoomIn" title="${t('zoom.in')}" aria-label="${t('zoom.in')}">A</button>
+    <button type="button" class="zoom-btn" id="siteZoomReset" title="${t('zoom.reset')}" aria-label="${t('zoom.reset')}">&#8635;</button>
   `;
   let level = currentSiteZoom();
   applySiteZoom(level);
@@ -379,7 +382,7 @@ function applyTheme(theme) {
 function initThemeControl() {
   const holder = document.getElementById('themeToggleControl');
   if (!holder) return;
-  holder.innerHTML = `<button type="button" class="zoom-btn" id="themeToggleBtn" title="Toggle light/dark theme" aria-label="Toggle light/dark theme"></button>`;
+  holder.innerHTML = `<button type="button" class="zoom-btn" id="themeToggleBtn" title="${t('theme.toggle')}" aria-label="${t('theme.toggle')}"></button>`;
   applyTheme(currentTheme());
   document.getElementById('themeToggleBtn').addEventListener('click', () => {
     applyTheme(currentTheme() === 'light' ? 'dark' : 'light');
@@ -399,7 +402,7 @@ document.addEventListener('DOMContentLoaded', initThemeControl);
    the user interacts with it.
    ============================================================ */
 function initHybridSelect(select) {
-  if (!select || select.dataset.hybridInit) return;
+  if (!select || select.dataset.hybridInit || select.id === 'langSelect') return;
   select.dataset.hybridInit = '1';
 
   const wrap = document.createElement('div');
@@ -417,7 +420,7 @@ function initHybridSelect(select) {
 
   const panel = document.createElement('div');
   panel.className = 'hybrid-select-panel';
-  panel.innerHTML = `<input type="text" class="hybrid-select-search" placeholder="Search&hellip;" autocomplete="off">
+  panel.innerHTML = `<input type="text" class="hybrid-select-search" placeholder="${t('common.search')}" autocomplete="off">
     <div class="hybrid-select-options"></div>`;
   wrap.appendChild(panel);
 
@@ -456,7 +459,7 @@ function initHybridSelect(select) {
       optionsList.appendChild(row);
     });
     if (!optionsList.children.length) {
-      optionsList.innerHTML = '<div class="hybrid-select-empty">No matches</div>';
+      optionsList.innerHTML = `<div class="hybrid-select-empty">${t('common.no_matches')}</div>`;
     }
   }
 
@@ -510,3 +513,14 @@ function initHybridSelectsOnPage() {
   document.querySelectorAll('select').forEach(initHybridSelect);
 }
 document.addEventListener('DOMContentLoaded', initHybridSelectsOnPage);
+
+/* Shared with the Deep Analysis page (same markup, same numbers). */
+function potentialFormulaHtml(pot) {
+  const nf = (v, d = 0) => localeNumber(v, { maximumFractionDigits: d, minimumFractionDigits: d });
+  const ex = pot.example || {};
+  const formula = t('games.pot_formula', { vm: nf(pot.viewers_mean, 1), vs: nf(pot.viewers_std, 1), pm: nf(pot.players_mean, 1), ps: nf(pot.players_std, 1) });
+  return `<p>${t('games.pot_p')}</p>
+    <pre class="mono formula-pre">${formula}</pre>
+    <p>${t('games.pot_p2', { rows: fmt(pot.rows), game: ex.game, date: ex.date, viewers: nf(ex.viewers), players: nf(ex.players), zv: nf(ex.z_viewers, 2), zp: nf(ex.z_players, 2), score: nf(ex.score, 2) })}</p>`;
+}
+

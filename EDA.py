@@ -168,6 +168,9 @@ def dedupe_game_info(game_info):
         df = df.sort_values('source_month')
     return df.drop_duplicates(subset='Game_Name', keep='last').reset_index(drop=True)
 
+POTENTIAL_PARAMS = {}
+
+
 def prepare_fact_table(df_steam, df_twitch):
     df_steam = df_steam.copy()
     df_steam['date'] = pd.to_datetime(df_steam['snapshot_day']).dt.date
@@ -189,14 +192,54 @@ def prepare_fact_table(df_steam, df_twitch):
     fact_table['potential_score'] = (
         fact_table['viewer_count_zscore'] * 0.6 + fact_table['current_players_zscore'] * 0.4
     )
+    # z = (x - mean) / std over EVERY game/day row in the dataset (population std,
+    # scipy.stats.zscore default). Kept so the site can print the real numbers.
+    POTENTIAL_PARAMS.clear()
+    POTENTIAL_PARAMS.update({
+        'rows': int(len(fact_table)),
+        'viewers_mean': round(float(fact_table['viewer_count'].mean()), 2),
+        'viewers_std': round(float(fact_table['viewer_count'].std(ddof=0)), 2),
+        'players_mean': round(float(fact_table['current_players'].mean()), 2),
+        'players_std': round(float(fact_table['current_players'].std(ddof=0)), 2),
+        'w_viewers': 0.6, 'w_players': 0.4,
+    })
+    _sorted = fact_table.sort_values('potential_score', ascending=False).reset_index(drop=True)
+    top = _sorted.iloc[max(0, int(len(_sorted) * 0.02))]  # a strong-but-not-extreme row (top 2%)
+    POTENTIAL_PARAMS['example'] = {
+        'game': str(top['game']), 'date': str(top['date']),
+        'viewers': round(float(top['viewer_count']), 1), 'players': round(float(top['current_players']), 1),
+        'z_viewers': round(float(top['viewer_count_zscore']), 3),
+        'z_players': round(float(top['current_players_zscore']), 3),
+        'score': round(float(top['potential_score']), 3),
+    }
     return fact_table
 
 
-LANGUAGE_UTC_OFFSETS = {
-    'en': -5, 'es': 1, 'pt': -3, 'fr': 1, 'de': 1, 'ru': 3, 'it': 1, 'pl': 1,
-    'ja': 9, 'ko': 9, 'zh': 8, 'th': 7, 'vi': 7, 'id': 7, 'hi': 5,
-    'ar': 3, 'tr': 3, 'uk': 2, 'cs': 1, 'sv': 1, 'da': 1, 'no': 1,
-    'nl': 1, 'fi': 2, 'el': 2, 'ro': 2, 'hu': 1, 'bg': 2,
+# --- TIME BASIS (read this before touching any hour/day logic) -----------------
+# The collector's own clock is Thailand time (Asia/Bangkok, UTC+7, no DST). The
+# snapshot_date / snapshot_time columns are written in THAT clock, NOT in UTC.
+# Proof: Twitch's `started_at` is UTC and a stream can never start after we saw
+# it, yet (snapshot - started_at) is never below 7.0 hours anywhere in the data
+# (min = 7.01 h over 210k rows). So the true UTC instant of a snapshot is
+#     snapshot_utc = snapshot_local(Asia/Bangkok) - 7h
+# and every "UTC" day / hour on the site is derived from that instant.
+SNAPSHOT_TZ = 'Asia/Bangkok'
+
+# Language -> one representative IANA zone. Real zone names (not fixed offsets)
+# so daylight-saving time is handled per date: e.g. German streams are UTC+1 in
+# winter but UTC+2 in summer. The raw data only has broadcast language, not the
+# streamer's real location, so this is a proxy, labelled as such in the UI.
+LANGUAGE_TZ = {
+    'en': 'America/New_York', 'es': 'Europe/Madrid', 'pt': 'America/Sao_Paulo',
+    'fr': 'Europe/Paris', 'de': 'Europe/Berlin', 'ru': 'Europe/Moscow',
+    'it': 'Europe/Rome', 'pl': 'Europe/Warsaw', 'ja': 'Asia/Tokyo',
+    'ko': 'Asia/Seoul', 'zh': 'Asia/Shanghai', 'th': 'Asia/Bangkok',
+    'vi': 'Asia/Ho_Chi_Minh', 'id': 'Asia/Jakarta', 'hi': 'Asia/Kolkata',
+    'ar': 'Asia/Riyadh', 'tr': 'Europe/Istanbul', 'uk': 'Europe/Kyiv',
+    'cs': 'Europe/Prague', 'sv': 'Europe/Stockholm', 'da': 'Europe/Copenhagen',
+    'no': 'Europe/Oslo', 'nl': 'Europe/Amsterdam', 'fi': 'Europe/Helsinki',
+    'el': 'Europe/Athens', 'ro': 'Europe/Bucharest', 'hu': 'Europe/Budapest',
+    'bg': 'Europe/Sofia',
 }
 
 # The raw data only records broadcast *language*, not a verified viewer
@@ -217,21 +260,43 @@ MIN_SAMPLES_FOR_COUNTRY_BREAKDOWN = 40
 
 def prepare_twitch_time_data(df_twitch):
     df = df_twitch.copy()
-    df['started_at_dt'] = pd.to_datetime(df['started_at'])
-    df['day_of_week'] = df['started_at_dt'].dt.day_name()
-    df['hour'] = df['snapshot_time'].str.slice(0, 2).astype(int)
+    df['started_at_dt'] = pd.to_datetime(df['started_at'], utc=True, errors='coerce')
 
-    snapshot_dt = pd.to_datetime(
+    # 1) Parse the collector-clock timestamp, then convert it to a real UTC instant.
+    snap_local = pd.to_datetime(
         df['snapshot_date'].astype(str) + ' ' + df['snapshot_time'].astype(str).str.replace('-', ':', regex=False),
         errors='coerce',
     )
-    lang = df.get('language', pd.Series('', index=df.index)).fillna('')
-    offsets = lang.map(LANGUAGE_UTC_OFFSETS).fillna(0)
-    local_dt = snapshot_dt + pd.to_timedelta(offsets, unit='h')
-    df['day_of_week_local'] = local_dt.dt.day_name().fillna(df['day_of_week'])
-    df['hour_local'] = local_dt.dt.hour.fillna(df['hour']).astype(int)
+    snap_utc = snap_local.dt.tz_localize(SNAPSHOT_TZ).dt.tz_convert('UTC')
+    df['snapshot_id'] = df['snapshot_date'].astype(str) + ' ' + df['snapshot_time'].astype(str)
+    df['snapshot_utc'] = snap_utc
+
+    # 2) UTC day + hour both come from the SAME instant. (Before: the day came
+    #    from the stream's started_at and the hour from the Bangkok clock, so
+    #    day and hour disagreed and 45% of rows had the wrong weekday.)
+    df['day_of_week'] = snap_utc.dt.day_name()
+    df['hour'] = snap_utc.dt.hour
+
+    # 3) Streamer-local day + hour: convert the SAME instant into each stream's
+    #    zone. tz_convert handles midnight roll-over (a 23:00 UTC snapshot is
+    #    already "tomorrow" for Japan) and daylight-saving time.
+    lang = df.get('language', pd.Series('', index=df.index)).fillna('').astype(str)
+    local_day = pd.Series(index=df.index, dtype=object)
+    local_hour = pd.Series(index=df.index, dtype='float')
+    for lg, tz in list(LANGUAGE_TZ.items()) + [('__other__', 'UTC')]:
+        mask = (~lang.isin(LANGUAGE_TZ.keys())) if lg == '__other__' else (lang == lg)
+        if not mask.any():
+            continue
+        loc = snap_utc[mask].dt.tz_convert(tz)
+        local_day[mask] = loc.dt.day_name()
+        local_hour[mask] = loc.dt.hour
+    df['day_of_week_local'] = local_day.fillna(df['day_of_week'])
+    df['hour_local'] = local_hour.fillna(df['hour']).astype(int)
+
     df['country'] = lang.map(COUNTRY_BY_LANGUAGE).fillna('Other')
-    df['date'] = pd.to_datetime(df['started_at_dt']).dt.date
+    # Period buckets (month / week / day dropdowns) follow the COLLECTION date
+    # (collector clock), the same basis the Steam join and monthly files use.
+    df['date'] = pd.to_datetime(df['snapshot_date']).dt.date
     return df
 
 
@@ -302,10 +367,10 @@ def q2_trends(fact_table, label, out_dir):
         desc = (f"'{top_game}' is the standout this period.{gap_note} Potential score is NOT the same metric "
                 f"as the 0-100 Opportunity score used on the Call Sheet: it standardizes Twitch viewer_count "
                 f"and Steam current_players into z-scores (how many standard deviations each snapshot is "
-                f"above/below that period's average across ALL games) and blends them 60/40 in favor of "
+                f"above/below the average of every game/day snapshot in the whole tracked dataset) and blends them 60/40 in favor of "
                 f"viewers, per game/day snapshot, then averages per game. Because it's z-scores, it's "
                 f"centered on 0 and can go negative (below-average) — it flags titles whose viewership AND "
-                f"player counts are unusually high relative to everything else tracked that period, not "
+                f"player counts are unusually high relative to everything else tracked, not "
                 f"just titles with the biggest raw audience.")
         f.write(desc)
     return desc
@@ -456,8 +521,7 @@ def q7_efficiency_ratio(df_time, label, out_dir):
         return None
     plt.figure(figsize=(10, 5))
     order = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-    ds = df_time.groupby('day_of_week').agg(viewer_count=('viewer_count', 'sum'), user_id=('user_id', 'nunique')).reindex(order)
-    ratio = ds['viewer_count'] / ds['user_id']
+    ratio = _snapshot_ratio(df_time, ['day_of_week']).set_index('day_of_week')['ratio'].reindex(order)
     plt.plot(ratio.index, ratio.values, marker='s', color=SITE_CUE, linewidth=2)
     plt.xticks(rotation=30)
     plt.title(f'Viewer-per-Streamer Ratio by Day ({label})')
@@ -762,6 +826,9 @@ def _safe_list(val):
         return [str(val)]
 
 
+OPPORTUNITY_PARAMS = {}
+
+
 def compute_opportunity_scores(games):
     if not games:
         return games
@@ -780,24 +847,76 @@ def compute_opportunity_scores(games):
     final_score = raw_score * (0.35 + 0.65 * confidence)
     for g, s in zip(games, final_score):
         g['opportunity_score'] = round(float(s) * 100, 1)
-    return sorted(games, key=lambda g: g['opportunity_score'], reverse=True)
+
+    # Exported verbatim so the site can show the exact "zero marks / full marks"
+    # anchors of every component instead of just saying "weighted".
+    def anchors(x):
+        return {'zero_at': round(float(np.percentile(x, 5)), 2), 'full_at': round(float(np.percentile(x, 95)), 2)}
+    OPPORTUNITY_PARAMS.clear()
+    OPPORTUNITY_PARAMS.update({
+        'n_games': len(games),
+        'components': [
+            {'key': 'audience', 'weight': 0.40, 'field': 'avg_viewers', **anchors(avg_v)},
+            {'key': 'saturation', 'weight': 0.35, 'field': 'viewers_per_streamer', **anchors(vps)},
+            {'key': 'growth', 'weight': 0.25, 'field': 'growth_pct', **anchors(growth)},
+        ],
+        'confidence_full_streamers': 15,
+        'confidence_floor': 0.35,
+    })
+    ranked = sorted(games, key=lambda g: g['opportunity_score'], reverse=True)
+    if ranked:
+        # Worked example = the game whose final score is closest to 50, because a
+        # perfect 100 (every component at full marks) teaches nothing about partial credit.
+        g = min(ranked, key=lambda x: abs(x['opportunity_score'] - 50))
+        comp = []
+        for c in OPPORTUNITY_PARAMS['components']:
+            v = float(g[c['field']])
+            lo, hi = c['zero_at'], c['full_at']
+            n = 0.0 if hi - lo < 1e-9 else float(np.clip((v - lo) / (hi - lo), 0, 1))
+            comp.append({'key': c['key'], 'value': round(v, 2), 'norm': round(n, 4),
+                         'weight': c['weight'], 'points': round(n * c['weight'] * 100, 2)})
+        raw = sum(c['norm'] * c['weight'] for c in comp)
+        OPPORTUNITY_PARAMS['example'] = {
+            'game': g['game'], 'components': comp,
+            'raw_score': round(raw * 100, 2),
+            'unique_streamers': g['unique_streamers_seen'],
+            'confidence': g['confidence'],
+            'multiplier': round(0.35 + 0.65 * g['confidence'], 4),
+            'final': g['opportunity_score'],
+        }
+    return ranked
+
+
+def _snapshot_ratio(df, keys):
+    """Viewers-per-streamer for each bucket in `keys`, computed PER SNAPSHOT and
+    then averaged across the snapshots that landed in that bucket.
+
+    Why per snapshot: the old code did sum(viewers) / nunique(streamers) over
+    every snapshot in the bucket. Summing viewers across N snapshots but
+    counting each streamer once inflates the ratio roughly N-fold, so a slot the
+    collector happened to visit 15 times looked far 'better' than one visited
+    twice. Per snapshot, the ratio is 'viewers watching / streamers live' at one
+    moment, which is comparable between slots whatever the collection schedule.
+    Also returns n_snapshots (how many distinct pulls back the number)."""
+    if df.empty:
+        return pd.DataFrame(columns=keys + ['ratio', 'n_snapshots'])
+    per = df.groupby(['snapshot_id'] + keys).agg(
+        viewers=('viewer_count', 'sum'), streamers=('user_id', 'nunique')
+    ).reset_index()
+    per['ratio'] = per['viewers'] / per['streamers']
+    out = per.groupby(keys).agg(
+        ratio=('ratio', 'mean'),
+        n_snapshots=('snapshot_id', 'nunique'),
+        avg_streamers=('streamers', 'mean'),
+        avg_viewers=('viewers', 'mean'),
+    ).reset_index()
+    return out
 
 
 def _compute_schedule_stats(df_twitch_time, day_col, hour_col):
-    by_day = df_twitch_time.groupby(day_col).agg(
-        total_viewers=('viewer_count', 'sum'), streamers=('user_id', 'nunique')
-    ).reindex(DAY_ORDER)
-    by_day['ratio'] = by_day['total_viewers'] / by_day['streamers']
-
-    by_hour = df_twitch_time.groupby(hour_col).agg(
-        total_viewers=('viewer_count', 'sum'), streamers=('user_id', 'nunique')
-    )
-    by_hour['ratio'] = by_hour['total_viewers'] / by_hour['streamers']
-
-    heat = df_twitch_time.groupby([day_col, hour_col]).agg(
-        total_viewers=('viewer_count', 'sum'), streamers=('user_id', 'nunique')
-    ).reset_index()
-    heat['ratio'] = heat['total_viewers'] / heat['streamers']
+    by_day = _snapshot_ratio(df_twitch_time, [day_col]).set_index(day_col).reindex(DAY_ORDER)
+    by_hour = _snapshot_ratio(df_twitch_time, [hour_col]).set_index(hour_col)
+    heat = _snapshot_ratio(df_twitch_time, [day_col, hour_col])
 
     day_ratio = by_day['ratio'].dropna()
     hour_ratio = by_hour['ratio'].dropna()
@@ -809,11 +928,55 @@ def _compute_schedule_stats(df_twitch_time, day_col, hour_col):
         'best_hour_overall': int(hour_ratio.idxmax()),
         'by_day': {d: round(float(v), 1) for d, v in day_ratio.items()},
         'by_hour': {int(h): round(float(v), 1) for h, v in hour_ratio.items()},
+        'by_hour_snapshots': {int(h): int(v) for h, v in by_hour['n_snapshots'].items()},
         'heatmap': [
-            {'day': r[day_col], 'hour': int(r[hour_col]), 'ratio': round(float(r['ratio']), 1)}
+            {'day': r[day_col], 'hour': int(r[hour_col]), 'ratio': round(float(r['ratio']), 1),
+             'n': int(r['n_snapshots']), 'streamers': round(float(r['avg_streamers']), 1),
+             'viewers': round(float(r['avg_viewers']), 0)}
             for _, r in heat.dropna(subset=['ratio']).iterrows()
         ],
         'sample_count': int(len(df_twitch_time)),
+    }
+
+
+def build_collection_coverage(df_twitch_time):
+    """Explains the 'no data' cells: the collector runs on a schedule, so some
+    UTC day/hour slots were simply never visited. Exported so the site can show
+    WHY a cell is empty instead of just hatching it."""
+    snaps = df_twitch_time.drop_duplicates('snapshot_id')[['snapshot_id', 'snapshot_utc', 'day_of_week', 'hour']]
+    cell_counts = snaps.groupby(['day_of_week', 'hour']).size()
+    hour_counts = snaps.groupby('hour').size()
+    total_cells = 7 * 24
+    # When did each broadcast language first show up? (One collector run covers every
+    # language at once, so differences here mean "first snapshot in which a stream in
+    # that language was among the tracked streams", not a different start of collection.)
+    lang_rows = df_twitch_time.dropna(subset=['snapshot_utc']).groupby('language').agg(
+        first=('snapshot_utc', 'min'), last=('snapshot_utc', 'max'), rows=('user_id', 'size')).reset_index()
+    by_language = [
+        {'language': r['language'], 'region': COUNTRY_BY_LANGUAGE.get(r['language'], 'Other'),
+         'first_utc': r['first'].strftime('%Y-%m-%d %H:%M'), 'last_utc': r['last'].strftime('%Y-%m-%d %H:%M'),
+         'rows': int(r['rows'])}
+        for _, r in lang_rows.sort_values('rows', ascending=False).iterrows()
+        if r['language'] in COUNTRY_BY_LANGUAGE
+    ]
+    first = snaps['snapshot_utc'].min()
+    last = snaps['snapshot_utc'].max()
+    span_days = max(1, (last - first).days + 1)
+    return {
+        'snapshot_clock': SNAPSHOT_TZ,
+        'snapshot_clock_offset_hours': 7,
+        'total_snapshots': int(len(snaps)),
+        'first_snapshot_utc': first.strftime('%Y-%m-%d %H:%M'),
+        'last_snapshot_utc': last.strftime('%Y-%m-%d %H:%M'),
+        'span_days': int(span_days),
+        'avg_snapshots_per_day': round(len(snaps) / span_days, 2),
+        'cells_covered': int(len(cell_counts)),
+        'cells_total': total_cells,
+        'utc_hours_never_visited': [h for h in range(24) if h not in hour_counts.index],
+        'snapshots_per_utc_hour': {int(h): int(v) for h, v in hour_counts.items()},
+        'min_snapshots_in_covered_cell': int(cell_counts.min()),
+        'max_snapshots_in_cell': int(cell_counts.max()),
+        'by_language': by_language,
     }
 
 
@@ -840,6 +1003,7 @@ def build_schedule_recommendations(df_twitch_time):
             if entry['standardized'] or entry['time_of_day']:
                 by_country[country] = entry
     schedule['by_country'] = by_country
+    schedule['coverage'] = build_collection_coverage(df_twitch_time)
     return schedule
 
 
@@ -894,7 +1058,7 @@ def _compute_activity_series(df_time, day_col, hour_col, include_stacks=True):
         streamers=('user_id', 'nunique'),
         total_viewers=('viewer_count', 'sum'),
     ).reindex(DAY_ORDER)
-    by_day['ratio'] = by_day['total_viewers'] / by_day['streamers']
+    by_day['ratio'] = _snapshot_ratio(df_time, [day_col]).set_index(day_col)['ratio'].reindex(DAY_ORDER)
 
     by_hour = df_time.groupby(hour_col)['viewer_count'].mean()
 
@@ -1055,11 +1219,67 @@ def export_site_data(games, schedule, meta, gpu_market, generated_at, out_path):
         'schedule': schedule,
         'games': games,
         'gpu_market': gpu_market,
+        'methodology': {'potential': dict(POTENTIAL_PARAMS), 'opportunity': dict(OPPORTUNITY_PARAMS)},
     })
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     with open(out_path, 'w') as f:
         json.dump(payload, f, indent=2, default=str, allow_nan=False)
     print(f"Wrote {len(games)} game recommendations to {out_path}")
+
+
+def build_download_bundle(games, schedule, gpu_market, out_zip):
+    """One zip the About page links to: every table the site is built from,
+    flat CSVs for spreadsheets, and the monthly source files."""
+    import zipfile, io, csv
+    os.makedirs(os.path.dirname(out_zip), exist_ok=True)
+
+    def csv_bytes(rows, fields):
+        buf = io.StringIO()
+        w = csv.DictWriter(buf, fieldnames=fields, extrasaction='ignore')
+        w.writeheader()
+        for r in rows:
+            w.writerow(r)
+        return buf.getvalue().encode('utf-8-sig')
+
+    game_fields = ['game', 'opportunity_score', 'potential_score', 'avg_viewers', 'viewers_per_streamer',
+                   'avg_concurrent_streamers', 'growth_pct', 'confidence', 'unique_streamers_seen', 'samples',
+                   'best_day_utc', 'best_hour_utc', 'best_day_local', 'best_hour_local',
+                   'price', 'free', 'total_reviews', 'review_score', 'avg_current_players_steam']
+    heat_rows = []
+    regions = {'ALL': schedule}
+    regions.update(schedule.get('by_country', {}))
+    for region, block in regions.items():
+        for mode in ('standardized', 'time_of_day'):
+            for c in (block.get(mode) or {}).get('heatmap', []):
+                heat_rows.append({'region': region, 'clock': 'UTC' if mode == 'standardized' else 'streamer-local', **c})
+    gpu_rows = [{'month': m, 'avg_price_usd': v} for m, v in (gpu_market.get('avg_price_by_month') or {}).items()]
+
+    readme = (
+        "GREEN ROOM - DATA BUNDLE\n"
+        "========================\n"
+        "games.csv                  one row per ranked game (same numbers as the Call Sheet)\n"
+        "schedule_heatmap.csv       viewers-per-streamer per day x hour. clock=UTC or streamer-local;\n"
+        "                           n = number of distinct snapshots behind the cell, ratio = mean of\n"
+        "                           (viewers / unique streamers) per snapshot. Missing day/hour rows =\n"
+        "                           the collector never ran in that slot.\n"
+        "gpu_monthly.csv           average tracked GPU price per month (USD)\n"
+        "data.json / insights.json  the exact files the website reads\n"
+        "raw_monthly/               monthly source files (parquet): steam, twitch, gpu, game_data\n\n"
+        "TIME BASIS: snapshot_date/snapshot_time in raw_monthly are Thailand time (Asia/Bangkok, UTC+7).\n"
+        "Subtract 7 hours to get UTC. All UTC day/hour values in the CSVs/JSON are already converted.\n"
+    )
+    with zipfile.ZipFile(out_zip, 'w', zipfile.ZIP_DEFLATED) as z:
+        z.writestr('README_DATA.txt', readme)
+        z.writestr('games.csv', csv_bytes(games, game_fields))
+        z.writestr('schedule_heatmap.csv', csv_bytes(heat_rows, ['region', 'clock', 'day', 'hour', 'ratio', 'n', 'streamers', 'viewers']))
+        z.writestr('gpu_monthly.csv', csv_bytes(gpu_rows, ['month', 'avg_price_usd']))
+        for name in ('data.json', 'insights.json'):
+            path = os.path.join(SITE_DIR, name)
+            if os.path.exists(path):
+                z.write(path, name)
+        for f in glob.glob(os.path.join(MONTHLY_DIR, '*', '*', '*.parquet')):
+            z.write(f, os.path.join('raw_monthly', os.path.relpath(f, MONTHLY_DIR)))
+    print(f"Wrote download bundle to {out_zip} ({os.path.getsize(out_zip)/1e6:.1f} MB)")
 
 
 INSIGHT_TITLES = {
@@ -1192,7 +1412,7 @@ def run_analysis():
     }
 
     fact_table['year_month'] = pd.to_datetime(fact_table['date']).dt.to_period('M').astype(str)
-    df_twitch_time['year_month'] = pd.to_datetime(df_twitch_time['started_at_dt']).dt.to_period('M').astype(str)
+    df_twitch_time['year_month'] = pd.to_datetime(df_twitch_time['date']).dt.to_period('M').astype(str)
 
     for month in sorted(fact_table['year_month'].unique()):
         print(f"Processing Month: {month}")
@@ -1284,6 +1504,7 @@ def run_analysis():
         'total_twitch_snapshots': int(len(df_twitch_time)),
     }
     export_site_data(games, schedule, meta, gpu_market, generated_at, os.path.join(SITE_DIR, 'data.json'))
+    build_download_bundle(games, schedule, gpu_market, os.path.join(SITE_DIR, 'downloads', 'green-room-data.zip'))
 
     print("Pipeline Execution Complete. Open index.html for the dashboard, "
           "or refresh data/Global_Summary and data/Visualizations for the charts.")

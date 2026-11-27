@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-title-key="about.title">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,13 +12,13 @@
   <div class="topbar">
     <div class="brand"><span class="brand-dot"></span> Green Room</div>
     <nav class="topnav">
-      <a href="index.html">Overview</a>
-      <a href="games.html">Call Sheet</a>
-      <a href="schedule.html">Signal Board</a>
-      <a href="insights.html">Deep Analysis</a>
-      <a href="about.html">About Us</a>
+      <a href="index.html" data-i18n="nav.overview">Overview</a>
+      <a href="games.html" data-i18n="nav.games">Call Sheet</a>
+      <a href="schedule.html" data-i18n="nav.board">Signal Board</a>
+      <a href="insights.html" data-i18n="nav.analysis">Deep Analysis</a>
+      <a href="about.html" data-i18n="nav.about">About Us</a>
     </nav>
-    <div class="topbar-meta mono" id="topbarMeta">loading&hellip;</div>
+    <div class="topbar-meta mono" id="topbarMeta" data-i18n="common.loading">loading&hellip;</div>
     <div class="zoom-control" id="siteZoomControl"></div>
     <div class="theme-toggle-wrap" id="themeToggleControl"></div>
   </div>
@@ -26,59 +26,79 @@
   <section class="section" style="border-top:none; padding-top:36px;">
     <div class="section-head">
       <div>
-        <h2>About Us</h2>
-        <p>We built this platform for our graduation project, driven by data analytics and our passion for gaming content strategy.</p>
+        <h2 data-i18n="about.h2">About Us</h2>
+        <p data-i18n="about.lead"></p>
       </div>
     </div>
 
-    <!-- ============================================================
-         EDIT-ME: fill in your own content below.
-         โอมอยากเพิ่มอะไร เพิ่มได้เลย
-    ============================================================ -->
-
     <div class="about-content" id="aboutContent">
-      <p>
-        <strong>Green Room</strong> (Data-Driven Gaming Trend Analysis) is a senior graduation project developed at the College of Computing, Prince of Songkla University (Phuket Campus). 
-      </p>
-      <p>
-        As gamers and creators ourselves, we noticed a common challenge: many independent content creators rely on intuition or short-lived hype when picking games to stream. This often leads to wasted time and low audience engagement. Green Room bridges this "information asymmetry" by analyzing real-time metrics from Steam and Twitch to help creators make data-driven decisions.
-      </p>
+      <p data-i18n-html="about.p1"></p>
+      <p data-i18n="about.p2"></p>
 
-      <h3>Project Objectives</h3>
+      <h3 data-i18n="about.obj_h">Project Objectives</h3>
       <ul>
-        <li><strong>Steam vs. Twitch Correlation:</strong> Investigate whether player counts on Steam have a statistically significant relationship with viewer counts on Twitch.</li>
-        <li><strong>Data-Driven Dashboard:</strong> Develop an interactive analytics dashboard to evaluate high-potential games and reduce the risk of choosing games purely by instinct.</li>
-        <li><strong>Key Performance Indicators:</strong> Identify and weight the key variables that drive a game's reach and success on streaming platforms.</li>
+        <li data-i18n-html="about.obj1"></li>
+        <li data-i18n-html="about.obj2"></li>
+        <li data-i18n-html="about.obj3"></li>
       </ul>
 
-      <h3>Data Sources & Technology</h3>
-      <p>
-        Our system ingests, cleans, and models data from multiple sources including the Steam API, Twitch API, SteamSpy, SteamCharts, and SullyGnome using automated batch ETL pipelines.
+      <h3 data-i18n="about.tech_h">Data Sources &amp; Technology</h3>
+      <p data-i18n="about.tech_p"></p>
+
+      <h3 data-i18n="about.data_h">Download the data</h3>
+      <p data-i18n="about.data_p"></p>
+      <p><a class="download-cta" href="downloads/green-room-data.zip" download data-i18n="about.data_btn">Download all data (ZIP)</a></p>
+      <p class="filter-hint" data-i18n="about.data_note"></p>
+      <p class="data-links"><span data-i18n="about.data_sheet">Or just one table:</span>
+        <button type="button" class="dl-link" id="dlGamesCsv" data-i18n="about.data_games">Games table (CSV)</button>
+        <button type="button" class="dl-link" id="dlHeatCsv" data-i18n="about.data_heat">Day x hour table (CSV)</button>
+        <a class="dl-link" href="data.json" download data-i18n="about.data_json">data.json</a>
       </p>
 
-      <h3>The Team</h3>
+      <h3 data-i18n="about.team_h">The Team</h3>
       <ul>
-        <li><strong>Nattaphop Kao-ian</strong> (6630611026) — Data Searching, Visualization, Coding & Hosting, EDA</li>
-        <li><strong>Kasidit Kasempitakpong</strong> (6630611059) — Data Collection, Cleaning, Data Modeling, Automation</li>
+        <li data-i18n-html="about.team1"></li>
+        <li data-i18n-html="about.team2"></li>
       </ul>
 
-      <h3>Project Advisor</h3>
-      <p>
-        <strong>Asst. Prof. Dr. Panisa Treepong</strong> — College of Computing, Prince of Songkla University
-      </p>
+      <h3 data-i18n="about.advisor_h">Project Advisor</h3>
+      <p data-i18n-html="about.advisor_p"></p>
     </div>
-    <!-- ============================================================
-         EDIT-ME end
-    ============================================================ -->
-
   </section>
 
   <footer>
-    <p class="copyright">&copy; PSU Phuket</p>
+
+    <p class="copyright" data-i18n="common.copyright">&copy; PSU Phuket</p>
   </footer>
 </div>
 
+<script src="js/lang/en.js"></script>
+<script src="js/lang/th.js"></script>
+<script src="js/lang/es.js"></script>
+<script src="js/lang/de.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/download.js"></script>
 <script src="js/common.js"></script>
-<script>DataStore.data().then(renderLatestUpdate);</script>
+<script>
+DataStore.data().then(DATA => {
+  renderLatestUpdate(DATA);
+  const rowsCsv = (rows) => rows;
+  document.getElementById('dlGamesCsv').addEventListener('click', () => {
+    const f = ['game','opportunity_score','potential_score','avg_viewers','viewers_per_streamer','avg_concurrent_streamers','growth_pct','confidence','unique_streamers_seen','samples','best_day_utc','best_hour_utc','best_day_local','best_hour_local'];
+    GRDownload.saveCsv([f, ...DATA.games.map(g => f.map(k => g[k] ?? ''))], 'green-room-games.csv');
+  });
+  document.getElementById('dlHeatCsv').addEventListener('click', () => {
+    const rows = [['region','clock','day','hour','viewers_per_streamer','n_snapshots','avg_streamers','avg_viewers']];
+    const S = DATA.schedule || {};
+    const regions = { ALL: S, ...(S.by_country || {}) };
+    Object.entries(regions).forEach(([region, block]) => {
+      [['standardized','UTC'],['time_of_day','streamer-local']].forEach(([mode, clock]) => {
+        ((block[mode] || {}).heatmap || []).forEach(c => rows.push([region, clock, c.day, c.hour, c.ratio, c.n, c.streamers, c.viewers]));
+      });
+    });
+    GRDownload.saveCsv(rows, 'green-room-day-hour.csv');
+  });
+});
+</script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-const MONTH_NAMES = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+let SITE_DATA = null;
 const ALL_VALUE = 'ALL';
 const DAY_ORDER_FULL = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
@@ -17,6 +17,7 @@ let distScaleMode = 'log10'; // 'linear' | 'log10'  (default: Log10)
 let selectedGame = null; // cross-chart game filter, set by clicking any game element
 
 Promise.all([DataStore.data(), DataStore.insights()]).then(([DATA, insights]) => {
+  SITE_DATA = DATA;
   INSIGHTS = insights;
   renderLatestUpdate(insights);
 
@@ -43,6 +44,8 @@ Promise.all([DataStore.data(), DataStore.insights()]).then(([DATA, insights]) =>
   renderCountrySelect();
   bindTimingControls();
   bindNewbieGuide();
+  renderNewbieMore();
+  renderCollectionStart();
   renderBlocks();
 });
 
@@ -57,7 +60,7 @@ function monthsForYear(year) {
 
 function renderYearSelect() {
   const select = document.getElementById('yearSelect');
-  select.innerHTML = `<option value="${ALL_VALUE}">All years</option>` +
+  select.innerHTML = `<option value="${ALL_VALUE}">${t('ins.all_years')}</option>` +
     years().map(y => `<option value="${y}">${y}</option>`).join('');
   select.value = currentYear;
 }
@@ -65,8 +68,8 @@ function renderYearSelect() {
 function renderMonthSelect() {
   const select = document.getElementById('monthSelect');
   const opts = monthsForYear(currentYear);
-  select.innerHTML = `<option value="${ALL_VALUE}">All months</option>` +
-    opts.map(m => `<option value="${m}">${MONTH_NAMES[parseInt(m, 10) - 1] || m}</option>`).join('');
+  select.innerHTML = `<option value="${ALL_VALUE}">${t('ins.all_months')}</option>` +
+    opts.map(m => `<option value="${m}">${localeMonthName(parseInt(m, 10) - 1) || m}</option>`).join('');
   select.value = opts.includes(currentMonth) ? currentMonth : ALL_VALUE;
   currentMonth = select.value;
 }
@@ -90,11 +93,11 @@ function renderWeekSelect() {
   const weeks = weeksForCurrentPeriod();
   const disabled = currentPeriod === 'GLOBAL';
   select.disabled = disabled;
-  select.innerHTML = `<option value="${ALL_VALUE}">All weeks</option>` +
+  select.innerHTML = `<option value="${ALL_VALUE}">${t('ins.all_weeks')}</option>` +
     weeks.map(w => {
       const startDay = (+w - 1) * 7 + 1;
       const endDay = Math.min(+w * 7, daysInCurrentMonth());
-      return `<option value="${w}">Week ${w} (days ${startDay}\u2013${endDay})</option>`;
+      return `<option value="${w}">${t('ins.week_opt', { w, a: startDay, b: endDay })}</option>`;
     }).join('');
   select.value = weeks.includes(currentWeek) ? currentWeek : ALL_VALUE;
   currentWeek = select.value;
@@ -118,8 +121,8 @@ function renderDaySelect() {
     dayNumbers = Array.from({ length: daysInCurrentMonth() }, (_, i) => i + 1);
   }
 
-  select.innerHTML = `<option value="${ALL_VALUE}">All days</option>` +
-    dayNumbers.map(d => `<option value="${String(d).padStart(2, '0')}">Day ${d}</option>`).join('');
+  select.innerHTML = `<option value="${ALL_VALUE}">${t('ins.all_days')}</option>` +
+    dayNumbers.map(d => `<option value="${String(d).padStart(2, '0')}">${t('ins.day_opt', { d })}</option>`).join('');
   const dayVals = dayNumbers.map(d => String(d).padStart(2, '0'));
   select.value = dayVals.includes(currentDay) ? currentDay : ALL_VALUE;
   currentDay = select.value;
@@ -203,7 +206,7 @@ function bindTimingControls() {
 function renderCountrySelect() {
   const select = document.getElementById('timingCountrySelect');
   const countries = INSIGHTS.countries || [];
-  select.innerHTML = `<option value="ALL">All regions</option>` +
+  select.innerHTML = `<option value="ALL">${t('common.all_regions')}</option>` +
     countries.map(c => `<option value="${c}">${c}</option>`).join('');
   select.value = currentCountry;
 }
@@ -225,31 +228,31 @@ function currentChartData() {
 }
 
 function currentPeriodLabel() {
-  if (currentPeriod === 'GLOBAL') return 'all months, all years';
+  if (currentPeriod === 'GLOBAL') return t('ins.period_all');
   const g = currentGranularity();
   if (g.type === 'day') return `${currentPeriod}-${g.key}`;
-  if (g.type === 'week') return `${currentPeriod}, Week ${g.key}`;
+  if (g.type === 'week') return t('ins.period_week', { period: currentPeriod, w: g.key });
   return currentPeriod;
 }
 
 /* ---------- Main chart blocks: q1, q2, q3, q6, q8, distribution ---------- */
 
 function renderBlocks() {
-  const label = currentPeriod === 'GLOBAL' ? 'Showing: all months, all years' : `Showing: ${currentPeriodLabel()}`;
+  const label = currentPeriod === 'GLOBAL' ? t('ins.showing_all') : t('ins.showing', { label: currentPeriodLabel() });
   document.getElementById('periodCurrent').textContent = label;
 
   const cd = currentChartData();
   const periodLabel = currentPeriodLabel();
 
   document.getElementById('insightBlocksPre').innerHTML = [
-    chartBlockHtml('q1', 'Steam players vs. Twitch viewers', scatterBlock(cd.q1, periodLabel)),
-    chartBlockHtml('q2', 'Top games by potential score', q2Block(cd.q2, periodLabel)),
-    chartBlockHtml('q3', 'What drives viewership', q3Block(cd.q3, periodLabel)),
+    chartBlockHtml('q1', t('ins.title.q1'), scatterBlock(cd.q1, periodLabel)),
+    chartBlockHtml('q2', t('ins.title.q2'), q2Block(cd.q2, periodLabel), potentialDetails()),
+    chartBlockHtml('q3', t('ins.title.q3'), q3Block(cd.q3, periodLabel)),
   ].join('');
 
   document.getElementById('insightBlocksPost').innerHTML = [
-    chartBlockHtml('q8', 'Predicting rising games', q8Block(cd.q8, periodLabel)),
-    chartBlockHtml('distribution', 'Viewer count distribution', distributionBlock(cd.distribution, periodLabel)),
+    chartBlockHtml('q8', t('ins.title.q8'), q8Block(cd.q8, periodLabel)),
+    chartBlockHtml('distribution', t('ins.title.dist'), distributionBlock(cd.distribution, periodLabel)),
   ].join('');
 
   wireUpChartBlocks(document.getElementById('insightBlocksPre'));
@@ -258,19 +261,40 @@ function renderBlocks() {
   renderTimingCharts();
 }
 
-function chartBlockHtml(key, title, inner) {
+function chartBlockHtml(key, title, inner, extra = '') {
   return `<div class="insight-block" data-chart-key="${key}">${inner.svg}
     <div>
       <h3>${title}</h3>
-      <p>${inner.desc ? escapeHtml(inner.desc) : 'Not enough data at this granularity for this chart. Try a Week or the whole Month/Global view.'}</p>
+      <p>${inner.desc ? escapeHtml(inner.desc) : t('ins.no_desc')}</p>
+      ${extra}
     </div>
   </div>`;
+}
+
+function potentialDetails() {
+  const pot = (SITE_DATA && SITE_DATA.methodology && SITE_DATA.methodology.potential) || null;
+  if (!pot || !pot.rows) return '';
+  return `<details class="info-details formula-details"><summary>${t('ins.q2.formula_summary')}</summary><div class="info-body">${potentialFormulaHtml(pot)}</div></details>`;
+}
+
+function renderNewbieMore() {
+  const el = document.getElementById('newbieMore');
+  if (!el) return;
+  const b = (k, text) => `<button type="button" class="newbie-jump small" data-jump="${k}">${text}</button>`;
+  el.innerHTML = t('ins.guide.more', {
+    b1: b('q6', t('ins.guide.more1')), b2: b('q1', t('ins.guide.more2')),
+    b3: b('q3', t('ins.guide.more3')), b4: b('q8', t('ins.guide.more4')),
+  });
 }
 
 function wireUpChartBlocks(container) {
   container.querySelectorAll('.insight-block').forEach(block => {
     if (block.dataset.chartKey) block.id = 'chart-' + block.dataset.chartKey;
     initChartInteractivity(block);
+    GRDownload.attach(block, {
+      title: () => (block.querySelector('h3') || {}).textContent || 'chart',
+      subtitle: () => currentPeriodLabel() + (block.closest('#timingCharts') ? ` · ${currentCountry === 'ALL' ? t('ins.region_all') : currentCountry} · ${currentTimezone === 'standardized' ? 'UTC' : t('common.local')}` : ''),
+    });
     const wrap = block.querySelector('.chart-zoom-wrap');
     if (wrap) initGraphZoom(block, wrap);
   });
@@ -309,7 +333,7 @@ function setSelectedGame(game) {
   const chip = document.getElementById('gameFilterChip');
   if (game) {
     chip.style.display = 'inline-flex';
-    chip.innerHTML = `Filtering: <strong>${escapeHtml(game)}</strong> <span class="chip-clear">&times;</span>`;
+    chip.innerHTML = t('ins.filter_chip', { game: escapeHtml(game) });
   } else {
     chip.style.display = 'none';
     chip.innerHTML = '';
@@ -369,15 +393,15 @@ function chartWrap(svg, extra = '') {
 }
 
 function emptyChart() {
-  return `<div class="empty-state">No chart for this selection.</div>`;
+  return `<div class="empty-state">${t('ins.no_chart')}</div>`;
 }
 
 function scatterBlock(d, periodLabel) {
   if (!d || !d.points || !d.points.length) return { svg: emptyChart(), desc: null };
-  const strength = Math.abs(d.r) > 0.7 ? 'strong' : Math.abs(d.r) > 0.4 ? 'moderate' : 'weak';
-  const direction = d.r > 0 ? 'rise together' : 'move in opposite directions';
-  const sig = d.p < 0.05 ? "a real pattern, not noise" : 'not statistically distinguishable from noise';
-  const desc = `Steam player counts and Twitch viewer counts have a ${strength} relationship (r = ${d.r.toFixed(2)}) for ${periodLabel}: the two tend to ${direction}. Across ${fmt(d.n)} matched game/day snapshots, that's ${sig} (p = ${d.p < 0.0001 ? d.p.toExponential(2) : d.p.toFixed(4)}).`;
+  const strength = t(Math.abs(d.r) > 0.7 ? 'ins.q1.strong' : Math.abs(d.r) > 0.4 ? 'ins.q1.moderate' : 'ins.q1.weak');
+  const direction = t(d.r > 0 ? 'ins.q1.up' : 'ins.q1.down');
+  const sig = t(d.p < 0.05 ? 'ins.q1.real' : 'ins.q1.noise');
+  const desc = t('ins.q1.desc', { strength, r: d.r.toFixed(2), period: periodLabel, direction, n: fmt(d.n), sig, p: d.p < 0.0001 ? d.p.toExponential(2) : d.p.toFixed(4) });
   return { svg: chartWrap(svgScatterChart(d.points)), desc };
 }
 
@@ -388,21 +412,21 @@ function q2Block(d, periodLabel) {
   const worst = hasBottom ? d.bottom[d.bottom.length - 1] : null;
   const gapNote = second
     ? (top.score - second.score > 0.15
-      ? ` It's clear of the next name, '${second.game}', by a real margin.`
-      : ` It's only narrowly ahead of '${second.game}' \u2014 treat the top few as a tier, not a strict ranking.`)
+      ? t('ins.q2.gap_big', { second: second.game })
+      : t('ins.q2.gap_small', { second: second.game }))
     : '';
   const spreadNote = worst
-    ? ` At the other end, '${worst.game}' sits lowest (${worst.score.toFixed(2)}) \u2014 a spread of ${(top.score - worst.score).toFixed(2)} between this period's strongest and weakest signal.`
+    ? t('ins.q2.spread', { worst: worst.game, score: worst.score.toFixed(2), spread: (top.score - worst.score).toFixed(2) })
     : '';
-  const desc = `'${top.game}' is the standout for ${periodLabel}.${gapNote}${spreadNote} Potential score blends standardized (z-scored) Twitch viewers (60%) and Steam players (40%), so it can go negative \u2014 it flags titles unusually strong (or weak) relative to everything else tracked in this window, not just the biggest raw audience.`;
+  const desc = t('ins.q2.desc', { top: top.game, period: periodLabel, gap: gapNote, spread: spreadNote });
   const items = [
-    { divider: true, label: 'Top 5' },
+    { divider: true, label: t('ins.q2.top5') },
     ...d.top.map(g => ({ label: g.game, value: g.score, group: 'top' })),
-    ...(hasBottom ? [{ divider: true, label: 'Bottom 5' }, ...d.bottom.map(g => ({ label: g.game, value: g.score, group: 'bottom' }))] : []),
+    ...(hasBottom ? [{ divider: true, label: t('ins.q2.bottom5') }, ...d.bottom.map(g => ({ label: g.game, value: g.score, group: 'bottom' }))] : []),
   ];
   return {
     svg: chartWrap(svgHorizontalBarChart(items, {
-      valueLabel: 'Potential score',
+      valueLabel: t('ins.q2.value'),
       format: v => v.toFixed(2),
       colorFor: it => it.group === 'bottom' ? 'var(--tally)' : 'var(--cue)',
       itemsAreGames: true,
@@ -414,29 +438,31 @@ function q2Block(d, periodLabel) {
 function q3Block(d, periodLabel) {
   if (!d || !d.features || !d.features.length) return { svg: emptyChart(), desc: null };
   const top = d.features[0], second = d.features[1];
-  const fit = d.r2 > 0.7 ? 'explains most of the variation' : d.r2 > 0.3 ? 'captures a real but partial pattern' : "only weakly explains what's happening";
-  const desc = `A Random Forest model trained to predict viewer count leans hardest on '${top.feature}'${second ? `, with '${second.feature}' as its next-strongest signal,` : ''} for ${periodLabel}. The model ${fit} (R\u00b2 = ${d.r2.toFixed(2)}, average prediction error \u00b1${fmt(Math.round(d.mae))} viewers, n = ${fmt(d.n)}).`;
+  const fit = t(d.r2 > 0.7 ? 'ins.q3.fit_high' : d.r2 > 0.3 ? 'ins.q3.fit_mid' : 'ins.q3.fit_low');
+  const desc = t('ins.q3.desc', { top: top.feature, next: second ? t('ins.q3.next', { second: second.feature }) : '', period: periodLabel, fit, r2: d.r2.toFixed(2), mae: fmt(Math.round(d.mae)), n: fmt(d.n) });
   const items = d.features.map(f => ({ label: f.feature, value: f.importance }));
-  return { svg: chartWrap(svgHorizontalBarChart(items, { color: 'var(--amber)', valueLabel: 'Importance', format: v => v.toFixed(3) })), desc };
+  return { svg: chartWrap(svgHorizontalBarChart(items, { color: 'var(--amber)', valueLabel: t('ins.q3.value'), format: v => v.toFixed(3) })), desc };
 }
 
 function q8Block(d, periodLabel) {
   if (!d || !d.metrics || !d.metrics.length) return { svg: emptyChart(), desc: null };
   const best = d.metrics.reduce((a, b) => Math.abs(b.r) > Math.abs(a.r) ? b : a);
+  const metricLabel = m => ({ 'Scoring Logic': t('ins.q8.label.scoring'), 'Current Viewers': t('ins.q8.label.viewers'), 'Peak Players': t('ins.q8.label.peak') }[m.label] || m.label);
+  const bestLabel = metricLabel(best);
   const verdict = best.label === 'Scoring Logic'
-    ? 'backs up the scoring logic used elsewhere on this site'
-    : `suggests a simpler signal ('${best.label}') actually predicts tomorrow's growth better than the built-in Potential score does`;
-  const desc = `Comparing three candidate signals against each game's next-day viewer change for ${periodLabel}, '${best.label}' comes out ahead (r = ${best.r.toFixed(3)}). That ${verdict} (n = ${fmt(d.n)}).`;
-  const labels = d.metrics.map(m => m.label);
+    ? t('ins.q8.good')
+    : t('ins.q8.other', { best: bestLabel });
+  const desc = t('ins.q8.desc', { period: periodLabel, best: bestLabel, r: best.r.toFixed(3), verdict, n: fmt(d.n) });
+  const labels = d.metrics.map(metricLabel);
   const values = d.metrics.map(m => m.r);
   const bestIdx = d.metrics.indexOf(best);
-  return { svg: chartWrap(svgBarChart(labels, values, { color: 'var(--cue)', highlight: bestIdx, allowNegative: true, tipSuffix: ' correlation', axisFormat: v => v.toFixed(2) })), desc };
+  return { svg: chartWrap(svgBarChart(labels, values, { color: 'var(--cue)', highlight: bestIdx, allowNegative: true, tipSuffix: t('ins.q8.suffix'), axisFormat: v => v.toFixed(2) })), desc };
 }
 
 function distributionBlock(d, periodLabel) {
   if (!d || !d.counts || !d.counts.length) return { svg: emptyChart(), desc: null };
-  const desc = `The typical stream during ${periodLabel} pulls a median of ${fmt(Math.round(d.median))} viewers, but the top 10% of snapshots reach ${fmt(Math.round(d.p90))}+ \u2014 viewership is heavily right-skewed, dominated by a small number of very large streams. That's why simple averages elsewhere on the site can look inflated by a handful of giants (n = ${fmt(d.n)} snapshots).${distScaleMode === 'log10' ? ' Log10 view compresses that skew so the smaller bars stay readable next to the giants.' : ' Switch to Log10 to see the long tail of smaller streams more clearly.'}`;
-  const toggle = toggleRow([{ value: 'linear', label: 'Linear' }, { value: 'log10', label: 'Log10' }], distScaleMode, 'scale-toggle');
+  const desc = t('ins.dist.desc', { period: periodLabel, median: fmt(Math.round(d.median)), p90: fmt(Math.round(d.p90)), n: fmt(d.n) }) + t(distScaleMode === 'log10' ? 'ins.dist.log' : 'ins.dist.lin');
+  const toggle = toggleRow([{ value: 'linear', label: t('ins.dist.linear') }, { value: 'log10', label: t('ins.dist.log10') }], distScaleMode, 'scale-toggle');
   return { svg: chartWrap(svgHistogramChart(d.bins, d.counts, { scale: distScaleMode }), toggle), desc };
 }
 
@@ -445,7 +471,7 @@ function renderDistributionOnly() {
   const periodLabel = currentPeriodLabel();
   const old = document.querySelector('#insightBlocksPost .insight-block[data-chart-key="distribution"]');
   if (!old) return;
-  const html = chartBlockHtml('distribution', 'Viewer count distribution', distributionBlock(cd.distribution, periodLabel));
+  const html = chartBlockHtml('distribution', t('ins.title.dist'), distributionBlock(cd.distribution, periodLabel));
   old.outerHTML = html;
   wireUpChartBlocks(document.getElementById('insightBlocksPost'));
 }
@@ -483,18 +509,18 @@ function timingSeriesForStacks() {
 function renderTimingCharts() {
   const container = document.getElementById('timingCharts');
   const series = currentTimingSeries();
-  const regionLabel = currentCountry === 'ALL' ? 'all regions' : currentCountry;
-  const tzLabel = currentTimezone === 'standardized' ? 'standardized UTC' : 'local time-of-day';
+  const regionLabel = currentCountry === 'ALL' ? t('ins.region_all') : currentCountry;
+  const tzLabel = currentTimezone === 'standardized' ? t('ins.tz_label.utc') : t('ins.tz_label.local');
 
   if (!series) {
-    container.innerHTML = `<div class="empty-state">Not enough tracked data for ${escapeHtml(regionLabel)} at this granularity yet. Try a broader Week/Month/Global view.</div>`;
+    container.innerHTML = `<div class="empty-state">${t('ins.no_timing', { region: escapeHtml(regionLabel) })}</div>`;
     return;
   }
 
   const dailyStreamers = DAY_ORDER_FULL.map(d => series.daily_streamers[d] ?? 0);
   const dailyRatio = DAY_ORDER_FULL.map(d => series.daily_viewer_per_streamer[d] ?? 0);
   const hourlyViewers = Array.from({ length: 24 }, (_, h) => series.hourly_avg_viewers[h] ?? 0);
-  const dayShort = DAY_ORDER_FULL.map(d => DAY_SHORT[d]);
+  const dayShort = DAY_ORDER_FULL.map(d => dayShortLabel(d));
 
   const peakDayIdx = argmax(dailyStreamers);
   const quietDayIdx = argmin(dailyStreamers);
@@ -504,48 +530,48 @@ function renderTimingCharts() {
   const worstRatioIdx = argmin(dailyRatio);
 
   const q4desc = dailyStreamers.some(v => v > 0)
-    ? `For ${escapeHtml(regionLabel)} (${tzLabel}), ${DAY_ORDER_FULL[peakDayIdx]} draws the most unique streamers, while ${DAY_ORDER_FULL[quietDayIdx]} is the quietest. Sample size: ${fmt(series.sample_count)} tracked snapshots.`
-    : 'Not enough data to identify a pattern for this filter.';
+    ? t('ins.q4.desc', { region: escapeHtml(regionLabel), tz: tzLabel, peak: dayLabel(DAY_ORDER_FULL[peakDayIdx]), quiet: dayLabel(DAY_ORDER_FULL[quietDayIdx]), n: fmt(series.sample_count) })
+    : t('ins.no_pattern');
   const q5desc = hourlyViewers.some(v => v > 0)
-    ? `Viewership for ${escapeHtml(regionLabel)} peaks around ${String(peakHourIdx).padStart(2, '0')}:00 and is quietest around ${String(quietHourIdx).padStart(2, '0')}:00 (${tzLabel}).`
-    : 'Not enough data to identify a pattern for this filter.';
+    ? t('ins.q5.desc', { region: escapeHtml(regionLabel), peak: String(peakHourIdx).padStart(2, '0'), quiet: String(quietHourIdx).padStart(2, '0'), tz: tzLabel })
+    : t('ins.no_pattern');
   const q7desc = dailyRatio.some(v => v > 0)
-    ? `${DAY_ORDER_FULL[bestRatioIdx]} gives the best viewers-per-streamer payoff for ${escapeHtml(regionLabel)}; ${DAY_ORDER_FULL[worstRatioIdx]} is the most saturated.`
-    : 'Not enough data to identify a pattern for this filter.';
+    ? t('ins.q7.desc', { best: dayLabel(DAY_ORDER_FULL[bestRatioIdx]), region: escapeHtml(regionLabel), worst: dayLabel(DAY_ORDER_FULL[worstRatioIdx]) })
+    : t('ins.no_pattern');
 
-  const q4Toggle = toggleRow([{ value: 'simple', label: 'Streamers' }, { value: 'stacked', label: 'By game' }], q4ViewMode, 'view-toggle');
+  const q4Toggle = toggleRow([{ value: 'simple', label: t('ins.q4.toggle.simple') }, { value: 'stacked', label: t('ins.q4.toggle.stacked') }], q4ViewMode, 'view-toggle');
   const q4Html = q4ViewMode === 'stacked' ? q4StackedHtml(regionLabel, tzLabel) : chartWrap(svgBarChart(dayShort, dailyStreamers, { color: 'var(--cue)', highlight: peakDayIdx }), q4Toggle);
   const q4Desc = q4ViewMode === 'stacked' ? q4StackedDesc(regionLabel) : q4desc;
 
-  const q6Toggle = toggleRow([{ value: 'stacked', label: 'By hour' }, { value: 'pie', label: 'Peak hour' }], q6ViewMode, 'view-toggle');
+  const q6Toggle = toggleRow([{ value: 'stacked', label: t('ins.q6.toggle.stacked') }, { value: 'pie', label: t('ins.q6.toggle.pie') }], q6ViewMode, 'view-toggle');
   const { html: q6Html, desc: q6Desc } = q6Content(regionLabel, q6Toggle);
 
   container.innerHTML = `
     <div class="insight-block" data-chart-key="q4">
       ${q4Html}
       <div>
-        <h3>Streamer activity by day</h3>
+        <h3>${t('ins.title.q4')}</h3>
         <p>${q4Desc}</p>
       </div>
     </div>
     <div class="insight-block" data-chart-key="q5">
       ${chartWrap(svgLineChart(Array.from({ length: 24 }, (_, h) => String(h).padStart(2, '0')), hourlyViewers, { color: 'var(--amber)' }))}
       <div>
-        <h3>Viewer engagement by hour</h3>
+        <h3>${t('ins.title.q5')}</h3>
         <p>${q5desc}</p>
       </div>
     </div>
     <div class="insight-block" data-chart-key="q6">
       ${q6Html}
       <div>
-        <h3>Game market share by hour</h3>
+        <h3>${t('ins.title.q6')}</h3>
         <p>${q6Desc}</p>
       </div>
     </div>
     <div class="insight-block" data-chart-key="q7">
       ${chartWrap(svgBarChart(dayShort, dailyRatio, { color: 'var(--cue)', highlight: bestRatioIdx }))}
       <div>
-        <h3>Viewer-per-streamer ratio by day</h3>
+        <h3>${t('ins.title.q7')}</h3>
         <p>${q7desc}</p>
       </div>
     </div>
@@ -555,45 +581,46 @@ function renderTimingCharts() {
 
 function q4StackedHtml(regionLabel, tzLabel) {
   const { series, fellBack } = timingSeriesForStacks();
-  const toggle = toggleRow([{ value: 'simple', label: 'Streamers' }, { value: 'stacked', label: 'By game' }], q4ViewMode, 'view-toggle');
+  const toggle = toggleRow([{ value: 'simple', label: t('ins.q4.toggle.simple') }, { value: 'stacked', label: t('ins.q4.toggle.stacked') }], q4ViewMode, 'view-toggle');
   if (!series || !series.daily_stack) return chartWrap(emptyChart(), toggle);
-  const dayShort = DAY_ORDER_FULL.map(d => DAY_SHORT[d]);
+  const dayShort = DAY_ORDER_FULL.map(d => dayShortLabel(d));
   const stack = DAY_ORDER_FULL.map(d => series.daily_stack.find(s => s.key === d) || { key: d, segments: [], total: 0 });
-  const fallbackNote = fellBack ? `<div class="chart-fallback-note">Game breakdown isn't available for ${escapeHtml(regionLabel)} \u2014 showing all regions instead.</div>` : '';
+  const fallbackNote = fellBack ? `<div class="chart-fallback-note">${t('ins.fallback_note', { region: escapeHtml(regionLabel) })}</div>` : '';
   return chartWrap(svgStackedBarChart(stack, series.daily_stack_games, { axisLabels: dayShort, peakKey: series.daily_stack_peak_day }), toggle + fallbackNote);
 }
 
 function q4StackedDesc(regionLabel) {
   const { series, fellBack } = timingSeriesForStacks();
-  if (!series || !series.daily_stack) return 'Not enough data to break this down by game for this filter.';
+  if (!series || !series.daily_stack) return t('ins.q4s.none');
   const peakDay = series.daily_stack_peak_day;
-  const region = fellBack ? 'all regions' : regionLabel;
-  return `Same day-of-week view as the streamer count, but split by which top games make up the viewership \u2014 ${peakDay} is the single biggest day for ${escapeHtml(region)}. Hover any segment for that game's exact share that day.`;
+  const region = fellBack ? t('ins.region_all') : regionLabel;
+  return t('ins.q4s.desc', { day: dayLabel(peakDay), region: escapeHtml(region) });
 }
 
 function q6Content(regionLabel, toggle) {
   const { series, fellBack } = timingSeriesForStacks();
   if (!series || !series.hourly_stack || !series.hourly_stack.length) {
-    return { html: chartWrap(emptyChart(), toggle), desc: 'Not enough data at this granularity for this chart.' };
+    return { html: chartWrap(emptyChart(), toggle), desc: t('ins.q6.none') };
   }
   const peakRow = series.hourly_stack[series.peak_hour];
   const leader = (peakRow.segments || []).filter(s => s.game !== 'Others').sort((a, b) => b.viewers - a.viewers)[0];
   const leaderShare = leader ? (leader.viewers / series.peak_hour_total * 100).toFixed(1) : null;
   const others = (peakRow.segments || []).find(s => s.game === 'Others');
-  const region = fellBack ? 'all regions' : regionLabel;
-  const othersNote = others ? ` Even at peak, everything outside the top 5 ('Others') still adds up to ${(others.viewers / series.peak_hour_total * 100).toFixed(1)}% of that hour's viewership.` : '';
-  const fallbackNote = fellBack ? `<div class="chart-fallback-note">Game breakdown isn't available for ${escapeHtml(regionLabel)} \u2014 showing all regions instead.</div>` : '';
+  const region = fellBack ? t('ins.region_all') : regionLabel;
+  const othersNote = others ? t('ins.q6.others_note', { pct: (others.viewers / series.peak_hour_total * 100).toFixed(1) }) : '';
+  const fallbackNote = fellBack ? `<div class="chart-fallback-note">${t('ins.fallback_note', { region: escapeHtml(regionLabel) })}</div>` : '';
+  const hourStr = String(series.peak_hour).padStart(2, '0');
 
   if (q6ViewMode === 'pie') {
     const slices = (peakRow.segments || []).map(s => ({ label: s.game, value: s.viewers }));
     const desc = leader
-      ? `Peak-hour (${String(series.peak_hour).padStart(2, '0')}:00 UTC) snapshot for ${escapeHtml(region)}: '${leader.game}' takes ${leaderShare}% of that single hour.${othersNote} Switch to "By hour" to see how this composition holds up across the full day.`
-      : `Peak-hour composition for ${escapeHtml(region)}.`;
+      ? t('ins.q6.pie', { hour: hourStr, region: escapeHtml(region), leader: leader.game, share: leaderShare, others: othersNote })
+      : t('ins.q6.pie_nol', { region: escapeHtml(region) });
     return { html: chartWrap(svgDonutChartWithLegend(slices), toggle) + fallbackNote, desc };
   }
   const desc = leader
-    ? `The busiest hour is ${String(series.peak_hour).padStart(2, '0')}:00 UTC (dashed outline below), where '${leader.game}' takes the largest slice (${leaderShare}%) for ${escapeHtml(region)}.${othersNote} Tracking the same top 5 games across all 24 hours shows whether a game's audience is steady all day or concentrated in a narrow window.`
-    : `Hourly viewership composition for ${escapeHtml(region)}.`;
+    ? t('ins.q6.stack', { hour: hourStr, leader: leader.game, share: leaderShare, region: escapeHtml(region), others: othersNote })
+    : t('ins.q6.stack_nol', { region: escapeHtml(region) });
   return {
     html: chartWrap(svgStackedBarChart(series.hourly_stack, series.hourly_stack_games, {
       axisLabels: Array.from({ length: 24 }, (_, h) => String(h).padStart(2, '0')),
@@ -613,6 +640,8 @@ function argmin(arr) {
   for (let i = 1; i < arr.length; i++) if ((arr[i] ?? Infinity) < (arr[idx] ?? Infinity)) idx = i;
   return idx;
 }
+
+function gameLabel(g) { return g === 'Others' ? t('ins.others') : g; }
 
 function escapeHtml(s) {
   const div = document.createElement('div');
@@ -693,7 +722,7 @@ function svgLineChart(labels, values, opts = {}) {
   const pathD = points.map((p, i) => `${i === 0 ? 'M' : 'L'}${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(' ');
   const areaD = `${pathD} L${points[points.length - 1][0].toFixed(1)},${(padT + innerH).toFixed(1)} L${points[0][0].toFixed(1)},${(padT + innerH).toFixed(1)} Z`;
   const dots = points.map((p, i) => {
-    const tip = `${labels[i]}:00 &mdash; <strong>${fmt(Math.round(values[i]))}</strong> avg viewers`;
+    const tip = `${labels[i]}:00 &mdash; <strong>${fmt(Math.round(values[i]))}</strong> ${t('ins.tip.avg_viewers')}`;
     return `<circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="4" fill="${opts.color || 'var(--cue)'}" data-tip="${escAttr(tip)}"/>`;
   }).join('');
   const tickEvery = Math.ceil(n / 8);
@@ -739,12 +768,12 @@ function svgScatterChart(points) {
     xticks += `<text x="${gx.toFixed(1)}" y="${height - padB + 16}" text-anchor="middle" class="chart-axis-label">${fmt(val)}</text>`;
   }
   const dots = points.map(p => {
-    const tip = `<strong>${escapeHtml(p.game)}</strong><br>Steam players: ${fmt(Math.round(p.x))}<br>Twitch viewers: ${fmt(Math.round(p.y))}`;
+    const tip = `<strong>${escapeHtml(p.game)}</strong><br>${t('ins.q1.tip_x')}: ${fmt(Math.round(p.x))}<br>${t('ins.q1.tip_y')}: ${fmt(Math.round(p.y))}`;
     return `<circle cx="${px(p.x).toFixed(1)}" cy="${py(p.y).toFixed(1)}" r="3.5" fill="var(--cue)" fill-opacity="0.65" data-tip="${escAttr(tip)}" data-game="${escAttr(p.game)}"/>`;
   }).join('');
   return `<svg viewBox="0 0 ${width} ${height}" class="mini-chart" preserveAspectRatio="xMidYMid meet">
     ${grid}${xticks}${dots}
-    <text x="${(width / 2).toFixed(1)}" y="${height - 4}" text-anchor="middle" class="chart-axis-label">Steam current players</text>
+    <text x="${(width / 2).toFixed(1)}" y="${height - 4}" text-anchor="middle" class="chart-axis-label">${t('ins.q1.x')}</text>
   </svg>`;
 }
 
@@ -778,7 +807,7 @@ function svgHorizontalBarChart(items, opts = {}) {
     const x = it.value >= 0 ? zeroX : zeroX - w;
     const color = opts.colorFor ? opts.colorFor(it) : (opts.color || 'var(--cue)');
     const formatted = opts.format ? opts.format(it.value) : fmt(it.value);
-    const tip = `<strong>${escapeHtml(it.label)}</strong><br>${opts.valueLabel || 'Value'}: ${formatted}`;
+    const tip = `<strong>${escapeHtml(it.label)}</strong><br>${opts.valueLabel || t('dl.csv_value')}: ${formatted}`;
     const shortLabel = it.label.length > 20 ? it.label.slice(0, 19) + '\u2026' : it.label;
     bars += `<text x="${padL - 8}" y="${(y + rowH / 2 + 4).toFixed(1)}" text-anchor="end" class="chart-axis-label">${escapeHtml(shortLabel)}</text>`;
     bars += `<rect x="${x.toFixed(1)}" y="${(y + 4).toFixed(1)}" width="${Math.max(1, w).toFixed(1)}" height="${rowH - 8}" rx="3" fill="${color}" opacity="${opts.highlightAll || i === 0 ? 1 : 0.75}" data-tip="${escAttr(tip)}"${opts.itemsAreGames ? ` data-game="${escAttr(it.label)}"` : ''}/>`;
@@ -810,9 +839,9 @@ function svgDonutChartWithLegend(slices) {
     const d = `M${x0.toFixed(1)},${y0.toFixed(1)} A${rOuter},${rOuter} 0 ${large} 1 ${x1.toFixed(1)},${y1.toFixed(1)} L${xi0.toFixed(1)},${yi0.toFixed(1)} A${rInner},${rInner} 0 ${large} 0 ${xi1.toFixed(1)},${yi1.toFixed(1)} Z`;
     const color = s.label === 'Others' ? 'var(--text-dim)' : DONUT_PALETTE[i % DONUT_PALETTE.length];
     const pct = (frac * 100).toFixed(1);
-    const tip = `<strong>${escapeHtml(s.label)}</strong><br>${fmt(Math.round(s.value))} viewers (${pct}%)`;
+    const tip = `<strong>${escapeHtml(gameLabel(s.label))}</strong><br>${t('ins.tip.viewers', { n: fmt(Math.round(s.value)), pct })}`;
     paths += `<path d="${d}" fill="${color}" opacity="0.92" data-tip="${escAttr(tip)}" data-game="${escAttr(s.label)}"/>`;
-    legendRows.push(`<div class="donut-legend-row" data-tip="${escAttr(tip)}" data-game="${escAttr(s.label)}"><span class="donut-swatch" style="background:${color}"></span>${escapeHtml(s.label)} <span class="mono">${pct}%</span></div>`);
+    legendRows.push(`<div class="donut-legend-row" data-tip="${escAttr(tip)}" data-game="${escAttr(s.label)}"><span class="donut-swatch" style="background:${color}"></span>${escapeHtml(gameLabel(s.label))} <span class="mono">${pct}%</span></div>`);
   });
   return `<div class="donut-wrap">
     <svg viewBox="0 0 ${size} ${size}" class="mini-chart donut-chart">${paths}</svg>
@@ -848,7 +877,7 @@ function svgStackedBarChart(stack, gameOrder, opts = {}) {
       const h = (seg.viewers / maxTotal) * innerH;
       const y = yCursor - h;
       const isPeak = opts.peakKey === s.key;
-      const tip = `<strong>${escapeHtml(seg.game)}</strong><br>${escapeHtml(axisLabels[i])}${unitLabel} &mdash; ${fmt(Math.round(seg.viewers))} viewers`;
+      const tip = `<strong>${escapeHtml(gameLabel(seg.game))}</strong><br>${escapeHtml(axisLabels[i])}${unitLabel} &mdash; ${t('ins.tip.viewers_plain', { n: fmt(Math.round(seg.viewers)) })}`;
       bars += `<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${barW.toFixed(1)}" height="${Math.max(0, h).toFixed(1)}" fill="${colorFor(seg.game)}" opacity="${isPeak ? 1 : 0.82}" data-tip="${escAttr(tip)}" data-game="${escAttr(seg.game)}"/>`;
       yCursor = y;
     });
@@ -868,14 +897,14 @@ function svgStackedBarChart(stack, gameOrder, opts = {}) {
     grid += `<text x="${padL - 8}" y="${(gy + 4).toFixed(1)}" text-anchor="end" class="chart-axis-label">${fmt(val)}</text>`;
   }
 
-  const legendTip = g => `<strong>${escapeHtml(g)}</strong><br>Click to isolate this game across the chart`;
+  const legendTip = g => `<strong>${escapeHtml(g)}</strong><br>${t('ins.legend_tip')}`;
   const legend = gameOrder.map((g, i) =>
-    `<div class="donut-legend-row" data-tip="${escAttr(legendTip(g))}" data-game="${escAttr(g)}"><span class="donut-swatch" style="background:${DONUT_PALETTE[i % DONUT_PALETTE.length]}"></span>${escapeHtml(g)}</div>`
-  ).join('') + `<div class="donut-legend-row" data-tip="${escAttr(legendTip('Others'))}" data-game="Others"><span class="donut-swatch" style="background:var(--text-dim)"></span>Others</div>`;
+    `<div class="donut-legend-row" data-tip="${escAttr(legendTip(gameLabel(g)))}" data-game="${escAttr(g)}"><span class="donut-swatch" style="background:${DONUT_PALETTE[i % DONUT_PALETTE.length]}"></span>${escapeHtml(g)}</div>`
+  ).join('') + `<div class="donut-legend-row" data-tip="${escAttr(legendTip(t('ins.others')))}" data-game="Others"><span class="donut-swatch" style="background:var(--text-dim)"></span>${t('ins.others')}</div>`;
 
   return `<div class="stacked-wrap">
     <svg viewBox="0 0 ${width} ${height}" class="mini-chart" preserveAspectRatio="xMidYMid meet">${grid}${bars}
-      <text x="${(width / 2).toFixed(1)}" y="${height - 4}" text-anchor="middle" class="chart-axis-label">${opts.peakKey != null ? 'Dashed outline marks the peak slot' : ''}</text>
+      <text x="${(width / 2).toFixed(1)}" y="${height - 4}" text-anchor="middle" class="chart-axis-label">${opts.peakKey != null ? t('ins.peak_outline') : ''}</text>
     </svg>
     <div class="donut-legend">${legend}</div>
   </div>`;
@@ -898,7 +927,7 @@ function svgHistogramChart(bins, counts, opts = {}) {
     const x = padL + i * slot;
     const y = padT + innerH - h;
     const lo = Math.round(bins[i]), hi = Math.round(bins[i + 1]);
-    const tip = `${fmt(lo)}&ndash;${fmt(hi)} viewers<br><strong>${fmt(c)}</strong> snapshots`;
+    const tip = t('ins.dist.tip', { lo: fmt(lo), hi: fmt(hi), c: fmt(c) });
     bars += `<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${Math.max(0, slot - 1).toFixed(1)}" height="${Math.max(0, h).toFixed(1)}" fill="var(--cue)" opacity="0.75" data-tip="${escAttr(tip)}"/>`;
   });
   let xt = '';
@@ -926,4 +955,25 @@ function svgHistogramChart(bins, counts, opts = {}) {
     }
   }
   return `<svg viewBox="0 0 ${width} ${height}" class="mini-chart" preserveAspectRatio="xMidYMid meet">${grid}${bars}${xt}</svg>`;
+}
+
+
+/* Paragraph under the timezone/region selectors: when data collection started,
+   and for every broadcast language, when it first appeared. */
+function renderCollectionStart() {
+  const host = document.getElementById('timingStartNote');
+  const cov = SITE_DATA && SITE_DATA.schedule && SITE_DATA.schedule.coverage;
+  if (!host || !cov || !cov.first_snapshot_utc) return;
+  let names = null;
+  try { names = new Intl.DisplayNames([document.documentElement.lang || 'en'], { type: 'language' }); } catch (e) { /* older browsers: show codes */ }
+  const rows = (cov.by_language || []).map(r => {
+    const label = names ? (names.of(r.language) || r.language) : r.language;
+    return `<tr><td>${escapeHtml(label)} <span class="mono dim">(${escapeHtml(r.language)})</span></td><td>${escapeHtml(r.region)}</td>
+      <td class="mono">${escapeHtml(r.first_utc)}</td><td class="mono">${fmt(r.rows)}</td></tr>`;
+  }).join('');
+  host.innerHTML = `<p class="filter-hint">${t('ins.start_p', { first: `<strong>${escapeHtml(cov.first_snapshot_utc)}</strong>` })} ${t('ins.start_range', { last: escapeHtml(cov.last_snapshot_utc) })}</p>
+    <details class="info-details"><summary>${t('ins.start_summary')}</summary>
+      <div class="info-body table-scroll start-table"><table class="formula-table"><thead><tr>
+        <th>${t('ins.start_col_lang')}</th><th>${t('ins.start_col_region')}</th><th>${t('ins.start_col_first')}</th><th>${t('ins.start_col_rows')}</th>
+      </tr></thead><tbody>${rows}</tbody></table></div></details>`;
 }

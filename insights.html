@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-title-key="ins.title">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,13 +12,13 @@
   <div class="topbar">
     <div class="brand"><span class="brand-dot"></span> Green Room</div>
     <nav class="topnav">
-      <a href="index.html">Overview</a>
-      <a href="games.html">Call Sheet</a>
-      <a href="schedule.html">Signal Board</a>
-      <a href="insights.html">Deep Analysis</a>
-      <a href="about.html">About Us</a>
+      <a href="index.html" data-i18n="nav.overview">Overview</a>
+      <a href="games.html" data-i18n="nav.games">Call Sheet</a>
+      <a href="schedule.html" data-i18n="nav.board">Signal Board</a>
+      <a href="insights.html" data-i18n="nav.analysis">Deep Analysis</a>
+      <a href="about.html" data-i18n="nav.about">About Us</a>
     </nav>
-    <div class="topbar-meta mono" id="topbarMeta">loading&hellip;</div>
+    <div class="topbar-meta mono" id="topbarMeta" data-i18n="common.loading">loading&hellip;</div>
     <div class="zoom-control" id="siteZoomControl"></div>
     <div class="theme-toggle-wrap" id="themeToggleControl"></div>
   </div>
@@ -26,107 +26,67 @@
   <section class="section" style="border-top:none; padding-top:36px;">
     <div class="section-head">
       <div>
-        <h2>Deep analysis</h2>
-        <p>The statistical work behind the recommendations: how strongly Steam player counts and Twitch viewership
-          actually correlate, what a Random Forest model says drives viewership, and whether the scoring logic
-          used elsewhere on this site actually predicts which games are about to rise. Generated straight from
-          <code>EDA.py</code> — the latest month by default, with every earlier month and the all-time totals one dropdown away. Click any game (a point, a bar, or a
-          stacked segment/legend entry) to highlight that game across every chart on this page; click it again,
-          or the chip that appears, to clear it.</p>
+        <h2 data-i18n="ins.h2">Deep analysis</h2>
+        <p data-i18n="ins.p"></p>
       </div>
     </div>
 
     <details class="newbie-guide" open>
-      <summary><span class="newbie-badge">New here?</span> Start with these 4 charts</summary>
-      <p class="newbie-lead">You don&rsquo;t need to read every chart. If you&rsquo;re a new streamer deciding
-        <em>what</em> to play and <em>when</em> to go live, go through these in order &mdash; each button jumps
-        straight to the chart.</p>
+      <summary><span class="newbie-badge" data-i18n="ins.guide.badge">New here?</span> <span data-i18n="ins.guide.summary">Start with these 4 charts</span></summary>
+      <p class="newbie-lead" data-i18n-html="ins.guide.lead"></p>
       <ol class="newbie-steps">
-        <li>
-          <button type="button" class="newbie-jump" data-jump="q2">1 &middot; Top games by potential score</button>
-          <span><strong>What should I play?</strong> Green bars are games with strong viewers <em>and</em> players right now.
-            Pick from the top, but skip anything far above the rest if you&rsquo;re small &mdash; giants are hard to get seen in.</span>
-        </li>
-        <li>
-          <button type="button" class="newbie-jump" data-jump="q7">2 &middot; Viewer-per-streamer ratio by day</button>
-          <span><strong>Which day is least crowded?</strong> A tall bar means many viewers for few streamers &mdash;
-            that&rsquo;s the day a small channel is most likely to be noticed.</span>
-        </li>
-        <li>
-          <button type="button" class="newbie-jump" data-jump="q5">3 &middot; Viewer engagement by hour</button>
-          <span><strong>What time should I go live?</strong> The peak is when the most people are watching; the
-            hours just <em>before</em> the peak are often a good compromise. Set <em>Timezone</em> to
-            &ldquo;Local time-of-day&rdquo; and pick your audience&rsquo;s <em>Region</em> first.</span>
-        </li>
-        <li>
-          <button type="button" class="newbie-jump" data-jump="distribution">4 &middot; Viewer count distribution</button>
-          <span><strong>What&rsquo;s realistic?</strong> Most streams are tiny and a handful are huge. Read the
-            <em>median</em> (not the average) as your normal expectation &mdash; this chart keeps you from comparing
-            yourself with the giants.</span>
-        </li>
+        <li><button type="button" class="newbie-jump" data-jump="q2" data-i18n="ins.guide.1b"></button> <span data-i18n-html="ins.guide.1t"></span></li>
+        <li><button type="button" class="newbie-jump" data-jump="q7" data-i18n="ins.guide.2b"></button> <span data-i18n-html="ins.guide.2t"></span></li>
+        <li><button type="button" class="newbie-jump" data-jump="q5" data-i18n="ins.guide.3b"></button> <span data-i18n-html="ins.guide.3t"></span></li>
+        <li><button type="button" class="newbie-jump" data-jump="distribution" data-i18n="ins.guide.4b"></button> <span data-i18n-html="ins.guide.4t"></span></li>
       </ol>
-      <p class="newbie-more"><strong>Then, when you&rsquo;re comfortable:</strong>
-        <button type="button" class="newbie-jump small" data-jump="q6">Game market share by hour</button> shows who you&rsquo;d compete
-        with at the busiest hour;
-        <button type="button" class="newbie-jump small" data-jump="q1">Steam vs. Twitch</button> checks whether a game&rsquo;s player
-        count predicts its viewers;
-        <button type="button" class="newbie-jump small" data-jump="q3">What drives viewership</button> and
-        <button type="button" class="newbie-jump small" data-jump="q8">Predicting rising games</button> are the
-        statistics behind the scoring &mdash; safe to skip at first.</p>
-      <p class="newbie-tip"><strong>Tip:</strong> click any game (a dot, a bar or a legend entry) to follow it across
-        every chart. Hover or tap any bar for exact numbers.</p>
+      <p class="newbie-more" id="newbieMore"></p>
+      <p class="newbie-tip" data-i18n-html="ins.guide.tip"></p>
     </details>
 
     <div class="period-controls" id="periodControls">
       <div class="period-select-group">
-        <label for="yearSelect">Year</label>
+        <label for="yearSelect" data-i18n="ins.year">Year</label>
         <select id="yearSelect"></select>
       </div>
       <div class="period-select-group">
-        <label for="monthSelect">Month</label>
+        <label for="monthSelect" data-i18n="ins.month">Month</label>
         <select id="monthSelect"></select>
       </div>
       <div class="period-select-group">
-        <label for="weekSelect">Week</label>
-        <select id="weekSelect"><option value="ALL">All weeks</option></select>
+        <label for="weekSelect" data-i18n="ins.week">Week</label>
+        <select id="weekSelect"><option value="ALL" data-i18n="ins.all_weeks">All weeks</option></select>
       </div>
       <div class="period-select-group">
-        <label for="daySelect">Day</label>
-        <select id="daySelect"><option value="ALL">All days</option></select>
+        <label for="daySelect" data-i18n="ins.day">Day</label>
+        <select id="daySelect"><option value="ALL" data-i18n="ins.all_days">All days</option></select>
       </div>
       <div class="period-current mono" id="periodCurrent"></div>
     </div>
+    <div class="start-note" id="timingStartNote"></div>
     <div class="game-filter-chip" id="gameFilterChip" style="display:none;"></div>
-    <p class="filter-hint">Week and Day only apply within a specific month &mdash; choose "All years" + "All months" for the all-time view, or a specific month to narrow down. Weeks are
-      calendar weeks within that month (Week 1 = days 1&ndash;7, and so on). Leave Week on "All weeks" and the Day
-      dropdown lists every day of the month; pick a Week and Day narrows to just that week's days. Some charts
-      (like the feature-importance model) need more data than a single day gives and won't show for that
-      granularity &mdash; try Week or the whole Month instead.</p>
+    <p class="filter-hint" data-i18n="ins.filter_hint"></p>
     <div id="insightBlocksPre"></div>
 
     <div class="timing-section">
       <div class="timing-head">
-        <h3>Timing signals</h3>
-        <p>Streamer activity, viewer engagement, game market share and the viewer-per-streamer ratio, all broken
-          down by day/hour &mdash; filterable by clock reference and by broadcast region so you can see whether the
-          pattern holds for a specific audience, not just the global average. Two of these charts also have a view
-          toggle for a second dimension (which games make up the totals) alongside the simple view.</p>
+        <h3 data-i18n="ins.timing_h">Timing signals</h3>
+        <p data-i18n="ins.timing_p"></p>
       </div>
       <div class="period-controls">
         <div class="period-select-group">
-          <label for="timingTimezoneSelect">Timezone</label>
+          <label for="timingTimezoneSelect" data-i18n="ins.tz">Timezone</label>
           <select id="timingTimezoneSelect">
-            <option value="standardized">Standardized (UTC)</option>
-            <option value="time_of_day">Local time-of-day</option>
+            <option value="standardized" data-i18n="ins.tz.utc">Standardized (UTC)</option>
+            <option value="time_of_day" data-i18n="ins.tz.local">Local time-of-day</option>
           </select>
         </div>
         <div class="period-select-group">
-          <label for="timingCountrySelect">Region</label>
+          <label for="timingCountrySelect" data-i18n="ins.region">Region</label>
           <select id="timingCountrySelect"></select>
         </div>
       </div>
-      <p class="filter-hint" id="timingRegionNote">Region is estimated from each stream's broadcast language, not
-        verified viewer location &mdash; treat it as a rough proxy, not a precise geography.</p>
+      <p class="filter-hint" id="timingRegionNote" data-i18n="ins.region_note"></p>
       <div class="timing-charts" id="timingCharts"></div>
     </div>
 
@@ -134,10 +94,16 @@
   </section>
 
   <footer>
-    <p>&copy; PSU Phuket</p>
+    <p class="copyright" data-i18n="common.copyright">&copy; PSU Phuket</p>
   </footer>
 </div>
 
+<script src="js/lang/en.js"></script>
+<script src="js/lang/th.js"></script>
+<script src="js/lang/es.js"></script>
+<script src="js/lang/de.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/download.js"></script>
 <script src="js/common.js"></script>
 <script src="js/insights.js"></script>
 </body>

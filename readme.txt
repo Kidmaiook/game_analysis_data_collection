@@ -159,3 +159,13 @@ with the new dark theme. Once you re-run EDA.py in an environment with
 pyarrow/fastparquet installed (needed to read the monthly .parquet
 files), all the Q1–Q9 and distribution charts in assets/insights/ will
 be regenerated in the same dark, site-matching style automatically.
+
+
+---- v11 changes ----
+* EDA.py: snapshot_date/time are Thailand time (UTC+7), not UTC. UTC day+hour now come from one instant
+  (snapshot - 7h); streamer-local time uses real IANA zones (DST aware). Viewers-per-streamer is now
+  averaged per snapshot, and each cell carries n (snapshot count). Coverage of the collector is exported.
+* data.json has a "methodology" block (zero/full-mark anchors, z-score mean/std, worked examples).
+* downloads/green-room-data.zip is rebuilt by EDA.py (linked from About Us).
+* js/lang/*.js hold translations (en, th, es, de). To add a language, copy en.js and register it in js/i18n.js.
+* js/download.js adds PNG / SVG / CSV download buttons to every chart.

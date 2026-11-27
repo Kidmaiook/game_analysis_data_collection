@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-title-key="games.title">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,13 +12,13 @@
   <div class="topbar">
     <div class="brand"><span class="brand-dot"></span> Green Room</div>
     <nav class="topnav">
-      <a href="index.html">Overview</a>
-      <a href="games.html">Call Sheet</a>
-      <a href="schedule.html">Signal Board</a>
-      <a href="insights.html">Deep Analysis</a>
-      <a href="about.html">About Us</a>
+      <a href="index.html" data-i18n="nav.overview">Overview</a>
+      <a href="games.html" data-i18n="nav.games">Call Sheet</a>
+      <a href="schedule.html" data-i18n="nav.board">Signal Board</a>
+      <a href="insights.html" data-i18n="nav.analysis">Deep Analysis</a>
+      <a href="about.html" data-i18n="nav.about">About Us</a>
     </nav>
-    <div class="topbar-meta mono" id="topbarMeta">loading&hellip;</div>
+    <div class="topbar-meta mono" id="topbarMeta" data-i18n="common.loading">loading&hellip;</div>
     <div class="zoom-control" id="siteZoomControl"></div>
     <div class="theme-toggle-wrap" id="themeToggleControl"></div>
   </div>
@@ -26,106 +26,92 @@
   <section class="section" style="border-top:none; padding-top:36px;">
     <div class="section-head">
       <div>
-        <h2>The call sheet</h2>
-        <p>Every game with enough independent streamers behind it to trust the numbers, ranked by
-          opportunity: audience size, how under-saturated it is, and its recent growth. Click a card for
-          its own best day/hour and Steam catalog info.</p>
+        <h2 data-i18n="games.h2">The call sheet</h2>
+        <p data-i18n="games.p"></p>
       </div>
     </div>
 
     <div class="filters">
       <div class="game-search-wrap">
-        <input type="text" id="searchInput" autocomplete="off" aria-autocomplete="list" aria-controls="gameSearchSuggestions" placeholder="Search games… start typing a title">
+        <input type="text" id="searchInput" autocomplete="off" aria-autocomplete="list" aria-controls="gameSearchSuggestions" data-i18n-attr="placeholder:games.search_ph" placeholder="Search games…">
         <div id="gameSearchSuggestions" class="game-search-suggestions" role="listbox" hidden></div>
       </div>
       <div class="checklist-dropdown" id="genreDropdown">
         <button type="button" class="checklist-toggle" id="genreToggle">
-          <span id="genreToggleLabel">All genres</span>
+          <span id="genreToggleLabel" data-i18n="games.all_genres">All genres</span>
           <span class="checklist-caret">&#9662;</span>
         </button>
         <div class="checklist-panel" id="genrePanel">
           <div class="checklist-panel-actions">
-            <button type="button" id="genreClearBtn">Clear</button>
-            <button type="button" id="genreAllBtn">Select all</button>
+            <button type="button" id="genreClearBtn" data-i18n="games.clear">Clear</button>
+            <button type="button" id="genreAllBtn" data-i18n="games.select_all">Select all</button>
           </div>
           <div class="checklist-options" id="genreOptions"></div>
         </div>
       </div>
       <select id="priceSelect">
-        <option value="">Any price</option>
-        <option value="free">Free to play</option>
-        <option value="paid">Paid</option>
+        <option value="" data-i18n="games.any_price">Any price</option>
+        <option value="free" data-i18n="games.free">Free to play</option>
+        <option value="paid" data-i18n="games.paid">Paid</option>
       </select>
     </div>
-    <p class="filter-hint">Tip: the search box matches any of several games at once &mdash; separate names with a space to
-      compare them side by side (e.g. <span class="mono">dota valorant</span> shows both). Pick multiple boxes in the
-      genre checklist to widen the filter instead of narrowing it &mdash; a game matches if it has <em>any</em> checked genre.</p>
+    <p class="filter-hint" data-i18n="games.hint"></p>
     <div class="sort-btns" id="sortBtns">
-      <button class="sort-btn active" data-sort="opportunity_score">Opportunity</button>
-      <button class="sort-btn" data-sort="growth_pct">Fastest growing</button>
-      <button class="sort-btn" data-sort="viewers_per_streamer">Least saturated</button>
-      <button class="sort-btn" data-sort="avg_viewers">Biggest audience</button>
+      <button class="sort-btn active" data-sort="opportunity_score" data-i18n="games.sort.opportunity">Opportunity</button>
+      <button class="sort-btn" data-sort="growth_pct" data-i18n="games.sort.growth">Fastest growing</button>
+      <button class="sort-btn" data-sort="viewers_per_streamer" data-i18n="games.sort.saturation">Least saturated</button>
+      <button class="sort-btn" data-sort="avg_viewers" data-i18n="games.sort.audience">Biggest audience</button>
     </div>
 
     <div class="game-grid" id="gameGrid"></div>
-    <div class="empty-state" id="emptyState" style="display:none;">No games match those filters. Try widening the search.</div>
+    <div class="empty-state" id="emptyState" style="display:none;" data-i18n="games.empty">No games match.</div>
 
+    <details class="info-details" open>
+      <summary data-i18n="games.how_summary">Exactly how is the Opportunity score calculated?</summary>
+      <div class="info-body" id="oppFormula"></div>
+    </details>
     <details class="info-details">
-      <summary>How is the Opportunity score calculated, and what do the colors mean?</summary>
-      <div class="info-body">
-        <p>Each game's <strong>Opportunity score</strong> (0&ndash;100, shown top-right of every card) blends three
-          normalized signals: <strong>audience size</strong> (40%, average viewers), <strong>viewers-per-streamer</strong>
-          (35%, how under-saturated the game is &mdash; more viewers for every person streaming it means less competition),
-          and <strong>recent growth</strong> (25%, first-half vs. second-half of the tracked window, clipped to
-          &minus;100%&ndash;300% so one outlier week can't dominate). Each signal is scaled against the 5th&ndash;95th
-          percentile across all games before blending, then the whole thing is discounted toward zero for games backed
-          by fewer than ~15 distinct streamers, so a single person's lucky night can't fake a high score.</p>
-        <div class="score-legend">
-          <span class="score-legend-item"><span class="dot" style="background:var(--cue)"></span> 66&ndash;100 &mdash; strong opportunity</span>
-          <span class="score-legend-item"><span class="dot" style="background:var(--amber)"></span> 33&ndash;65 &mdash; moderate</span>
-          <span class="score-legend-item"><span class="dot" style="background:var(--tally)"></span> 0&ndash;32 &mdash; low / saturated</span>
-        </div>
-        <p>The mini day-of-week board inside each game's detail card is a small heatmap: it colors each day by that
-          game's average viewers, scaled 0&ndash;5 against its own busiest day (not the whole site's scale). Faint mint =
-          this game's quietest day; solid glowing mint = its single best day. It's a per-game view of the same idea as
-          the site-wide <a href="schedule.html">Signal Board</a>.</p>
-      </div>
+      <summary data-i18n="games.pot_summary">Potential score — formula</summary>
+      <div class="info-body" id="potFormula"></div>
     </details>
   </section>
 
   <footer>
-    <p><strong>Methodology.</strong> Opportunity score blends audience size (40%), viewers-per-streamer (35%)
-      and clipped growth (25%), then discounts games backed by fewer than ~15 distinct streamers so a single
-      person's lucky night can't dominate the ranking. Best day/hour is shown in whichever mode you pick inside
-      a game's detail card — standardized (UTC) or time-of-day (streamer-local, estimated from broadcast language).</p>
-    <p class="copyright">&copy; PSU Phuket</p>
+    <p data-i18n="games.footer"></p>
+    <p class="copyright" data-i18n="common.copyright">&copy; PSU Phuket</p>
   </footer>
 </div>
 <div class="modal-backdrop" id="modalBackdrop">
   <div class="modal">
-    <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+    <button class="modal-close" id="modalClose" data-i18n-attr="aria-label:games.modal.close" aria-label="Close">&times;</button>
     <h3 id="modalTitle">&mdash;</h3>
     <div class="modal-sub" id="modalSub">&mdash;</div>
     <div class="modal-grid" id="modalStats"></div>
     <div class="mode-toggle" id="modalModeToggle">
-      <button class="active" data-mode="utc">Standardized (UTC)</button>
-      <button data-mode="local">Time of day (local)</button>
+      <button class="active" data-mode="utc" data-i18n="games.modal.utc">Standardized (UTC)</button>
+      <button data-mode="local" data-i18n="games.modal.local">Time of day (local)</button>
     </div>
-    <div class="mini-heat-label">Average viewers by day of week</div>
+    <div class="mini-heat-label" data-i18n="games.modal.by_day">Average viewers by day of week</div>
     <div class="mini-board" id="modalDayBoard"></div>
     <div class="legend" style="margin-top:10px;">
-      <span>Quietest day</span>
+      <span data-i18n="games.modal.quietest">Quietest day</span>
       <span class="sw" data-level="0"></span>
       <span class="sw" data-level="1"></span>
       <span class="sw" data-level="2"></span>
       <span class="sw" data-level="3"></span>
       <span class="sw" data-level="4"></span>
       <span class="sw" data-level="5"></span>
-      <span>Best day for this game</span>
+      <span data-i18n="games.modal.bestgame">Best day for this game</span>
     </div>
   </div>
 </div>
 
+<script src="js/lang/en.js"></script>
+<script src="js/lang/th.js"></script>
+<script src="js/lang/es.js"></script>
+<script src="js/lang/de.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/download.js"></script>
 <script src="js/common.js"></script>
 <script src="js/games.js"></script>
 </body>
