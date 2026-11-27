@@ -2,8 +2,6 @@ name: Sync and Run python from main to web
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "45 10 * * *" 
   push:
     branches:
       - main
