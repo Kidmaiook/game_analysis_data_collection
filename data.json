@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T14:01:17.569139+00:00",
+  "generated_at": "2026-11-27T14:14:50.983197+00:00",
   "last_updated_display": "27/11/2026",
   "meta": {
     "months_covered": [
@@ -100950,7 +100950,7 @@
       "2026-08": 876.92,
       "2026-09": 849.62,
       "2026-10": 383.16,
-      "2026-11": 407.14
+      "2026-11": 406.86
     },
     "avg_price_by_year": {
       "2026": {
@@ -100963,7 +100963,7 @@
         "2026-08": 876.92,
         "2026-09": 849.62,
         "2026-10": 383.16,
-        "2026-11": 407.14
+        "2026-11": 406.86
       }
     },
     "cheapest_models": [
@@ -100977,11 +100977,11 @@
       },
       {
         "model": "GeForce GTX 750",
-        "avg_price": 89.81
+        "avg_price": 89.99
       },
       {
         "model": "GeForce GTX 750 Ti",
-        "avg_price": 109.21
+        "avg_price": 109.88
       },
       {
         "model": "Radeon Pro WX 4100",
@@ -101007,10 +101007,10 @@
       },
       {
         "model": "Radeon RX 6900 XT",
-        "avg_price": 1007.04
+        "avg_price": 1002.97
       }
     ],
-    "total_models_tracked": 95,
+    "total_models_tracked": 97,
     "chart": "assets/gpu/graph_gpu_price_trend.png"
   },
   "methodology": {
